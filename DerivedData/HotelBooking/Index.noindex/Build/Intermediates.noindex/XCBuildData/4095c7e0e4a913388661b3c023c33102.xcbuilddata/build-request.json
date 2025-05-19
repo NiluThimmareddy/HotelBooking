@@ -1,0 +1,48 @@
+{
+  "buildCommand" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : true,
+    "targets" : null
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "6097645010babe577145d1dd514006ccb2bc2d3bc83964a474f65848bf18fa6a"
+    }
+  ],
+  "containerPath" : "/Users/toqsoft/Desktop/HotelBooking/HotelBooking.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "indexbuild",
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/toqsoft/Desktop/HotelBooking/DerivedData/HotelBooking/Index.noindex/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/toqsoft/Desktop/HotelBooking/DerivedData/HotelBooking/Index.noindex/Build/Products",
+      "derivedDataPath" : "/Users/toqsoft/Desktop/HotelBooking/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/toqsoft/Desktop/HotelBooking/DerivedData/HotelBooking/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/toqsoft/Desktop/HotelBooking/DerivedData/HotelBooking/Index.noindex/PrecompiledHeaders",
+      "indexRegularBuildIntermediatesPath" : "/Users/toqsoft/Desktop/HotelBooking/DerivedData/HotelBooking/Build/Intermediates.noindex",
+      "indexRegularBuildProductsPath" : "/Users/toqsoft/Desktop/HotelBooking/DerivedData/HotelBooking/Build/Products",
+      "pchPath" : "/Users/toqsoft/Desktop/HotelBooking/DerivedData/HotelBooking/Index.noindex/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "NO",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "qos" : "utility",
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
