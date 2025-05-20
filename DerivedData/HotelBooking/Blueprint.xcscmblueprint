@@ -1,0 +1,23 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "92735A0135C81CD6B18F1A9E181420A231B7F471",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "92735A0135C81CD6B18F1A9E181420A231B7F471" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3D3FFA4C-E61F-498B-93FC-1D6E06A62028",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "92735A0135C81CD6B18F1A9E181420A231B7F471" : "HotelBooking\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HotelBooking",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "HotelBooking.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/NiluThimmareddy\/HotelBooking.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "92735A0135C81CD6B18F1A9E181420A231B7F471"
+    }
+  ]
+}

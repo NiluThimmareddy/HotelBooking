@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		B541E7C82DDB07E800B2B692 /* HotelBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B541E88F2DDB302900B2B692 /* Reachability.swift-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Reachability.swift-master"; path = "../Reachability.swift-master"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -46,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				B541E7CA2DDB07E800B2B692 /* HotelBooking */,
+				B541E88D2DDB175200B2B692 /* Frameworks */,
 				B541E7C92DDB07E800B2B692 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +58,14 @@
 				B541E7C82DDB07E800B2B692 /* HotelBooking.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B541E88D2DDB175200B2B692 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B541E88F2DDB302900B2B692 /* Reachability.swift-master */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

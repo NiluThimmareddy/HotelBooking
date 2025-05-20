@@ -1,0 +1,15 @@
+{
+  "" : {
+    "dependencies" : "/Users/toqsoft/Desktop/HotelBooking/DerivedData/HotelBooking/Index.noindex/Build/Intermediates.noindex/Reachability.build/Debug-iphonesimulator/Reachability.build/Objects-normal/arm64/Reachability-master.d",
+    "diagnostics" : "/Users/toqsoft/Desktop/HotelBooking/DerivedData/HotelBooking/Index.noindex/Build/Intermediates.noindex/Reachability.build/Debug-iphonesimulator/Reachability.build/Objects-normal/arm64/Reachability-master.dia",
+    "emit-module-dependencies" : "/Users/toqsoft/Desktop/HotelBooking/DerivedData/HotelBooking/Index.noindex/Build/Intermediates.noindex/Reachability.build/Debug-iphonesimulator/Reachability.build/Objects-normal/arm64/Reachability-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/toqsoft/Desktop/HotelBooking/DerivedData/HotelBooking/Index.noindex/Build/Intermediates.noindex/Reachability.build/Debug-iphonesimulator/Reachability.build/Objects-normal/arm64/Reachability-master-emit-module.dia",
+    "swift-dependencies" : "/Users/toqsoft/Desktop/HotelBooking/DerivedData/HotelBooking/Index.noindex/Build/Intermediates.noindex/Reachability.build/Debug-iphonesimulator/Reachability.build/Objects-normal/arm64/Reachability-master.swiftdeps"
+  },
+  "/Users/toqsoft/Desktop/HotelBooking/DerivedData/HotelBooking/Index.noindex/Build/Intermediates.noindex/Reachability.build/Debug-iphonesimulator/Reachability.build/DerivedSources/resource_bundle_accessor.swift" : {
+
+  },
+  "/Users/toqsoft/Desktop/Reachability.swift-master/Sources/Reachability.swift" : {
+
+  }
+}

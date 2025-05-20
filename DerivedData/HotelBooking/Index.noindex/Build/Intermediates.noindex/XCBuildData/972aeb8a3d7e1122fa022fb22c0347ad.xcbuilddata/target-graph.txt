@@ -1,0 +1,9 @@
+Target dependency graph (4 targets)
+Target 'ReachabilityTests' in project 'Reachability'
+➜ Explicit dependency on target 'Reachability' in project 'Reachability'
+Target 'Reachability' in project 'Reachability'
+➜ Explicit dependency on target 'Reachability' in project 'Reachability'
+➜ Explicit dependency on target 'Reachability_Reachability' in project 'Reachability'
+Target 'Reachability' in project 'Reachability'
+➜ Explicit dependency on target 'Reachability_Reachability' in project 'Reachability'
+Target 'Reachability_Reachability' in project 'Reachability' (no dependencies)

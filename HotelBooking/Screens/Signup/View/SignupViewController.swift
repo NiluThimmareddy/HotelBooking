@@ -9,6 +9,9 @@ import UIKit
 
 class SignupViewController: UIViewController {
 
+    let viewmodel = SignupViewModel()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,14 +19,14 @@ class SignupViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func bindViewModel(){
+        viewmodel.isLoading = { [weak self] isLoading in
+            if isLoading {
+                self?.showActivityIndicator()
+            }else{
+                self?.hideActivityIndicator()
+            }
+            
+        }
     }
-    */
-
 }

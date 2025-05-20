@@ -1,3 +1,0 @@
-Target dependency graph (2 targets)
-Target 'HotelBooking' in project 'HotelBooking' (no dependencies)
-Target 'HotelBooking' in project 'HotelBooking' (no dependencies)
