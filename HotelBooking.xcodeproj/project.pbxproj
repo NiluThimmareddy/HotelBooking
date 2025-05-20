@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B5FE94DA2DDCAC8F00EEE0B9 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = B5FE94D92DDCAC8F00EEE0B9 /* Reachability */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		B541E7C82DDB07E800B2B692 /* HotelBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B541E88F2DDB302900B2B692 /* Reachability.swift-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Reachability.swift-master"; path = "../Reachability.swift-master"; sourceTree = SOURCE_ROOT; };
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5FE94DA2DDCAC8F00EEE0B9 /* Reachability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +93,7 @@
 			);
 			name = HotelBooking;
 			packageProductDependencies = (
+				B5FE94D92DDCAC8F00EEE0B9 /* Reachability */,
 			);
 			productName = HotelBooking;
 			productReference = B541E7C82DDB07E800B2B692 /* HotelBooking.app */;
@@ -117,6 +123,9 @@
 			);
 			mainGroup = B541E7BF2DDB07E800B2B692;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B5FE94D82DDCAC8F00EEE0B9 /* XCRemoteSwiftPackageReference "Reachability" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B541E7C92DDB07E800B2B692 /* Products */;
 			projectDirPath = "";
@@ -349,6 +358,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B5FE94D82DDCAC8F00EEE0B9 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B5FE94D92DDCAC8F00EEE0B9 /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5FE94D82DDCAC8F00EEE0B9 /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B541E7C02DDB07E800B2B692 /* Project object */;
 }
