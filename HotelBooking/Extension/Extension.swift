@@ -73,16 +73,11 @@ extension UIViewController{
  )
  */
 
-
-
-
-
 extension UIViewController {
     
-    private static var spinnerTag: Int { return 999_999 } // Unique identifier
+    private static var spinnerTag: Int { return 999_999 }
     
     func showActivityIndicator() {
-        // Avoid adding multiple spinners
         if self.view.viewWithTag(Self.spinnerTag) != nil { return }
         
         let spinner = UIActivityIndicatorView(style: .large)
@@ -93,7 +88,7 @@ extension UIViewController {
         
         spinner.startAnimating()
         self.view.addSubview(spinner)
-        self.view.isUserInteractionEnabled = false // Prevent interaction
+        self.view.isUserInteractionEnabled = false
     }
 
     func hideActivityIndicator() {
@@ -103,4 +98,41 @@ extension UIViewController {
             self.view.isUserInteractionEnabled = true
         }
     }
+}
+
+extension UIView {
+    
+    @IBInspectable var borderWidth: CGFloat {
+        get { return layer.borderWidth }
+        set { layer.borderWidth = newValue }
+    }
+    
+    @IBInspectable var borderColor: UIColor {
+        get { return UIColor(cgColor: layer.borderColor ?? UIColor.clear.cgColor) }
+        set { layer.borderColor = newValue.cgColor }
+    }
+    
+    @IBInspectable var cornerRadius: CGFloat {
+        get { return layer.cornerRadius }
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue > 0
+        }
+    }
+    func applyCardStyle(cornerRadius: CGFloat = 15,
+                        shadowOffset: CGSize = CGSize(width: 0, height: 1),
+                        shadowRadius: CGFloat = 2,
+                        shadowOpacity: Float = 0.8,
+                        shadowColor: UIColor = .black) {
+
+        self.layer.cornerRadius = cornerRadius
+        self.layer.shadowOffset = shadowOffset
+        self.layer.shadowRadius = shadowRadius
+        self.layer.shadowOpacity = shadowOpacity
+        self.layer.shadowColor = shadowColor.cgColor
+        self.layer.masksToBounds = false
+        self.layer.shadowPath = nil
+    }
+
+
 }

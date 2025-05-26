@@ -14,10 +14,7 @@ class SignupViewModel{
     var isLoading: ((Bool)-> Void)?
     var showError: ((String)-> Void)?
     var didLoadUser: (()-> Void)?
-    
-    
-   
-    
+  
     func postUser(){
         let userData = User(id: 0, name: "Nilu", email: "nilu@example.com")
         let body = try? JSONEncoder().encode(userData)

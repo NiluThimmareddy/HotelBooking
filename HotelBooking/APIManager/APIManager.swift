@@ -8,8 +8,6 @@
 import Foundation
 import Reachability
 
-
-
 enum HTTPMethod: String{
     case GET, POST, PUT, DELETE
 }
