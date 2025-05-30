@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RecommendedHotelsCVC" customModule="HotelBooking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="225" height="258"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="225" height="258"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R22-9w-Ara">
+                        <rect key="frame" x="5" y="5" width="215" height="248"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_hotel" translatesAutoresizingMaskIntoConstraints="NO" id="fWd-qV-6Qd">
+                                <rect key="frame" x="0.0" y="0.0" width="215" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Tbf-qG-NIY">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                                    </constraint>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocf-6e-tp7">
+                                <rect key="frame" x="10" y="155" width="195" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                </variation>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIE-Gs-A7T" customClass="CosmosView" customModule="HotelBooking" customModuleProvider="target">
+                                <rect key="frame" x="5" y="178" width="205" height="25"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="ote-da-gBD">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                    </constraint>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                        <color key="value" red="0.98431372549999996" green="0.79607843140000001" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pjV-n5-x2n">
+                                <rect key="frame" x="5" y="208" width="205" height="35"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="86F-Q2-Wax">
+                                        <rect key="frame" x="5" y="7.3333333333333304" width="25" height="20.666666666666671"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="EPr-0p-1mQ"/>
+                                            <constraint firstAttribute="width" secondItem="86F-Q2-Wax" secondAttribute="height" id="eyt-6l-u7b"/>
+                                        </constraints>
+                                        <imageReference key="image" image="homekit" catalog="system" symbolScale="small"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyu-sF-2Tl">
+                                        <rect key="frame" x="35" y="0.0" width="170" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="86F-Q2-Wax" firstAttribute="centerY" secondItem="pjV-n5-x2n" secondAttribute="centerY" id="6aM-uR-B7D"/>
+                                    <constraint firstItem="xyu-sF-2Tl" firstAttribute="leading" secondItem="86F-Q2-Wax" secondAttribute="trailing" constant="5" id="8Xq-Gv-AvA"/>
+                                    <constraint firstItem="86F-Q2-Wax" firstAttribute="top" secondItem="pjV-n5-x2n" secondAttribute="top" constant="4.9999999999999964" id="9sq-O4-m62"/>
+                                    <constraint firstAttribute="trailing" secondItem="xyu-sF-2Tl" secondAttribute="trailing" id="NOb-ZG-yMM"/>
+                                    <constraint firstItem="86F-Q2-Wax" firstAttribute="leading" secondItem="pjV-n5-x2n" secondAttribute="leading" constant="5" id="YSV-GC-lAG"/>
+                                    <constraint firstAttribute="bottom" secondItem="xyu-sF-2Tl" secondAttribute="bottom" id="cND-g9-FyN"/>
+                                    <constraint firstItem="xyu-sF-2Tl" firstAttribute="top" secondItem="pjV-n5-x2n" secondAttribute="top" id="xqo-0H-HeD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="pjV-n5-x2n" secondAttribute="bottom" constant="5" id="ANc-UB-UOt"/>
+                            <constraint firstItem="fWd-qV-6Qd" firstAttribute="top" secondItem="R22-9w-Ara" secondAttribute="top" id="Awb-4C-7YC"/>
+                            <constraint firstItem="nIE-Gs-A7T" firstAttribute="leading" secondItem="R22-9w-Ara" secondAttribute="leading" constant="5" id="Geo-Im-qzQ"/>
+                            <constraint firstAttribute="trailing" secondItem="nIE-Gs-A7T" secondAttribute="trailing" constant="5" id="GkI-IR-kjU"/>
+                            <constraint firstItem="pjV-n5-x2n" firstAttribute="trailing" secondItem="nIE-Gs-A7T" secondAttribute="trailing" id="Mg3-pN-hPm"/>
+                            <constraint firstAttribute="trailing" secondItem="fWd-qV-6Qd" secondAttribute="trailing" id="WX0-GX-feq"/>
+                            <constraint firstAttribute="trailing" secondItem="ocf-6e-tp7" secondAttribute="trailing" constant="10" id="aU8-7p-dhu"/>
+                            <constraint firstItem="pjV-n5-x2n" firstAttribute="top" secondItem="nIE-Gs-A7T" secondAttribute="bottom" constant="5" id="ar1-p8-MUU"/>
+                            <constraint firstItem="ocf-6e-tp7" firstAttribute="leading" secondItem="R22-9w-Ara" secondAttribute="leading" constant="10" id="cFt-B6-Cf9"/>
+                            <constraint firstItem="ocf-6e-tp7" firstAttribute="top" secondItem="fWd-qV-6Qd" secondAttribute="bottom" constant="5" id="jMw-az-ZT5"/>
+                            <constraint firstItem="pjV-n5-x2n" firstAttribute="leading" secondItem="nIE-Gs-A7T" secondAttribute="leading" id="uUZ-gS-5wA"/>
+                            <constraint firstItem="nIE-Gs-A7T" firstAttribute="top" secondItem="ocf-6e-tp7" secondAttribute="bottom" constant="5" id="y6g-lf-Wze"/>
+                            <constraint firstItem="fWd-qV-6Qd" firstAttribute="leading" secondItem="R22-9w-Ara" secondAttribute="leading" id="zjM-iX-DhR"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="R22-9w-Ara" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="8Si-s3-7rc"/>
+                <constraint firstAttribute="bottom" secondItem="R22-9w-Ara" secondAttribute="bottom" constant="5" id="I1a-ft-DBz"/>
+                <constraint firstAttribute="trailing" secondItem="R22-9w-Ara" secondAttribute="trailing" constant="5" id="XDP-bo-sYC"/>
+                <constraint firstItem="R22-9w-Ara" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="yrW-Bm-Qxv"/>
+            </constraints>
+            <size key="customSize" width="225" height="258"/>
+            <connections>
+                <outlet property="addressLabel" destination="xyu-sF-2Tl" id="q1j-7O-PmQ"/>
+                <outlet property="backView" destination="R22-9w-Ara" id="hZ5-FB-1ZR"/>
+                <outlet property="hotelImageView" destination="fWd-qV-6Qd" id="KZ4-K5-BGi"/>
+                <outlet property="hotelNameLabel" destination="ocf-6e-tp7" id="Q8H-Ns-ret"/>
+                <outlet property="ratingView" destination="nIE-Gs-A7T" id="0hW-Yg-UdH"/>
+            </connections>
+            <point key="canvasLocation" x="179.38931297709922" y="61.971830985915496"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="ic_hotel" width="1872" height="1249.3333740234375"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

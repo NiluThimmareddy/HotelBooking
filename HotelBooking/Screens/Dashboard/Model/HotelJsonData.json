@@ -4304,2407 +4304,2407 @@
     }
   ],
   "HotelPolicies": [
-    {
-      "PolicyId": "4b6f9f69-f0be-4a05-b2b8-4bfbe016fae7",
-      "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 0"
-    },
-    {
-      "PolicyId": "b399e309-ffd3-460f-9b1f-cfe3f71266ea",
-      "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 0"
-    },
-    {
-      "PolicyId": "542be603-cad6-4f5f-9a72-6dbbcf2d1822",
-      "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 0"
-    },
-    {
-      "PolicyId": "6f3e9185-fb3e-4ba5-af9d-73f4a5f8ce6e",
-      "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 0"
-    },
-    {
-      "PolicyId": "d746b1ce-d647-4370-b8f1-8679d28fc4df",
-      "HotelId": "d89b276b-7436-4a95-b8c7-de51abb9d634",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 1"
-    },
-    {
-      "PolicyId": "9b04b46d-d9bf-40ff-ae30-2054a2fd6f01",
-      "HotelId": "d89b276b-7436-4a95-b8c7-de51abb9d634",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 1"
-    },
-    {
-      "PolicyId": "179f1674-6422-40e9-843a-ded1fb98c9c8",
-      "HotelId": "d89b276b-7436-4a95-b8c7-de51abb9d634",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 1"
-    },
-    {
-      "PolicyId": "78c2a0fd-462d-4a6d-b787-69e8eb7b139d",
-      "HotelId": "d89b276b-7436-4a95-b8c7-de51abb9d634",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 1"
-    },
-    {
-      "PolicyId": "6085f672-299f-4773-93b9-6c5ef83c95a1",
-      "HotelId": "62ce3529-4c55-4405-8a09-e81c15971eec",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 2"
-    },
-    {
-      "PolicyId": "f61f9530-86a5-41d4-a64b-4db83fee14bc",
-      "HotelId": "62ce3529-4c55-4405-8a09-e81c15971eec",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 2"
-    },
-    {
-      "PolicyId": "66b38306-6f6b-4616-a16f-431b3fdf3c8a",
-      "HotelId": "62ce3529-4c55-4405-8a09-e81c15971eec",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 2"
-    },
-    {
-      "PolicyId": "265c53b9-8ee4-4359-a91b-eda7cd243b59",
-      "HotelId": "62ce3529-4c55-4405-8a09-e81c15971eec",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 2"
-    },
-    {
-      "PolicyId": "23fdf4a0-d93e-412c-baff-ac5915b5c2c8",
-      "HotelId": "a1a44c17-7f8a-4640-b8e3-db217e6b0ba5",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 3"
-    },
-    {
-      "PolicyId": "ec6e2b1c-0d22-4cdd-834e-c053d0870780",
-      "HotelId": "a1a44c17-7f8a-4640-b8e3-db217e6b0ba5",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 3"
-    },
-    {
-      "PolicyId": "1ca5adeb-1058-4c91-94b6-649d378fa783",
-      "HotelId": "a1a44c17-7f8a-4640-b8e3-db217e6b0ba5",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 3"
-    },
-    {
-      "PolicyId": "d81e3130-427b-4b09-af1b-ad2e889829d9",
-      "HotelId": "a1a44c17-7f8a-4640-b8e3-db217e6b0ba5",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 3"
-    },
-    {
-      "PolicyId": "2f02a304-c818-42b1-a3dc-278b79b8c642",
-      "HotelId": "da7bef77-0bbe-4cc0-8e22-2f6c31f84b08",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 4"
-    },
-    {
-      "PolicyId": "d71b9340-245d-41d0-8489-2392eccf6c0b",
-      "HotelId": "da7bef77-0bbe-4cc0-8e22-2f6c31f84b08",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 4"
-    },
-    {
-      "PolicyId": "15234c81-d84c-4f33-9b27-ff485cd963d5",
-      "HotelId": "da7bef77-0bbe-4cc0-8e22-2f6c31f84b08",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 4"
-    },
-    {
-      "PolicyId": "7367cac1-8bfb-49a4-b4f4-a961b20bbdbe",
-      "HotelId": "da7bef77-0bbe-4cc0-8e22-2f6c31f84b08",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 4"
-    },
-    {
-      "PolicyId": "70c29026-c684-4941-b686-6a5d4524ad4c",
-      "HotelId": "4b087496-2d4a-42b2-a231-d0dc3595b2b9",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 5"
-    },
-    {
-      "PolicyId": "94586a2b-2a8f-408f-88df-4fe4b4f96144",
-      "HotelId": "4b087496-2d4a-42b2-a231-d0dc3595b2b9",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 5"
-    },
-    {
-      "PolicyId": "83c43baf-911b-48b7-a0d0-5fde71543990",
-      "HotelId": "4b087496-2d4a-42b2-a231-d0dc3595b2b9",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 5"
-    },
-    {
-      "PolicyId": "39c776dd-f5d2-411a-9353-73cf7b82d9d9",
-      "HotelId": "4b087496-2d4a-42b2-a231-d0dc3595b2b9",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 5"
-    },
-    {
-      "PolicyId": "2da70c1e-8f33-473b-bd6a-4b9b75e00ae0",
-      "HotelId": "f8f5903a-bfde-48cd-95e2-1c50260e6fd4",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 6"
-    },
-    {
-      "PolicyId": "d8d86a78-d101-484a-99a0-d5aa1a758d71",
-      "HotelId": "f8f5903a-bfde-48cd-95e2-1c50260e6fd4",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 6"
-    },
-    {
-      "PolicyId": "82c803d5-a798-451b-a66e-cc69cc53cd67",
-      "HotelId": "f8f5903a-bfde-48cd-95e2-1c50260e6fd4",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 6"
-    },
-    {
-      "PolicyId": "55300634-8f4c-4c93-9470-b5d0a1595d36",
-      "HotelId": "f8f5903a-bfde-48cd-95e2-1c50260e6fd4",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 6"
-    },
-    {
-      "PolicyId": "0e2b0dc2-dfd0-4c55-bc1b-29ac032fdf77",
-      "HotelId": "402218c4-e9aa-42f3-8aab-4cf5ff1473b5",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 7"
-    },
-    {
-      "PolicyId": "a3245008-2e0c-48bf-8413-4f0dae773a81",
-      "HotelId": "402218c4-e9aa-42f3-8aab-4cf5ff1473b5",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 7"
-    },
-    {
-      "PolicyId": "8369a086-f408-40fd-b982-5ea1fdb8a5d2",
-      "HotelId": "402218c4-e9aa-42f3-8aab-4cf5ff1473b5",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 7"
-    },
-    {
-      "PolicyId": "c07a4a91-3487-4715-8382-bf10d7410df0",
-      "HotelId": "402218c4-e9aa-42f3-8aab-4cf5ff1473b5",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 7"
-    },
-    {
-      "PolicyId": "48d0d903-9bb2-40a9-9710-2e4599e31e7c",
-      "HotelId": "982310b6-dd24-4c23-9e41-57b85e31d8e5",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 8"
-    },
-    {
-      "PolicyId": "0ecb29a3-9b3e-4004-b4fa-eb7d5bd183f8",
-      "HotelId": "982310b6-dd24-4c23-9e41-57b85e31d8e5",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 8"
-    },
-    {
-      "PolicyId": "98fcd19f-43cd-4ec6-bbcb-970d8aa23783",
-      "HotelId": "982310b6-dd24-4c23-9e41-57b85e31d8e5",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 8"
-    },
-    {
-      "PolicyId": "49d3da94-f1ec-4873-873e-9b2879baaa51",
-      "HotelId": "982310b6-dd24-4c23-9e41-57b85e31d8e5",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 8"
-    },
-    {
-      "PolicyId": "2c3965aa-e958-4972-a819-a1879b87273c",
-      "HotelId": "69718f94-16de-4a60-abff-599127e4f30a",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 9"
-    },
-    {
-      "PolicyId": "588a918d-4093-453f-8925-bd9cf4dfb08a",
-      "HotelId": "69718f94-16de-4a60-abff-599127e4f30a",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 9"
-    },
-    {
-      "PolicyId": "f406663a-1f2a-4c5f-aa27-cb5ca9ab884b",
-      "HotelId": "69718f94-16de-4a60-abff-599127e4f30a",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 9"
-    },
-    {
-      "PolicyId": "33ffe3e3-89b7-4a02-9549-772092139e34",
-      "HotelId": "69718f94-16de-4a60-abff-599127e4f30a",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 9"
-    },
-    {
-      "PolicyId": "e0298ed1-664c-4145-bb46-a55240b384cd",
-      "HotelId": "ad557b47-b465-4465-8edc-38c384441bb3",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 10"
-    },
-    {
-      "PolicyId": "9f00abae-65e2-4309-9745-e18b1ce351d5",
-      "HotelId": "ad557b47-b465-4465-8edc-38c384441bb3",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 10"
-    },
-    {
-      "PolicyId": "fde4b6ef-fc37-4e11-9739-7247f445b451",
-      "HotelId": "ad557b47-b465-4465-8edc-38c384441bb3",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 10"
-    },
-    {
-      "PolicyId": "e7dca313-bfd5-47d4-b1e9-ae04d5a3ef8d",
-      "HotelId": "ad557b47-b465-4465-8edc-38c384441bb3",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 10"
-    },
-    {
-      "PolicyId": "cac78596-76f6-4e6b-a2a6-69a9756aa264",
-      "HotelId": "44967e8d-e435-49b9-aae1-6b8518123d2e",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 11"
-    },
-    {
-      "PolicyId": "c467ea6d-94e4-4b0c-83b5-6b2fe7c4cc65",
-      "HotelId": "44967e8d-e435-49b9-aae1-6b8518123d2e",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 11"
-    },
-    {
-      "PolicyId": "c51e7b57-c709-43f4-872c-3dc3f5c9d8dc",
-      "HotelId": "44967e8d-e435-49b9-aae1-6b8518123d2e",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 11"
-    },
-    {
-      "PolicyId": "a2819c45-99da-4e81-8286-8cc6e135aeac",
-      "HotelId": "44967e8d-e435-49b9-aae1-6b8518123d2e",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 11"
-    },
-    {
-      "PolicyId": "f290ea00-75be-4de7-8a44-66f80542476a",
-      "HotelId": "311717a3-f253-485f-aa35-dc3589764c5e",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 12"
-    },
-    {
-      "PolicyId": "d82b5fe2-f3cf-4bcf-a96a-79063989bdee",
-      "HotelId": "311717a3-f253-485f-aa35-dc3589764c5e",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 12"
-    },
-    {
-      "PolicyId": "2f46c0f5-9aa4-4dec-9332-374cd9253105",
-      "HotelId": "311717a3-f253-485f-aa35-dc3589764c5e",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 12"
-    },
-    {
-      "PolicyId": "83e76aba-b7cc-4f16-8138-b9d4dc9a4df4",
-      "HotelId": "311717a3-f253-485f-aa35-dc3589764c5e",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 12"
-    },
-    {
-      "PolicyId": "562df5a0-1c99-4c28-8c77-ddee2d871369",
-      "HotelId": "ca731293-8659-4394-a5d8-cbcacb288e68",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 13"
-    },
-    {
-      "PolicyId": "5ebbad5b-02b3-4cbd-8e4f-c3177f7fe7b7",
-      "HotelId": "ca731293-8659-4394-a5d8-cbcacb288e68",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 13"
-    },
-    {
-      "PolicyId": "1b711b54-f7f5-413d-a326-6e8c66a58239",
-      "HotelId": "ca731293-8659-4394-a5d8-cbcacb288e68",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 13"
-    },
-    {
-      "PolicyId": "03e0e977-8547-4a62-b001-a6d55300e744",
-      "HotelId": "ca731293-8659-4394-a5d8-cbcacb288e68",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 13"
-    },
-    {
-      "PolicyId": "cd093f6b-d9b0-417a-88e2-d04f152d4793",
-      "HotelId": "dd29816f-c081-4d8c-a721-c0efb01715bb",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 14"
-    },
-    {
-      "PolicyId": "859e43d4-1afd-42eb-b33b-9ef58c518f94",
-      "HotelId": "dd29816f-c081-4d8c-a721-c0efb01715bb",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 14"
-    },
-    {
-      "PolicyId": "7cf90d3b-afd6-4396-9476-6ee85acdc4aa",
-      "HotelId": "dd29816f-c081-4d8c-a721-c0efb01715bb",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 14"
-    },
-    {
-      "PolicyId": "7873ba2f-0aae-4ba5-8bbc-290e4aaec81a",
-      "HotelId": "dd29816f-c081-4d8c-a721-c0efb01715bb",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 14"
-    },
-    {
-      "PolicyId": "0a9fad9a-4de5-48b2-8d5c-6ceac58c56e8",
-      "HotelId": "c1e6e095-0a95-451f-b604-3503e573b8e6",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 15"
-    },
-    {
-      "PolicyId": "f4612058-3857-4c7d-a94e-815a2dd9f046",
-      "HotelId": "c1e6e095-0a95-451f-b604-3503e573b8e6",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 15"
-    },
-    {
-      "PolicyId": "d2790d80-3e1e-49c7-8f64-0892425de484",
-      "HotelId": "c1e6e095-0a95-451f-b604-3503e573b8e6",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 15"
-    },
-    {
-      "PolicyId": "fe26c4ad-1f96-49ee-8703-d20d790c458e",
-      "HotelId": "c1e6e095-0a95-451f-b604-3503e573b8e6",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 15"
-    },
-    {
-      "PolicyId": "e9904f01-43b6-4938-a78a-a54763ffebca",
-      "HotelId": "9c884b80-d9de-4c0a-b4aa-06ebcba5ca12",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 16"
-    },
-    {
-      "PolicyId": "b3b96592-9122-40e0-b8e4-0472d84d2304",
-      "HotelId": "9c884b80-d9de-4c0a-b4aa-06ebcba5ca12",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 16"
-    },
-    {
-      "PolicyId": "73adbcf1-57cb-4ded-9a4e-5269a07c8319",
-      "HotelId": "9c884b80-d9de-4c0a-b4aa-06ebcba5ca12",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 16"
-    },
-    {
-      "PolicyId": "d5a48b99-8976-4469-8b19-e443bce0cdce",
-      "HotelId": "9c884b80-d9de-4c0a-b4aa-06ebcba5ca12",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 16"
-    },
-    {
-      "PolicyId": "8d7a9761-8fc1-4c21-8d32-506d308bc932",
-      "HotelId": "d3e09f7f-07e7-4e75-8831-17db01e13492",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 17"
-    },
-    {
-      "PolicyId": "7307fa4b-5b50-4faa-b52d-18014cba0262",
-      "HotelId": "d3e09f7f-07e7-4e75-8831-17db01e13492",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 17"
-    },
-    {
-      "PolicyId": "e6b7e89c-f983-4570-a549-bbe2cc95d92a",
-      "HotelId": "d3e09f7f-07e7-4e75-8831-17db01e13492",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 17"
-    },
-    {
-      "PolicyId": "08965103-eb83-497a-9c76-555bf36c050a",
-      "HotelId": "d3e09f7f-07e7-4e75-8831-17db01e13492",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 17"
-    },
-    {
-      "PolicyId": "aecb0b57-febc-4a9a-afb6-9438944b96e5",
-      "HotelId": "2dcb0a6c-9bb5-4aec-88d3-76d1b2a4d835",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 18"
-    },
-    {
-      "PolicyId": "8a007b20-8001-49ac-9172-8f5e876ce781",
-      "HotelId": "2dcb0a6c-9bb5-4aec-88d3-76d1b2a4d835",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 18"
-    },
-    {
-      "PolicyId": "eed63f7c-052e-42e1-8f91-b430b99c1b45",
-      "HotelId": "2dcb0a6c-9bb5-4aec-88d3-76d1b2a4d835",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 18"
-    },
-    {
-      "PolicyId": "9440d430-6c4d-4b4c-ae7b-858e43bd72cb",
-      "HotelId": "2dcb0a6c-9bb5-4aec-88d3-76d1b2a4d835",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 18"
-    },
-    {
-      "PolicyId": "825d443e-6196-40f4-b526-e542446e1a63",
-      "HotelId": "adac2819-f198-4ada-b047-30edad61e22d",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 19"
-    },
-    {
-      "PolicyId": "1d9ec006-3c1f-4f8d-8bc0-9b3efc99ddf9",
-      "HotelId": "adac2819-f198-4ada-b047-30edad61e22d",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 19"
-    },
-    {
-      "PolicyId": "47f25b57-ae2b-4c21-b444-9ce10821e02f",
-      "HotelId": "adac2819-f198-4ada-b047-30edad61e22d",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 19"
-    },
-    {
-      "PolicyId": "b6fd03df-89a9-4fa7-8326-5143cd0d2503",
-      "HotelId": "adac2819-f198-4ada-b047-30edad61e22d",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 19"
-    },
-    {
-      "PolicyId": "7edcfc87-13dc-475e-bbfe-7cc3557349f3",
-      "HotelId": "f1641c17-ac85-4a6f-9cbb-d215f7cd32a9",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 20"
-    },
-    {
-      "PolicyId": "d85da865-6aec-4e60-a00a-c95ec651bdbb",
-      "HotelId": "f1641c17-ac85-4a6f-9cbb-d215f7cd32a9",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 20"
-    },
-    {
-      "PolicyId": "fc76a27a-9e94-4738-9400-e16818e56892",
-      "HotelId": "f1641c17-ac85-4a6f-9cbb-d215f7cd32a9",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 20"
-    },
-    {
-      "PolicyId": "d10dd582-8537-46ec-8386-eed40dbaad62",
-      "HotelId": "f1641c17-ac85-4a6f-9cbb-d215f7cd32a9",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 20"
-    },
-    {
-      "PolicyId": "6770930a-2c44-4a9c-a7db-8ffc866bcf2a",
-      "HotelId": "e2c06540-9fea-4782-8fac-2d569fa26c22",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 21"
-    },
-    {
-      "PolicyId": "52a96cda-aa45-4873-93af-7005b75a173d",
-      "HotelId": "e2c06540-9fea-4782-8fac-2d569fa26c22",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 21"
-    },
-    {
-      "PolicyId": "13021068-987e-4ffe-8a56-41087bd3e3b0",
-      "HotelId": "e2c06540-9fea-4782-8fac-2d569fa26c22",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 21"
-    },
-    {
-      "PolicyId": "ea0a56fb-cba5-4a3f-b37d-62f1353473ff",
-      "HotelId": "e2c06540-9fea-4782-8fac-2d569fa26c22",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 21"
-    },
-    {
-      "PolicyId": "c10037a0-aece-464f-b823-b6646683d2e8",
-      "HotelId": "11dc69f1-a73d-40b3-8538-5f0431f1e34e",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 22"
-    },
-    {
-      "PolicyId": "7acac635-74d2-442b-b50f-05236a321237",
-      "HotelId": "11dc69f1-a73d-40b3-8538-5f0431f1e34e",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 22"
-    },
-    {
-      "PolicyId": "4de81219-b8dc-4468-8a47-9507c0b875ef",
-      "HotelId": "11dc69f1-a73d-40b3-8538-5f0431f1e34e",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 22"
-    },
-    {
-      "PolicyId": "6b5d3114-0b71-45b5-b2b3-8c7ec3291fbf",
-      "HotelId": "11dc69f1-a73d-40b3-8538-5f0431f1e34e",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 22"
-    },
-    {
-      "PolicyId": "4c63208b-8557-4581-b3ad-351d1c13d137",
-      "HotelId": "6b1c5865-4660-461f-856a-836303011e5a",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 23"
-    },
-    {
-      "PolicyId": "4adf7982-2f62-4882-9548-bfa677c7fe2f",
-      "HotelId": "6b1c5865-4660-461f-856a-836303011e5a",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 23"
-    },
-    {
-      "PolicyId": "d41d25f5-9f47-4a6e-844d-849af727e69f",
-      "HotelId": "6b1c5865-4660-461f-856a-836303011e5a",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 23"
-    },
-    {
-      "PolicyId": "d191526a-3d08-4fd4-8d9a-d14749179023",
-      "HotelId": "6b1c5865-4660-461f-856a-836303011e5a",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 23"
-    },
-    {
-      "PolicyId": "a3113d10-2bb9-4f44-a633-cf4136749cc8",
-      "HotelId": "c108ee2c-18b6-4561-8b08-88bbc12bdbbf",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 24"
-    },
-    {
-      "PolicyId": "78fce23c-4e68-417c-8ce5-1e89b9d8f420",
-      "HotelId": "c108ee2c-18b6-4561-8b08-88bbc12bdbbf",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 24"
-    },
-    {
-      "PolicyId": "3d189f86-ebd0-44ff-b743-06b643279d22",
-      "HotelId": "c108ee2c-18b6-4561-8b08-88bbc12bdbbf",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 24"
-    },
-    {
-      "PolicyId": "62433d57-95cd-4232-895a-7d005b925be7",
-      "HotelId": "c108ee2c-18b6-4561-8b08-88bbc12bdbbf",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 24"
-    },
-    {
-      "PolicyId": "91bd26dd-75cf-406a-9255-2842cdf83bc1",
-      "HotelId": "6b499a23-75ca-44c2-b521-93c22c7a4aeb",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 25"
-    },
-    {
-      "PolicyId": "3a3f29c4-fcb8-4dd3-a418-ae97a9a2be53",
-      "HotelId": "6b499a23-75ca-44c2-b521-93c22c7a4aeb",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 25"
-    },
-    {
-      "PolicyId": "0fd5ce2b-b74e-492c-a9b8-43eff15ee99c",
-      "HotelId": "6b499a23-75ca-44c2-b521-93c22c7a4aeb",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 25"
-    },
-    {
-      "PolicyId": "899939d2-0f3c-4d6a-9115-2a206f250d10",
-      "HotelId": "6b499a23-75ca-44c2-b521-93c22c7a4aeb",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 25"
-    },
-    {
-      "PolicyId": "721a13ed-8432-4eaa-bc49-74979a537653",
-      "HotelId": "70cc2df0-6826-4b1b-8499-5c99c6cb2931",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 26"
-    },
-    {
-      "PolicyId": "c8475f26-9e8a-4e79-a50a-fa301005edb2",
-      "HotelId": "70cc2df0-6826-4b1b-8499-5c99c6cb2931",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 26"
-    },
-    {
-      "PolicyId": "f2a72460-bb8b-4a3d-ae60-f6bfb2b3037d",
-      "HotelId": "70cc2df0-6826-4b1b-8499-5c99c6cb2931",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 26"
-    },
-    {
-      "PolicyId": "cc3ef3bf-249c-4da0-8958-7ea41cd878c1",
-      "HotelId": "70cc2df0-6826-4b1b-8499-5c99c6cb2931",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 26"
-    },
-    {
-      "PolicyId": "10a00219-ad78-49ae-ab3b-77c885d5138b",
-      "HotelId": "e113aad3-8cfb-41ac-b5d4-8d091869509d",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 27"
-    },
-    {
-      "PolicyId": "a29442c5-1623-4a43-b330-71803c5d8706",
-      "HotelId": "e113aad3-8cfb-41ac-b5d4-8d091869509d",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 27"
-    },
-    {
-      "PolicyId": "5e6dc9ee-1d4f-4d2b-abf2-14778dd742bc",
-      "HotelId": "e113aad3-8cfb-41ac-b5d4-8d091869509d",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 27"
-    },
-    {
-      "PolicyId": "1aabdca2-16ff-4d58-9dcd-db7c405ec9f5",
-      "HotelId": "e113aad3-8cfb-41ac-b5d4-8d091869509d",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 27"
-    },
-    {
-      "PolicyId": "ab2c355c-cf98-426f-bbec-bf13e7a9dd3f",
-      "HotelId": "1cd2a7d6-0091-4755-ba39-64d1abc572b3",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 28"
-    },
-    {
-      "PolicyId": "8bd36f6e-393e-4633-bc60-762dd7116046",
-      "HotelId": "1cd2a7d6-0091-4755-ba39-64d1abc572b3",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 28"
-    },
-    {
-      "PolicyId": "49116fa6-4801-4ce5-a2af-ea8609722b9e",
-      "HotelId": "1cd2a7d6-0091-4755-ba39-64d1abc572b3",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 28"
-    },
-    {
-      "PolicyId": "3b82a23e-41e8-49df-8667-4941d5bcee80",
-      "HotelId": "1cd2a7d6-0091-4755-ba39-64d1abc572b3",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 28"
-    },
-    {
-      "PolicyId": "5f0cd68c-5f07-4c23-b5f8-1b29f85f9c1e",
-      "HotelId": "54e9e302-ea19-4bca-a6ba-686eb0dc3f24",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 29"
-    },
-    {
-      "PolicyId": "2251c99c-eb5c-4c52-96d3-b314bbceed2f",
-      "HotelId": "54e9e302-ea19-4bca-a6ba-686eb0dc3f24",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 29"
-    },
-    {
-      "PolicyId": "33e321d1-3d2e-45a0-b5aa-eaff49167a6d",
-      "HotelId": "54e9e302-ea19-4bca-a6ba-686eb0dc3f24",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 29"
-    },
-    {
-      "PolicyId": "19cf44b8-dad6-4097-a7ce-fbea443507b3",
-      "HotelId": "54e9e302-ea19-4bca-a6ba-686eb0dc3f24",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 29"
-    },
-    {
-      "PolicyId": "03d76481-3636-4ea7-ac3e-e3c03b02deee",
-      "HotelId": "9d6d55fa-bda1-46f3-bfcf-4d8b04bfb15d",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 30"
-    },
-    {
-      "PolicyId": "f248cd05-49f1-48a1-bb21-36ef4c67c41a",
-      "HotelId": "9d6d55fa-bda1-46f3-bfcf-4d8b04bfb15d",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 30"
-    },
-    {
-      "PolicyId": "81f22569-6557-451c-a270-e181dc5f4799",
-      "HotelId": "9d6d55fa-bda1-46f3-bfcf-4d8b04bfb15d",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 30"
-    },
-    {
-      "PolicyId": "eface0f8-cb2b-4968-b984-5637c4b71265",
-      "HotelId": "9d6d55fa-bda1-46f3-bfcf-4d8b04bfb15d",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 30"
-    },
-    {
-      "PolicyId": "1d3e76bf-3e23-439a-9031-da57a4470d2c",
-      "HotelId": "000475fb-099f-4c31-b4dc-349a6527ac78",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 31"
-    },
-    {
-      "PolicyId": "05f2b8a9-d419-4266-8f59-e9438b244070",
-      "HotelId": "000475fb-099f-4c31-b4dc-349a6527ac78",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 31"
-    },
-    {
-      "PolicyId": "e8f1f973-4ed7-4e31-b5f0-53f7a92d1a6a",
-      "HotelId": "000475fb-099f-4c31-b4dc-349a6527ac78",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 31"
-    },
-    {
-      "PolicyId": "4a230bd1-6f78-4de0-a496-d25aa99cb512",
-      "HotelId": "000475fb-099f-4c31-b4dc-349a6527ac78",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 31"
-    },
-    {
-      "PolicyId": "ef77193c-75a1-4970-81e3-11a0c6970c45",
-      "HotelId": "26343a0e-43b2-4011-9276-2de1b739cb5e",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 32"
-    },
-    {
-      "PolicyId": "a89386b0-d3aa-4409-b771-e8dd26d6c73c",
-      "HotelId": "26343a0e-43b2-4011-9276-2de1b739cb5e",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 32"
-    },
-    {
-      "PolicyId": "257b02ba-8bfa-4c44-ae6f-1c0f221b4744",
-      "HotelId": "26343a0e-43b2-4011-9276-2de1b739cb5e",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 32"
-    },
-    {
-      "PolicyId": "063a9d7d-aeb4-4aa9-9867-9213d1f68919",
-      "HotelId": "26343a0e-43b2-4011-9276-2de1b739cb5e",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 32"
-    },
-    {
-      "PolicyId": "ecb627e7-3faa-4fbf-83af-24678f59a1fa",
-      "HotelId": "6f8619b5-9b71-443d-b4dd-bb2ca83a275f",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 33"
-    },
-    {
-      "PolicyId": "2727a3ff-be86-44b0-8df7-555f813c484d",
-      "HotelId": "6f8619b5-9b71-443d-b4dd-bb2ca83a275f",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 33"
-    },
-    {
-      "PolicyId": "e839921e-9136-4cce-9dd6-ff6792b7c06b",
-      "HotelId": "6f8619b5-9b71-443d-b4dd-bb2ca83a275f",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 33"
-    },
-    {
-      "PolicyId": "5453839a-5f3c-44cd-be4d-e909e88bcfbd",
-      "HotelId": "6f8619b5-9b71-443d-b4dd-bb2ca83a275f",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 33"
-    },
-    {
-      "PolicyId": "5b940bf1-5871-462c-ab17-374e211d73ea",
-      "HotelId": "f43dba0b-5938-43bb-af74-91147f4c2f9c",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 34"
-    },
-    {
-      "PolicyId": "6735994d-5f3f-4199-8c8c-9acaaed8af93",
-      "HotelId": "f43dba0b-5938-43bb-af74-91147f4c2f9c",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 34"
-    },
-    {
-      "PolicyId": "41b3f63d-ac4e-4a7d-9e8b-dcc5fe8c22cc",
-      "HotelId": "f43dba0b-5938-43bb-af74-91147f4c2f9c",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 34"
-    },
-    {
-      "PolicyId": "e581c498-5857-4475-a13c-c1c8e12b93da",
-      "HotelId": "f43dba0b-5938-43bb-af74-91147f4c2f9c",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 34"
-    },
-    {
-      "PolicyId": "76c7f41a-650a-4a3c-bd23-1ef229e332c3",
-      "HotelId": "aa0e23de-8df4-4789-9ce3-4badcb1291c5",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 35"
-    },
-    {
-      "PolicyId": "207a6c51-a05e-40e3-b340-30acfbc813c9",
-      "HotelId": "aa0e23de-8df4-4789-9ce3-4badcb1291c5",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 35"
-    },
-    {
-      "PolicyId": "16525241-98b2-4d56-b973-bccd4bf47109",
-      "HotelId": "aa0e23de-8df4-4789-9ce3-4badcb1291c5",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 35"
-    },
-    {
-      "PolicyId": "ab2a6815-3c1c-4fa2-908c-3f3441c10df1",
-      "HotelId": "aa0e23de-8df4-4789-9ce3-4badcb1291c5",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 35"
-    },
-    {
-      "PolicyId": "018a9e8d-fc6f-4b4a-ab5a-5f324091b539",
-      "HotelId": "cbbfeac5-11cc-4de3-8c1b-e8c8d2cc8645",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 36"
-    },
-    {
-      "PolicyId": "42b44287-ff4b-4929-ad6a-80e0228c413f",
-      "HotelId": "cbbfeac5-11cc-4de3-8c1b-e8c8d2cc8645",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 36"
-    },
-    {
-      "PolicyId": "db45bb5b-6b19-4fd1-bca7-269ff3addc0a",
-      "HotelId": "cbbfeac5-11cc-4de3-8c1b-e8c8d2cc8645",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 36"
-    },
-    {
-      "PolicyId": "41df3532-60be-4eda-9c6e-a74d46c8d2a2",
-      "HotelId": "cbbfeac5-11cc-4de3-8c1b-e8c8d2cc8645",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 36"
-    },
-    {
-      "PolicyId": "6ca5e66d-96f3-4446-9a23-6157114f534b",
-      "HotelId": "e382370a-f37b-4e8a-9fb7-4f6a6fdcc03d",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 37"
-    },
-    {
-      "PolicyId": "13a12d63-214f-45ba-942e-b882bf751de2",
-      "HotelId": "e382370a-f37b-4e8a-9fb7-4f6a6fdcc03d",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 37"
-    },
-    {
-      "PolicyId": "9ac2556f-fcd3-429b-9c7c-66e60bec9d43",
-      "HotelId": "e382370a-f37b-4e8a-9fb7-4f6a6fdcc03d",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 37"
-    },
-    {
-      "PolicyId": "20e32819-38ec-4d87-8438-5a496ac3c9bf",
-      "HotelId": "e382370a-f37b-4e8a-9fb7-4f6a6fdcc03d",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 37"
-    },
-    {
-      "PolicyId": "573f4c08-d50d-4475-85b3-9c59a1233c81",
-      "HotelId": "1f4a52b5-7f9a-4b48-ad75-b7bdbcc9e9ec",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 38"
-    },
-    {
-      "PolicyId": "3e280083-ad51-472b-ab1d-c7c28ee843ed",
-      "HotelId": "1f4a52b5-7f9a-4b48-ad75-b7bdbcc9e9ec",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 38"
-    },
-    {
-      "PolicyId": "df0b889b-506d-456a-a793-2587c17c061c",
-      "HotelId": "1f4a52b5-7f9a-4b48-ad75-b7bdbcc9e9ec",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 38"
-    },
-    {
-      "PolicyId": "fe5617a4-5704-416f-9174-d72098c02372",
-      "HotelId": "1f4a52b5-7f9a-4b48-ad75-b7bdbcc9e9ec",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 38"
-    },
-    {
-      "PolicyId": "fd5d1995-c8f1-4dd9-a043-73fbd9ea5c78",
-      "HotelId": "cd6b7f9c-8cc4-4407-87b4-f8944d89a198",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 39"
-    },
-    {
-      "PolicyId": "4109bdd6-fc1d-4be0-a91a-017f341b651c",
-      "HotelId": "cd6b7f9c-8cc4-4407-87b4-f8944d89a198",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 39"
-    },
-    {
-      "PolicyId": "9a6d1812-1499-4c60-844d-5ed6bb3b1085",
-      "HotelId": "cd6b7f9c-8cc4-4407-87b4-f8944d89a198",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 39"
-    },
-    {
-      "PolicyId": "a69d9d6e-b14b-4195-989a-df33451b8921",
-      "HotelId": "cd6b7f9c-8cc4-4407-87b4-f8944d89a198",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 39"
-    },
-    {
-      "PolicyId": "06231107-6fb5-4af0-af1a-562df6c265b5",
-      "HotelId": "ef8163b4-52b9-4067-a2f6-2666a6e94063",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 40"
-    },
-    {
-      "PolicyId": "17041f47-37dd-4d0a-aaaa-299e92e667f0",
-      "HotelId": "ef8163b4-52b9-4067-a2f6-2666a6e94063",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 40"
-    },
-    {
-      "PolicyId": "961b23bb-0adb-46c6-a01a-41d67f227568",
-      "HotelId": "ef8163b4-52b9-4067-a2f6-2666a6e94063",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 40"
-    },
-    {
-      "PolicyId": "15e06704-1a16-42ac-9b60-ba5da5a1c37e",
-      "HotelId": "ef8163b4-52b9-4067-a2f6-2666a6e94063",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 40"
-    },
-    {
-      "PolicyId": "b990cc8e-4641-4847-a670-947673722b7b",
-      "HotelId": "0afde1e5-fe83-4567-b11b-facec1b4f94e",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 41"
-    },
-    {
-      "PolicyId": "6f0995a2-7fe5-4d48-b10e-b5b04a816a64",
-      "HotelId": "0afde1e5-fe83-4567-b11b-facec1b4f94e",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 41"
-    },
-    {
-      "PolicyId": "b7d1cd93-0acb-4a45-8818-45a2f0e93290",
-      "HotelId": "0afde1e5-fe83-4567-b11b-facec1b4f94e",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 41"
-    },
-    {
-      "PolicyId": "bfcda9c3-1b03-441e-89ab-7133c80979a2",
-      "HotelId": "0afde1e5-fe83-4567-b11b-facec1b4f94e",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 41"
-    },
-    {
-      "PolicyId": "3794a54e-7d76-4a56-9a01-f2023d072ea3",
-      "HotelId": "d58d47ea-6758-417b-8b0b-1f2976f86208",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 42"
-    },
-    {
-      "PolicyId": "be4877e7-9669-4721-bbc2-f30bb238b424",
-      "HotelId": "d58d47ea-6758-417b-8b0b-1f2976f86208",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 42"
-    },
-    {
-      "PolicyId": "32e7c966-df35-42c0-ba3b-28fa34fe44ca",
-      "HotelId": "d58d47ea-6758-417b-8b0b-1f2976f86208",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 42"
-    },
-    {
-      "PolicyId": "d0ac568b-6524-4a7c-bca0-98af36eae9f8",
-      "HotelId": "d58d47ea-6758-417b-8b0b-1f2976f86208",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 42"
-    },
-    {
-      "PolicyId": "d3d3901e-308a-4839-b632-cdaf9d80f9b6",
-      "HotelId": "ad7e4043-41a0-4aa0-9195-41412bca2103",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 43"
-    },
-    {
-      "PolicyId": "9423617d-9809-4f8a-8007-28cac4d04b6b",
-      "HotelId": "ad7e4043-41a0-4aa0-9195-41412bca2103",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 43"
-    },
-    {
-      "PolicyId": "125e3e0e-6e07-4314-91bf-906f77685315",
-      "HotelId": "ad7e4043-41a0-4aa0-9195-41412bca2103",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 43"
-    },
-    {
-      "PolicyId": "1b1e36ed-de99-41c8-bb92-a1120a65bbea",
-      "HotelId": "ad7e4043-41a0-4aa0-9195-41412bca2103",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 43"
-    },
-    {
-      "PolicyId": "9c54bc21-ab00-4256-8840-2c0c3a67e6b8",
-      "HotelId": "4f4d9705-b370-4071-8c81-a27bceaaee17",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 44"
-    },
-    {
-      "PolicyId": "057a3831-ee56-4072-809b-7ee194415dab",
-      "HotelId": "4f4d9705-b370-4071-8c81-a27bceaaee17",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 44"
-    },
-    {
-      "PolicyId": "e2675f4a-187a-47eb-b8e2-15b6fbabd229",
-      "HotelId": "4f4d9705-b370-4071-8c81-a27bceaaee17",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 44"
-    },
-    {
-      "PolicyId": "6071164a-8b02-431b-ad0d-178afdaf8231",
-      "HotelId": "4f4d9705-b370-4071-8c81-a27bceaaee17",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 44"
-    },
-    {
-      "PolicyId": "332c498e-ea9b-4b36-a064-81ce6a3e9715",
-      "HotelId": "5755dd5d-2929-4a49-93b7-cd43a2b0060a",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 45"
-    },
-    {
-      "PolicyId": "4fd83204-8632-43a4-b9c2-a89df37da624",
-      "HotelId": "5755dd5d-2929-4a49-93b7-cd43a2b0060a",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 45"
-    },
-    {
-      "PolicyId": "df9fe46e-5e54-4390-a18b-61cd1d04a4ff",
-      "HotelId": "5755dd5d-2929-4a49-93b7-cd43a2b0060a",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 45"
-    },
-    {
-      "PolicyId": "ea8c07b9-f992-439a-9f04-6db06390675f",
-      "HotelId": "5755dd5d-2929-4a49-93b7-cd43a2b0060a",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 45"
-    },
-    {
-      "PolicyId": "d0758225-965a-4e7e-918c-901edd9a1b9c",
-      "HotelId": "2c9bf8bf-1226-4f52-bae1-78e839eaacd4",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 46"
-    },
-    {
-      "PolicyId": "77af713f-35e9-4259-aa6f-482c7590ad81",
-      "HotelId": "2c9bf8bf-1226-4f52-bae1-78e839eaacd4",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 46"
-    },
-    {
-      "PolicyId": "18b813db-cd90-4337-9492-f537211a7821",
-      "HotelId": "2c9bf8bf-1226-4f52-bae1-78e839eaacd4",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 46"
-    },
-    {
-      "PolicyId": "5caddeb7-4981-4756-8293-26626731449c",
-      "HotelId": "2c9bf8bf-1226-4f52-bae1-78e839eaacd4",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 46"
-    },
-    {
-      "PolicyId": "ba1f743a-c1d6-45c8-9138-5d61114c6d94",
-      "HotelId": "32a88b80-e341-4b3c-8100-e1682c1ebb08",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 47"
-    },
-    {
-      "PolicyId": "460b7116-477f-48dd-a38b-3a4be42e18e6",
-      "HotelId": "32a88b80-e341-4b3c-8100-e1682c1ebb08",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 47"
-    },
-    {
-      "PolicyId": "d59829e8-c93d-4799-9785-008fd5654a43",
-      "HotelId": "32a88b80-e341-4b3c-8100-e1682c1ebb08",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 47"
-    },
-    {
-      "PolicyId": "9e5c9904-d9d7-4ede-9332-6408d951bc07",
-      "HotelId": "32a88b80-e341-4b3c-8100-e1682c1ebb08",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 47"
-    },
-    {
-      "PolicyId": "df686ede-c2ff-4904-9c60-bac5c971d21f",
-      "HotelId": "aade5116-9765-42f0-bd4f-e50ee859dd39",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 48"
-    },
-    {
-      "PolicyId": "0e746923-fa83-4296-93b0-03ec86ace508",
-      "HotelId": "aade5116-9765-42f0-bd4f-e50ee859dd39",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 48"
-    },
-    {
-      "PolicyId": "bf421db1-c459-4710-8411-f60982907a50",
-      "HotelId": "aade5116-9765-42f0-bd4f-e50ee859dd39",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 48"
-    },
-    {
-      "PolicyId": "1f332cd1-2895-4f28-9141-c9d9c4288338",
-      "HotelId": "aade5116-9765-42f0-bd4f-e50ee859dd39",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 48"
-    },
-    {
-      "PolicyId": "d1af2a06-da62-4cd4-9257-ae82abfaaee9",
-      "HotelId": "a3a773df-2237-4a33-9445-763fd80bcfa9",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 49"
-    },
-    {
-      "PolicyId": "75816079-7b4d-4f77-ac93-80c5707947eb",
-      "HotelId": "a3a773df-2237-4a33-9445-763fd80bcfa9",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 49"
-    },
-    {
-      "PolicyId": "e1cd882d-ee1b-4de2-8e79-06d03e82e71f",
-      "HotelId": "a3a773df-2237-4a33-9445-763fd80bcfa9",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 49"
-    },
-    {
-      "PolicyId": "6e394988-9c0c-4e45-b65f-01cfdec9f328",
-      "HotelId": "a3a773df-2237-4a33-9445-763fd80bcfa9",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 49"
-    },
-    {
-      "PolicyId": "d74feb7b-1ff0-48ed-a69b-33e4581e9833",
-      "HotelId": "13ae1ef8-e252-4afd-923c-e0db37f37e38",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 50"
-    },
-    {
-      "PolicyId": "59cc76e2-4f6d-429b-a700-42357017fa07",
-      "HotelId": "13ae1ef8-e252-4afd-923c-e0db37f37e38",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 50"
-    },
-    {
-      "PolicyId": "115b804c-88ad-4588-9cbc-1e49a1bdd563",
-      "HotelId": "13ae1ef8-e252-4afd-923c-e0db37f37e38",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 50"
-    },
-    {
-      "PolicyId": "83d68333-004b-4cde-9b6a-280f79930445",
-      "HotelId": "13ae1ef8-e252-4afd-923c-e0db37f37e38",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 50"
-    },
-    {
-      "PolicyId": "9bedbb7f-b86b-4def-bffb-3d0e82d3b7d2",
-      "HotelId": "037451e4-52c2-4712-b463-bd63c739a744",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 51"
-    },
-    {
-      "PolicyId": "70cb2efd-5f2b-4ff8-b4c5-18830f12e6e9",
-      "HotelId": "037451e4-52c2-4712-b463-bd63c739a744",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 51"
-    },
-    {
-      "PolicyId": "7b2d79e2-f962-4758-9a70-6b7a97fc9416",
-      "HotelId": "037451e4-52c2-4712-b463-bd63c739a744",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 51"
-    },
-    {
-      "PolicyId": "4ea64e84-b847-4dc1-b126-0d5b15a108df",
-      "HotelId": "037451e4-52c2-4712-b463-bd63c739a744",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 51"
-    },
-    {
-      "PolicyId": "6cd79a35-f320-4e7a-8503-8ac106e6e2dd",
-      "HotelId": "7d9b5485-b939-44c3-9f35-37717aeb9b50",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 52"
-    },
-    {
-      "PolicyId": "2b66cd26-0ebf-4be7-93dc-5df68e1c332d",
-      "HotelId": "7d9b5485-b939-44c3-9f35-37717aeb9b50",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 52"
-    },
-    {
-      "PolicyId": "48acb2b6-75da-4a18-ae9d-6f6e63155654",
-      "HotelId": "7d9b5485-b939-44c3-9f35-37717aeb9b50",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 52"
-    },
-    {
-      "PolicyId": "eca425fc-c1ee-41e0-9608-83158584a22a",
-      "HotelId": "7d9b5485-b939-44c3-9f35-37717aeb9b50",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 52"
-    },
-    {
-      "PolicyId": "7519fb10-7382-4560-b216-923dd5c09e9c",
-      "HotelId": "f42db2f7-f93a-4b5b-b9ff-e6131999b115",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 53"
-    },
-    {
-      "PolicyId": "5cd8f0b6-0674-4212-aaa1-c973b1b15182",
-      "HotelId": "f42db2f7-f93a-4b5b-b9ff-e6131999b115",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 53"
-    },
-    {
-      "PolicyId": "495ed404-2a62-4d3b-bfc1-ad7e9bb8ef92",
-      "HotelId": "f42db2f7-f93a-4b5b-b9ff-e6131999b115",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 53"
-    },
-    {
-      "PolicyId": "d1a0acc2-16d7-4114-b926-33a06b5cb829",
-      "HotelId": "f42db2f7-f93a-4b5b-b9ff-e6131999b115",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 53"
-    },
-    {
-      "PolicyId": "e30882a7-d43f-4c56-8cca-d7957777a911",
-      "HotelId": "d1f0f37d-d8cb-4385-8f04-9aa94cbbebbf",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 54"
-    },
-    {
-      "PolicyId": "cb23899b-399e-4667-9b8b-022adc52e05b",
-      "HotelId": "d1f0f37d-d8cb-4385-8f04-9aa94cbbebbf",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 54"
-    },
-    {
-      "PolicyId": "3a679c5a-a847-4576-95e7-3adea2303fc0",
-      "HotelId": "d1f0f37d-d8cb-4385-8f04-9aa94cbbebbf",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 54"
-    },
-    {
-      "PolicyId": "cc3f1bc9-87e8-43e3-a467-661f6cec0a15",
-      "HotelId": "d1f0f37d-d8cb-4385-8f04-9aa94cbbebbf",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 54"
-    },
-    {
-      "PolicyId": "2a08964e-a71d-4bfe-849b-e57a5151f2e1",
-      "HotelId": "f9600915-2648-4461-bffb-c753fa67a3d3",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 55"
-    },
-    {
-      "PolicyId": "0df620ce-3eb2-49ad-b81b-eaba17a1b2c0",
-      "HotelId": "f9600915-2648-4461-bffb-c753fa67a3d3",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 55"
-    },
-    {
-      "PolicyId": "31ef205b-32c6-4e4c-a353-8924cde00aec",
-      "HotelId": "f9600915-2648-4461-bffb-c753fa67a3d3",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 55"
-    },
-    {
-      "PolicyId": "22553c13-1b36-4a4f-8b44-cf3952344ede",
-      "HotelId": "f9600915-2648-4461-bffb-c753fa67a3d3",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 55"
-    },
-    {
-      "PolicyId": "869cc6ee-b3ef-45ae-a77c-46f5744ce642",
-      "HotelId": "abae4d48-7082-4d6f-9f9d-4c557f3fbea7",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 56"
-    },
-    {
-      "PolicyId": "06336a2f-007e-4d99-b08a-907e3e397468",
-      "HotelId": "abae4d48-7082-4d6f-9f9d-4c557f3fbea7",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 56"
-    },
-    {
-      "PolicyId": "ecc5ea89-08f9-4ad5-b629-9a0b2d1a99d4",
-      "HotelId": "abae4d48-7082-4d6f-9f9d-4c557f3fbea7",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 56"
-    },
-    {
-      "PolicyId": "dea8f71e-0036-4e5e-bfe3-1ebb9fd0969a",
-      "HotelId": "abae4d48-7082-4d6f-9f9d-4c557f3fbea7",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 56"
-    },
-    {
-      "PolicyId": "442a9559-5ce4-4e1a-9ad3-c2fad5548e83",
-      "HotelId": "8e5f9b49-0a88-472b-9759-5181e0dffff6",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 57"
-    },
-    {
-      "PolicyId": "a4fef137-b64b-43c9-a9ef-b2c6235fab7c",
-      "HotelId": "8e5f9b49-0a88-472b-9759-5181e0dffff6",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 57"
-    },
-    {
-      "PolicyId": "b2d268e8-006a-493e-bcbd-b934eb959a33",
-      "HotelId": "8e5f9b49-0a88-472b-9759-5181e0dffff6",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 57"
-    },
-    {
-      "PolicyId": "98c91d89-b79a-48e6-a4cc-b602d588d945",
-      "HotelId": "8e5f9b49-0a88-472b-9759-5181e0dffff6",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 57"
-    },
-    {
-      "PolicyId": "e0fc65b3-3ed1-4c23-b46a-f7933e2a25d4",
-      "HotelId": "ddb9cb21-f488-40c1-9566-60062be486fd",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 58"
-    },
-    {
-      "PolicyId": "c4178d89-b866-4045-bb9a-8b2ed35c7518",
-      "HotelId": "ddb9cb21-f488-40c1-9566-60062be486fd",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 58"
-    },
-    {
-      "PolicyId": "192bd753-824c-43b3-bf5c-c42ea4d82412",
-      "HotelId": "ddb9cb21-f488-40c1-9566-60062be486fd",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 58"
-    },
-    {
-      "PolicyId": "4560bd8b-540f-486b-8c78-9026c4a1c926",
-      "HotelId": "ddb9cb21-f488-40c1-9566-60062be486fd",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 58"
-    },
-    {
-      "PolicyId": "32bc892d-a443-4758-ab28-06ae087d6c08",
-      "HotelId": "d2a1deba-1053-4794-b786-92e0aae9e166",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 59"
-    },
-    {
-      "PolicyId": "7773918c-8ae1-4266-b874-ca442a058e9e",
-      "HotelId": "d2a1deba-1053-4794-b786-92e0aae9e166",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 59"
-    },
-    {
-      "PolicyId": "538eafe6-5814-4fc1-a81c-da952cb36d18",
-      "HotelId": "d2a1deba-1053-4794-b786-92e0aae9e166",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 59"
-    },
-    {
-      "PolicyId": "60a57ece-6185-4d2e-8551-201ec24e29da",
-      "HotelId": "d2a1deba-1053-4794-b786-92e0aae9e166",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 59"
-    },
-    {
-      "PolicyId": "33d7c764-caee-4b42-a4da-90f41b2b7c43",
-      "HotelId": "a951e32c-bb5c-464c-9acf-7734d910b14c",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 60"
-    },
-    {
-      "PolicyId": "4bbc6aae-e1e3-4aaa-931d-b5aed8ada0a0",
-      "HotelId": "a951e32c-bb5c-464c-9acf-7734d910b14c",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 60"
-    },
-    {
-      "PolicyId": "75ab339e-f47c-43ae-afd2-785dbed12d66",
-      "HotelId": "a951e32c-bb5c-464c-9acf-7734d910b14c",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 60"
-    },
-    {
-      "PolicyId": "fb941dc7-a77f-4248-93d1-e1cc2d6f4305",
-      "HotelId": "a951e32c-bb5c-464c-9acf-7734d910b14c",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 60"
-    },
-    {
-      "PolicyId": "28c7b8ba-769f-4c0f-86fd-2101dd952c3e",
-      "HotelId": "6790052d-0575-4f1c-b468-e07dadcf0beb",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 61"
-    },
-    {
-      "PolicyId": "4cf612db-4f04-496a-add7-3894a8527a3b",
-      "HotelId": "6790052d-0575-4f1c-b468-e07dadcf0beb",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 61"
-    },
-    {
-      "PolicyId": "0b8e6d7f-b9c0-4631-8ba8-c656bcd52098",
-      "HotelId": "6790052d-0575-4f1c-b468-e07dadcf0beb",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 61"
-    },
-    {
-      "PolicyId": "708dab13-3dff-4783-9ea6-28da2f34af68",
-      "HotelId": "6790052d-0575-4f1c-b468-e07dadcf0beb",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 61"
-    },
-    {
-      "PolicyId": "4d7912b1-ace2-466d-81e7-b9e75b9ab5d6",
-      "HotelId": "81f40f84-ce8f-40d7-9053-9a0008a03ff3",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 62"
-    },
-    {
-      "PolicyId": "28fd77de-471e-4ce6-ab90-d58422eb4603",
-      "HotelId": "81f40f84-ce8f-40d7-9053-9a0008a03ff3",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 62"
-    },
-    {
-      "PolicyId": "af48776a-ab78-4670-afe5-afebc895f516",
-      "HotelId": "81f40f84-ce8f-40d7-9053-9a0008a03ff3",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 62"
-    },
-    {
-      "PolicyId": "fe82f44b-64fc-4aaf-a070-bbfc05702ce6",
-      "HotelId": "81f40f84-ce8f-40d7-9053-9a0008a03ff3",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 62"
-    },
-    {
-      "PolicyId": "b617046e-0757-4aa0-9656-de228973a4db",
-      "HotelId": "a5a63e07-a948-4fdf-a863-ada693762c15",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 63"
-    },
-    {
-      "PolicyId": "1b46743b-3623-4998-8cac-187fab1bffd3",
-      "HotelId": "a5a63e07-a948-4fdf-a863-ada693762c15",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 63"
-    },
-    {
-      "PolicyId": "6efdb10b-0db7-4c2c-af6f-6d668feda752",
-      "HotelId": "a5a63e07-a948-4fdf-a863-ada693762c15",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 63"
-    },
-    {
-      "PolicyId": "3209ee64-a258-4dc2-b09a-5f2e79732915",
-      "HotelId": "a5a63e07-a948-4fdf-a863-ada693762c15",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 63"
-    },
-    {
-      "PolicyId": "ebf32ef9-6a44-4916-90d9-76683bb9aac9",
-      "HotelId": "7bd9b44c-9e93-48a7-b3a3-29b478d226fa",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 64"
-    },
-    {
-      "PolicyId": "c52c91f7-36f0-439f-af81-ccf443d50bff",
-      "HotelId": "7bd9b44c-9e93-48a7-b3a3-29b478d226fa",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 64"
-    },
-    {
-      "PolicyId": "4b0b94e4-7eb5-47be-af26-dd8f57d0c796",
-      "HotelId": "7bd9b44c-9e93-48a7-b3a3-29b478d226fa",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 64"
-    },
-    {
-      "PolicyId": "e89246bc-baff-4030-9855-baa4552e6e23",
-      "HotelId": "7bd9b44c-9e93-48a7-b3a3-29b478d226fa",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 64"
-    },
-    {
-      "PolicyId": "194591a5-bdc5-44e5-9d08-e3f859013685",
-      "HotelId": "27c63078-0dfa-442a-bccc-c20396bc0d7d",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 65"
-    },
-    {
-      "PolicyId": "f1b9df98-d454-47bd-9e91-08f9479b268b",
-      "HotelId": "27c63078-0dfa-442a-bccc-c20396bc0d7d",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 65"
-    },
-    {
-      "PolicyId": "286b6bdf-f709-41f7-aed2-5b417215e370",
-      "HotelId": "27c63078-0dfa-442a-bccc-c20396bc0d7d",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 65"
-    },
-    {
-      "PolicyId": "59523593-6287-4c9f-bcbc-cfa1c18fa229",
-      "HotelId": "27c63078-0dfa-442a-bccc-c20396bc0d7d",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 65"
-    },
-    {
-      "PolicyId": "883e8224-ca3d-4a80-ae7c-3fee3ba20042",
-      "HotelId": "c75f038c-ea60-4de7-923a-6a3adcaf34cf",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 66"
-    },
-    {
-      "PolicyId": "e8ce3fc8-214d-45e7-99ec-d0d3955b1f85",
-      "HotelId": "c75f038c-ea60-4de7-923a-6a3adcaf34cf",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 66"
-    },
-    {
-      "PolicyId": "bce55575-9438-42ab-93d5-2b09421fea9d",
-      "HotelId": "c75f038c-ea60-4de7-923a-6a3adcaf34cf",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 66"
-    },
-    {
-      "PolicyId": "712d85b3-6db9-4b5c-8684-12a6394bcfe8",
-      "HotelId": "c75f038c-ea60-4de7-923a-6a3adcaf34cf",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 66"
-    },
-    {
-      "PolicyId": "bc22bd7b-c45d-4bdb-a56a-68e53af97e1a",
-      "HotelId": "a16c7459-4cea-4737-9056-134bc3e3cc7d",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 67"
-    },
-    {
-      "PolicyId": "7fc18522-69cd-40bc-88e0-728b207c2897",
-      "HotelId": "a16c7459-4cea-4737-9056-134bc3e3cc7d",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 67"
-    },
-    {
-      "PolicyId": "63ea4fef-db70-4f9c-a6fe-aecdc2173db1",
-      "HotelId": "a16c7459-4cea-4737-9056-134bc3e3cc7d",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 67"
-    },
-    {
-      "PolicyId": "2076ab21-d106-40f5-a157-586085cde4ba",
-      "HotelId": "a16c7459-4cea-4737-9056-134bc3e3cc7d",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 67"
-    },
-    {
-      "PolicyId": "4a90e3ac-4148-4e08-8f5e-5dddd916ae22",
-      "HotelId": "8a3aa524-d0a4-4492-bef9-c1e8eda85700",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 68"
-    },
-    {
-      "PolicyId": "cf18d455-cc58-4acf-86b1-3f88af9db12b",
-      "HotelId": "8a3aa524-d0a4-4492-bef9-c1e8eda85700",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 68"
-    },
-    {
-      "PolicyId": "3db51388-9b9b-4c71-9f3f-675a290a0a64",
-      "HotelId": "8a3aa524-d0a4-4492-bef9-c1e8eda85700",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 68"
-    },
-    {
-      "PolicyId": "1552a98d-bfe5-459f-a31d-f90f9c324e01",
-      "HotelId": "8a3aa524-d0a4-4492-bef9-c1e8eda85700",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 68"
-    },
-    {
-      "PolicyId": "f45f30af-160b-46e0-b525-8ee42751597c",
-      "HotelId": "821bc1d1-b484-4f21-95f1-b8320f4641c3",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 69"
-    },
-    {
-      "PolicyId": "9a0eaa2a-4a04-4716-a13a-60c1142b9d23",
-      "HotelId": "821bc1d1-b484-4f21-95f1-b8320f4641c3",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 69"
-    },
-    {
-      "PolicyId": "2ad23f37-8bfd-466a-b603-4455337a86c0",
-      "HotelId": "821bc1d1-b484-4f21-95f1-b8320f4641c3",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 69"
-    },
-    {
-      "PolicyId": "6c288524-4143-42bb-9459-20dd44521366",
-      "HotelId": "821bc1d1-b484-4f21-95f1-b8320f4641c3",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 69"
-    },
-    {
-      "PolicyId": "f46323d0-b7f8-4192-a102-3cb362642ce3",
-      "HotelId": "99919e41-14f8-4aac-b697-d1c10ddda12b",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 70"
-    },
-    {
-      "PolicyId": "719d7e4a-c55b-4901-ab37-0e8ba43aff81",
-      "HotelId": "99919e41-14f8-4aac-b697-d1c10ddda12b",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 70"
-    },
-    {
-      "PolicyId": "96673589-af75-4621-bc8a-07d523c3fb14",
-      "HotelId": "99919e41-14f8-4aac-b697-d1c10ddda12b",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 70"
-    },
-    {
-      "PolicyId": "aac00a2c-3f65-4b3e-b8df-09342df45662",
-      "HotelId": "99919e41-14f8-4aac-b697-d1c10ddda12b",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 70"
-    },
-    {
-      "PolicyId": "dec04139-95d2-4114-a814-1b855272647f",
-      "HotelId": "1709c3db-a8df-4d0c-817c-34f1f0c4b4b0",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 71"
-    },
-    {
-      "PolicyId": "54cfab27-146e-40ec-91d6-15798a8921ef",
-      "HotelId": "1709c3db-a8df-4d0c-817c-34f1f0c4b4b0",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 71"
-    },
-    {
-      "PolicyId": "05cc6ec8-7a4f-4c3c-bc19-abdcea33a0f0",
-      "HotelId": "1709c3db-a8df-4d0c-817c-34f1f0c4b4b0",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 71"
-    },
-    {
-      "PolicyId": "4a566ab5-4f0a-43d5-b47e-533006244a3b",
-      "HotelId": "1709c3db-a8df-4d0c-817c-34f1f0c4b4b0",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 71"
-    },
-    {
-      "PolicyId": "a7e3e98d-f4ed-4c02-a995-5b2d21b48d7b",
-      "HotelId": "fd8bb30b-f4ce-436c-bc1d-4ffa13bd6dc9",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 72"
-    },
-    {
-      "PolicyId": "b439b96e-eee4-4db9-90bb-4daac93a8d30",
-      "HotelId": "fd8bb30b-f4ce-436c-bc1d-4ffa13bd6dc9",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 72"
-    },
-    {
-      "PolicyId": "3f625ba6-cb86-46e8-a40b-6496c7bf661f",
-      "HotelId": "fd8bb30b-f4ce-436c-bc1d-4ffa13bd6dc9",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 72"
-    },
-    {
-      "PolicyId": "2d9ec515-718b-4cad-b048-2bcd799184c8",
-      "HotelId": "fd8bb30b-f4ce-436c-bc1d-4ffa13bd6dc9",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 72"
-    },
-    {
-      "PolicyId": "b8ed32ce-e8c7-4a70-94e4-536df9c0f889",
-      "HotelId": "41e9dc5b-c05a-407b-bd1b-eb85a99504f5",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 73"
-    },
-    {
-      "PolicyId": "30758e13-422c-458f-8a35-ada40621b8ae",
-      "HotelId": "41e9dc5b-c05a-407b-bd1b-eb85a99504f5",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 73"
-    },
-    {
-      "PolicyId": "d550a9af-0048-42c9-a9ce-e861270a3eda",
-      "HotelId": "41e9dc5b-c05a-407b-bd1b-eb85a99504f5",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 73"
-    },
-    {
-      "PolicyId": "dd249158-76ec-4fc1-add9-afe92f576c82",
-      "HotelId": "41e9dc5b-c05a-407b-bd1b-eb85a99504f5",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 73"
-    },
-    {
-      "PolicyId": "fb9bf3c2-bd37-4919-9939-1b9f55737b55",
-      "HotelId": "901c728d-61b8-4da4-b21d-11377dc2a5e4",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 74"
-    },
-    {
-      "PolicyId": "a90986f9-f80d-4fad-9d12-f278e4a251c3",
-      "HotelId": "901c728d-61b8-4da4-b21d-11377dc2a5e4",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 74"
-    },
-    {
-      "PolicyId": "1e960fe1-09ab-46af-9c17-9b4f8b9582d2",
-      "HotelId": "901c728d-61b8-4da4-b21d-11377dc2a5e4",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 74"
-    },
-    {
-      "PolicyId": "337e3571-7f82-4970-9df2-76e7faa464a6",
-      "HotelId": "901c728d-61b8-4da4-b21d-11377dc2a5e4",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 74"
-    },
-    {
-      "PolicyId": "dfdb917f-14da-4844-8655-a3b9cf93c286",
-      "HotelId": "91465efa-0f11-4209-9f1c-c66dd9f2748c",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 75"
-    },
-    {
-      "PolicyId": "7b4ae721-8a2a-4ed5-9c1f-d502e07a0871",
-      "HotelId": "91465efa-0f11-4209-9f1c-c66dd9f2748c",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 75"
-    },
-    {
-      "PolicyId": "dfad8f6b-4446-40e7-9acc-28ef8469d261",
-      "HotelId": "91465efa-0f11-4209-9f1c-c66dd9f2748c",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 75"
-    },
-    {
-      "PolicyId": "d2910c16-4b9d-4de1-989b-bf00da7c2090",
-      "HotelId": "91465efa-0f11-4209-9f1c-c66dd9f2748c",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 75"
-    },
-    {
-      "PolicyId": "635c2e4c-b12c-4269-b1bf-daad399c4993",
-      "HotelId": "22966e8a-de2e-41f6-85c1-eddcba020753",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 76"
-    },
-    {
-      "PolicyId": "cbe6a81d-4f95-4359-ba66-069a750fa44c",
-      "HotelId": "22966e8a-de2e-41f6-85c1-eddcba020753",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 76"
-    },
-    {
-      "PolicyId": "da9bafe4-aeea-4bee-bf05-abc35fd084d9",
-      "HotelId": "22966e8a-de2e-41f6-85c1-eddcba020753",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 76"
-    },
-    {
-      "PolicyId": "afea470b-c72b-4db1-9a28-315eaeb16cfe",
-      "HotelId": "22966e8a-de2e-41f6-85c1-eddcba020753",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 76"
-    },
-    {
-      "PolicyId": "b563b337-b51e-417f-8c21-44dfdd0c3cb9",
-      "HotelId": "1f6c74af-7370-4fda-bbe8-e1698b139669",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 77"
-    },
-    {
-      "PolicyId": "8b6063e7-eb6a-4895-b30d-1f19c2f333ff",
-      "HotelId": "1f6c74af-7370-4fda-bbe8-e1698b139669",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 77"
-    },
-    {
-      "PolicyId": "8f52f352-f05f-43c1-9b0c-012901e7a37a",
-      "HotelId": "1f6c74af-7370-4fda-bbe8-e1698b139669",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 77"
-    },
-    {
-      "PolicyId": "3c616e91-196b-4b52-a424-b2af2c8e1a7a",
-      "HotelId": "1f6c74af-7370-4fda-bbe8-e1698b139669",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 77"
-    },
-    {
-      "PolicyId": "0bcdc27e-6715-49d0-96c9-163e16fc9cdd",
-      "HotelId": "db26a564-5703-48f1-8fb3-f570a21d9125",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 78"
-    },
-    {
-      "PolicyId": "fbbd1f23-02fa-4373-8fe1-606d04971fe1",
-      "HotelId": "db26a564-5703-48f1-8fb3-f570a21d9125",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 78"
-    },
-    {
-      "PolicyId": "c1436d43-a272-48e0-a745-cc0aec79830c",
-      "HotelId": "db26a564-5703-48f1-8fb3-f570a21d9125",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 78"
-    },
-    {
-      "PolicyId": "568c017e-9067-4c4d-ad2f-218a8b6a04cd",
-      "HotelId": "db26a564-5703-48f1-8fb3-f570a21d9125",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 78"
-    },
-    {
-      "PolicyId": "fd1a6971-2d74-4eb4-bbdb-731ac73024f8",
-      "HotelId": "32447acb-fec0-4dc2-aa63-0d7d0cb0d214",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 79"
-    },
-    {
-      "PolicyId": "988713d4-c121-4fb4-a952-13ffb6019fb6",
-      "HotelId": "32447acb-fec0-4dc2-aa63-0d7d0cb0d214",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 79"
-    },
-    {
-      "PolicyId": "015b085b-06cd-40e0-a6bd-ed2b044af018",
-      "HotelId": "32447acb-fec0-4dc2-aa63-0d7d0cb0d214",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 79"
-    },
-    {
-      "PolicyId": "0901b722-80ea-4d95-81e0-ced49bda190e",
-      "HotelId": "32447acb-fec0-4dc2-aa63-0d7d0cb0d214",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 79"
-    },
-    {
-      "PolicyId": "496a2903-8d58-4a48-ac57-0f3a3708186f",
-      "HotelId": "d7656b7e-9763-4a8d-88df-f2c732d3b934",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 80"
-    },
-    {
-      "PolicyId": "657e9e1a-00cf-4114-a762-e2eb81a97002",
-      "HotelId": "d7656b7e-9763-4a8d-88df-f2c732d3b934",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 80"
-    },
-    {
-      "PolicyId": "b6cb590d-27c1-4762-9e0b-c1bd261884f1",
-      "HotelId": "d7656b7e-9763-4a8d-88df-f2c732d3b934",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 80"
-    },
-    {
-      "PolicyId": "2baf873d-a44b-4355-b8dd-c33ffab0a25b",
-      "HotelId": "d7656b7e-9763-4a8d-88df-f2c732d3b934",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 80"
-    },
-    {
-      "PolicyId": "6335b3b8-73d5-4a06-8d1b-553c40242dfd",
-      "HotelId": "e3af3f63-97f4-4ed1-bccd-c17d0a1f38e1",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 81"
-    },
-    {
-      "PolicyId": "529efdd2-b210-48a4-bbb0-325c3886834b",
-      "HotelId": "e3af3f63-97f4-4ed1-bccd-c17d0a1f38e1",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 81"
-    },
-    {
-      "PolicyId": "27930638-cdfa-41ef-b741-3c795f22b332",
-      "HotelId": "e3af3f63-97f4-4ed1-bccd-c17d0a1f38e1",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 81"
-    },
-    {
-      "PolicyId": "ccc76790-158a-455e-8beb-68c9e8e37c28",
-      "HotelId": "e3af3f63-97f4-4ed1-bccd-c17d0a1f38e1",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 81"
-    },
-    {
-      "PolicyId": "88d32ef0-6597-4128-9412-6e411016f9fb",
-      "HotelId": "4b85db68-0feb-4c2f-824a-bc1b1784af92",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 82"
-    },
-    {
-      "PolicyId": "dd49ab81-a714-40f5-9275-1734a72ac4ae",
-      "HotelId": "4b85db68-0feb-4c2f-824a-bc1b1784af92",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 82"
-    },
-    {
-      "PolicyId": "a1a93236-d8ef-497e-989a-73fdb3f81516",
-      "HotelId": "4b85db68-0feb-4c2f-824a-bc1b1784af92",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 82"
-    },
-    {
-      "PolicyId": "f1dbf547-4379-42f7-a334-d28c66573808",
-      "HotelId": "4b85db68-0feb-4c2f-824a-bc1b1784af92",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 82"
-    },
-    {
-      "PolicyId": "1386eb8c-92a4-4335-accb-3c18e6b6ba89",
-      "HotelId": "c3f1d083-af78-4e75-b2e7-bb617e640a59",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 83"
-    },
-    {
-      "PolicyId": "08bcc65e-e513-48a7-8a42-9e412bd02eca",
-      "HotelId": "c3f1d083-af78-4e75-b2e7-bb617e640a59",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 83"
-    },
-    {
-      "PolicyId": "c220344a-38f9-4101-8ddf-ba618e730660",
-      "HotelId": "c3f1d083-af78-4e75-b2e7-bb617e640a59",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 83"
-    },
-    {
-      "PolicyId": "019ce13c-9523-4513-bf9d-e22e3453abc5",
-      "HotelId": "c3f1d083-af78-4e75-b2e7-bb617e640a59",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 83"
-    },
-    {
-      "PolicyId": "c03aa591-1e43-4ca3-96e0-1ce6efee0045",
-      "HotelId": "58411c6d-787b-4558-9bec-6db481418718",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 84"
-    },
-    {
-      "PolicyId": "2e132efd-9e2f-4361-abc2-6d18f3734117",
-      "HotelId": "58411c6d-787b-4558-9bec-6db481418718",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 84"
-    },
-    {
-      "PolicyId": "ee8da23e-1bfd-4179-91e5-49ab3d358d67",
-      "HotelId": "58411c6d-787b-4558-9bec-6db481418718",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 84"
-    },
-    {
-      "PolicyId": "d7c02ccf-7794-479a-94c2-73891c1d7db2",
-      "HotelId": "58411c6d-787b-4558-9bec-6db481418718",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 84"
-    },
-    {
-      "PolicyId": "e1dd01af-e380-4aa1-b538-209328714c03",
-      "HotelId": "bb7595fe-0511-4008-8097-137cd77d4f11",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 85"
-    },
-    {
-      "PolicyId": "de223dc7-e3de-4395-a5c9-36e928afcdd7",
-      "HotelId": "bb7595fe-0511-4008-8097-137cd77d4f11",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 85"
-    },
-    {
-      "PolicyId": "32bf3af3-68f7-4c64-a307-9c4b668eb1ae",
-      "HotelId": "bb7595fe-0511-4008-8097-137cd77d4f11",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 85"
-    },
-    {
-      "PolicyId": "c758ee43-0c65-44d6-93df-fbfbe83a4aeb",
-      "HotelId": "bb7595fe-0511-4008-8097-137cd77d4f11",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 85"
-    },
-    {
-      "PolicyId": "ff4a2edd-46cc-4a1a-8311-815452a74a4c",
-      "HotelId": "1e04cd79-e973-4594-808a-d0b6770917cc",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 86"
-    },
-    {
-      "PolicyId": "86ce6e99-c1ca-42f0-b438-8d1db55e3fc6",
-      "HotelId": "1e04cd79-e973-4594-808a-d0b6770917cc",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 86"
-    },
-    {
-      "PolicyId": "b1daa6c0-8c5f-4fef-82e3-63d909cddc10",
-      "HotelId": "1e04cd79-e973-4594-808a-d0b6770917cc",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 86"
-    },
-    {
-      "PolicyId": "92962068-9de5-4bf8-8644-f36af3b9eb44",
-      "HotelId": "1e04cd79-e973-4594-808a-d0b6770917cc",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 86"
-    },
-    {
-      "PolicyId": "ba0231bb-8f92-47f0-b36d-200f29e06052",
-      "HotelId": "ad3346c5-e8a7-457a-a6b7-fe3953f43585",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 87"
-    },
-    {
-      "PolicyId": "07389429-5978-4802-a903-edbe38d3d7b5",
-      "HotelId": "ad3346c5-e8a7-457a-a6b7-fe3953f43585",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 87"
-    },
-    {
-      "PolicyId": "438e5fab-c1cc-45a2-864b-5a15d129f325",
-      "HotelId": "ad3346c5-e8a7-457a-a6b7-fe3953f43585",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 87"
-    },
-    {
-      "PolicyId": "2192706c-872c-485e-8291-060da47e9bd8",
-      "HotelId": "ad3346c5-e8a7-457a-a6b7-fe3953f43585",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 87"
-    },
-    {
-      "PolicyId": "78c9738b-e50b-4a51-adea-541289e3b033",
-      "HotelId": "d9f1a248-b355-4f5e-b9e2-9c4e1229ddf7",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 88"
-    },
-    {
-      "PolicyId": "9128659a-9f2f-4513-b63a-28981544a8be",
-      "HotelId": "d9f1a248-b355-4f5e-b9e2-9c4e1229ddf7",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 88"
-    },
-    {
-      "PolicyId": "d9918a01-037a-4484-8a8a-e109e13da0e2",
-      "HotelId": "d9f1a248-b355-4f5e-b9e2-9c4e1229ddf7",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 88"
-    },
-    {
-      "PolicyId": "e7eb1091-a234-4d4e-99e5-5e7760a8ad90",
-      "HotelId": "d9f1a248-b355-4f5e-b9e2-9c4e1229ddf7",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 88"
-    },
-    {
-      "PolicyId": "d11db702-d241-4569-b540-cd7a5327e8aa",
-      "HotelId": "443dedeb-7832-4c82-8071-de0dff4615e9",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 89"
-    },
-    {
-      "PolicyId": "70c5e807-39f5-4059-b258-45999620faf2",
-      "HotelId": "443dedeb-7832-4c82-8071-de0dff4615e9",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 89"
-    },
-    {
-      "PolicyId": "9f9bcbd9-8b7f-4df1-9f9f-9750c73bb28a",
-      "HotelId": "443dedeb-7832-4c82-8071-de0dff4615e9",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 89"
-    },
-    {
-      "PolicyId": "48760e0b-cd4e-4ecd-bb9e-71dc19e49532",
-      "HotelId": "443dedeb-7832-4c82-8071-de0dff4615e9",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 89"
-    },
-    {
-      "PolicyId": "2da71a0c-68f8-4b04-b2f1-9da1e0929ff7",
-      "HotelId": "7e1c01e6-92dd-4f11-b459-68e11cf993c2",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 90"
-    },
-    {
-      "PolicyId": "cfe400f6-b004-496b-99f3-6fd8be4eb8bc",
-      "HotelId": "7e1c01e6-92dd-4f11-b459-68e11cf993c2",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 90"
-    },
-    {
-      "PolicyId": "ec2c07fa-ecfa-4476-844a-f2af12a0c358",
-      "HotelId": "7e1c01e6-92dd-4f11-b459-68e11cf993c2",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 90"
-    },
-    {
-      "PolicyId": "5f43e42a-0d66-4266-8399-5e5ee549db18",
-      "HotelId": "7e1c01e6-92dd-4f11-b459-68e11cf993c2",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 90"
-    },
-    {
-      "PolicyId": "12e2fc1b-5a1b-4b1f-8918-0061a68db6d0",
-      "HotelId": "b21f0bcc-2d96-4a49-a4d4-cabfd37586cc",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 91"
-    },
-    {
-      "PolicyId": "dbea5535-9cee-4e6d-9b9f-950848685ac3",
-      "HotelId": "b21f0bcc-2d96-4a49-a4d4-cabfd37586cc",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 91"
-    },
-    {
-      "PolicyId": "7964fd72-f01d-418f-901e-99dd4a872a7d",
-      "HotelId": "b21f0bcc-2d96-4a49-a4d4-cabfd37586cc",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 91"
-    },
-    {
-      "PolicyId": "3a6ed0b7-918b-4130-a026-e1444793a944",
-      "HotelId": "b21f0bcc-2d96-4a49-a4d4-cabfd37586cc",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 91"
-    },
-    {
-      "PolicyId": "17311e10-73d7-4591-b78b-189377d640ec",
-      "HotelId": "f246183d-c4b2-4850-b32b-e55b36e8ad5a",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 92"
-    },
-    {
-      "PolicyId": "2b61e045-860f-4c39-819f-05c9307acaa5",
-      "HotelId": "f246183d-c4b2-4850-b32b-e55b36e8ad5a",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 92"
-    },
-    {
-      "PolicyId": "eb748211-e7f4-4e89-94e5-d2f6752c3fd9",
-      "HotelId": "f246183d-c4b2-4850-b32b-e55b36e8ad5a",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 92"
-    },
-    {
-      "PolicyId": "79cf4c85-d9c0-4e53-b435-32636f1163d0",
-      "HotelId": "f246183d-c4b2-4850-b32b-e55b36e8ad5a",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 92"
-    },
-    {
-      "PolicyId": "2f02b642-b26b-42c9-9561-c28ce58c46d6",
-      "HotelId": "74ec6778-4ecb-4fee-9ee8-b39a7f745352",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 93"
-    },
-    {
-      "PolicyId": "07fdcf42-56c8-45c5-87a0-c855c47f1e2e",
-      "HotelId": "74ec6778-4ecb-4fee-9ee8-b39a7f745352",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 93"
-    },
-    {
-      "PolicyId": "8be4e321-cf3b-4309-ab18-e7528790d616",
-      "HotelId": "74ec6778-4ecb-4fee-9ee8-b39a7f745352",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 93"
-    },
-    {
-      "PolicyId": "d5ed46c2-e2f6-481e-b997-664ca15985a4",
-      "HotelId": "74ec6778-4ecb-4fee-9ee8-b39a7f745352",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 93"
-    },
-    {
-      "PolicyId": "5e66a4cc-bc35-4734-8824-ecc0d804b728",
-      "HotelId": "99a8bf8c-ed86-40c2-b893-7ae28714634f",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 94"
-    },
-    {
-      "PolicyId": "9ec58f9f-09eb-4202-b93e-405ed9f1fac3",
-      "HotelId": "99a8bf8c-ed86-40c2-b893-7ae28714634f",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 94"
-    },
-    {
-      "PolicyId": "2cd8b1ec-b092-4c86-bbce-ef7def060b5b",
-      "HotelId": "99a8bf8c-ed86-40c2-b893-7ae28714634f",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 94"
-    },
-    {
-      "PolicyId": "95d2fad2-8bb0-40de-8eaa-185b13cd0cdc",
-      "HotelId": "99a8bf8c-ed86-40c2-b893-7ae28714634f",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 94"
-    },
-    {
-      "PolicyId": "a9836a1b-f855-49ce-be2f-ce5185201475",
-      "HotelId": "71dab290-8738-4001-b87f-65823a5a5af2",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 95"
-    },
-    {
-      "PolicyId": "b5887067-8b41-4db1-814b-6efba8a0d00b",
-      "HotelId": "71dab290-8738-4001-b87f-65823a5a5af2",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 95"
-    },
-    {
-      "PolicyId": "341cbed6-7e1f-4d57-94ff-802b041cbfb7",
-      "HotelId": "71dab290-8738-4001-b87f-65823a5a5af2",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 95"
-    },
-    {
-      "PolicyId": "8c803833-5ac9-42fd-885a-7726686b0e21",
-      "HotelId": "71dab290-8738-4001-b87f-65823a5a5af2",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 95"
-    },
-    {
-      "PolicyId": "46f1a9fc-a626-4b59-8621-9797769581db",
-      "HotelId": "174d145f-b04c-41c3-888e-0ffdc60573a1",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 96"
-    },
-    {
-      "PolicyId": "be3e96f8-6f6f-4432-b514-fdd2a285b469",
-      "HotelId": "174d145f-b04c-41c3-888e-0ffdc60573a1",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 96"
-    },
-    {
-      "PolicyId": "60a135e7-7f45-4f17-83c7-dfd614578fb7",
-      "HotelId": "174d145f-b04c-41c3-888e-0ffdc60573a1",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 96"
-    },
-    {
-      "PolicyId": "d6cda5a5-4bff-4cd4-b953-b73ec1b75fad",
-      "HotelId": "174d145f-b04c-41c3-888e-0ffdc60573a1",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 96"
-    },
-    {
-      "PolicyId": "0b874173-100c-432d-b626-e6bd28b86a93",
-      "HotelId": "5a2dd2d7-3cdb-44f7-be93-4d64a4e47323",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 97"
-    },
-    {
-      "PolicyId": "75614e42-6d8e-485f-bec2-bc7c5f022152",
-      "HotelId": "5a2dd2d7-3cdb-44f7-be93-4d64a4e47323",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 97"
-    },
-    {
-      "PolicyId": "e3fc677e-a503-4285-a943-e47c66fc685e",
-      "HotelId": "5a2dd2d7-3cdb-44f7-be93-4d64a4e47323",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 97"
-    },
-    {
-      "PolicyId": "98fff318-c8d8-4166-b440-54d0bbd3432f",
-      "HotelId": "5a2dd2d7-3cdb-44f7-be93-4d64a4e47323",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 97"
-    },
-    {
-      "PolicyId": "b78797ef-c510-40b9-8753-753bc8885ee1",
-      "HotelId": "373439a7-92ae-4e1a-a948-21542bc9dff5",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 98"
-    },
-    {
-      "PolicyId": "4b9ee8a4-635f-4df9-96ab-90cee6b5377a",
-      "HotelId": "373439a7-92ae-4e1a-a948-21542bc9dff5",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 98"
-    },
-    {
-      "PolicyId": "333d65dc-b036-460a-934d-157b4c78b939",
-      "HotelId": "373439a7-92ae-4e1a-a948-21542bc9dff5",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 98"
-    },
-    {
-      "PolicyId": "3fec5cbb-bd36-4b15-b463-fc4120306036",
-      "HotelId": "373439a7-92ae-4e1a-a948-21542bc9dff5",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 98"
-    },
-    {
-      "PolicyId": "2d82ebb8-e254-4d86-856f-879b2d806516",
-      "HotelId": "737d20fd-189a-404a-822d-2082020a5a74",
-      "PolicyType": "Cancellation",
-      "Description": "Sample cancellation policy for Hotel 99"
-    },
-    {
-      "PolicyId": "9b718612-36c6-4847-817a-c34025da037e",
-      "HotelId": "737d20fd-189a-404a-822d-2082020a5a74",
-      "PolicyType": "Child",
-      "Description": "Sample child policy for Hotel 99"
-    },
-    {
-      "PolicyId": "7854a4ba-9a6e-4f0e-8262-9ae84d524540",
-      "HotelId": "737d20fd-189a-404a-822d-2082020a5a74",
-      "PolicyType": "Pet",
-      "Description": "Sample pet policy for Hotel 99"
-    },
-    {
-      "PolicyId": "252e1ff4-3e57-4da7-88a6-cc788399ae69",
-      "HotelId": "737d20fd-189a-404a-822d-2082020a5a74",
-      "PolicyType": "Payment",
-      "Description": "Sample payment policy for Hotel 99"
-    }
-  ],
+      {
+        "PolicyId": "4b6f9f69-f0be-4a05-b2b8-4bfbe016fae7",
+        "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 0"
+      },
+      {
+        "PolicyId": "b399e309-ffd3-460f-9b1f-cfe3f71266ea",
+        "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 0"
+      },
+      {
+        "PolicyId": "542be603-cad6-4f5f-9a72-6dbbcf2d1822",
+        "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 0"
+      },
+      {
+        "PolicyId": "6f3e9185-fb3e-4ba5-af9d-73f4a5f8ce6e",
+        "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 0"
+      },
+      {
+        "PolicyId": "d746b1ce-d647-4370-b8f1-8679d28fc4df",
+        "HotelId": "d89b276b-7436-4a95-b8c7-de51abb9d634",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 1"
+      },
+      {
+        "PolicyId": "9b04b46d-d9bf-40ff-ae30-2054a2fd6f01",
+        "HotelId": "d89b276b-7436-4a95-b8c7-de51abb9d634",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 1"
+      },
+      {
+        "PolicyId": "179f1674-6422-40e9-843a-ded1fb98c9c8",
+        "HotelId": "d89b276b-7436-4a95-b8c7-de51abb9d634",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 1"
+      },
+      {
+        "PolicyId": "78c2a0fd-462d-4a6d-b787-69e8eb7b139d",
+        "HotelId": "d89b276b-7436-4a95-b8c7-de51abb9d634",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 1"
+      },
+      {
+        "PolicyId": "6085f672-299f-4773-93b9-6c5ef83c95a1",
+        "HotelId": "62ce3529-4c55-4405-8a09-e81c15971eec",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 2"
+      },
+      {
+        "PolicyId": "f61f9530-86a5-41d4-a64b-4db83fee14bc",
+        "HotelId": "62ce3529-4c55-4405-8a09-e81c15971eec",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 2"
+      },
+      {
+        "PolicyId": "66b38306-6f6b-4616-a16f-431b3fdf3c8a",
+        "HotelId": "62ce3529-4c55-4405-8a09-e81c15971eec",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 2"
+      },
+      {
+        "PolicyId": "265c53b9-8ee4-4359-a91b-eda7cd243b59",
+        "HotelId": "62ce3529-4c55-4405-8a09-e81c15971eec",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 2"
+      },
+      {
+        "PolicyId": "23fdf4a0-d93e-412c-baff-ac5915b5c2c8",
+        "HotelId": "a1a44c17-7f8a-4640-b8e3-db217e6b0ba5",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 3"
+      },
+      {
+        "PolicyId": "ec6e2b1c-0d22-4cdd-834e-c053d0870780",
+        "HotelId": "a1a44c17-7f8a-4640-b8e3-db217e6b0ba5",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 3"
+      },
+      {
+        "PolicyId": "1ca5adeb-1058-4c91-94b6-649d378fa783",
+        "HotelId": "a1a44c17-7f8a-4640-b8e3-db217e6b0ba5",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 3"
+      },
+      {
+        "PolicyId": "d81e3130-427b-4b09-af1b-ad2e889829d9",
+        "HotelId": "a1a44c17-7f8a-4640-b8e3-db217e6b0ba5",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 3"
+      },
+      {
+        "PolicyId": "2f02a304-c818-42b1-a3dc-278b79b8c642",
+        "HotelId": "da7bef77-0bbe-4cc0-8e22-2f6c31f84b08",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 4"
+      },
+      {
+        "PolicyId": "d71b9340-245d-41d0-8489-2392eccf6c0b",
+        "HotelId": "da7bef77-0bbe-4cc0-8e22-2f6c31f84b08",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 4"
+      },
+      {
+        "PolicyId": "15234c81-d84c-4f33-9b27-ff485cd963d5",
+        "HotelId": "da7bef77-0bbe-4cc0-8e22-2f6c31f84b08",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 4"
+      },
+      {
+        "PolicyId": "7367cac1-8bfb-49a4-b4f4-a961b20bbdbe",
+        "HotelId": "da7bef77-0bbe-4cc0-8e22-2f6c31f84b08",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 4"
+      },
+      {
+        "PolicyId": "70c29026-c684-4941-b686-6a5d4524ad4c",
+        "HotelId": "4b087496-2d4a-42b2-a231-d0dc3595b2b9",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 5"
+      },
+      {
+        "PolicyId": "94586a2b-2a8f-408f-88df-4fe4b4f96144",
+        "HotelId": "4b087496-2d4a-42b2-a231-d0dc3595b2b9",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 5"
+      },
+      {
+        "PolicyId": "83c43baf-911b-48b7-a0d0-5fde71543990",
+        "HotelId": "4b087496-2d4a-42b2-a231-d0dc3595b2b9",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 5"
+      },
+      {
+        "PolicyId": "39c776dd-f5d2-411a-9353-73cf7b82d9d9",
+        "HotelId": "4b087496-2d4a-42b2-a231-d0dc3595b2b9",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 5"
+      },
+      {
+        "PolicyId": "2da70c1e-8f33-473b-bd6a-4b9b75e00ae0",
+        "HotelId": "f8f5903a-bfde-48cd-95e2-1c50260e6fd4",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 6"
+      },
+      {
+        "PolicyId": "d8d86a78-d101-484a-99a0-d5aa1a758d71",
+        "HotelId": "f8f5903a-bfde-48cd-95e2-1c50260e6fd4",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 6"
+      },
+      {
+        "PolicyId": "82c803d5-a798-451b-a66e-cc69cc53cd67",
+        "HotelId": "f8f5903a-bfde-48cd-95e2-1c50260e6fd4",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 6"
+      },
+      {
+        "PolicyId": "55300634-8f4c-4c93-9470-b5d0a1595d36",
+        "HotelId": "f8f5903a-bfde-48cd-95e2-1c50260e6fd4",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 6"
+      },
+      {
+        "PolicyId": "0e2b0dc2-dfd0-4c55-bc1b-29ac032fdf77",
+        "HotelId": "402218c4-e9aa-42f3-8aab-4cf5ff1473b5",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 7"
+      },
+      {
+        "PolicyId": "a3245008-2e0c-48bf-8413-4f0dae773a81",
+        "HotelId": "402218c4-e9aa-42f3-8aab-4cf5ff1473b5",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 7"
+      },
+      {
+        "PolicyId": "8369a086-f408-40fd-b982-5ea1fdb8a5d2",
+        "HotelId": "402218c4-e9aa-42f3-8aab-4cf5ff1473b5",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 7"
+      },
+      {
+        "PolicyId": "c07a4a91-3487-4715-8382-bf10d7410df0",
+        "HotelId": "402218c4-e9aa-42f3-8aab-4cf5ff1473b5",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 7"
+      },
+      {
+        "PolicyId": "48d0d903-9bb2-40a9-9710-2e4599e31e7c",
+        "HotelId": "982310b6-dd24-4c23-9e41-57b85e31d8e5",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 8"
+      },
+      {
+        "PolicyId": "0ecb29a3-9b3e-4004-b4fa-eb7d5bd183f8",
+        "HotelId": "982310b6-dd24-4c23-9e41-57b85e31d8e5",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 8"
+      },
+      {
+        "PolicyId": "98fcd19f-43cd-4ec6-bbcb-970d8aa23783",
+        "HotelId": "982310b6-dd24-4c23-9e41-57b85e31d8e5",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 8"
+      },
+      {
+        "PolicyId": "49d3da94-f1ec-4873-873e-9b2879baaa51",
+        "HotelId": "982310b6-dd24-4c23-9e41-57b85e31d8e5",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 8"
+      },
+      {
+        "PolicyId": "2c3965aa-e958-4972-a819-a1879b87273c",
+        "HotelId": "69718f94-16de-4a60-abff-599127e4f30a",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 9"
+      },
+      {
+        "PolicyId": "588a918d-4093-453f-8925-bd9cf4dfb08a",
+        "HotelId": "69718f94-16de-4a60-abff-599127e4f30a",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 9"
+      },
+      {
+        "PolicyId": "f406663a-1f2a-4c5f-aa27-cb5ca9ab884b",
+        "HotelId": "69718f94-16de-4a60-abff-599127e4f30a",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 9"
+      },
+      {
+        "PolicyId": "33ffe3e3-89b7-4a02-9549-772092139e34",
+        "HotelId": "69718f94-16de-4a60-abff-599127e4f30a",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 9"
+      },
+      {
+        "PolicyId": "e0298ed1-664c-4145-bb46-a55240b384cd",
+        "HotelId": "ad557b47-b465-4465-8edc-38c384441bb3",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 10"
+      },
+      {
+        "PolicyId": "9f00abae-65e2-4309-9745-e18b1ce351d5",
+        "HotelId": "ad557b47-b465-4465-8edc-38c384441bb3",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 10"
+      },
+      {
+        "PolicyId": "fde4b6ef-fc37-4e11-9739-7247f445b451",
+        "HotelId": "ad557b47-b465-4465-8edc-38c384441bb3",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 10"
+      },
+      {
+        "PolicyId": "e7dca313-bfd5-47d4-b1e9-ae04d5a3ef8d",
+        "HotelId": "ad557b47-b465-4465-8edc-38c384441bb3",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 10"
+      },
+      {
+        "PolicyId": "cac78596-76f6-4e6b-a2a6-69a9756aa264",
+        "HotelId": "44967e8d-e435-49b9-aae1-6b8518123d2e",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 11"
+      },
+      {
+        "PolicyId": "c467ea6d-94e4-4b0c-83b5-6b2fe7c4cc65",
+        "HotelId": "44967e8d-e435-49b9-aae1-6b8518123d2e",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 11"
+      },
+      {
+        "PolicyId": "c51e7b57-c709-43f4-872c-3dc3f5c9d8dc",
+        "HotelId": "44967e8d-e435-49b9-aae1-6b8518123d2e",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 11"
+      },
+      {
+        "PolicyId": "a2819c45-99da-4e81-8286-8cc6e135aeac",
+        "HotelId": "44967e8d-e435-49b9-aae1-6b8518123d2e",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 11"
+      },
+      {
+        "PolicyId": "f290ea00-75be-4de7-8a44-66f80542476a",
+        "HotelId": "311717a3-f253-485f-aa35-dc3589764c5e",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 12"
+      },
+      {
+        "PolicyId": "d82b5fe2-f3cf-4bcf-a96a-79063989bdee",
+        "HotelId": "311717a3-f253-485f-aa35-dc3589764c5e",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 12"
+      },
+      {
+        "PolicyId": "2f46c0f5-9aa4-4dec-9332-374cd9253105",
+        "HotelId": "311717a3-f253-485f-aa35-dc3589764c5e",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 12"
+      },
+      {
+        "PolicyId": "83e76aba-b7cc-4f16-8138-b9d4dc9a4df4",
+        "HotelId": "311717a3-f253-485f-aa35-dc3589764c5e",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 12"
+      },
+      {
+        "PolicyId": "562df5a0-1c99-4c28-8c77-ddee2d871369",
+        "HotelId": "ca731293-8659-4394-a5d8-cbcacb288e68",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 13"
+      },
+      {
+        "PolicyId": "5ebbad5b-02b3-4cbd-8e4f-c3177f7fe7b7",
+        "HotelId": "ca731293-8659-4394-a5d8-cbcacb288e68",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 13"
+      },
+      {
+        "PolicyId": "1b711b54-f7f5-413d-a326-6e8c66a58239",
+        "HotelId": "ca731293-8659-4394-a5d8-cbcacb288e68",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 13"
+      },
+      {
+        "PolicyId": "03e0e977-8547-4a62-b001-a6d55300e744",
+        "HotelId": "ca731293-8659-4394-a5d8-cbcacb288e68",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 13"
+      },
+      {
+        "PolicyId": "cd093f6b-d9b0-417a-88e2-d04f152d4793",
+        "HotelId": "dd29816f-c081-4d8c-a721-c0efb01715bb",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 14"
+      },
+      {
+        "PolicyId": "859e43d4-1afd-42eb-b33b-9ef58c518f94",
+        "HotelId": "dd29816f-c081-4d8c-a721-c0efb01715bb",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 14"
+      },
+      {
+        "PolicyId": "7cf90d3b-afd6-4396-9476-6ee85acdc4aa",
+        "HotelId": "dd29816f-c081-4d8c-a721-c0efb01715bb",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 14"
+      },
+      {
+        "PolicyId": "7873ba2f-0aae-4ba5-8bbc-290e4aaec81a",
+        "HotelId": "dd29816f-c081-4d8c-a721-c0efb01715bb",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 14"
+      },
+      {
+        "PolicyId": "0a9fad9a-4de5-48b2-8d5c-6ceac58c56e8",
+        "HotelId": "c1e6e095-0a95-451f-b604-3503e573b8e6",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 15"
+      },
+      {
+        "PolicyId": "f4612058-3857-4c7d-a94e-815a2dd9f046",
+        "HotelId": "c1e6e095-0a95-451f-b604-3503e573b8e6",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 15"
+      },
+      {
+        "PolicyId": "d2790d80-3e1e-49c7-8f64-0892425de484",
+        "HotelId": "c1e6e095-0a95-451f-b604-3503e573b8e6",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 15"
+      },
+      {
+        "PolicyId": "fe26c4ad-1f96-49ee-8703-d20d790c458e",
+        "HotelId": "c1e6e095-0a95-451f-b604-3503e573b8e6",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 15"
+      },
+      {
+        "PolicyId": "e9904f01-43b6-4938-a78a-a54763ffebca",
+        "HotelId": "9c884b80-d9de-4c0a-b4aa-06ebcba5ca12",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 16"
+      },
+      {
+        "PolicyId": "b3b96592-9122-40e0-b8e4-0472d84d2304",
+        "HotelId": "9c884b80-d9de-4c0a-b4aa-06ebcba5ca12",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 16"
+      },
+      {
+        "PolicyId": "73adbcf1-57cb-4ded-9a4e-5269a07c8319",
+        "HotelId": "9c884b80-d9de-4c0a-b4aa-06ebcba5ca12",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 16"
+      },
+      {
+        "PolicyId": "d5a48b99-8976-4469-8b19-e443bce0cdce",
+        "HotelId": "9c884b80-d9de-4c0a-b4aa-06ebcba5ca12",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 16"
+      },
+      {
+        "PolicyId": "8d7a9761-8fc1-4c21-8d32-506d308bc932",
+        "HotelId": "d3e09f7f-07e7-4e75-8831-17db01e13492",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 17"
+      },
+      {
+        "PolicyId": "7307fa4b-5b50-4faa-b52d-18014cba0262",
+        "HotelId": "d3e09f7f-07e7-4e75-8831-17db01e13492",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 17"
+      },
+      {
+        "PolicyId": "e6b7e89c-f983-4570-a549-bbe2cc95d92a",
+        "HotelId": "d3e09f7f-07e7-4e75-8831-17db01e13492",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 17"
+      },
+      {
+        "PolicyId": "08965103-eb83-497a-9c76-555bf36c050a",
+        "HotelId": "d3e09f7f-07e7-4e75-8831-17db01e13492",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 17"
+      },
+      {
+        "PolicyId": "aecb0b57-febc-4a9a-afb6-9438944b96e5",
+        "HotelId": "2dcb0a6c-9bb5-4aec-88d3-76d1b2a4d835",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 18"
+      },
+      {
+        "PolicyId": "8a007b20-8001-49ac-9172-8f5e876ce781",
+        "HotelId": "2dcb0a6c-9bb5-4aec-88d3-76d1b2a4d835",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 18"
+      },
+      {
+        "PolicyId": "eed63f7c-052e-42e1-8f91-b430b99c1b45",
+        "HotelId": "2dcb0a6c-9bb5-4aec-88d3-76d1b2a4d835",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 18"
+      },
+      {
+        "PolicyId": "9440d430-6c4d-4b4c-ae7b-858e43bd72cb",
+        "HotelId": "2dcb0a6c-9bb5-4aec-88d3-76d1b2a4d835",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 18"
+      },
+      {
+        "PolicyId": "825d443e-6196-40f4-b526-e542446e1a63",
+        "HotelId": "adac2819-f198-4ada-b047-30edad61e22d",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 19"
+      },
+      {
+        "PolicyId": "1d9ec006-3c1f-4f8d-8bc0-9b3efc99ddf9",
+        "HotelId": "adac2819-f198-4ada-b047-30edad61e22d",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 19"
+      },
+      {
+        "PolicyId": "47f25b57-ae2b-4c21-b444-9ce10821e02f",
+        "HotelId": "adac2819-f198-4ada-b047-30edad61e22d",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 19"
+      },
+      {
+        "PolicyId": "b6fd03df-89a9-4fa7-8326-5143cd0d2503",
+        "HotelId": "adac2819-f198-4ada-b047-30edad61e22d",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 19"
+      },
+      {
+        "PolicyId": "7edcfc87-13dc-475e-bbfe-7cc3557349f3",
+        "HotelId": "f1641c17-ac85-4a6f-9cbb-d215f7cd32a9",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 20"
+      },
+      {
+        "PolicyId": "d85da865-6aec-4e60-a00a-c95ec651bdbb",
+        "HotelId": "f1641c17-ac85-4a6f-9cbb-d215f7cd32a9",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 20"
+      },
+      {
+        "PolicyId": "fc76a27a-9e94-4738-9400-e16818e56892",
+        "HotelId": "f1641c17-ac85-4a6f-9cbb-d215f7cd32a9",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 20"
+      },
+      {
+        "PolicyId": "d10dd582-8537-46ec-8386-eed40dbaad62",
+        "HotelId": "f1641c17-ac85-4a6f-9cbb-d215f7cd32a9",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 20"
+      },
+      {
+        "PolicyId": "6770930a-2c44-4a9c-a7db-8ffc866bcf2a",
+        "HotelId": "e2c06540-9fea-4782-8fac-2d569fa26c22",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 21"
+      },
+      {
+        "PolicyId": "52a96cda-aa45-4873-93af-7005b75a173d",
+        "HotelId": "e2c06540-9fea-4782-8fac-2d569fa26c22",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 21"
+      },
+      {
+        "PolicyId": "13021068-987e-4ffe-8a56-41087bd3e3b0",
+        "HotelId": "e2c06540-9fea-4782-8fac-2d569fa26c22",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 21"
+      },
+      {
+        "PolicyId": "ea0a56fb-cba5-4a3f-b37d-62f1353473ff",
+        "HotelId": "e2c06540-9fea-4782-8fac-2d569fa26c22",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 21"
+      },
+      {
+        "PolicyId": "c10037a0-aece-464f-b823-b6646683d2e8",
+        "HotelId": "11dc69f1-a73d-40b3-8538-5f0431f1e34e",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 22"
+      },
+      {
+        "PolicyId": "7acac635-74d2-442b-b50f-05236a321237",
+        "HotelId": "11dc69f1-a73d-40b3-8538-5f0431f1e34e",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 22"
+      },
+      {
+        "PolicyId": "4de81219-b8dc-4468-8a47-9507c0b875ef",
+        "HotelId": "11dc69f1-a73d-40b3-8538-5f0431f1e34e",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 22"
+      },
+      {
+        "PolicyId": "6b5d3114-0b71-45b5-b2b3-8c7ec3291fbf",
+        "HotelId": "11dc69f1-a73d-40b3-8538-5f0431f1e34e",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 22"
+      },
+      {
+        "PolicyId": "4c63208b-8557-4581-b3ad-351d1c13d137",
+        "HotelId": "6b1c5865-4660-461f-856a-836303011e5a",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 23"
+      },
+      {
+        "PolicyId": "4adf7982-2f62-4882-9548-bfa677c7fe2f",
+        "HotelId": "6b1c5865-4660-461f-856a-836303011e5a",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 23"
+      },
+      {
+        "PolicyId": "d41d25f5-9f47-4a6e-844d-849af727e69f",
+        "HotelId": "6b1c5865-4660-461f-856a-836303011e5a",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 23"
+      },
+      {
+        "PolicyId": "d191526a-3d08-4fd4-8d9a-d14749179023",
+        "HotelId": "6b1c5865-4660-461f-856a-836303011e5a",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 23"
+      },
+      {
+        "PolicyId": "a3113d10-2bb9-4f44-a633-cf4136749cc8",
+        "HotelId": "c108ee2c-18b6-4561-8b08-88bbc12bdbbf",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 24"
+      },
+      {
+        "PolicyId": "78fce23c-4e68-417c-8ce5-1e89b9d8f420",
+        "HotelId": "c108ee2c-18b6-4561-8b08-88bbc12bdbbf",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 24"
+      },
+      {
+        "PolicyId": "3d189f86-ebd0-44ff-b743-06b643279d22",
+        "HotelId": "c108ee2c-18b6-4561-8b08-88bbc12bdbbf",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 24"
+      },
+      {
+        "PolicyId": "62433d57-95cd-4232-895a-7d005b925be7",
+        "HotelId": "c108ee2c-18b6-4561-8b08-88bbc12bdbbf",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 24"
+      },
+      {
+        "PolicyId": "91bd26dd-75cf-406a-9255-2842cdf83bc1",
+        "HotelId": "6b499a23-75ca-44c2-b521-93c22c7a4aeb",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 25"
+      },
+      {
+        "PolicyId": "3a3f29c4-fcb8-4dd3-a418-ae97a9a2be53",
+        "HotelId": "6b499a23-75ca-44c2-b521-93c22c7a4aeb",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 25"
+      },
+      {
+        "PolicyId": "0fd5ce2b-b74e-492c-a9b8-43eff15ee99c",
+        "HotelId": "6b499a23-75ca-44c2-b521-93c22c7a4aeb",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 25"
+      },
+      {
+        "PolicyId": "899939d2-0f3c-4d6a-9115-2a206f250d10",
+        "HotelId": "6b499a23-75ca-44c2-b521-93c22c7a4aeb",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 25"
+      },
+      {
+        "PolicyId": "721a13ed-8432-4eaa-bc49-74979a537653",
+        "HotelId": "70cc2df0-6826-4b1b-8499-5c99c6cb2931",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 26"
+      },
+      {
+        "PolicyId": "c8475f26-9e8a-4e79-a50a-fa301005edb2",
+        "HotelId": "70cc2df0-6826-4b1b-8499-5c99c6cb2931",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 26"
+      },
+      {
+        "PolicyId": "f2a72460-bb8b-4a3d-ae60-f6bfb2b3037d",
+        "HotelId": "70cc2df0-6826-4b1b-8499-5c99c6cb2931",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 26"
+      },
+      {
+        "PolicyId": "cc3ef3bf-249c-4da0-8958-7ea41cd878c1",
+        "HotelId": "70cc2df0-6826-4b1b-8499-5c99c6cb2931",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 26"
+      },
+      {
+        "PolicyId": "10a00219-ad78-49ae-ab3b-77c885d5138b",
+        "HotelId": "e113aad3-8cfb-41ac-b5d4-8d091869509d",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 27"
+      },
+      {
+        "PolicyId": "a29442c5-1623-4a43-b330-71803c5d8706",
+        "HotelId": "e113aad3-8cfb-41ac-b5d4-8d091869509d",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 27"
+      },
+      {
+        "PolicyId": "5e6dc9ee-1d4f-4d2b-abf2-14778dd742bc",
+        "HotelId": "e113aad3-8cfb-41ac-b5d4-8d091869509d",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 27"
+      },
+      {
+        "PolicyId": "1aabdca2-16ff-4d58-9dcd-db7c405ec9f5",
+        "HotelId": "e113aad3-8cfb-41ac-b5d4-8d091869509d",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 27"
+      },
+      {
+        "PolicyId": "ab2c355c-cf98-426f-bbec-bf13e7a9dd3f",
+        "HotelId": "1cd2a7d6-0091-4755-ba39-64d1abc572b3",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 28"
+      },
+      {
+        "PolicyId": "8bd36f6e-393e-4633-bc60-762dd7116046",
+        "HotelId": "1cd2a7d6-0091-4755-ba39-64d1abc572b3",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 28"
+      },
+      {
+        "PolicyId": "49116fa6-4801-4ce5-a2af-ea8609722b9e",
+        "HotelId": "1cd2a7d6-0091-4755-ba39-64d1abc572b3",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 28"
+      },
+      {
+        "PolicyId": "3b82a23e-41e8-49df-8667-4941d5bcee80",
+        "HotelId": "1cd2a7d6-0091-4755-ba39-64d1abc572b3",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 28"
+      },
+      {
+        "PolicyId": "5f0cd68c-5f07-4c23-b5f8-1b29f85f9c1e",
+        "HotelId": "54e9e302-ea19-4bca-a6ba-686eb0dc3f24",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 29"
+      },
+      {
+        "PolicyId": "2251c99c-eb5c-4c52-96d3-b314bbceed2f",
+        "HotelId": "54e9e302-ea19-4bca-a6ba-686eb0dc3f24",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 29"
+      },
+      {
+        "PolicyId": "33e321d1-3d2e-45a0-b5aa-eaff49167a6d",
+        "HotelId": "54e9e302-ea19-4bca-a6ba-686eb0dc3f24",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 29"
+      },
+      {
+        "PolicyId": "19cf44b8-dad6-4097-a7ce-fbea443507b3",
+        "HotelId": "54e9e302-ea19-4bca-a6ba-686eb0dc3f24",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 29"
+      },
+      {
+        "PolicyId": "03d76481-3636-4ea7-ac3e-e3c03b02deee",
+        "HotelId": "9d6d55fa-bda1-46f3-bfcf-4d8b04bfb15d",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 30"
+      },
+      {
+        "PolicyId": "f248cd05-49f1-48a1-bb21-36ef4c67c41a",
+        "HotelId": "9d6d55fa-bda1-46f3-bfcf-4d8b04bfb15d",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 30"
+      },
+      {
+        "PolicyId": "81f22569-6557-451c-a270-e181dc5f4799",
+        "HotelId": "9d6d55fa-bda1-46f3-bfcf-4d8b04bfb15d",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 30"
+      },
+      {
+        "PolicyId": "eface0f8-cb2b-4968-b984-5637c4b71265",
+        "HotelId": "9d6d55fa-bda1-46f3-bfcf-4d8b04bfb15d",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 30"
+      },
+      {
+        "PolicyId": "1d3e76bf-3e23-439a-9031-da57a4470d2c",
+        "HotelId": "000475fb-099f-4c31-b4dc-349a6527ac78",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 31"
+      },
+      {
+        "PolicyId": "05f2b8a9-d419-4266-8f59-e9438b244070",
+        "HotelId": "000475fb-099f-4c31-b4dc-349a6527ac78",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 31"
+      },
+      {
+        "PolicyId": "e8f1f973-4ed7-4e31-b5f0-53f7a92d1a6a",
+        "HotelId": "000475fb-099f-4c31-b4dc-349a6527ac78",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 31"
+      },
+      {
+        "PolicyId": "4a230bd1-6f78-4de0-a496-d25aa99cb512",
+        "HotelId": "000475fb-099f-4c31-b4dc-349a6527ac78",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 31"
+      },
+      {
+        "PolicyId": "ef77193c-75a1-4970-81e3-11a0c6970c45",
+        "HotelId": "26343a0e-43b2-4011-9276-2de1b739cb5e",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 32"
+      },
+      {
+        "PolicyId": "a89386b0-d3aa-4409-b771-e8dd26d6c73c",
+        "HotelId": "26343a0e-43b2-4011-9276-2de1b739cb5e",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 32"
+      },
+      {
+        "PolicyId": "257b02ba-8bfa-4c44-ae6f-1c0f221b4744",
+        "HotelId": "26343a0e-43b2-4011-9276-2de1b739cb5e",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 32"
+      },
+      {
+        "PolicyId": "063a9d7d-aeb4-4aa9-9867-9213d1f68919",
+        "HotelId": "26343a0e-43b2-4011-9276-2de1b739cb5e",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 32"
+      },
+      {
+        "PolicyId": "ecb627e7-3faa-4fbf-83af-24678f59a1fa",
+        "HotelId": "6f8619b5-9b71-443d-b4dd-bb2ca83a275f",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 33"
+      },
+      {
+        "PolicyId": "2727a3ff-be86-44b0-8df7-555f813c484d",
+        "HotelId": "6f8619b5-9b71-443d-b4dd-bb2ca83a275f",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 33"
+      },
+      {
+        "PolicyId": "e839921e-9136-4cce-9dd6-ff6792b7c06b",
+        "HotelId": "6f8619b5-9b71-443d-b4dd-bb2ca83a275f",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 33"
+      },
+      {
+        "PolicyId": "5453839a-5f3c-44cd-be4d-e909e88bcfbd",
+        "HotelId": "6f8619b5-9b71-443d-b4dd-bb2ca83a275f",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 33"
+      },
+      {
+        "PolicyId": "5b940bf1-5871-462c-ab17-374e211d73ea",
+        "HotelId": "f43dba0b-5938-43bb-af74-91147f4c2f9c",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 34"
+      },
+      {
+        "PolicyId": "6735994d-5f3f-4199-8c8c-9acaaed8af93",
+        "HotelId": "f43dba0b-5938-43bb-af74-91147f4c2f9c",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 34"
+      },
+      {
+        "PolicyId": "41b3f63d-ac4e-4a7d-9e8b-dcc5fe8c22cc",
+        "HotelId": "f43dba0b-5938-43bb-af74-91147f4c2f9c",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 34"
+      },
+      {
+        "PolicyId": "e581c498-5857-4475-a13c-c1c8e12b93da",
+        "HotelId": "f43dba0b-5938-43bb-af74-91147f4c2f9c",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 34"
+      },
+      {
+        "PolicyId": "76c7f41a-650a-4a3c-bd23-1ef229e332c3",
+        "HotelId": "aa0e23de-8df4-4789-9ce3-4badcb1291c5",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 35"
+      },
+      {
+        "PolicyId": "207a6c51-a05e-40e3-b340-30acfbc813c9",
+        "HotelId": "aa0e23de-8df4-4789-9ce3-4badcb1291c5",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 35"
+      },
+      {
+        "PolicyId": "16525241-98b2-4d56-b973-bccd4bf47109",
+        "HotelId": "aa0e23de-8df4-4789-9ce3-4badcb1291c5",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 35"
+      },
+      {
+        "PolicyId": "ab2a6815-3c1c-4fa2-908c-3f3441c10df1",
+        "HotelId": "aa0e23de-8df4-4789-9ce3-4badcb1291c5",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 35"
+      },
+      {
+        "PolicyId": "018a9e8d-fc6f-4b4a-ab5a-5f324091b539",
+        "HotelId": "cbbfeac5-11cc-4de3-8c1b-e8c8d2cc8645",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 36"
+      },
+      {
+        "PolicyId": "42b44287-ff4b-4929-ad6a-80e0228c413f",
+        "HotelId": "cbbfeac5-11cc-4de3-8c1b-e8c8d2cc8645",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 36"
+      },
+      {
+        "PolicyId": "db45bb5b-6b19-4fd1-bca7-269ff3addc0a",
+        "HotelId": "cbbfeac5-11cc-4de3-8c1b-e8c8d2cc8645",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 36"
+      },
+      {
+        "PolicyId": "41df3532-60be-4eda-9c6e-a74d46c8d2a2",
+        "HotelId": "cbbfeac5-11cc-4de3-8c1b-e8c8d2cc8645",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 36"
+      },
+      {
+        "PolicyId": "6ca5e66d-96f3-4446-9a23-6157114f534b",
+        "HotelId": "e382370a-f37b-4e8a-9fb7-4f6a6fdcc03d",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 37"
+      },
+      {
+        "PolicyId": "13a12d63-214f-45ba-942e-b882bf751de2",
+        "HotelId": "e382370a-f37b-4e8a-9fb7-4f6a6fdcc03d",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 37"
+      },
+      {
+        "PolicyId": "9ac2556f-fcd3-429b-9c7c-66e60bec9d43",
+        "HotelId": "e382370a-f37b-4e8a-9fb7-4f6a6fdcc03d",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 37"
+      },
+      {
+        "PolicyId": "20e32819-38ec-4d87-8438-5a496ac3c9bf",
+        "HotelId": "e382370a-f37b-4e8a-9fb7-4f6a6fdcc03d",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 37"
+      },
+      {
+        "PolicyId": "573f4c08-d50d-4475-85b3-9c59a1233c81",
+        "HotelId": "1f4a52b5-7f9a-4b48-ad75-b7bdbcc9e9ec",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 38"
+      },
+      {
+        "PolicyId": "3e280083-ad51-472b-ab1d-c7c28ee843ed",
+        "HotelId": "1f4a52b5-7f9a-4b48-ad75-b7bdbcc9e9ec",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 38"
+      },
+      {
+        "PolicyId": "df0b889b-506d-456a-a793-2587c17c061c",
+        "HotelId": "1f4a52b5-7f9a-4b48-ad75-b7bdbcc9e9ec",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 38"
+      },
+      {
+        "PolicyId": "fe5617a4-5704-416f-9174-d72098c02372",
+        "HotelId": "1f4a52b5-7f9a-4b48-ad75-b7bdbcc9e9ec",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 38"
+      },
+      {
+        "PolicyId": "fd5d1995-c8f1-4dd9-a043-73fbd9ea5c78",
+        "HotelId": "cd6b7f9c-8cc4-4407-87b4-f8944d89a198",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 39"
+      },
+      {
+        "PolicyId": "4109bdd6-fc1d-4be0-a91a-017f341b651c",
+        "HotelId": "cd6b7f9c-8cc4-4407-87b4-f8944d89a198",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 39"
+      },
+      {
+        "PolicyId": "9a6d1812-1499-4c60-844d-5ed6bb3b1085",
+        "HotelId": "cd6b7f9c-8cc4-4407-87b4-f8944d89a198",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 39"
+      },
+      {
+        "PolicyId": "a69d9d6e-b14b-4195-989a-df33451b8921",
+        "HotelId": "cd6b7f9c-8cc4-4407-87b4-f8944d89a198",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 39"
+      },
+      {
+        "PolicyId": "06231107-6fb5-4af0-af1a-562df6c265b5",
+        "HotelId": "ef8163b4-52b9-4067-a2f6-2666a6e94063",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 40"
+      },
+      {
+        "PolicyId": "17041f47-37dd-4d0a-aaaa-299e92e667f0",
+        "HotelId": "ef8163b4-52b9-4067-a2f6-2666a6e94063",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 40"
+      },
+      {
+        "PolicyId": "961b23bb-0adb-46c6-a01a-41d67f227568",
+        "HotelId": "ef8163b4-52b9-4067-a2f6-2666a6e94063",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 40"
+      },
+      {
+        "PolicyId": "15e06704-1a16-42ac-9b60-ba5da5a1c37e",
+        "HotelId": "ef8163b4-52b9-4067-a2f6-2666a6e94063",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 40"
+      },
+      {
+        "PolicyId": "b990cc8e-4641-4847-a670-947673722b7b",
+        "HotelId": "0afde1e5-fe83-4567-b11b-facec1b4f94e",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 41"
+      },
+      {
+        "PolicyId": "6f0995a2-7fe5-4d48-b10e-b5b04a816a64",
+        "HotelId": "0afde1e5-fe83-4567-b11b-facec1b4f94e",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 41"
+      },
+      {
+        "PolicyId": "b7d1cd93-0acb-4a45-8818-45a2f0e93290",
+        "HotelId": "0afde1e5-fe83-4567-b11b-facec1b4f94e",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 41"
+      },
+      {
+        "PolicyId": "bfcda9c3-1b03-441e-89ab-7133c80979a2",
+        "HotelId": "0afde1e5-fe83-4567-b11b-facec1b4f94e",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 41"
+      },
+      {
+        "PolicyId": "3794a54e-7d76-4a56-9a01-f2023d072ea3",
+        "HotelId": "d58d47ea-6758-417b-8b0b-1f2976f86208",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 42"
+      },
+      {
+        "PolicyId": "be4877e7-9669-4721-bbc2-f30bb238b424",
+        "HotelId": "d58d47ea-6758-417b-8b0b-1f2976f86208",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 42"
+      },
+      {
+        "PolicyId": "32e7c966-df35-42c0-ba3b-28fa34fe44ca",
+        "HotelId": "d58d47ea-6758-417b-8b0b-1f2976f86208",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 42"
+      },
+      {
+        "PolicyId": "d0ac568b-6524-4a7c-bca0-98af36eae9f8",
+        "HotelId": "d58d47ea-6758-417b-8b0b-1f2976f86208",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 42"
+      },
+      {
+        "PolicyId": "d3d3901e-308a-4839-b632-cdaf9d80f9b6",
+        "HotelId": "ad7e4043-41a0-4aa0-9195-41412bca2103",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 43"
+      },
+      {
+        "PolicyId": "9423617d-9809-4f8a-8007-28cac4d04b6b",
+        "HotelId": "ad7e4043-41a0-4aa0-9195-41412bca2103",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 43"
+      },
+      {
+        "PolicyId": "125e3e0e-6e07-4314-91bf-906f77685315",
+        "HotelId": "ad7e4043-41a0-4aa0-9195-41412bca2103",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 43"
+      },
+      {
+        "PolicyId": "1b1e36ed-de99-41c8-bb92-a1120a65bbea",
+        "HotelId": "ad7e4043-41a0-4aa0-9195-41412bca2103",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 43"
+      },
+      {
+        "PolicyId": "9c54bc21-ab00-4256-8840-2c0c3a67e6b8",
+        "HotelId": "4f4d9705-b370-4071-8c81-a27bceaaee17",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 44"
+      },
+      {
+        "PolicyId": "057a3831-ee56-4072-809b-7ee194415dab",
+        "HotelId": "4f4d9705-b370-4071-8c81-a27bceaaee17",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 44"
+      },
+      {
+        "PolicyId": "e2675f4a-187a-47eb-b8e2-15b6fbabd229",
+        "HotelId": "4f4d9705-b370-4071-8c81-a27bceaaee17",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 44"
+      },
+      {
+        "PolicyId": "6071164a-8b02-431b-ad0d-178afdaf8231",
+        "HotelId": "4f4d9705-b370-4071-8c81-a27bceaaee17",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 44"
+      },
+      {
+        "PolicyId": "332c498e-ea9b-4b36-a064-81ce6a3e9715",
+        "HotelId": "5755dd5d-2929-4a49-93b7-cd43a2b0060a",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 45"
+      },
+      {
+        "PolicyId": "4fd83204-8632-43a4-b9c2-a89df37da624",
+        "HotelId": "5755dd5d-2929-4a49-93b7-cd43a2b0060a",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 45"
+      },
+      {
+        "PolicyId": "df9fe46e-5e54-4390-a18b-61cd1d04a4ff",
+        "HotelId": "5755dd5d-2929-4a49-93b7-cd43a2b0060a",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 45"
+      },
+      {
+        "PolicyId": "ea8c07b9-f992-439a-9f04-6db06390675f",
+        "HotelId": "5755dd5d-2929-4a49-93b7-cd43a2b0060a",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 45"
+      },
+      {
+        "PolicyId": "d0758225-965a-4e7e-918c-901edd9a1b9c",
+        "HotelId": "2c9bf8bf-1226-4f52-bae1-78e839eaacd4",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 46"
+      },
+      {
+        "PolicyId": "77af713f-35e9-4259-aa6f-482c7590ad81",
+        "HotelId": "2c9bf8bf-1226-4f52-bae1-78e839eaacd4",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 46"
+      },
+      {
+        "PolicyId": "18b813db-cd90-4337-9492-f537211a7821",
+        "HotelId": "2c9bf8bf-1226-4f52-bae1-78e839eaacd4",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 46"
+      },
+      {
+        "PolicyId": "5caddeb7-4981-4756-8293-26626731449c",
+        "HotelId": "2c9bf8bf-1226-4f52-bae1-78e839eaacd4",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 46"
+      },
+      {
+        "PolicyId": "ba1f743a-c1d6-45c8-9138-5d61114c6d94",
+        "HotelId": "32a88b80-e341-4b3c-8100-e1682c1ebb08",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 47"
+      },
+      {
+        "PolicyId": "460b7116-477f-48dd-a38b-3a4be42e18e6",
+        "HotelId": "32a88b80-e341-4b3c-8100-e1682c1ebb08",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 47"
+      },
+      {
+        "PolicyId": "d59829e8-c93d-4799-9785-008fd5654a43",
+        "HotelId": "32a88b80-e341-4b3c-8100-e1682c1ebb08",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 47"
+      },
+      {
+        "PolicyId": "9e5c9904-d9d7-4ede-9332-6408d951bc07",
+        "HotelId": "32a88b80-e341-4b3c-8100-e1682c1ebb08",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 47"
+      },
+      {
+        "PolicyId": "df686ede-c2ff-4904-9c60-bac5c971d21f",
+        "HotelId": "aade5116-9765-42f0-bd4f-e50ee859dd39",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 48"
+      },
+      {
+        "PolicyId": "0e746923-fa83-4296-93b0-03ec86ace508",
+        "HotelId": "aade5116-9765-42f0-bd4f-e50ee859dd39",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 48"
+      },
+      {
+        "PolicyId": "bf421db1-c459-4710-8411-f60982907a50",
+        "HotelId": "aade5116-9765-42f0-bd4f-e50ee859dd39",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 48"
+      },
+      {
+        "PolicyId": "1f332cd1-2895-4f28-9141-c9d9c4288338",
+        "HotelId": "aade5116-9765-42f0-bd4f-e50ee859dd39",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 48"
+      },
+      {
+        "PolicyId": "d1af2a06-da62-4cd4-9257-ae82abfaaee9",
+        "HotelId": "a3a773df-2237-4a33-9445-763fd80bcfa9",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 49"
+      },
+      {
+        "PolicyId": "75816079-7b4d-4f77-ac93-80c5707947eb",
+        "HotelId": "a3a773df-2237-4a33-9445-763fd80bcfa9",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 49"
+      },
+      {
+        "PolicyId": "e1cd882d-ee1b-4de2-8e79-06d03e82e71f",
+        "HotelId": "a3a773df-2237-4a33-9445-763fd80bcfa9",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 49"
+      },
+      {
+        "PolicyId": "6e394988-9c0c-4e45-b65f-01cfdec9f328",
+        "HotelId": "a3a773df-2237-4a33-9445-763fd80bcfa9",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 49"
+      },
+      {
+        "PolicyId": "d74feb7b-1ff0-48ed-a69b-33e4581e9833",
+        "HotelId": "13ae1ef8-e252-4afd-923c-e0db37f37e38",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 50"
+      },
+      {
+        "PolicyId": "59cc76e2-4f6d-429b-a700-42357017fa07",
+        "HotelId": "13ae1ef8-e252-4afd-923c-e0db37f37e38",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 50"
+      },
+      {
+        "PolicyId": "115b804c-88ad-4588-9cbc-1e49a1bdd563",
+        "HotelId": "13ae1ef8-e252-4afd-923c-e0db37f37e38",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 50"
+      },
+      {
+        "PolicyId": "83d68333-004b-4cde-9b6a-280f79930445",
+        "HotelId": "13ae1ef8-e252-4afd-923c-e0db37f37e38",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 50"
+      },
+      {
+        "PolicyId": "9bedbb7f-b86b-4def-bffb-3d0e82d3b7d2",
+        "HotelId": "037451e4-52c2-4712-b463-bd63c739a744",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 51"
+      },
+      {
+        "PolicyId": "70cb2efd-5f2b-4ff8-b4c5-18830f12e6e9",
+        "HotelId": "037451e4-52c2-4712-b463-bd63c739a744",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 51"
+      },
+      {
+        "PolicyId": "7b2d79e2-f962-4758-9a70-6b7a97fc9416",
+        "HotelId": "037451e4-52c2-4712-b463-bd63c739a744",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 51"
+      },
+      {
+        "PolicyId": "4ea64e84-b847-4dc1-b126-0d5b15a108df",
+        "HotelId": "037451e4-52c2-4712-b463-bd63c739a744",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 51"
+      },
+      {
+        "PolicyId": "6cd79a35-f320-4e7a-8503-8ac106e6e2dd",
+        "HotelId": "7d9b5485-b939-44c3-9f35-37717aeb9b50",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 52"
+      },
+      {
+        "PolicyId": "2b66cd26-0ebf-4be7-93dc-5df68e1c332d",
+        "HotelId": "7d9b5485-b939-44c3-9f35-37717aeb9b50",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 52"
+      },
+      {
+        "PolicyId": "48acb2b6-75da-4a18-ae9d-6f6e63155654",
+        "HotelId": "7d9b5485-b939-44c3-9f35-37717aeb9b50",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 52"
+      },
+      {
+        "PolicyId": "eca425fc-c1ee-41e0-9608-83158584a22a",
+        "HotelId": "7d9b5485-b939-44c3-9f35-37717aeb9b50",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 52"
+      },
+      {
+        "PolicyId": "7519fb10-7382-4560-b216-923dd5c09e9c",
+        "HotelId": "f42db2f7-f93a-4b5b-b9ff-e6131999b115",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 53"
+      },
+      {
+        "PolicyId": "5cd8f0b6-0674-4212-aaa1-c973b1b15182",
+        "HotelId": "f42db2f7-f93a-4b5b-b9ff-e6131999b115",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 53"
+      },
+      {
+        "PolicyId": "495ed404-2a62-4d3b-bfc1-ad7e9bb8ef92",
+        "HotelId": "f42db2f7-f93a-4b5b-b9ff-e6131999b115",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 53"
+      },
+      {
+        "PolicyId": "d1a0acc2-16d7-4114-b926-33a06b5cb829",
+        "HotelId": "f42db2f7-f93a-4b5b-b9ff-e6131999b115",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 53"
+      },
+      {
+        "PolicyId": "e30882a7-d43f-4c56-8cca-d7957777a911",
+        "HotelId": "d1f0f37d-d8cb-4385-8f04-9aa94cbbebbf",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 54"
+      },
+      {
+        "PolicyId": "cb23899b-399e-4667-9b8b-022adc52e05b",
+        "HotelId": "d1f0f37d-d8cb-4385-8f04-9aa94cbbebbf",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 54"
+      },
+      {
+        "PolicyId": "3a679c5a-a847-4576-95e7-3adea2303fc0",
+        "HotelId": "d1f0f37d-d8cb-4385-8f04-9aa94cbbebbf",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 54"
+      },
+      {
+        "PolicyId": "cc3f1bc9-87e8-43e3-a467-661f6cec0a15",
+        "HotelId": "d1f0f37d-d8cb-4385-8f04-9aa94cbbebbf",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 54"
+      },
+      {
+        "PolicyId": "2a08964e-a71d-4bfe-849b-e57a5151f2e1",
+        "HotelId": "f9600915-2648-4461-bffb-c753fa67a3d3",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 55"
+      },
+      {
+        "PolicyId": "0df620ce-3eb2-49ad-b81b-eaba17a1b2c0",
+        "HotelId": "f9600915-2648-4461-bffb-c753fa67a3d3",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 55"
+      },
+      {
+        "PolicyId": "31ef205b-32c6-4e4c-a353-8924cde00aec",
+        "HotelId": "f9600915-2648-4461-bffb-c753fa67a3d3",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 55"
+      },
+      {
+        "PolicyId": "22553c13-1b36-4a4f-8b44-cf3952344ede",
+        "HotelId": "f9600915-2648-4461-bffb-c753fa67a3d3",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 55"
+      },
+      {
+        "PolicyId": "869cc6ee-b3ef-45ae-a77c-46f5744ce642",
+        "HotelId": "abae4d48-7082-4d6f-9f9d-4c557f3fbea7",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 56"
+      },
+      {
+        "PolicyId": "06336a2f-007e-4d99-b08a-907e3e397468",
+        "HotelId": "abae4d48-7082-4d6f-9f9d-4c557f3fbea7",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 56"
+      },
+      {
+        "PolicyId": "ecc5ea89-08f9-4ad5-b629-9a0b2d1a99d4",
+        "HotelId": "abae4d48-7082-4d6f-9f9d-4c557f3fbea7",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 56"
+      },
+      {
+        "PolicyId": "dea8f71e-0036-4e5e-bfe3-1ebb9fd0969a",
+        "HotelId": "abae4d48-7082-4d6f-9f9d-4c557f3fbea7",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 56"
+      },
+      {
+        "PolicyId": "442a9559-5ce4-4e1a-9ad3-c2fad5548e83",
+        "HotelId": "8e5f9b49-0a88-472b-9759-5181e0dffff6",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 57"
+      },
+      {
+        "PolicyId": "a4fef137-b64b-43c9-a9ef-b2c6235fab7c",
+        "HotelId": "8e5f9b49-0a88-472b-9759-5181e0dffff6",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 57"
+      },
+      {
+        "PolicyId": "b2d268e8-006a-493e-bcbd-b934eb959a33",
+        "HotelId": "8e5f9b49-0a88-472b-9759-5181e0dffff6",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 57"
+      },
+      {
+        "PolicyId": "98c91d89-b79a-48e6-a4cc-b602d588d945",
+        "HotelId": "8e5f9b49-0a88-472b-9759-5181e0dffff6",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 57"
+      },
+      {
+        "PolicyId": "e0fc65b3-3ed1-4c23-b46a-f7933e2a25d4",
+        "HotelId": "ddb9cb21-f488-40c1-9566-60062be486fd",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 58"
+      },
+      {
+        "PolicyId": "c4178d89-b866-4045-bb9a-8b2ed35c7518",
+        "HotelId": "ddb9cb21-f488-40c1-9566-60062be486fd",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 58"
+      },
+      {
+        "PolicyId": "192bd753-824c-43b3-bf5c-c42ea4d82412",
+        "HotelId": "ddb9cb21-f488-40c1-9566-60062be486fd",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 58"
+      },
+      {
+        "PolicyId": "4560bd8b-540f-486b-8c78-9026c4a1c926",
+        "HotelId": "ddb9cb21-f488-40c1-9566-60062be486fd",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 58"
+      },
+      {
+        "PolicyId": "32bc892d-a443-4758-ab28-06ae087d6c08",
+        "HotelId": "d2a1deba-1053-4794-b786-92e0aae9e166",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 59"
+      },
+      {
+        "PolicyId": "7773918c-8ae1-4266-b874-ca442a058e9e",
+        "HotelId": "d2a1deba-1053-4794-b786-92e0aae9e166",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 59"
+      },
+      {
+        "PolicyId": "538eafe6-5814-4fc1-a81c-da952cb36d18",
+        "HotelId": "d2a1deba-1053-4794-b786-92e0aae9e166",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 59"
+      },
+      {
+        "PolicyId": "60a57ece-6185-4d2e-8551-201ec24e29da",
+        "HotelId": "d2a1deba-1053-4794-b786-92e0aae9e166",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 59"
+      },
+      {
+        "PolicyId": "33d7c764-caee-4b42-a4da-90f41b2b7c43",
+        "HotelId": "a951e32c-bb5c-464c-9acf-7734d910b14c",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 60"
+      },
+      {
+        "PolicyId": "4bbc6aae-e1e3-4aaa-931d-b5aed8ada0a0",
+        "HotelId": "a951e32c-bb5c-464c-9acf-7734d910b14c",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 60"
+      },
+      {
+        "PolicyId": "75ab339e-f47c-43ae-afd2-785dbed12d66",
+        "HotelId": "a951e32c-bb5c-464c-9acf-7734d910b14c",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 60"
+      },
+      {
+        "PolicyId": "fb941dc7-a77f-4248-93d1-e1cc2d6f4305",
+        "HotelId": "a951e32c-bb5c-464c-9acf-7734d910b14c",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 60"
+      },
+      {
+        "PolicyId": "28c7b8ba-769f-4c0f-86fd-2101dd952c3e",
+        "HotelId": "6790052d-0575-4f1c-b468-e07dadcf0beb",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 61"
+      },
+      {
+        "PolicyId": "4cf612db-4f04-496a-add7-3894a8527a3b",
+        "HotelId": "6790052d-0575-4f1c-b468-e07dadcf0beb",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 61"
+      },
+      {
+        "PolicyId": "0b8e6d7f-b9c0-4631-8ba8-c656bcd52098",
+        "HotelId": "6790052d-0575-4f1c-b468-e07dadcf0beb",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 61"
+      },
+      {
+        "PolicyId": "708dab13-3dff-4783-9ea6-28da2f34af68",
+        "HotelId": "6790052d-0575-4f1c-b468-e07dadcf0beb",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 61"
+      },
+      {
+        "PolicyId": "4d7912b1-ace2-466d-81e7-b9e75b9ab5d6",
+        "HotelId": "81f40f84-ce8f-40d7-9053-9a0008a03ff3",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 62"
+      },
+      {
+        "PolicyId": "28fd77de-471e-4ce6-ab90-d58422eb4603",
+        "HotelId": "81f40f84-ce8f-40d7-9053-9a0008a03ff3",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 62"
+      },
+      {
+        "PolicyId": "af48776a-ab78-4670-afe5-afebc895f516",
+        "HotelId": "81f40f84-ce8f-40d7-9053-9a0008a03ff3",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 62"
+      },
+      {
+        "PolicyId": "fe82f44b-64fc-4aaf-a070-bbfc05702ce6",
+        "HotelId": "81f40f84-ce8f-40d7-9053-9a0008a03ff3",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 62"
+      },
+      {
+        "PolicyId": "b617046e-0757-4aa0-9656-de228973a4db",
+        "HotelId": "a5a63e07-a948-4fdf-a863-ada693762c15",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 63"
+      },
+      {
+        "PolicyId": "1b46743b-3623-4998-8cac-187fab1bffd3",
+        "HotelId": "a5a63e07-a948-4fdf-a863-ada693762c15",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 63"
+      },
+      {
+        "PolicyId": "6efdb10b-0db7-4c2c-af6f-6d668feda752",
+        "HotelId": "a5a63e07-a948-4fdf-a863-ada693762c15",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 63"
+      },
+      {
+        "PolicyId": "3209ee64-a258-4dc2-b09a-5f2e79732915",
+        "HotelId": "a5a63e07-a948-4fdf-a863-ada693762c15",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 63"
+      },
+      {
+        "PolicyId": "ebf32ef9-6a44-4916-90d9-76683bb9aac9",
+        "HotelId": "7bd9b44c-9e93-48a7-b3a3-29b478d226fa",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 64"
+      },
+      {
+        "PolicyId": "c52c91f7-36f0-439f-af81-ccf443d50bff",
+        "HotelId": "7bd9b44c-9e93-48a7-b3a3-29b478d226fa",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 64"
+      },
+      {
+        "PolicyId": "4b0b94e4-7eb5-47be-af26-dd8f57d0c796",
+        "HotelId": "7bd9b44c-9e93-48a7-b3a3-29b478d226fa",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 64"
+      },
+      {
+        "PolicyId": "e89246bc-baff-4030-9855-baa4552e6e23",
+        "HotelId": "7bd9b44c-9e93-48a7-b3a3-29b478d226fa",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 64"
+      },
+      {
+        "PolicyId": "194591a5-bdc5-44e5-9d08-e3f859013685",
+        "HotelId": "27c63078-0dfa-442a-bccc-c20396bc0d7d",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 65"
+      },
+      {
+        "PolicyId": "f1b9df98-d454-47bd-9e91-08f9479b268b",
+        "HotelId": "27c63078-0dfa-442a-bccc-c20396bc0d7d",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 65"
+      },
+      {
+        "PolicyId": "286b6bdf-f709-41f7-aed2-5b417215e370",
+        "HotelId": "27c63078-0dfa-442a-bccc-c20396bc0d7d",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 65"
+      },
+      {
+        "PolicyId": "59523593-6287-4c9f-bcbc-cfa1c18fa229",
+        "HotelId": "27c63078-0dfa-442a-bccc-c20396bc0d7d",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 65"
+      },
+      {
+        "PolicyId": "883e8224-ca3d-4a80-ae7c-3fee3ba20042",
+        "HotelId": "c75f038c-ea60-4de7-923a-6a3adcaf34cf",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 66"
+      },
+      {
+        "PolicyId": "e8ce3fc8-214d-45e7-99ec-d0d3955b1f85",
+        "HotelId": "c75f038c-ea60-4de7-923a-6a3adcaf34cf",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 66"
+      },
+      {
+        "PolicyId": "bce55575-9438-42ab-93d5-2b09421fea9d",
+        "HotelId": "c75f038c-ea60-4de7-923a-6a3adcaf34cf",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 66"
+      },
+      {
+        "PolicyId": "712d85b3-6db9-4b5c-8684-12a6394bcfe8",
+        "HotelId": "c75f038c-ea60-4de7-923a-6a3adcaf34cf",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 66"
+      },
+      {
+        "PolicyId": "bc22bd7b-c45d-4bdb-a56a-68e53af97e1a",
+        "HotelId": "a16c7459-4cea-4737-9056-134bc3e3cc7d",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 67"
+      },
+      {
+        "PolicyId": "7fc18522-69cd-40bc-88e0-728b207c2897",
+        "HotelId": "a16c7459-4cea-4737-9056-134bc3e3cc7d",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 67"
+      },
+      {
+        "PolicyId": "63ea4fef-db70-4f9c-a6fe-aecdc2173db1",
+        "HotelId": "a16c7459-4cea-4737-9056-134bc3e3cc7d",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 67"
+      },
+      {
+        "PolicyId": "2076ab21-d106-40f5-a157-586085cde4ba",
+        "HotelId": "a16c7459-4cea-4737-9056-134bc3e3cc7d",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 67"
+      },
+      {
+        "PolicyId": "4a90e3ac-4148-4e08-8f5e-5dddd916ae22",
+        "HotelId": "8a3aa524-d0a4-4492-bef9-c1e8eda85700",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 68"
+      },
+      {
+        "PolicyId": "cf18d455-cc58-4acf-86b1-3f88af9db12b",
+        "HotelId": "8a3aa524-d0a4-4492-bef9-c1e8eda85700",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 68"
+      },
+      {
+        "PolicyId": "3db51388-9b9b-4c71-9f3f-675a290a0a64",
+        "HotelId": "8a3aa524-d0a4-4492-bef9-c1e8eda85700",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 68"
+      },
+      {
+        "PolicyId": "1552a98d-bfe5-459f-a31d-f90f9c324e01",
+        "HotelId": "8a3aa524-d0a4-4492-bef9-c1e8eda85700",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 68"
+      },
+      {
+        "PolicyId": "f45f30af-160b-46e0-b525-8ee42751597c",
+        "HotelId": "821bc1d1-b484-4f21-95f1-b8320f4641c3",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 69"
+      },
+      {
+        "PolicyId": "9a0eaa2a-4a04-4716-a13a-60c1142b9d23",
+        "HotelId": "821bc1d1-b484-4f21-95f1-b8320f4641c3",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 69"
+      },
+      {
+        "PolicyId": "2ad23f37-8bfd-466a-b603-4455337a86c0",
+        "HotelId": "821bc1d1-b484-4f21-95f1-b8320f4641c3",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 69"
+      },
+      {
+        "PolicyId": "6c288524-4143-42bb-9459-20dd44521366",
+        "HotelId": "821bc1d1-b484-4f21-95f1-b8320f4641c3",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 69"
+      },
+      {
+        "PolicyId": "f46323d0-b7f8-4192-a102-3cb362642ce3",
+        "HotelId": "99919e41-14f8-4aac-b697-d1c10ddda12b",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 70"
+      },
+      {
+        "PolicyId": "719d7e4a-c55b-4901-ab37-0e8ba43aff81",
+        "HotelId": "99919e41-14f8-4aac-b697-d1c10ddda12b",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 70"
+      },
+      {
+        "PolicyId": "96673589-af75-4621-bc8a-07d523c3fb14",
+        "HotelId": "99919e41-14f8-4aac-b697-d1c10ddda12b",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 70"
+      },
+      {
+        "PolicyId": "aac00a2c-3f65-4b3e-b8df-09342df45662",
+        "HotelId": "99919e41-14f8-4aac-b697-d1c10ddda12b",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 70"
+      },
+      {
+        "PolicyId": "dec04139-95d2-4114-a814-1b855272647f",
+        "HotelId": "1709c3db-a8df-4d0c-817c-34f1f0c4b4b0",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 71"
+      },
+      {
+        "PolicyId": "54cfab27-146e-40ec-91d6-15798a8921ef",
+        "HotelId": "1709c3db-a8df-4d0c-817c-34f1f0c4b4b0",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 71"
+      },
+      {
+        "PolicyId": "05cc6ec8-7a4f-4c3c-bc19-abdcea33a0f0",
+        "HotelId": "1709c3db-a8df-4d0c-817c-34f1f0c4b4b0",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 71"
+      },
+      {
+        "PolicyId": "4a566ab5-4f0a-43d5-b47e-533006244a3b",
+        "HotelId": "1709c3db-a8df-4d0c-817c-34f1f0c4b4b0",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 71"
+      },
+      {
+        "PolicyId": "a7e3e98d-f4ed-4c02-a995-5b2d21b48d7b",
+        "HotelId": "fd8bb30b-f4ce-436c-bc1d-4ffa13bd6dc9",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 72"
+      },
+      {
+        "PolicyId": "b439b96e-eee4-4db9-90bb-4daac93a8d30",
+        "HotelId": "fd8bb30b-f4ce-436c-bc1d-4ffa13bd6dc9",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 72"
+      },
+      {
+        "PolicyId": "3f625ba6-cb86-46e8-a40b-6496c7bf661f",
+        "HotelId": "fd8bb30b-f4ce-436c-bc1d-4ffa13bd6dc9",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 72"
+      },
+      {
+        "PolicyId": "2d9ec515-718b-4cad-b048-2bcd799184c8",
+        "HotelId": "fd8bb30b-f4ce-436c-bc1d-4ffa13bd6dc9",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 72"
+      },
+      {
+        "PolicyId": "b8ed32ce-e8c7-4a70-94e4-536df9c0f889",
+        "HotelId": "41e9dc5b-c05a-407b-bd1b-eb85a99504f5",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 73"
+      },
+      {
+        "PolicyId": "30758e13-422c-458f-8a35-ada40621b8ae",
+        "HotelId": "41e9dc5b-c05a-407b-bd1b-eb85a99504f5",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 73"
+      },
+      {
+        "PolicyId": "d550a9af-0048-42c9-a9ce-e861270a3eda",
+        "HotelId": "41e9dc5b-c05a-407b-bd1b-eb85a99504f5",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 73"
+      },
+      {
+        "PolicyId": "dd249158-76ec-4fc1-add9-afe92f576c82",
+        "HotelId": "41e9dc5b-c05a-407b-bd1b-eb85a99504f5",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 73"
+      },
+      {
+        "PolicyId": "fb9bf3c2-bd37-4919-9939-1b9f55737b55",
+        "HotelId": "901c728d-61b8-4da4-b21d-11377dc2a5e4",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 74"
+      },
+      {
+        "PolicyId": "a90986f9-f80d-4fad-9d12-f278e4a251c3",
+        "HotelId": "901c728d-61b8-4da4-b21d-11377dc2a5e4",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 74"
+      },
+      {
+        "PolicyId": "1e960fe1-09ab-46af-9c17-9b4f8b9582d2",
+        "HotelId": "901c728d-61b8-4da4-b21d-11377dc2a5e4",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 74"
+      },
+      {
+        "PolicyId": "337e3571-7f82-4970-9df2-76e7faa464a6",
+        "HotelId": "901c728d-61b8-4da4-b21d-11377dc2a5e4",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 74"
+      },
+      {
+        "PolicyId": "dfdb917f-14da-4844-8655-a3b9cf93c286",
+        "HotelId": "91465efa-0f11-4209-9f1c-c66dd9f2748c",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 75"
+      },
+      {
+        "PolicyId": "7b4ae721-8a2a-4ed5-9c1f-d502e07a0871",
+        "HotelId": "91465efa-0f11-4209-9f1c-c66dd9f2748c",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 75"
+      },
+      {
+        "PolicyId": "dfad8f6b-4446-40e7-9acc-28ef8469d261",
+        "HotelId": "91465efa-0f11-4209-9f1c-c66dd9f2748c",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 75"
+      },
+      {
+        "PolicyId": "d2910c16-4b9d-4de1-989b-bf00da7c2090",
+        "HotelId": "91465efa-0f11-4209-9f1c-c66dd9f2748c",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 75"
+      },
+      {
+        "PolicyId": "635c2e4c-b12c-4269-b1bf-daad399c4993",
+        "HotelId": "22966e8a-de2e-41f6-85c1-eddcba020753",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 76"
+      },
+      {
+        "PolicyId": "cbe6a81d-4f95-4359-ba66-069a750fa44c",
+        "HotelId": "22966e8a-de2e-41f6-85c1-eddcba020753",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 76"
+      },
+      {
+        "PolicyId": "da9bafe4-aeea-4bee-bf05-abc35fd084d9",
+        "HotelId": "22966e8a-de2e-41f6-85c1-eddcba020753",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 76"
+      },
+      {
+        "PolicyId": "afea470b-c72b-4db1-9a28-315eaeb16cfe",
+        "HotelId": "22966e8a-de2e-41f6-85c1-eddcba020753",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 76"
+      },
+      {
+        "PolicyId": "b563b337-b51e-417f-8c21-44dfdd0c3cb9",
+        "HotelId": "1f6c74af-7370-4fda-bbe8-e1698b139669",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 77"
+      },
+      {
+        "PolicyId": "8b6063e7-eb6a-4895-b30d-1f19c2f333ff",
+        "HotelId": "1f6c74af-7370-4fda-bbe8-e1698b139669",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 77"
+      },
+      {
+        "PolicyId": "8f52f352-f05f-43c1-9b0c-012901e7a37a",
+        "HotelId": "1f6c74af-7370-4fda-bbe8-e1698b139669",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 77"
+      },
+      {
+        "PolicyId": "3c616e91-196b-4b52-a424-b2af2c8e1a7a",
+        "HotelId": "1f6c74af-7370-4fda-bbe8-e1698b139669",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 77"
+      },
+      {
+        "PolicyId": "0bcdc27e-6715-49d0-96c9-163e16fc9cdd",
+        "HotelId": "db26a564-5703-48f1-8fb3-f570a21d9125",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 78"
+      },
+      {
+        "PolicyId": "fbbd1f23-02fa-4373-8fe1-606d04971fe1",
+        "HotelId": "db26a564-5703-48f1-8fb3-f570a21d9125",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 78"
+      },
+      {
+        "PolicyId": "c1436d43-a272-48e0-a745-cc0aec79830c",
+        "HotelId": "db26a564-5703-48f1-8fb3-f570a21d9125",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 78"
+      },
+      {
+        "PolicyId": "568c017e-9067-4c4d-ad2f-218a8b6a04cd",
+        "HotelId": "db26a564-5703-48f1-8fb3-f570a21d9125",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 78"
+      },
+      {
+        "PolicyId": "fd1a6971-2d74-4eb4-bbdb-731ac73024f8",
+        "HotelId": "32447acb-fec0-4dc2-aa63-0d7d0cb0d214",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 79"
+      },
+      {
+        "PolicyId": "988713d4-c121-4fb4-a952-13ffb6019fb6",
+        "HotelId": "32447acb-fec0-4dc2-aa63-0d7d0cb0d214",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 79"
+      },
+      {
+        "PolicyId": "015b085b-06cd-40e0-a6bd-ed2b044af018",
+        "HotelId": "32447acb-fec0-4dc2-aa63-0d7d0cb0d214",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 79"
+      },
+      {
+        "PolicyId": "0901b722-80ea-4d95-81e0-ced49bda190e",
+        "HotelId": "32447acb-fec0-4dc2-aa63-0d7d0cb0d214",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 79"
+      },
+      {
+        "PolicyId": "496a2903-8d58-4a48-ac57-0f3a3708186f",
+        "HotelId": "d7656b7e-9763-4a8d-88df-f2c732d3b934",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 80"
+      },
+      {
+        "PolicyId": "657e9e1a-00cf-4114-a762-e2eb81a97002",
+        "HotelId": "d7656b7e-9763-4a8d-88df-f2c732d3b934",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 80"
+      },
+      {
+        "PolicyId": "b6cb590d-27c1-4762-9e0b-c1bd261884f1",
+        "HotelId": "d7656b7e-9763-4a8d-88df-f2c732d3b934",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 80"
+      },
+      {
+        "PolicyId": "2baf873d-a44b-4355-b8dd-c33ffab0a25b",
+        "HotelId": "d7656b7e-9763-4a8d-88df-f2c732d3b934",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 80"
+      },
+      {
+        "PolicyId": "6335b3b8-73d5-4a06-8d1b-553c40242dfd",
+        "HotelId": "e3af3f63-97f4-4ed1-bccd-c17d0a1f38e1",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 81"
+      },
+      {
+        "PolicyId": "529efdd2-b210-48a4-bbb0-325c3886834b",
+        "HotelId": "e3af3f63-97f4-4ed1-bccd-c17d0a1f38e1",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 81"
+      },
+      {
+        "PolicyId": "27930638-cdfa-41ef-b741-3c795f22b332",
+        "HotelId": "e3af3f63-97f4-4ed1-bccd-c17d0a1f38e1",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 81"
+      },
+      {
+        "PolicyId": "ccc76790-158a-455e-8beb-68c9e8e37c28",
+        "HotelId": "e3af3f63-97f4-4ed1-bccd-c17d0a1f38e1",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 81"
+      },
+      {
+        "PolicyId": "88d32ef0-6597-4128-9412-6e411016f9fb",
+        "HotelId": "4b85db68-0feb-4c2f-824a-bc1b1784af92",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 82"
+      },
+      {
+        "PolicyId": "dd49ab81-a714-40f5-9275-1734a72ac4ae",
+        "HotelId": "4b85db68-0feb-4c2f-824a-bc1b1784af92",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 82"
+      },
+      {
+        "PolicyId": "a1a93236-d8ef-497e-989a-73fdb3f81516",
+        "HotelId": "4b85db68-0feb-4c2f-824a-bc1b1784af92",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 82"
+      },
+      {
+        "PolicyId": "f1dbf547-4379-42f7-a334-d28c66573808",
+        "HotelId": "4b85db68-0feb-4c2f-824a-bc1b1784af92",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 82"
+      },
+      {
+        "PolicyId": "1386eb8c-92a4-4335-accb-3c18e6b6ba89",
+        "HotelId": "c3f1d083-af78-4e75-b2e7-bb617e640a59",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 83"
+      },
+      {
+        "PolicyId": "08bcc65e-e513-48a7-8a42-9e412bd02eca",
+        "HotelId": "c3f1d083-af78-4e75-b2e7-bb617e640a59",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 83"
+      },
+      {
+        "PolicyId": "c220344a-38f9-4101-8ddf-ba618e730660",
+        "HotelId": "c3f1d083-af78-4e75-b2e7-bb617e640a59",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 83"
+      },
+      {
+        "PolicyId": "019ce13c-9523-4513-bf9d-e22e3453abc5",
+        "HotelId": "c3f1d083-af78-4e75-b2e7-bb617e640a59",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 83"
+      },
+      {
+        "PolicyId": "c03aa591-1e43-4ca3-96e0-1ce6efee0045",
+        "HotelId": "58411c6d-787b-4558-9bec-6db481418718",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 84"
+      },
+      {
+        "PolicyId": "2e132efd-9e2f-4361-abc2-6d18f3734117",
+        "HotelId": "58411c6d-787b-4558-9bec-6db481418718",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 84"
+      },
+      {
+        "PolicyId": "ee8da23e-1bfd-4179-91e5-49ab3d358d67",
+        "HotelId": "58411c6d-787b-4558-9bec-6db481418718",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 84"
+      },
+      {
+        "PolicyId": "d7c02ccf-7794-479a-94c2-73891c1d7db2",
+        "HotelId": "58411c6d-787b-4558-9bec-6db481418718",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 84"
+      },
+      {
+        "PolicyId": "e1dd01af-e380-4aa1-b538-209328714c03",
+        "HotelId": "bb7595fe-0511-4008-8097-137cd77d4f11",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 85"
+      },
+      {
+        "PolicyId": "de223dc7-e3de-4395-a5c9-36e928afcdd7",
+        "HotelId": "bb7595fe-0511-4008-8097-137cd77d4f11",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 85"
+      },
+      {
+        "PolicyId": "32bf3af3-68f7-4c64-a307-9c4b668eb1ae",
+        "HotelId": "bb7595fe-0511-4008-8097-137cd77d4f11",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 85"
+      },
+      {
+        "PolicyId": "c758ee43-0c65-44d6-93df-fbfbe83a4aeb",
+        "HotelId": "bb7595fe-0511-4008-8097-137cd77d4f11",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 85"
+      },
+      {
+        "PolicyId": "ff4a2edd-46cc-4a1a-8311-815452a74a4c",
+        "HotelId": "1e04cd79-e973-4594-808a-d0b6770917cc",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 86"
+      },
+      {
+        "PolicyId": "86ce6e99-c1ca-42f0-b438-8d1db55e3fc6",
+        "HotelId": "1e04cd79-e973-4594-808a-d0b6770917cc",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 86"
+      },
+      {
+        "PolicyId": "b1daa6c0-8c5f-4fef-82e3-63d909cddc10",
+        "HotelId": "1e04cd79-e973-4594-808a-d0b6770917cc",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 86"
+      },
+      {
+        "PolicyId": "92962068-9de5-4bf8-8644-f36af3b9eb44",
+        "HotelId": "1e04cd79-e973-4594-808a-d0b6770917cc",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 86"
+      },
+      {
+        "PolicyId": "ba0231bb-8f92-47f0-b36d-200f29e06052",
+        "HotelId": "ad3346c5-e8a7-457a-a6b7-fe3953f43585",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 87"
+      },
+      {
+        "PolicyId": "07389429-5978-4802-a903-edbe38d3d7b5",
+        "HotelId": "ad3346c5-e8a7-457a-a6b7-fe3953f43585",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 87"
+      },
+      {
+        "PolicyId": "438e5fab-c1cc-45a2-864b-5a15d129f325",
+        "HotelId": "ad3346c5-e8a7-457a-a6b7-fe3953f43585",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 87"
+      },
+      {
+        "PolicyId": "2192706c-872c-485e-8291-060da47e9bd8",
+        "HotelId": "ad3346c5-e8a7-457a-a6b7-fe3953f43585",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 87"
+      },
+      {
+        "PolicyId": "78c9738b-e50b-4a51-adea-541289e3b033",
+        "HotelId": "d9f1a248-b355-4f5e-b9e2-9c4e1229ddf7",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 88"
+      },
+      {
+        "PolicyId": "9128659a-9f2f-4513-b63a-28981544a8be",
+        "HotelId": "d9f1a248-b355-4f5e-b9e2-9c4e1229ddf7",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 88"
+      },
+      {
+        "PolicyId": "d9918a01-037a-4484-8a8a-e109e13da0e2",
+        "HotelId": "d9f1a248-b355-4f5e-b9e2-9c4e1229ddf7",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 88"
+      },
+      {
+        "PolicyId": "e7eb1091-a234-4d4e-99e5-5e7760a8ad90",
+        "HotelId": "d9f1a248-b355-4f5e-b9e2-9c4e1229ddf7",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 88"
+      },
+      {
+        "PolicyId": "d11db702-d241-4569-b540-cd7a5327e8aa",
+        "HotelId": "443dedeb-7832-4c82-8071-de0dff4615e9",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 89"
+      },
+      {
+        "PolicyId": "70c5e807-39f5-4059-b258-45999620faf2",
+        "HotelId": "443dedeb-7832-4c82-8071-de0dff4615e9",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 89"
+      },
+      {
+        "PolicyId": "9f9bcbd9-8b7f-4df1-9f9f-9750c73bb28a",
+        "HotelId": "443dedeb-7832-4c82-8071-de0dff4615e9",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 89"
+      },
+      {
+        "PolicyId": "48760e0b-cd4e-4ecd-bb9e-71dc19e49532",
+        "HotelId": "443dedeb-7832-4c82-8071-de0dff4615e9",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 89"
+      },
+      {
+        "PolicyId": "2da71a0c-68f8-4b04-b2f1-9da1e0929ff7",
+        "HotelId": "7e1c01e6-92dd-4f11-b459-68e11cf993c2",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 90"
+      },
+      {
+        "PolicyId": "cfe400f6-b004-496b-99f3-6fd8be4eb8bc",
+        "HotelId": "7e1c01e6-92dd-4f11-b459-68e11cf993c2",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 90"
+      },
+      {
+        "PolicyId": "ec2c07fa-ecfa-4476-844a-f2af12a0c358",
+        "HotelId": "7e1c01e6-92dd-4f11-b459-68e11cf993c2",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 90"
+      },
+      {
+        "PolicyId": "5f43e42a-0d66-4266-8399-5e5ee549db18",
+        "HotelId": "7e1c01e6-92dd-4f11-b459-68e11cf993c2",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 90"
+      },
+      {
+        "PolicyId": "12e2fc1b-5a1b-4b1f-8918-0061a68db6d0",
+        "HotelId": "b21f0bcc-2d96-4a49-a4d4-cabfd37586cc",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 91"
+      },
+      {
+        "PolicyId": "dbea5535-9cee-4e6d-9b9f-950848685ac3",
+        "HotelId": "b21f0bcc-2d96-4a49-a4d4-cabfd37586cc",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 91"
+      },
+      {
+        "PolicyId": "7964fd72-f01d-418f-901e-99dd4a872a7d",
+        "HotelId": "b21f0bcc-2d96-4a49-a4d4-cabfd37586cc",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 91"
+      },
+      {
+        "PolicyId": "3a6ed0b7-918b-4130-a026-e1444793a944",
+        "HotelId": "b21f0bcc-2d96-4a49-a4d4-cabfd37586cc",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 91"
+      },
+      {
+        "PolicyId": "17311e10-73d7-4591-b78b-189377d640ec",
+        "HotelId": "f246183d-c4b2-4850-b32b-e55b36e8ad5a",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 92"
+      },
+      {
+        "PolicyId": "2b61e045-860f-4c39-819f-05c9307acaa5",
+        "HotelId": "f246183d-c4b2-4850-b32b-e55b36e8ad5a",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 92"
+      },
+      {
+        "PolicyId": "eb748211-e7f4-4e89-94e5-d2f6752c3fd9",
+        "HotelId": "f246183d-c4b2-4850-b32b-e55b36e8ad5a",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 92"
+      },
+      {
+        "PolicyId": "79cf4c85-d9c0-4e53-b435-32636f1163d0",
+        "HotelId": "f246183d-c4b2-4850-b32b-e55b36e8ad5a",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 92"
+      },
+      {
+        "PolicyId": "2f02b642-b26b-42c9-9561-c28ce58c46d6",
+        "HotelId": "74ec6778-4ecb-4fee-9ee8-b39a7f745352",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 93"
+      },
+      {
+        "PolicyId": "07fdcf42-56c8-45c5-87a0-c855c47f1e2e",
+        "HotelId": "74ec6778-4ecb-4fee-9ee8-b39a7f745352",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 93"
+      },
+      {
+        "PolicyId": "8be4e321-cf3b-4309-ab18-e7528790d616",
+        "HotelId": "74ec6778-4ecb-4fee-9ee8-b39a7f745352",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 93"
+      },
+      {
+        "PolicyId": "d5ed46c2-e2f6-481e-b997-664ca15985a4",
+        "HotelId": "74ec6778-4ecb-4fee-9ee8-b39a7f745352",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 93"
+      },
+      {
+        "PolicyId": "5e66a4cc-bc35-4734-8824-ecc0d804b728",
+        "HotelId": "99a8bf8c-ed86-40c2-b893-7ae28714634f",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 94"
+      },
+      {
+        "PolicyId": "9ec58f9f-09eb-4202-b93e-405ed9f1fac3",
+        "HotelId": "99a8bf8c-ed86-40c2-b893-7ae28714634f",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 94"
+      },
+      {
+        "PolicyId": "2cd8b1ec-b092-4c86-bbce-ef7def060b5b",
+        "HotelId": "99a8bf8c-ed86-40c2-b893-7ae28714634f",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 94"
+      },
+      {
+        "PolicyId": "95d2fad2-8bb0-40de-8eaa-185b13cd0cdc",
+        "HotelId": "99a8bf8c-ed86-40c2-b893-7ae28714634f",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 94"
+      },
+      {
+        "PolicyId": "a9836a1b-f855-49ce-be2f-ce5185201475",
+        "HotelId": "71dab290-8738-4001-b87f-65823a5a5af2",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 95"
+      },
+      {
+        "PolicyId": "b5887067-8b41-4db1-814b-6efba8a0d00b",
+        "HotelId": "71dab290-8738-4001-b87f-65823a5a5af2",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 95"
+      },
+      {
+        "PolicyId": "341cbed6-7e1f-4d57-94ff-802b041cbfb7",
+        "HotelId": "71dab290-8738-4001-b87f-65823a5a5af2",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 95"
+      },
+      {
+        "PolicyId": "8c803833-5ac9-42fd-885a-7726686b0e21",
+        "HotelId": "71dab290-8738-4001-b87f-65823a5a5af2",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 95"
+      },
+      {
+        "PolicyId": "46f1a9fc-a626-4b59-8621-9797769581db",
+        "HotelId": "174d145f-b04c-41c3-888e-0ffdc60573a1",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 96"
+      },
+      {
+        "PolicyId": "be3e96f8-6f6f-4432-b514-fdd2a285b469",
+        "HotelId": "174d145f-b04c-41c3-888e-0ffdc60573a1",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 96"
+      },
+      {
+        "PolicyId": "60a135e7-7f45-4f17-83c7-dfd614578fb7",
+        "HotelId": "174d145f-b04c-41c3-888e-0ffdc60573a1",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 96"
+      },
+      {
+        "PolicyId": "d6cda5a5-4bff-4cd4-b953-b73ec1b75fad",
+        "HotelId": "174d145f-b04c-41c3-888e-0ffdc60573a1",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 96"
+      },
+      {
+        "PolicyId": "0b874173-100c-432d-b626-e6bd28b86a93",
+        "HotelId": "5a2dd2d7-3cdb-44f7-be93-4d64a4e47323",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 97"
+      },
+      {
+        "PolicyId": "75614e42-6d8e-485f-bec2-bc7c5f022152",
+        "HotelId": "5a2dd2d7-3cdb-44f7-be93-4d64a4e47323",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 97"
+      },
+      {
+        "PolicyId": "e3fc677e-a503-4285-a943-e47c66fc685e",
+        "HotelId": "5a2dd2d7-3cdb-44f7-be93-4d64a4e47323",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 97"
+      },
+      {
+        "PolicyId": "98fff318-c8d8-4166-b440-54d0bbd3432f",
+        "HotelId": "5a2dd2d7-3cdb-44f7-be93-4d64a4e47323",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 97"
+      },
+      {
+        "PolicyId": "b78797ef-c510-40b9-8753-753bc8885ee1",
+        "HotelId": "373439a7-92ae-4e1a-a948-21542bc9dff5",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 98"
+      },
+      {
+        "PolicyId": "4b9ee8a4-635f-4df9-96ab-90cee6b5377a",
+        "HotelId": "373439a7-92ae-4e1a-a948-21542bc9dff5",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 98"
+      },
+      {
+        "PolicyId": "333d65dc-b036-460a-934d-157b4c78b939",
+        "HotelId": "373439a7-92ae-4e1a-a948-21542bc9dff5",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 98"
+      },
+      {
+        "PolicyId": "3fec5cbb-bd36-4b15-b463-fc4120306036",
+        "HotelId": "373439a7-92ae-4e1a-a948-21542bc9dff5",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 98"
+      },
+      {
+        "PolicyId": "2d82ebb8-e254-4d86-856f-879b2d806516",
+        "HotelId": "737d20fd-189a-404a-822d-2082020a5a74",
+        "PolicyType": "Cancellation",
+        "Description": "Sample cancellation policy for Hotel 99"
+      },
+      {
+        "PolicyId": "9b718612-36c6-4847-817a-c34025da037e",
+        "HotelId": "737d20fd-189a-404a-822d-2082020a5a74",
+        "PolicyType": "Child",
+        "Description": "Sample child policy for Hotel 99"
+      },
+      {
+        "PolicyId": "7854a4ba-9a6e-4f0e-8262-9ae84d524540",
+        "HotelId": "737d20fd-189a-404a-822d-2082020a5a74",
+        "PolicyType": "Pet",
+        "Description": "Sample pet policy for Hotel 99"
+      },
+      {
+        "PolicyId": "252e1ff4-3e57-4da7-88a6-cc788399ae69",
+        "HotelId": "737d20fd-189a-404a-822d-2082020a5a74",
+        "PolicyType": "Payment",
+        "Description": "Sample payment policy for Hotel 99"
+      }
+    ],
   "HotelNearbyLandmarks": [
     {
       "LandmarkId": "57fecfdb-3711-4f67-82c0-fc6e3eb324d5",
