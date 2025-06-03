@@ -14,8 +14,13 @@ class RecommendedHotelsCVC: UICollectionViewCell {
     @IBOutlet weak var hotelNameLabel: UILabel!
     @IBOutlet weak var ratingView: CosmosView!
     @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var ratingTypeLabel: UILabel!
+    @IBOutlet weak var totalReviewsLabel: UILabel!
+    @IBOutlet weak var startingPriceLabel: UILabel!
     
     var hotelimages = ["hotel_2","hotel_3","hotel_4","hotel_5","hotel_6","hotel_7"]
+    var startingRate = ["$ 180.00","$ 190.00","$ 200.00","$ 210.00","$ 220.00","$230.00"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,9 +34,10 @@ class RecommendedHotelsCVC: UICollectionViewCell {
         hotelImageView.image = UIImage(named: imageName)
         hotelNameLabel.text = item.HotelName
         addressLabel.text = item.Country
+//        startingPriceLabel.text = startingRate[index % startingRate.count]
         
         let rating = item.StarRating ?? 0.0
         ratingView.rating = rating
-        ratingView.text = String(format: "%.1f", rating)
+//        ratingLabel.text = String(format: "%.1f", rating)
     }
 }

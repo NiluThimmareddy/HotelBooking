@@ -20,20 +20,30 @@ class HotelsListTVC : UITableViewCell {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var covidLabel: UILabel!
     @IBOutlet weak var phoneNoLabel: UILabel!
+    @IBOutlet weak var adultsPriceLabel: UILabel!
+    @IBOutlet weak var taxLabel: UILabel!
+    @IBOutlet weak var cancelationPolicyLabel: UILabel!
+    @IBOutlet weak var availabilityRoomsLabel: UILabel!
+    @IBOutlet weak var originalPriceLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var reviewTypeLabel: UILabel!
+    @IBOutlet weak var totalReviewsCountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         backView.applyCardStyle()
     }
     
-    func configure(with hotel: Hotel, room: HotelRoom?, distance: String) {
+    func configure(with hotel: Hotel, room: HotelRoom?, policy: Policy, distance: String) {
         hotelNameLabel.text = hotel.HotelName
         hotelTypeLabel.text = hotel.HotelType
         descriptionLabel.text = hotel.Description
-        addressLabel.text = hotel.City
+        addressLabel.text = "\(hotel.Country), \(hotel.StateOrProvince), \(hotel.City), \(hotel.AddressLine1), \(hotel.PostalCode)"
         phoneNoLabel.text = hotel.PrimaryPhone
-        covidLabel.text = hotel.CovidSafetyLevel
+        covidLabel.text = "CovidSafety Level : \(hotel.CovidSafetyLevel)"
         distanceLabel.text = "\(distance)"
+        availabilityRoomsLabel.text = "Available Rooms : \(room?.availableRooms ?? 0)"
+        cancelationPolicyLabel.text = policy.PolicyType
 
         if let room = room {
             priceLabel.text = "$\(room.basePrice)"
@@ -43,7 +53,7 @@ class HotelsListTVC : UITableViewCell {
 
         let rating = hotel.StarRating ?? 0.0
         ratingsView.rating = rating
-        ratingsView.text = String(format: "%.1f", rating)
+        ratingLabel.text = String(format: "%.1f", rating)
     }
 
 

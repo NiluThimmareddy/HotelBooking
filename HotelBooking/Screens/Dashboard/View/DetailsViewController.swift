@@ -13,6 +13,7 @@ struct AvailabilitiesModel{
     let image: String
 }
 class DetailsViewController: UIViewController,UIScrollViewDelegate {
+    
     @IBOutlet weak var policiesCollectionView: UICollectionView!
     @IBOutlet weak var aboutThisHotelDescP: UILabel!
     @IBOutlet weak var scrollViewScroll: UIScrollView!
@@ -44,6 +45,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate {
                               AvailabilitiesModel(name: "business", image: "business")]
     var hotelImages = ["1","2","3","4","5","6","7","8","9","10","11"]
     var policies = ["Cancellation","Child","Comfort","Pet"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -85,7 +87,6 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
 
-        // Example threshold: Show label after scrolling 100 pts down
         if offsetY > 100 {
             topNameLbl.text = hotelNameLBL.text
             topNameLbl.isHidden = false

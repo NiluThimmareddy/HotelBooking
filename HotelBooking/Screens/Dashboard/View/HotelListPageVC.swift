@@ -9,7 +9,7 @@ import UIKit
 import CoreLocation
 
 class HotelListPageVC: UIViewController, CLLocationManagerDelegate {
-
+    
     @IBOutlet weak var hotelListTableview: UITableView!
     @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var sortButton: UIButton!
@@ -90,6 +90,7 @@ extension HotelListPageVC: UITableViewDelegate, UITableViewDataSource {
         let hotel = viewModel.allHotels[indexPath.row]
         let rooms = viewModel.allRooms.filter { $0.hotelId == hotel.HotelId }
         let cheapestRoom = rooms.min(by: { $0.basePrice < $1.basePrice })
+        let policy = viewModel.allPolicies[indexPath.row]
         
         var distanceText = "10 km from the heart of the city"
         if let userLocation = currentLocation {
@@ -101,17 +102,23 @@ extension HotelListPageVC: UITableViewDelegate, UITableViewDataSource {
             print("Location not ready when loading cell for \(hotel.HotelName)")
         }
         
-        cell.configure(with: hotel, room: cheapestRoom, distance: distanceText)
+        cell.configure(with: hotel, room: cheapestRoom, policy: policy, distance: distanceText)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if UIDevice.current.userInterfaceIdiom == .pad {
-            return 400
+            return 460
         } else {
-            return 350
+            return 390
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
+        let controller = storyboard.instantiateViewController(identifier: "DetailsViewController") as! DetailsViewController
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 
@@ -121,7 +128,7 @@ extension HotelListPageVC {
         hotelListTableview.dataSource = self
         
         hotelListTableview.register(UINib(nibName: "HotelsListTVC", bundle: nil), forCellReuseIdentifier: "HotelsListTVC")
-
+        
         viewModel.fetchHotels {
             self.hotelsFetched = true
             DispatchQueue.main.async {
