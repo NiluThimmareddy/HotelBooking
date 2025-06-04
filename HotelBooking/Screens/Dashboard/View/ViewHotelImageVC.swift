@@ -9,10 +9,14 @@ import UIKit
 
 class ViewHotelImageVC: UIViewController {
     var images: [String] = []
+    var titleData: String?
+    @IBOutlet weak var titleLable: UILabel!
+    @IBOutlet weak var photosCountLbl: UILabel!
     @IBOutlet weak var imageViewCollectionVIew: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        titleLable.text = titleData
+        photosCountLbl.text = "Photo 1 of \(images.count)"
         imageViewCollectionVIew.register(UINib(nibName: "ViewHotelImageCVC", bundle: nil), forCellWithReuseIdentifier: "ViewHotelImageCVC")
         if let layout = imageViewCollectionVIew.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .horizontal
@@ -21,8 +25,15 @@ class ViewHotelImageVC: UIViewController {
         imageViewCollectionVIew.isPagingEnabled = true
 
     }
-    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageIndex = Int(scrollView.contentOffset.x / scrollView.frame.width)
+        photosCountLbl.text = "Photo \(pageIndex + 1) of \(images.count)"
+    }
 
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
     @IBAction func closeButton(_ sender: Any) {
         dismiss(animated: true)
     }

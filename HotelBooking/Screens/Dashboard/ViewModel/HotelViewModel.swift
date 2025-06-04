@@ -57,7 +57,7 @@ class HotelJsonViewModel {
         }
     }
 
-    private func loadJson(completion: @escaping (Bool) -> Void) {
+    func loadJson(completion: @escaping (Bool) -> Void) {
         guard let path = Bundle.main.path(forResource: "HotelJsonData", ofType: "json"),
               let data = try? Data(contentsOf: URL(fileURLWithPath: path)) else {
             print("Could not find or read HotelJsonData.json")
@@ -71,8 +71,7 @@ class HotelJsonViewModel {
             self.allPolicies = decoded.Policies ?? []
             self.allSeasonalPrices = decoded.SeasonalPrices ?? []
             self.allRoomAvailability = decoded.RoomAvailability ?? []
-            self.allRooms = decoded.HotelRooms ?? []
-            
+
             currentPage = 0
             loadedItems = getPageItems(forPage: currentPage)
             completion(true)

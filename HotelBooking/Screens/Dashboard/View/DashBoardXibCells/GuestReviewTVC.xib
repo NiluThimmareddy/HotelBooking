@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GuestReviewTVC" rowHeight="67" id="KGk-i7-Jjw" customClass="GuestReviewTVC" customModule="HotelBooking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXa-b0-Pnt">
+                        <rect key="frame" x="10" y="10" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41i-Wf-zfU">
+                        <rect key="frame" x="10" y="41" width="300" height="3"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KVm-Kv-C8n">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="3"/>
+                                <color key="backgroundColor" name="defaultColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="dum-Wt-tnx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KVm-Kv-C8n" firstAttribute="top" secondItem="41i-Wf-zfU" secondAttribute="top" id="0lQ-cH-00f"/>
+                            <constraint firstAttribute="bottom" secondItem="KVm-Kv-C8n" secondAttribute="bottom" id="fCv-T2-5x3"/>
+                            <constraint firstAttribute="height" constant="3" id="fed-Uv-2lZ"/>
+                            <constraint firstItem="KVm-Kv-C8n" firstAttribute="leading" secondItem="41i-Wf-zfU" secondAttribute="leading" id="lzt-fB-KHT"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smU-3o-xFx">
+                        <rect key="frame" x="268" y="10" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="41i-Wf-zfU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="6cM-X6-wcg"/>
+                    <constraint firstItem="RXa-b0-Pnt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Ltx-mb-UFs"/>
+                    <constraint firstAttribute="trailing" secondItem="smU-3o-xFx" secondAttribute="trailing" constant="10" id="TDN-aG-iQg"/>
+                    <constraint firstItem="RXa-b0-Pnt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="VnV-jZ-btc"/>
+                    <constraint firstItem="41i-Wf-zfU" firstAttribute="top" secondItem="RXa-b0-Pnt" secondAttribute="bottom" constant="10" id="ac8-Zc-swt"/>
+                    <constraint firstItem="smU-3o-xFx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="sOa-lP-wbx"/>
+                    <constraint firstAttribute="trailing" secondItem="41i-Wf-zfU" secondAttribute="trailing" constant="10" id="vQU-3Q-nBh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="countLbl" destination="smU-3o-xFx" id="0gk-6Q-t6N"/>
+                <outlet property="progressView" destination="KVm-Kv-C8n" id="Ukk-0y-L67"/>
+                <outlet property="progressViewBackView" destination="41i-Wf-zfU" id="df3-9U-gUg"/>
+                <outlet property="progressViewWidthCons" destination="dum-Wt-tnx" id="y5O-Uv-9nQ"/>
+                <outlet property="titleLbl" destination="RXa-b0-Pnt" id="qN0-qf-Uhm"/>
+            </connections>
+            <point key="canvasLocation" x="129.7709923664122" y="-3.1690140845070425"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="defaultColor">
+            <color red="0.0" green="0.23100000619888306" blue="0.58399999141693115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

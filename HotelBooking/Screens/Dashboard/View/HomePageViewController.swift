@@ -141,8 +141,10 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
-        self.navigationController?.navigationBar.tintColor = .white
-        self.navigationController?.pushViewController(controller, animated: true)
+        controller.modalPresentationStyle = .fullScreen
+        present(controller, animated: true)
+//        self.navigationController?.navigationBar.tintColor = .white
+//        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
