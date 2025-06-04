@@ -30,6 +30,11 @@ class HotelJsonViewModel {
         }
         return Int(ceil(Double(count) / Double(pageSize)))
     }
+    
+    var bankImages = ["ic_hdfc","ic_canara","ic_punjab_bank","ic_doller","ic_hotel 1","ic_card","ic_Bank"]
+    var percentage = ["Flat 20% off","Flat 20% off","Flat 15% off","3 months no cost EMI","Min. 20% off","5% unlimited cashback", "Flat 20% off"]
+    var descriptions = ["on hotels with HDFC Bank Credit Card. T&C","on hotels with canara bank credit card T&C","on hotels with punjab national bank credit card. T&C","on all leading bank credit cards","on top international hotels","on your flipkart axis bank credit card T&C", "on hotels with Bank of Baroda Credit Card. T&C"]
+    var offerCode = ["HDFCCC","CANARACC","PNBCC","","","","BOBCC"]
 
     var allItemsForCurrentMode: [String] {
         switch displayMode {

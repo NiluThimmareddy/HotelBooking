@@ -17,6 +17,12 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
     @IBOutlet weak var hotelRoomCollectionView: UICollectionView!
     @IBOutlet weak var propertyTypeCollectionView: UICollectionView!
     @IBOutlet weak var selectdateButton: UIButton!
+    @IBOutlet weak var dealsView: UIView!
+    @IBOutlet weak var bestPlaceImgView: UIImageView!
+    @IBOutlet weak var dealsTitleLabel: UILabel!
+    @IBOutlet weak var selectionDateLabel: UILabel!
+    @IBOutlet weak var seeDealsButton: UIButton!
+    @IBOutlet weak var offersCollectionView: UICollectionView!
     
     let viewModel = HotelJsonViewModel()
     
@@ -27,6 +33,7 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
         hotelListCollectionView.register(UINib(nibName: "RecommendedHotelsLwrCVC", bundle: nil), forCellWithReuseIdentifier: "RecommendedHotelsLwrCVC")
         hotelRoomCollectionView.register(UINib(nibName: "RecommendedRoomsLwrCVC", bundle: nil), forCellWithReuseIdentifier: "RecommendedRoomsLwrCVC")
         propertyTypeCollectionView.register(UINib(nibName: "PropertyTypeCVC", bundle: nil), forCellWithReuseIdentifier: "PropertyTypeCVC")
+        offersCollectionView.register(UINib(nibName: "TopOffersCVC", bundle: nil), forCellWithReuseIdentifier: "TopOffersCVC")
         
         if let layout = hotelListCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.estimatedItemSize = .zero
@@ -36,8 +43,12 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
             layouts.estimatedItemSize = .zero
         }
         
-        if let PropertyLayouts = propertyTypeCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            PropertyLayouts.estimatedItemSize = .zero
+        if let propertyLayouts = propertyTypeCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            propertyLayouts.estimatedItemSize = .zero
+        }
+        
+        if let offersLayouts = offersCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            offersLayouts.estimatedItemSize = .zero
         }
         
         viewModel.fetchHotels {
@@ -45,9 +56,15 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
                 self.hotelListCollectionView.reloadData()
                 self.hotelRoomCollectionView.reloadData()
                 self.propertyTypeCollectionView.reloadData()
+                self.offersCollectionView.reloadData()
             }
         }
         
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        bestPlaceImgView.applyStrongLeftGradient()
     }
     
     @IBAction func selectdateButtonAction(_ sender: Any) {
@@ -70,10 +87,16 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
     }
 
     @IBAction func searchButtonAction(_ sender: Any) {
-        let storyboard = storyboard?.instantiateViewController(withIdentifier: "HotelListPageVC") as! HotelListPageVC
+        let controller = storyboard?.instantiateViewController(withIdentifier: "HotelListPageVC") as! HotelListPageVC
         self.navigationController?.navigationBar.tintColor = .white
-        self.navigationController?.pushViewController(storyboard, animated: true)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
+    
+    @IBAction func seeDealsButtonAction(_ sender: Any) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "HotelListPageVC") as! HotelListPageVC
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
     
 }
 
@@ -84,8 +107,10 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
             return min(6, viewModel.allHotels.count)
         } else if collectionView == hotelRoomCollectionView {
             return min(6, viewModel.allRooms.count)
-        } else {
+        } else if collectionView == propertyTypeCollectionView {
             return min(6, viewModel.allHotels.count)
+        } else {
+            return viewModel.bankImages.count
         }
     }
     
@@ -100,10 +125,15 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
             let item = viewModel.allRooms[indexPath.row]
             cell.configure(with: item, index: indexPath.item)
             return cell
-        } else {
+        } else if collectionView == propertyTypeCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PropertyTypeCVC", for: indexPath) as! PropertyTypeCVC
             let item = viewModel.allHotels[indexPath.row]
             cell.configure(with: item, index: indexPath.item)
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopOffersCVC", for: indexPath) as! TopOffersCVC
+            cell.configure(viewModel: viewModel, index: indexPath.row)
+
             return cell
         }
     }

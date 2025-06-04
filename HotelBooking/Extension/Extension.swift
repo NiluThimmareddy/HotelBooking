@@ -58,18 +58,18 @@ extension UIViewController{
  
  
  self.showAlert(
-     title: "Delete Data?",
-     message: "Are you sure you want to delete this?",
-     type: .confirm,
-     okTitle: "Yes",
-     cancelTitle: "Cancel",
-     onOK: {
-         // Perform deletion here
-         print("Data deleted")
-     },
-     onCancel: {
-         print("Cancelled")
-     }
+ title: "Delete Data?",
+ message: "Are you sure you want to delete this?",
+ type: .confirm,
+ okTitle: "Yes",
+ cancelTitle: "Cancel",
+ onOK: {
+ // Perform deletion here
+ print("Data deleted")
+ },
+ onCancel: {
+ print("Cancelled")
+ }
  )
  */
 
@@ -90,7 +90,7 @@ extension UIViewController {
         self.view.addSubview(spinner)
         self.view.isUserInteractionEnabled = false
     }
-
+    
     func hideActivityIndicator() {
         if let spinner = self.view.viewWithTag(Self.spinnerTag) as? UIActivityIndicatorView {
             spinner.stopAnimating()
@@ -123,7 +123,7 @@ extension UIView {
                         shadowRadius: CGFloat = 2,
                         shadowOpacity: Float = 0.8,
                         shadowColor: UIColor = .black) {
-
+        
         self.layer.shadowOffset = shadowOffset
         self.layer.shadowRadius = shadowRadius
         self.layer.shadowOpacity = shadowOpacity
@@ -131,37 +131,65 @@ extension UIView {
         self.layer.masksToBounds = false
         self.layer.shadowPath = nil
     }
-
+    
     func BackViewShadow(){
-               self.layer.shadowOpacity = 0.0
-               self.layer.shadowOffset = CGSize(width: 0, height: 0)
-               self.layer.shadowRadius = 0
-               self.layer.cornerRadius = 10
-               self.layer.shadowColor = UIColor.darkGray.cgColor
-               self.layer.shadowOpacity = 0.5
-               self.layer.shadowOffset = CGSize(width: 3, height: 3)
-               self.layer.shadowRadius = 4
-               self.layer.masksToBounds = false
+        self.layer.shadowOpacity = 0.0
+        self.layer.shadowOffset = CGSize(width: 0, height: 0)
+        self.layer.shadowRadius = 0
+        self.layer.cornerRadius = 10
+        self.layer.shadowColor = UIColor.darkGray.cgColor
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowOffset = CGSize(width: 3, height: 3)
+        self.layer.shadowRadius = 4
+        self.layer.masksToBounds = false
     }
 
 }
 
-  
+
 extension UIColor {
     convenience init(hex: String) {
         var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-
+        
         if hexSanitized.hasPrefix("#") {
             hexSanitized.remove(at: hexSanitized.startIndex)
         }
-
+        
         var rgb: UInt64 = 0
         Scanner(string: hexSanitized).scanHexInt64(&rgb)
-
+        
         let red = CGFloat((rgb & 0xFF0000) >> 16) / 255.0
         let green = CGFloat((rgb & 0x00FF00) >> 8) / 255.0
         let blue = CGFloat(rgb & 0x0000FF) / 255.0
-
+        
         self.init(red: red, green: green, blue: blue, alpha: 1.0)
     }
+
 }
+
+extension UIImageView {
+    func applyStrongLeftGradient() {
+        let gradient = CAGradientLayer()
+        gradient.colors = [
+            UIColor.black.withAlphaComponent(0.85).cgColor,
+            UIColor.black.withAlphaComponent(0.55).cgColor,
+            UIColor.clear.cgColor
+        ]
+        gradient.locations = [0.0, 0.35, 1.0]
+        gradient.startPoint = CGPoint(x: 0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1, y: 0.5)
+        gradient.frame = self.bounds
+        gradient.cornerRadius = self.layer.cornerRadius
+        gradient.name = "blackOverlay"
+
+        self.layer.sublayers?.removeAll(where: { $0.name == "blackOverlay" })
+        self.layer.addSublayer(gradient)
+    }
+}
+
+extension Array {
+    subscript(safe index: Int) -> Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+}
+
