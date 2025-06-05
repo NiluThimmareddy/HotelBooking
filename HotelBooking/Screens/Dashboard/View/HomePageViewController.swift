@@ -5,7 +5,6 @@
 //  Created by ToqSoft on 19/05/25.
 //
 
-
 import UIKit
 
 class HomePageViewController: UIViewController, CalenderVCDelegate {
@@ -23,6 +22,8 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
     @IBOutlet weak var selectionDateLabel: UILabel!
     @IBOutlet weak var seeDealsButton: UIButton!
     @IBOutlet weak var offersCollectionView: UICollectionView!
+    @IBOutlet weak var roomAndAdultsButton: UIButton!
+    
     
     let viewModel = HotelJsonViewModel()
     
@@ -86,6 +87,31 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
         selectdateButton.setTitle(dateRangeText, for: .normal)
     }
 
+    @IBAction func roomAndAdultsButtonAction(_ sender: Any) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "SelectRoomsAndGuestsVC") as! SelectRoomsAndGuestsVC
+
+        if let sheet = controller.sheetPresentationController {
+            sheet.detents = [
+                .custom(identifier: .medium, resolver: { context in
+                    return context.maximumDetentValue * 0.6
+                })
+            ]
+            sheet.selectedDetentIdentifier = .medium
+            sheet.prefersGrabberVisible = true
+            sheet.largestUndimmedDetentIdentifier = .medium
+            sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            sheet.prefersEdgeAttachedInCompactHeight = true
+        }
+
+        controller.onApply = { [weak self] rooms, adults, children in
+            let title = "\(rooms) Room , \(adults) Adult\(adults > 1 ? "s" : "")" + (children > 0 ? " , \(children) Child\(children > 1 ? "ren" : "")" : "")
+            self?.roomAndAdultsButton.setTitle(title, for: .normal)
+        }
+
+        controller.modalPresentationStyle = .pageSheet
+        present(controller, animated: true)
+    }
+
     @IBAction func searchButtonAction(_ sender: Any) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "HotelListPageVC") as! HotelListPageVC
         self.navigationController?.navigationBar.tintColor = .white
@@ -97,43 +123,44 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    
 }
 
 extension HomePageViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == hotelListCollectionView {
+        switch collectionView {
+        case hotelListCollectionView, propertyTypeCollectionView:
             return min(6, viewModel.allHotels.count)
-        } else if collectionView == hotelRoomCollectionView {
+        case hotelRoomCollectionView:
             return min(6, viewModel.allRooms.count)
-        } else if collectionView == propertyTypeCollectionView {
-            return min(6, viewModel.allHotels.count)
-        } else {
+        default:
             return viewModel.bankImages.count
         }
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == hotelListCollectionView {
+        switch collectionView {
+        case hotelListCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendedHotelsLwrCVC", for: indexPath) as! RecommendedHotelsLwrCVC
             let item = viewModel.allHotels[indexPath.row]
             cell.configure(with: item, index: indexPath.item)
             return cell
-        } else if collectionView == hotelRoomCollectionView {
+            
+        case hotelRoomCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendedRoomsLwrCVC", for: indexPath) as! RecommendedRoomsLwrCVC
             let item = viewModel.allRooms[indexPath.row]
             cell.configure(with: item, index: indexPath.item)
             return cell
-        } else if collectionView == propertyTypeCollectionView {
+            
+        case propertyTypeCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PropertyTypeCVC", for: indexPath) as! PropertyTypeCVC
             let item = viewModel.allHotels[indexPath.row]
             cell.configure(with: item, index: indexPath.item)
             return cell
-        } else {
+            
+        default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopOffersCVC", for: indexPath) as! TopOffersCVC
             cell.configure(viewModel: viewModel, index: indexPath.row)
-
             return cell
         }
     }
