@@ -9,7 +9,6 @@ import UIKit
 
 class HomePageViewController: UIViewController, CalenderVCDelegate {
     
-    
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var hotelListCollectionView: UICollectionView!
@@ -24,61 +23,40 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
     @IBOutlet weak var offersCollectionView: UICollectionView!
     @IBOutlet weak var roomAndAdultsButton: UIButton!
     
-    
     let viewModel = HotelJsonViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchView.applyCardStyle()
-        
-        hotelListCollectionView.register(UINib(nibName: "RecommendedHotelsLwrCVC", bundle: nil), forCellWithReuseIdentifier: "RecommendedHotelsLwrCVC")
-        hotelRoomCollectionView.register(UINib(nibName: "RecommendedRoomsLwrCVC", bundle: nil), forCellWithReuseIdentifier: "RecommendedRoomsLwrCVC")
-        propertyTypeCollectionView.register(UINib(nibName: "PropertyTypeCVC", bundle: nil), forCellWithReuseIdentifier: "PropertyTypeCVC")
-        offersCollectionView.register(UINib(nibName: "TopOffersCVC", bundle: nil), forCellWithReuseIdentifier: "TopOffersCVC")
-        
-        if let layout = hotelListCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.estimatedItemSize = .zero
-        }
-        
-        if let layouts = hotelRoomCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layouts.estimatedItemSize = .zero
-        }
-        
-        if let propertyLayouts = propertyTypeCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            propertyLayouts.estimatedItemSize = .zero
-        }
-        
-        if let offersLayouts = offersCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            offersLayouts.estimatedItemSize = .zero
-        }
-        
-        viewModel.fetchHotels {
-            DispatchQueue.main.async {
-                self.hotelListCollectionView.reloadData()
-                self.hotelRoomCollectionView.reloadData()
-                self.propertyTypeCollectionView.reloadData()
-                self.offersCollectionView.reloadData()
-            }
-        }
-        
+        setUpUI()
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         bestPlaceImgView.applyStrongLeftGradient()
     }
-    
+
     @IBAction func selectdateButtonAction(_ sender: Any) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "CalenderVC") as! CalenderVC
+        guard let controller = storyboard?.instantiateViewController(withIdentifier: "CalenderVC") as? CalenderVC else { return }
         controller.delegate = self
+        
         if let sheet = controller.sheetPresentationController {
             sheet.detents = [
                 .custom { context in
-                    return context.maximumDetentValue * 0.85
+                    return context.maximumDetentValue * 0.65
                 }
             ]
             sheet.prefersGrabberVisible = true
+            sheet.preferredCornerRadius = 20
+            
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                sheet.largestUndimmedDetentIdentifier = .medium
+                controller.preferredContentSize = CGSize(
+                    width: UIScreen.main.bounds.width,
+                    height: UIScreen.main.bounds.height * 0.5
+                )
+            }
         }
+        
         controller.modalPresentationStyle = .pageSheet
         present(controller, animated: true)
     }
@@ -86,31 +64,41 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
     func didSelectDateRange(_ dateRangeText: String) {
         selectdateButton.setTitle(dateRangeText, for: .normal)
     }
-
+    
     @IBAction func roomAndAdultsButtonAction(_ sender: Any) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "SelectRoomsAndGuestsVC") as! SelectRoomsAndGuestsVC
+        guard let controller = storyboard?.instantiateViewController(withIdentifier: "SelectRoomsAndGuestsVC") as? SelectRoomsAndGuestsVC else { return }
 
         if let sheet = controller.sheetPresentationController {
-            sheet.detents = [
-                .custom(identifier: .medium, resolver: { context in
-                    return context.maximumDetentValue * 0.6
-                })
-            ]
-            sheet.selectedDetentIdentifier = .medium
-            sheet.prefersGrabberVisible = true
-            sheet.largestUndimmedDetentIdentifier = .medium
-            sheet.prefersScrollingExpandsWhenScrolledToEdge = false
-            sheet.prefersEdgeAttachedInCompactHeight = true
-        }
+            if #available(iOS 16.0, *) {
+                sheet.detents = [
+                    .custom(identifier: .medium, resolver: { context in
+                        return context.maximumDetentValue * 0.65
+                    })
+                ]
+                sheet.selectedDetentIdentifier = .medium
+                sheet.prefersGrabberVisible = true
+                sheet.preferredCornerRadius = 20
 
-        controller.onApply = { [weak self] rooms, adults, children in
-            let title = "\(rooms) Room , \(adults) Adult\(adults > 1 ? "s" : "")" + (children > 0 ? " , \(children) Child\(children > 1 ? "ren" : "")" : "")
-            self?.roomAndAdultsButton.setTitle(title, for: .normal)
+                if UIDevice.current.userInterfaceIdiom == .pad {
+                    sheet.largestUndimmedDetentIdentifier = nil
+                    controller.preferredContentSize = CGSize(
+                        width: UIScreen.main.bounds.width,
+                        height: UIScreen.main.bounds.height * 0.5
+                    )
+                }
+            }
         }
 
         controller.modalPresentationStyle = .pageSheet
+
+        controller.onApply = { [weak self] rooms, adults, children in
+            let title = "\(rooms) Room\(rooms > 1 ? "s" : "") , \(adults) Adult\(adults > 1 ? "s" : "")" + (children > 0 ? " , \(children) Child\(children > 1 ? "ren" : "")" : "")
+            self?.roomAndAdultsButton.setTitle(title, for: .normal)
+        }
+
         present(controller, animated: true)
     }
+
 
     @IBAction func searchButtonAction(_ sender: Any) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "HotelListPageVC") as! HotelListPageVC
@@ -170,8 +158,6 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
         let controller = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
         controller.modalPresentationStyle = .fullScreen
         present(controller, animated: true)
-//        self.navigationController?.navigationBar.tintColor = .white
-//        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -188,5 +174,40 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
 
 }
 
-
+extension HomePageViewController {
+    func setUpUI() {
+        searchView.applyCardStyle()
+        
+        hotelListCollectionView.register(UINib(nibName: "RecommendedHotelsLwrCVC", bundle: nil), forCellWithReuseIdentifier: "RecommendedHotelsLwrCVC")
+        hotelRoomCollectionView.register(UINib(nibName: "RecommendedRoomsLwrCVC", bundle: nil), forCellWithReuseIdentifier: "RecommendedRoomsLwrCVC")
+        propertyTypeCollectionView.register(UINib(nibName: "PropertyTypeCVC", bundle: nil), forCellWithReuseIdentifier: "PropertyTypeCVC")
+        offersCollectionView.register(UINib(nibName: "TopOffersCVC", bundle: nil), forCellWithReuseIdentifier: "TopOffersCVC")
+        
+        if let layout = hotelListCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.estimatedItemSize = .zero
+        }
+        
+        if let layouts = hotelRoomCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layouts.estimatedItemSize = .zero
+        }
+        
+        if let propertyLayouts = propertyTypeCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            propertyLayouts.estimatedItemSize = .zero
+        }
+        
+        if let offersLayouts = offersCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            offersLayouts.estimatedItemSize = .zero
+        }
+        
+        viewModel.fetchHotels {
+            DispatchQueue.main.async {
+                self.hotelListCollectionView.reloadData()
+                self.hotelRoomCollectionView.reloadData()
+                self.propertyTypeCollectionView.reloadData()
+                self.offersCollectionView.reloadData()
+            }
+        }
+        
+    }
+}
 

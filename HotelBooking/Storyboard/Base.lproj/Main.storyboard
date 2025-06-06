@@ -225,7 +225,9 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ins-7Y-5Ex">
                                         <rect key="frame" x="20" y="60" width="353" height="41"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="1FT-mu-amM"/>
+                                            <constraint firstAttribute="height" constant="40" id="1FT-mu-amM">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                            </constraint>
                                         </constraints>
                                         <segments>
                                             <segment title="Calender"/>
@@ -314,6 +316,9 @@
                                             <constraint firstItem="t0X-gW-EOR" firstAttribute="top" secondItem="0yu-fE-aIW" secondAttribute="bottom" constant="20" id="M3a-r5-07X"/>
                                             <constraint firstAttribute="trailing" secondItem="t0X-gW-EOR" secondAttribute="trailing" constant="25" id="cZD-hb-c5X"/>
                                             <constraint firstItem="Vff-e1-ytg" firstAttribute="top" secondItem="eQW-Ww-SPG" secondAttribute="top" constant="5" id="mJu-bL-l97"/>
+                                            <constraint firstAttribute="height" constant="150.66999999999999" id="olO-GY-2Qs">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="170"/>
+                                            </constraint>
                                             <constraint firstItem="t0X-gW-EOR" firstAttribute="leading" secondItem="eQW-Ww-SPG" secondAttribute="leading" constant="25" id="pJp-Ig-kzm"/>
                                             <constraint firstAttribute="trailing" secondItem="Vff-e1-ytg" secondAttribute="trailing" id="wnV-nG-Dkq"/>
                                         </constraints>
@@ -420,6 +425,9 @@
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                </variation>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Oa7-dG-0oT">
                                                                 <rect key="frame" x="203" y="0.0" width="150" height="46.666666666666664"/>
@@ -491,6 +499,9 @@
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                </variation>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Git-HG-bXO">
                                                                 <rect key="frame" x="203" y="0.0" width="150" height="46.666666666666664"/>
@@ -565,12 +576,18 @@
                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                        </variation>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age 0-17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Bo-Qr-0Vm">
                                                                         <rect key="frame" x="0.0" y="25.333333333333371" width="203" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        </variation>
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -655,6 +672,9 @@
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                </variation>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pio-LC-c78">
                                                 <rect key="frame" x="298" y="10" width="52" height="30"/>
@@ -678,34 +698,41 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BE5-PN-2Hv">
-                                        <rect key="frame" x="20" y="309" width="353" height="30"/>
+                                        <rect key="frame" x="20" y="309" width="353" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Assistance animals aren't considerd pets. Read more about travelling with assistance animals."/>
                                         <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         </variation>
                                         <connections>
                                             <action selector="readMoreButtonTapped:" destination="NJr-Ob-aGP" eventType="touchUpInside" id="rwh-bm-wb1"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age of children at check-out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kW8-bR-CIa">
-                                        <rect key="frame" x="20" y="354" width="353" height="20.333333333333314"/>
+                                        <rect key="frame" x="20" y="357" width="353" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child ages will be used to find you the best macth in beds, room size and special prices." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dD0-0i-6bB">
-                                        <rect key="frame" x="20" y="384.33333333333331" width="353" height="36"/>
+                                        <rect key="frame" x="20" y="387.33333333333331" width="353" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        </variation>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TOs-FB-Hxr">
-                                        <rect key="frame" x="20" y="430.33333333333343" width="353" height="203.66666666666669"/>
+                                        <rect key="frame" x="20" y="433.33333333333343" width="353" height="200.66666666666669"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <connections>
-                                            <outlet property="dataSource" destination="NJr-Ob-aGP" id="35Y-qp-Sg7"/>
-                                            <outlet property="delegate" destination="NJr-Ob-aGP" id="7Qn-uC-ZPf"/>
+                                            <outlet property="dataSource" destination="NJr-Ob-aGP" id="PvX-Zx-0ja"/>
+                                            <outlet property="delegate" destination="NJr-Ob-aGP" id="tDl-xl-hZR"/>
                                         </connections>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ue-Ty-rep">
@@ -812,6 +839,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C98-f0-fb2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3188.5496183206105" y="-332.3943661971831"/>
+        </scene>
+        <!--Assistance Animal PolicyVC-->
+        <scene sceneID="QAZ-y9-DOW">
+            <objects>
+                <viewController storyboardIdentifier="AssistanceAnimalPolicyVC" id="CRA-2A-zKn" customClass="AssistanceAnimalPolicyVC" customModule="HotelBooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kd5-AJ-eWO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_assistancePet" translatesAutoresizingMaskIntoConstraints="NO" id="mZY-0h-d3c">
+                                <rect key="frame" x="121.66666666666669" y="89" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="nCA-lW-Sq5">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" secondItem="mZY-0h-d3c" secondAttribute="height" id="rAv-de-eyk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travelling with assistance animals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XlH-k4-A1k">
+                                <rect key="frame" x="20" y="249" width="353" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                </variation>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="KRy-L6-BMH">
+                                <rect key="frame" x="20" y="283" width="353" height="250"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="VEP-MW-sps"/>
+                                </constraints>
+                                <string key="text">Certified assistance animals are highly trained disability support aids that play an essential role in helping individuals with disabilities to engage in daily tasks safely and confidently.                               
+In many countries, travellers with an assistance animal are entitled to book any accommodation without facing additional fees or conditions even if pets aren’t allowed. Legal requirements on assistance animals vary based on location, so before travelling, study the local laws.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="McI-oL-z3n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mZY-0h-d3c" firstAttribute="centerX" secondItem="McI-oL-z3n" secondAttribute="centerX" id="JJ1-Nt-hwc"/>
+                            <constraint firstItem="KRy-L6-BMH" firstAttribute="leading" secondItem="XlH-k4-A1k" secondAttribute="leading" id="K16-sA-ssJ"/>
+                            <constraint firstItem="XlH-k4-A1k" firstAttribute="leading" secondItem="McI-oL-z3n" secondAttribute="leading" constant="20" id="OiQ-Md-xmB"/>
+                            <constraint firstItem="KRy-L6-BMH" firstAttribute="trailing" secondItem="XlH-k4-A1k" secondAttribute="trailing" id="Sh7-XT-kkq"/>
+                            <constraint firstItem="McI-oL-z3n" firstAttribute="trailing" secondItem="XlH-k4-A1k" secondAttribute="trailing" constant="20" id="TkO-uA-iJe"/>
+                            <constraint firstItem="KRy-L6-BMH" firstAttribute="top" secondItem="XlH-k4-A1k" secondAttribute="bottom" constant="10" id="axq-J8-fPt"/>
+                            <constraint firstItem="XlH-k4-A1k" firstAttribute="top" secondItem="mZY-0h-d3c" secondAttribute="bottom" constant="10" id="gYS-Ia-xXX"/>
+                            <constraint firstItem="mZY-0h-d3c" firstAttribute="top" secondItem="McI-oL-z3n" secondAttribute="top" constant="30" id="ren-HX-HPD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="KRy-L6-BMH" id="dMZ-RZ-qea"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uce-fj-EHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3898" y="-332"/>
         </scene>
         <!--Hotel Booking-->
         <scene sceneID="fLU-rw-CWe">
@@ -1059,7 +1149,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xfh-zx-phn">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xfh-zx-phn">
                                                 <rect key="frame" x="10" y="952" width="373" height="190"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -1307,6 +1397,7 @@
     <resources>
         <image name="arrow.up.arrow.down" catalog="system" width="128" height="97"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="ic_assistancePet" width="86.666664123535156" height="93.333335876464844"/>
         <image name="ic_vidhanSabha" width="204" height="141.66667175292969"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="minus" catalog="system" width="128" height="26"/>
@@ -1324,13 +1415,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tableCellBlueTextColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

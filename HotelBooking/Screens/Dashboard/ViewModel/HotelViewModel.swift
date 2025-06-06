@@ -71,7 +71,8 @@ class HotelJsonViewModel {
             self.allPolicies = decoded.Policies ?? []
             self.allSeasonalPrices = decoded.SeasonalPrices ?? []
             self.allRoomAvailability = decoded.RoomAvailability ?? []
-
+            self.allRooms = decoded.HotelRooms ?? []
+            
             currentPage = 0
             loadedItems = getPageItems(forPage: currentPage)
             completion(true)

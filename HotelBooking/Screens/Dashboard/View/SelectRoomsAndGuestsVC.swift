@@ -43,7 +43,31 @@ class SelectRoomsAndGuestsVC: UIViewController {
         self.dismiss(animated: true)
     }
     
-    @IBAction func readMoreButtonTapped(_ sender: Any) {}
+
+    @IBAction func readMoreButtonTapped(_ sender: Any) {
+        guard let controller = storyboard?.instantiateViewController(withIdentifier: "AssistanceAnimalPolicyVC") else { return }
+
+        if let sheet = controller.sheetPresentationController {
+            sheet.detents = [
+                .custom { context in
+                    return context.maximumDetentValue * 0.6
+                }
+            ]
+            sheet.prefersGrabberVisible = true
+            sheet.preferredCornerRadius = 20
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                sheet.largestUndimmedDetentIdentifier = .medium
+            }
+        }
+
+        controller.modalPresentationStyle = .pageSheet
+
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            controller.preferredContentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.5)
+        }
+
+        present(controller, animated: true)
+    }
     
     @IBAction func minusRoomButtonAction(_ sender: Any) {
         if roomCount > 1 {
@@ -97,6 +121,7 @@ class SelectRoomsAndGuestsVC: UIViewController {
         childrensListTableView.isHidden = false
 
         childrensListTableView.reloadData()
+        
         expandSheetToFullScreen()
     }
     
@@ -121,7 +146,11 @@ extension SelectRoomsAndGuestsVC : UITableViewDelegate, UITableViewDataSource {
     }
    
    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       return 100
+       if UIDevice.current.userInterfaceIdiom == .pad {
+           return 120
+       } else {
+           return 100
+       }
    }
 }
 
@@ -139,21 +168,23 @@ extension SelectRoomsAndGuestsVC {
         let fullText = "Assistance animals aren't considerd pets. Read more about travelling with assistance animals."
         let blackText = "Assistance animals aren't considerd pets. "
         let linkText = "Read more about travelling with assistance animals."
-        
+
+        let fontSize: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 18 : 15
+
         let attributedString = NSMutableAttributedString(
             string: fullText,
             attributes: [
-                .font: UIFont.systemFont(ofSize: 15),
+                .font: UIFont.systemFont(ofSize: fontSize),
                 .foregroundColor: UIColor.systemBlue
             ]
         )
-        
+
         attributedString.addAttribute(
             .foregroundColor,
             value: UIColor.black,
             range: (fullText as NSString).range(of: blackText)
         )
-        
+
         readMoreButton.setAttributedTitle(attributedString, for: .normal)
         readMoreButton.titleLabel?.numberOfLines = 0
         readMoreButton.titleLabel?.lineBreakMode = .byWordWrapping
@@ -171,6 +202,7 @@ extension SelectRoomsAndGuestsVC {
         minusRoomButton.isEnabled = roomCount > 1
         adultsMinusButton.isEnabled = adultsCount > 1
         childrenMinusButton.isEnabled = childrenCount > 0
+        childrenPlusButton.isEnabled = childrenCount < 10
     }
     
     func expandSheetToFullScreen() {
@@ -201,4 +233,6 @@ extension SelectRoomsAndGuestsVC {
         }
     }
 }
+
+
 
