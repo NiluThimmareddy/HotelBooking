@@ -13,13 +13,14 @@ struct HotelJsonRoot: Codable {
     let SeasonalPrices: [SeasonalPrice]?
     let RoomAvailability: [RoomAvailability]?
     let HotelRooms: [HotelRoom]?
-    
+    let HotelImages: [HotelImage]?
     enum CodingKeys: String, CodingKey {
         case Hotels
         case Policies = "HotelPolicies"
         case SeasonalPrices = "RoomSeasonalPrices"
         case RoomAvailability
         case HotelRooms = "HotelRooms"
+        case HotelImages = "HotelImages"
     }
 }
 

@@ -156,6 +156,7 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        controller.hotelDetailsData = viewModel.allHotels[indexPath.row]
         controller.modalPresentationStyle = .fullScreen
         present(controller, animated: true)
     }

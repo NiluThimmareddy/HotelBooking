@@ -131,7 +131,14 @@ extension UIView {
         self.layer.masksToBounds = false
         self.layer.shadowPath = nil
     }
-    
+    func BackViewShadowAppyManually(cornerRadius: CGFloat) {
+        self.layer.cornerRadius = cornerRadius
+        self.layer.shadowColor = UIColor.darkGray.cgColor
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowOffset = CGSize(width: 3, height: 3)
+        self.layer.shadowRadius = 4
+        self.layer.masksToBounds = false
+    }
     func BackViewShadow(){
         self.layer.shadowOpacity = 0.0
         self.layer.shadowOffset = CGSize(width: 0, height: 0)

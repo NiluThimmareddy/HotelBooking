@@ -3,7 +3,7 @@
 import Foundation
 
 enum DisplayMode {
-    case hotel, seasonalPrice, policy, roomAvailability, hotelRooms
+    case hotel, seasonalPrice, policy, roomAvailability, hotelRooms, hotelImages
 }
 
 class HotelJsonViewModel {
@@ -13,6 +13,7 @@ class HotelJsonViewModel {
     var allPolicies: [Policy] = []
     var allRoomAvailability: [RoomAvailability] = []
     var allRooms: [HotelRoom] = []
+    var allhotelImages: [HotelImage] = []
     
     var loadedItems: [String] = []
     var currentPage = 0
@@ -27,6 +28,7 @@ class HotelJsonViewModel {
         case .policy: count = allPolicies.count
         case .roomAvailability: count = allRoomAvailability.count
         case .hotelRooms: count = allRooms.count
+        case .hotelImages: count = allhotelImages.count
         }
         return Int(ceil(Double(count) / Double(pageSize)))
     }
@@ -48,6 +50,8 @@ class HotelJsonViewModel {
             return allRoomAvailability.map { "Room ID: \($0.RoomId)\nDate: \($0.Date)\nAvailable Count: \($0.AvailableCount)" }
         case .hotelRooms:
             return allRooms.map { $0.roomId }
+        case .hotelImages:
+            return allhotelImages.map { "Hotel ID: \($0.hotelId) \nImageUrl: \($0.imageUrl)\nImageId: \($0.imageId)" }
         }
     }
 
@@ -71,8 +75,7 @@ class HotelJsonViewModel {
             self.allPolicies = decoded.Policies ?? []
             self.allSeasonalPrices = decoded.SeasonalPrices ?? []
             self.allRoomAvailability = decoded.RoomAvailability ?? []
-            self.allRooms = decoded.HotelRooms ?? []
-            
+            self.allhotelImages = decoded.HotelImages ?? []
             currentPage = 0
             loadedItems = getPageItems(forPage: currentPage)
             completion(true)

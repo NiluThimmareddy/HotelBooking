@@ -24,11 +24,17 @@ struct GuestReviewModel{
     let name: String
     let rating: String
 }
-class DetailsViewController: UIViewController,UIScrollViewDelegate {
+class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDelegate {
     
     
     
     
+    @IBOutlet weak var mapKitBackView: UIView!
+    @IBOutlet weak var starFive: UIImageView!
+    @IBOutlet weak var starFour: UIImageView!
+    @IBOutlet weak var starThree: UIImageView!
+    @IBOutlet weak var starTwo: UIImageView!
+    @IBOutlet weak var starOne: UIImageView!
     @IBOutlet weak var guestWhoStayedHereLovedViewAllButton: UIButton!
     @IBOutlet weak var importantInformationReadMoreButton: UIButton!
     @IBOutlet weak var importantInformationLblHeightCons: NSLayoutConstraint!
@@ -76,6 +82,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate {
     @IBOutlet weak var heartButton: UIButton!
     @IBOutlet weak var topNameLbl: UILabel!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var viewMapButton: UIButton!
     var currentIndex = 0
     let countryViewModel = CountryListViewModel()
     let viewModel = HotelJsonViewModel()
@@ -103,7 +110,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate {
     var policies = ["Cancellation","Child","Comfort","Pet"]
    
     var isGuestReviewExpanded = false
-
+    var hotelDetailsData: Hotel?
     override func viewDidLoad() {
         super.viewDidLoad()
         CountryCodeManager.shared.fetchCountryCodes {
@@ -111,6 +118,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate {
                     self.GuestWhoStayedHereTV.reloadData()
                 }
             }
+        updateStarRating()
         hideViewAllButton()
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
         swipeLeft.direction = .left
@@ -163,11 +171,13 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate {
         hotelRatingLbl.clipsToBounds = true
 
         locationWithPin()
+        mapKitBackView.layer.cornerRadius = 10
         mapKitViewLatitudeLocation.layer.cornerRadius = 10
+        mapKitViewLatitudeLocation.delegate = self
         topNameLbl.text = ""
         scrollViewScroll.delegate = self
 
-        let originalPrice = "Rs 2808"
+        let originalPrice = "$ 280"
         let attributedString = NSAttributedString(
             string: originalPrice,
             attributes: [
@@ -178,7 +188,49 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate {
 
         priceStrikeLbl.attributedText = attributedString
         
+        
+        callPoliciesData()
+        callAllHotelsRoomData()
     }
+    func callAllHotelsRoomData(){
+        viewModel.switchDisplayMode(to: .hotelRooms)
+        
+        viewModel.fetchHotels {
+            DispatchQueue.main.async {
+                let filter = self.viewModel.allRooms.filter {
+                    $0.hotelId == self.hotelDetailsData?.HotelId
+                }
+                print("HotelId: \(filter)")
+                print("HotelId: \(filter)")
+//                if let finalFilterData = filter.first {
+//                    self.actualPriceLbl.text = "\(finalFilterData.basePrice)"
+//                } else {
+//                    self.actualPriceLbl.text = "N/A"
+//                }
+            }
+        }
+    }
+    func callPoliciesData(){
+        viewModel.switchDisplayMode(to: .policy)
+
+        viewModel.fetchHotels {
+            DispatchQueue.main.async {
+                self.policiesCollectionView.reloadData()
+            }
+        }
+    }
+    func updateStarRating() {
+        let rating = Int(hotelDetailsData?.StarRating ?? 0)
+        let starImageViews = [starOne, starTwo, starThree, starFour, starFive]
+        for (index, imageView) in starImageViews.enumerated() {
+            if index < rating {
+                imageView?.image = UIImage(named: "star")
+            } else {
+                imageView?.image = UIImage(named: "star-2")
+            }
+        }
+    }
+
     func hideViewAllButton(){
         let maxUserReviewCount = callUserReview.count
         if maxUserReviewCount > 5{
@@ -217,22 +269,6 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate {
         updateDynamicHeights()
     }
 
-//    func updateDynamicHeights() {
-//        let guestReviewCount = isGuestReviewExpanded ? callGuestReview.count : min(callGuestReview.count, 3)
-//        let guestReviewHeight = CGFloat(guestReviewCount) * 50
-//        let guestWhoStayedHeight = CGFloat(callUserReview.count) * 100
-//
-//        guestReviewTVHightCons.constant = guestReviewHeight
-//        GuestWhoStayedHereTVHeightCons.constant = guestWhoStayedHeight
-//
-//        let baseContentHeight: CGFloat = 2584 - 50 - 100
-//        scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight
-//
-//       
-//            view.layoutIfNeeded()
-//        
-//    }
-
     func updateDynamicHeights() {
         let guestReviewCount = isGuestReviewExpanded ? callGuestReview.count : min(callGuestReview.count, 3)
         let guestReviewHeight = CGFloat(guestReviewCount) * 50
@@ -243,7 +279,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate {
         guestReviewTVHightCons.constant = guestReviewHeight
         GuestWhoStayedHereTVHeightCons.constant = guestWhoStayedHeight
 
-        let baseContentHeight: CGFloat = 2164 - 50 - 100
+        let baseContentHeight: CGFloat = 2184 - 50 - 100
         scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight
 
         view.layoutIfNeeded()
@@ -263,20 +299,8 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate {
         }
     }
     func callData(){
-        viewModel.loadJson { [weak self] success in
-                DispatchQueue.main.async {
-                    if success {
-                        if let hotel = self?.viewModel.allHotels.first {
-                            print("First hotel name: \(hotel.HotelName)")
-                            self?.hotelNameLBL.text = hotel.HotelName
-                            self?.aboutThisHotelDescP.text = hotel.Description
-                            
-                        }
-                    } else {
-                        print("Failed to load data.")
-                    }
-                }
-            }
+        hotelNameLBL.text = hotelDetailsData?.HotelName
+        aboutThisHotelDescP.text = hotelDetailsData?.Description
     }
     
     @IBAction func guestWhoStayedHereLovedViewAllButton(_ sender: Any) {
@@ -317,27 +341,65 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate {
         dismiss(animated: true)
     }
     
+    @IBAction func viewMapButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "ViewHotelMapLocationVC")as! ViewHotelMapLocationVC
+        vc.hotelDataPass = hotelDetailsData
+        present(vc, animated: true)
+    }
     @IBAction func heartButton(_ sender: Any) {
     }
     
+    @IBAction func checkOutDateSelectButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "CheckInCalendarVC")as! CheckInCalendarVC
+        present(vc, animated: true)
+    }
+    @IBAction func checkIndateSelectButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "CheckInCalendarVC")as! CheckInCalendarVC
+        present(vc, animated: true)
+    }
+    @IBAction func guestCountTotalButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "GuestAndRoomsVC")as! GuestAndRoomsVC
+        present(vc, animated: true)
+    }
     @IBAction func shareButton(_ sender: Any) {
     }
-    func locationWithPin(){
-        let latitude: CLLocationDegrees = 13.0827
-            let longitude: CLLocationDegrees = 80.2707
+    func locationWithPin() {
+        let latitude: CLLocationDegrees = hotelDetailsData?.Latitude ?? 0
+        let longitude: CLLocationDegrees = hotelDetailsData?.Longitude ?? 0
 
-            let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let region = MKCoordinateRegion(center: location, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        mapKitViewLatitudeLocation.setRegion(region, animated: true)
 
-            // Set region around the location
-            let region = MKCoordinateRegion(center: location, latitudinalMeters: 1000, longitudinalMeters: 1000)
-            mapKitViewLatitudeLocation.setRegion(region, animated: true)
-
-            // Add a pin
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = location
-            annotation.title = "Hotel Location" // Customize this title
-            mapKitViewLatitudeLocation.addAnnotation(annotation)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        annotation.title = hotelDetailsData?.HotelName
+        mapKitViewLatitudeLocation.addAnnotation(annotation)
     }
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        }
+
+        let identifier = "CustomPin"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView?.canShowCallout = true
+            annotationView?.image = UIImage(named: "mapPin") 
+            annotationView?.frame.size = CGSize(width: 30, height: 30)
+        } else {
+            annotationView?.annotation = annotation
+        }
+
+        return annotationView
+    }
+
 }
 
 extension DetailsViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
@@ -347,7 +409,8 @@ extension DetailsViewController: UICollectionViewDelegate,UICollectionViewDataSo
         }else if collectionView == availabilitiesCollectionView{
             return callAvailabilities.count
         }else{
-            return policies.count
+            let filter = self.viewModel.allPolicies.filter { $0.HotelId == self.hotelDetailsData?.HotelId }
+            return filter.count
         }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -410,8 +473,9 @@ extension DetailsViewController: UICollectionViewDelegate,UICollectionViewDataSo
             return cell
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HotelPoliciesCVC", for: indexPath)as! HotelPoliciesCVC
-            let data = policies[indexPath.row]
-            cell.titleLbl.text = data
+            let filter = self.viewModel.allPolicies.filter { $0.HotelId == self.hotelDetailsData?.HotelId }
+            let finalFilteredData = filter[indexPath.row]
+            cell.titleLbl.text = finalFilteredData.PolicyType
             return cell
         }
     }
