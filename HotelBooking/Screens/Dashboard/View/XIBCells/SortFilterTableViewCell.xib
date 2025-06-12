@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="SortFilterTableViewCell" customModule="HotelBooking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qt7-nh-gv9">
+                        <rect key="frame" x="20" y="5" width="260" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7X-yl-CA7">
+                        <rect key="frame" x="285" y="5" width="30" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="avB-6O-V8e"/>
+                        </constraints>
+                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain">
+                            <imageReference key="image" image="circle" catalog="system" symbolScale="large"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="selectButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="LfJ-td-uOP"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="X7X-yl-CA7" secondAttribute="trailing" constant="5" id="7Qi-FR-zJw"/>
+                    <constraint firstAttribute="bottom" secondItem="X7X-yl-CA7" secondAttribute="bottom" constant="5" id="GNg-6x-oeO"/>
+                    <constraint firstItem="Qt7-nh-gv9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Ni4-8s-jdS"/>
+                    <constraint firstItem="Qt7-nh-gv9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="dZJ-yC-9GY"/>
+                    <constraint firstAttribute="bottom" secondItem="Qt7-nh-gv9" secondAttribute="bottom" constant="5" id="gbn-iT-qzI"/>
+                    <constraint firstItem="X7X-yl-CA7" firstAttribute="leading" secondItem="Qt7-nh-gv9" secondAttribute="trailing" constant="5" id="ror-C0-CO1"/>
+                    <constraint firstItem="X7X-yl-CA7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="uJ3-XD-4mt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="contentLabel" destination="Qt7-nh-gv9" id="eLm-wD-4GZ"/>
+                <outlet property="selectButton" destination="X7X-yl-CA7" id="ltr-8a-o9y"/>
+            </connections>
+            <point key="canvasLocation" x="13.740458015267174" y="-11.267605633802818"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circle" catalog="system" width="128" height="123"/>
+    </resources>
+</document>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G3W-UM-2vi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nKK-Lb-kMS">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -204,6 +204,127 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="phf-VD-qkf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1686.2595419847328" y="-331.69014084507046"/>
+        </scene>
+        <!--Rooms List PageVC-->
+        <scene sceneID="Mlt-O1-a8W">
+            <objects>
+                <viewController storyboardIdentifier="RoomsListPageVC" id="nKK-Lb-kMS" customClass="RoomsListPageVC" customModule="HotelBooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D9O-pF-KZb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TnO-x2-ROP">
+                                <rect key="frame" x="0.0" y="69" width="393" height="700"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nKK-Lb-kMS" id="oZa-4R-HJ4"/>
+                                    <outlet property="delegate" destination="nKK-Lb-kMS" id="aqi-8y-Ae7"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zwy-k1-pBt">
+                                <rect key="frame" x="0.0" y="689" width="393" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wf7-Sz-64h">
+                                        <rect key="frame" x="20" y="20" width="353" height="40"/>
+                                        <color key="backgroundColor" name="defaultColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Reserve">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="reserveButtonAction:" destination="nKK-Lb-kMS" eventType="touchUpInside" id="wST-bp-2bK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wf7-Sz-64h" secondAttribute="trailing" constant="20" id="5Mw-8j-86H"/>
+                                    <constraint firstAttribute="height" constant="80" id="E7C-9w-DAD"/>
+                                    <constraint firstItem="wf7-Sz-64h" firstAttribute="top" secondItem="Zwy-k1-pBt" secondAttribute="top" constant="20" id="LY2-oJ-FCl"/>
+                                    <constraint firstItem="wf7-Sz-64h" firstAttribute="leading" secondItem="Zwy-k1-pBt" secondAttribute="leading" constant="20" id="Uq9-yY-leT"/>
+                                    <constraint firstAttribute="bottom" secondItem="wf7-Sz-64h" secondAttribute="bottom" constant="20" id="YT4-8b-gO6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ea2-h5-OfZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zwy-k1-pBt" firstAttribute="leading" secondItem="Ea2-h5-OfZ" secondAttribute="leading" id="Hum-Kt-MH9"/>
+                            <constraint firstItem="TnO-x2-ROP" firstAttribute="leading" secondItem="Ea2-h5-OfZ" secondAttribute="leading" id="ItU-ft-HID"/>
+                            <constraint firstItem="Ea2-h5-OfZ" firstAttribute="bottom" secondItem="TnO-x2-ROP" secondAttribute="bottom" id="Nnt-Q1-YOd"/>
+                            <constraint firstItem="TnO-x2-ROP" firstAttribute="top" secondItem="Ea2-h5-OfZ" secondAttribute="top" constant="10" id="h9Y-Zb-OgC"/>
+                            <constraint firstItem="Zwy-k1-pBt" firstAttribute="bottom" secondItem="Ea2-h5-OfZ" secondAttribute="bottom" id="lyQ-7I-aUt"/>
+                            <constraint firstItem="Ea2-h5-OfZ" firstAttribute="trailing" secondItem="Zwy-k1-pBt" secondAttribute="trailing" id="qqJ-za-YVA"/>
+                            <constraint firstItem="Zwy-k1-pBt" firstAttribute="top" secondItem="TnO-x2-ROP" secondAttribute="bottom" id="tLE-FR-ukB"/>
+                            <constraint firstItem="Ea2-h5-OfZ" firstAttribute="trailing" secondItem="TnO-x2-ROP" secondAttribute="trailing" id="tUU-8i-ZFg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Zwy-k1-pBt"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ZTZ-uA-zur"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bottomView" destination="Zwy-k1-pBt" id="vsp-as-slN"/>
+                        <outlet property="reserveButton" destination="wf7-Sz-64h" id="dCR-Et-cse"/>
+                        <outlet property="roomsListTableView" destination="TnO-x2-ROP" id="Snd-2e-955"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ERi-qm-wC5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2450" y="330"/>
+        </scene>
+        <!--Sort Filter View Controller-->
+        <scene sceneID="RKJ-HR-dav">
+            <objects>
+                <viewController storyboardIdentifier="SortFilterViewController" id="pu9-bu-Ys7" customClass="SortFilterViewController" customModule="HotelBooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vIW-PA-ehp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjj-pm-tuG">
+                                <rect key="frame" x="20" y="79" width="353" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zxE-mG-AjP">
+                                <rect key="frame" x="0.0" y="113" width="393" height="705"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="pu9-bu-Ys7" id="z9O-iu-4mw"/>
+                                    <outlet property="delegate" destination="pu9-bu-Ys7" id="XD4-3v-frZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UoK-gi-vEG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UoK-gi-vEG" firstAttribute="trailing" secondItem="zxE-mG-AjP" secondAttribute="trailing" id="BdB-4G-ns5"/>
+                            <constraint firstItem="UoK-gi-vEG" firstAttribute="trailing" secondItem="Qjj-pm-tuG" secondAttribute="trailing" constant="20" id="RM6-B6-KpO"/>
+                            <constraint firstItem="Qjj-pm-tuG" firstAttribute="top" secondItem="UoK-gi-vEG" secondAttribute="top" constant="20" id="VEy-4s-gE6"/>
+                            <constraint firstItem="zxE-mG-AjP" firstAttribute="leading" secondItem="UoK-gi-vEG" secondAttribute="leading" id="XeQ-hA-zC5"/>
+                            <constraint firstItem="Qjj-pm-tuG" firstAttribute="leading" secondItem="UoK-gi-vEG" secondAttribute="leading" constant="20" id="Xs6-nF-tsJ"/>
+                            <constraint firstItem="UoK-gi-vEG" firstAttribute="bottom" secondItem="zxE-mG-AjP" secondAttribute="bottom" id="hcF-JU-KUM"/>
+                            <constraint firstItem="zxE-mG-AjP" firstAttribute="top" secondItem="Qjj-pm-tuG" secondAttribute="bottom" constant="10" id="oJy-oe-A6k"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sortFilterTableView" destination="zxE-mG-AjP" id="Z25-Fa-ams"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cfz-o9-JiF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3189" y="330"/>
         </scene>
         <!--CalenderVC-->
         <scene sceneID="NHF-YN-caF">
@@ -1415,13 +1536,13 @@ In many countries, travellers with an assistance animal are entitled to book any
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tableCellBlueTextColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

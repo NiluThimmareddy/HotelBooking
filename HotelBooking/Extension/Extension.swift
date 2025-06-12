@@ -158,6 +158,25 @@ extension UIView {
         self.layer.shadowOffset = CGSize(width: 0, height: -3)
         self.layer.shadowRadius = 4
     }
+    
+    func setHighlightedText(for label: UILabel, fullText: String, highlightText: String, normalFont: UIFont = .systemFont(ofSize: 14), highlightFont: UIFont = .boldSystemFont(ofSize: 18), normalColor: UIColor = .darkGray, highlightColor: UIColor = .black) {
+        let attributedString = NSMutableAttributedString(string: fullText)
+        
+        attributedString.addAttributes([
+            .font: normalFont,
+            .foregroundColor: normalColor
+        ], range: NSRange(location: 0, length: attributedString.length))
+        
+        if let range = fullText.range(of: highlightText) {
+            let nsRange = NSRange(range, in: fullText)
+            attributedString.addAttributes([
+                .font: highlightFont,
+                .foregroundColor: highlightColor
+            ], range: nsRange)
+        }
+        
+        label.attributedText = attributedString
+    }
 
 }
 
@@ -208,3 +227,25 @@ extension Array {
     }
 }
 
+
+extension UIView {
+    func addBorder(edge: UIRectEdge, color: UIColor, thickness: CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        
+        switch edge {
+        case .top:
+            border.frame = CGRect(x: 0, y: 0, width: frame.width, height: thickness)
+        case .bottom:
+            border.frame = CGRect(x: 0, y: frame.height - thickness, width: frame.width, height: thickness)
+        case .left:
+            border.frame = CGRect(x: 0, y: 0, width: thickness, height: frame.height)
+        case .right:
+            border.frame = CGRect(x: frame.width - thickness, y: 0, width: thickness, height: frame.height)
+        default:
+            break
+        }
+        
+        layer.addSublayer(border)
+    }
+}

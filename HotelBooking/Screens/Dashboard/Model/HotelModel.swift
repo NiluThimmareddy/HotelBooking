@@ -247,3 +247,7 @@ struct RoomAvailability: Codable {
     let AvailableCount: Int
 }
 
+struct Room {
+    var hasOffer: Bool
+    var hasImage: Bool
+}

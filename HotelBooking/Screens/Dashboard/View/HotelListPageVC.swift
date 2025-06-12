@@ -18,6 +18,7 @@ class HotelListPageVC: UIViewController, CLLocationManagerDelegate {
     
     private let filterVC = FilterViewController()
     private let overlayView = UIView()
+    var selectedSortOption: String?
     
     var isClicked : Bool = false
     
@@ -67,6 +68,28 @@ class HotelListPageVC: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func sortButtonAction(_ sender: Any) {
+        guard let controller = storyboard?.instantiateViewController(withIdentifier: "SortFilterViewController") as? SortFilterViewController else { return }
+        
+        if let sheet = controller.sheetPresentationController {
+            sheet.detents = [
+                .custom { context in
+                    return context.maximumDetentValue * 0.65
+                }
+            ]
+            sheet.prefersGrabberVisible = true
+            sheet.preferredCornerRadius = 20
+            
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                sheet.largestUndimmedDetentIdentifier = .medium
+                controller.preferredContentSize = CGSize(
+                    width: UIScreen.main.bounds.width,
+                    height: UIScreen.main.bounds.height * 0.5
+                )
+            }
+        }
+        
+        controller.modalPresentationStyle = .pageSheet
+        present(controller, animated: true)
     }
     
     @IBAction func filterButtonAction(_ sender: Any) {
