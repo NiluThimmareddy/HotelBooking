@@ -154,13 +154,13 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-<<<<<<< Updated upstream
+
         let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
         controller.hotelDetailsData = viewModel.allHotels[indexPath.row]
         controller.modalPresentationStyle = .fullScreen
         present(controller, animated: true)
-=======
+
         switch collectionView {
         case hotelListCollectionView:
             let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
@@ -180,7 +180,7 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
         default :
             break
         }
->>>>>>> Stashed changes
+
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
