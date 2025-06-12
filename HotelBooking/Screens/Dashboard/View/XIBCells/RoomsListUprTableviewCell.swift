@@ -1,20 +1,22 @@
 //
-//  RoomOffersCollectionViewCell.swift
+//  RoomsListUprTableviewCell.swift
 //  HotelBooking
 //
-//  Created by toqsoft on 10/06/25.
+//  Created by toqsoft on 12/06/25.
 //
 
 import UIKit
 
-class RoomOffersCollectionViewCell : UICollectionViewCell {
+class RoomsListUprTableviewCell : UITableViewCell {
 
+    
     @IBOutlet weak var backView: UIView!
-    @IBOutlet weak var priceLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         backView.applyCardStyle()
     }
 
+   
+    
 }

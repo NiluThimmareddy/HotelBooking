@@ -12,6 +12,12 @@ class RoomsListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var offerCollectionView: UICollectionView!
+    @IBOutlet weak var roomTypeLabel: UILabel!
+    @IBOutlet weak var adultsCountLabel: UILabel!
+    @IBOutlet weak var bedsCountLabel: UILabel!
+    @IBOutlet weak var roomSizeLabel: UILabel!
+    
+    var viewModel = HotelJsonViewModel()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +30,6 @@ class RoomsListTableViewCell: UITableViewCell {
         }
     }
 
-   
 }
 
 extension RoomsListTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

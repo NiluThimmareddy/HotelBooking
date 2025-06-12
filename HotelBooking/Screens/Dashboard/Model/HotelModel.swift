@@ -14,13 +14,24 @@ struct HotelJsonRoot: Codable {
     let RoomAvailability: [RoomAvailability]?
     let HotelRooms: [HotelRoom]?
     let HotelImages: [HotelImage]?
+    let HotelNearbyLandmark : [HotelLandmark]?
+    let HotelDiscounts: [HotelDiscount]?
+    let Facilities: [HotelFacility]?
+    let HotelFacilities : [HotelFacilityAvailability]?
+    let RoomFacility : [RoomFacility]?
+    
     enum CodingKeys: String, CodingKey {
         case Hotels
         case Policies = "HotelPolicies"
         case SeasonalPrices = "RoomSeasonalPrices"
-        case RoomAvailability
+        case RoomAvailability = "RoomAvailability"
         case HotelRooms = "HotelRooms"
         case HotelImages = "HotelImages"
+        case HotelNearbyLandmark = "HotelNearbyLandmarks"
+        case HotelDiscounts = "HotelDiscounts"
+        case Facilities = "Facilities"
+        case HotelFacilities = "HotelFacilities"
+        case RoomFacility = "RoomFacilities"
     }
 }
 
@@ -248,6 +259,6 @@ struct RoomAvailability: Codable {
 }
 
 struct Room {
-    var hasOffer: Bool
-    var hasImage: Bool
+    var hasOffer: Bool?
+    var hasImage: Bool?
 }

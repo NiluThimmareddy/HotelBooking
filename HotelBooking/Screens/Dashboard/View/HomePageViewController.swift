@@ -122,7 +122,7 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
         case hotelRoomCollectionView:
             return min(6, viewModel.allRooms.count)
         default:
-            return viewModel.bankImages.count
+            return min(7, viewModel.allHotelDiscounts.count)
         }
     }
 
@@ -148,7 +148,8 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
             
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopOffersCVC", for: indexPath) as! TopOffersCVC
-            cell.configure(viewModel: viewModel, index: indexPath.row)
+            let discount = viewModel.allHotelDiscounts[indexPath.row]
+            cell.configure(viewModel: viewModel, index: indexPath.row, discount: discount)
             return cell
         }
     }

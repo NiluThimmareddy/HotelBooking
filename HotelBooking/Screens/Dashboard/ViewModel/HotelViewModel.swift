@@ -3,7 +3,7 @@
 import Foundation
 
 enum DisplayMode {
-    case hotel, seasonalPrice, policy, roomAvailability, hotelRooms, hotelImages
+    case hotel, seasonalPrice, policy, roomAvailability, hotelRooms, hotelImages, hotelNearbyLandmarks, hotelDiscounts, facility, hotelFacilityAvailability, roomFacility
 }
 
 class HotelJsonViewModel {
@@ -14,6 +14,11 @@ class HotelJsonViewModel {
     var allRoomAvailability: [RoomAvailability] = []
     var allRooms: [HotelRoom] = []
     var allhotelImages: [HotelImage] = []
+    var allHotelNearbyLandmarks: [HotelLandmark] = []
+    var allHotelDiscounts: [HotelDiscount] = []
+    var allFacilities: [HotelFacility] = []
+    var allHotelFacilityAvailabilities: [HotelFacilityAvailability] = []
+    var allRoomFacilities: [RoomFacility] = []
     
     var loadedItems: [String] = []
     var currentPage = 0
@@ -29,6 +34,11 @@ class HotelJsonViewModel {
         case .roomAvailability: count = allRoomAvailability.count
         case .hotelRooms: count = allRooms.count
         case .hotelImages: count = allhotelImages.count
+        case .hotelNearbyLandmarks: count = allHotelNearbyLandmarks.count
+        case .hotelDiscounts: count = allHotelDiscounts.count
+        case .facility: count = allFacilities.count
+        case .hotelFacilityAvailability: count = allHotelFacilityAvailabilities.count
+        case .roomFacility: count = allRoomFacilities.count
         }
         return Int(ceil(Double(count) / Double(pageSize)))
     }
@@ -42,16 +52,36 @@ class HotelJsonViewModel {
         switch displayMode {
         case .hotel:
             return allHotels.map { "Hotel Name: \($0.HotelName)\nHotel Type: \($0.HotelType)" }
+
         case .seasonalPrice:
             return allSeasonalPrices.map { "Room ID: \($0.RoomId)\nPrice: \($0.Price)\nFrom: \($0.StartDate)\nTo: \($0.EndDate)" }
+
         case .policy:
             return allPolicies.map { "Hotel ID: \($0.HotelId)\nPolicy Type: \($0.PolicyType)\nDescription: \($0.Description)" }
+
         case .roomAvailability:
             return allRoomAvailability.map { "Room ID: \($0.RoomId)\nDate: \($0.Date)\nAvailable Count: \($0.AvailableCount)" }
+
         case .hotelRooms:
-            return allRooms.map { $0.roomId }
+            return allRooms.map { "Room ID: \($0.roomId)\nRoom Type: \($0.roomType)\nHotel ID: \($0.hotelId)" }
+
         case .hotelImages:
-            return allhotelImages.map { "Hotel ID: \($0.hotelId) \nImageUrl: \($0.imageUrl)\nImageId: \($0.imageId)" }
+            return allhotelImages.map { "Hotel ID: \($0.hotelId)\nImage URL: \($0.imageUrl)\nImage ID: \($0.imageId)" }
+
+        case .hotelNearbyLandmarks:
+            return allHotelNearbyLandmarks.map { "Hotel ID: \($0.hotelId)\nLandmark: \($0.landmarkName)\nDistance: \($0.distanceInKm)" }
+
+        case .hotelDiscounts:
+            return allHotelDiscounts.map { "Hotel ID: \($0.hotelId)\nDiscount: \($0.discountPercentage)%\nFrom: \($0.validFrom)\nTo: \($0.validTo)" }
+
+        case .facility:
+            return allFacilities.map { "Facility ID: \($0.facilityId)\nFacility Name: \($0.facilityName)" }
+
+        case .hotelFacilityAvailability:
+            return allHotelFacilityAvailabilities.map { "Hotel ID: \($0.hotelId)\nFacility ID: \($0.facilityId)\nAvailable: \($0.isAvailable ? "Yes" : "No")" }
+
+        case .roomFacility:
+            return allRoomFacilities.map { "Room ID: \($0.roomId)\nFacility ID: \($0.facilityId)" }
         }
     }
 
@@ -77,6 +107,12 @@ class HotelJsonViewModel {
             self.allRoomAvailability = decoded.RoomAvailability ?? []
             self.allhotelImages = decoded.HotelImages ?? []
             self.allRooms = decoded.HotelRooms ?? []
+            self.allHotelNearbyLandmarks = decoded.HotelNearbyLandmark ?? []
+            self.allHotelDiscounts = decoded.HotelDiscounts ?? []
+            self.allFacilities = decoded.Facilities ?? []
+            self.allHotelFacilityAvailabilities = decoded.HotelFacilities ?? []
+            self.allRoomFacilities = decoded.RoomFacility ?? []
+            
             currentPage = 0
             loadedItems = getPageItems(forPage: currentPage)
             completion(true)

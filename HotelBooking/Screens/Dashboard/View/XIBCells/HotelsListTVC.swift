@@ -34,14 +34,14 @@ class HotelsListTVC : UITableViewCell {
         backView.applyCardStyle()
     }
     
-    func configure(with hotel: Hotel, room: HotelRoom?, policy: Policy, distance: String) {
+    func configure(with hotel: Hotel, room: HotelRoom?, policy: Policy, distance: HotelLandmark) {
         hotelNameLabel.text = hotel.HotelName
         hotelTypeLabel.text = hotel.HotelType
         descriptionLabel.text = hotel.Description
         addressLabel.text = "\(hotel.Country), \(hotel.StateOrProvince), \(hotel.City), \(hotel.AddressLine1), \(hotel.PostalCode)"
         phoneNoLabel.text = hotel.PrimaryPhone
         covidLabel.text = "CovidSafety Level : \(hotel.CovidSafetyLevel)"
-        distanceLabel.text = "\(distance)"
+        distanceLabel.text = "\(distance.distanceInKm) KM from \(distance.landmarkType)"
         availabilityRoomsLabel.text = "Available Rooms : \(room?.availableRooms ?? 0)"
         cancelationPolicyLabel.text = policy.PolicyType
 

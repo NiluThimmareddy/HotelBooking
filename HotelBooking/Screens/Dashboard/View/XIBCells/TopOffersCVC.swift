@@ -24,7 +24,8 @@ class TopOffersCVC: UICollectionViewCell {
         bankImageView.contentMode = .scaleAspectFit
     }
 
-    func configure(viewModel: HotelJsonViewModel, index: Int) {
+    func configure(viewModel: HotelJsonViewModel, index: Int, discount : HotelDiscount) {
+        
         guard index < viewModel.bankImages.count,
               let image = UIImage(named: viewModel.bankImages[index]) else {
             bankImageView.image = nil
@@ -42,8 +43,10 @@ class TopOffersCVC: UICollectionViewCell {
         aspectRatioConstraint?.priority = .required
         aspectRatioConstraint?.isActive = true
 
-        percentLabel.text = viewModel.percentage[safe: index] ?? ""
-        descriptionLabel.text = viewModel.descriptions[safe: index] ?? ""
+        percentLabel.text = discount.title
+        descriptionLabel.text = discount.description
+//        percentLabel.text = viewModel.percentage[safe: index] ?? ""
+//        descriptionLabel.text = viewModel.descriptions[safe: index] ?? ""
 
         let code = viewModel.offerCode[safe: index] ?? ""
         offerCodeLabel.text = code

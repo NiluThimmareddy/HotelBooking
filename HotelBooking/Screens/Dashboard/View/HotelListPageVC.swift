@@ -114,18 +114,9 @@ extension HotelListPageVC: UITableViewDelegate, UITableViewDataSource {
         let rooms = viewModel.allRooms.filter { $0.hotelId == hotel.HotelId }
         let cheapestRoom = rooms.min(by: { $0.basePrice < $1.basePrice })
         let policy = viewModel.allPolicies[indexPath.row]
-        
-        var distanceText = "10 km from the heart of the city"
-        if let userLocation = currentLocation {
-            let hotelLocation = CLLocation(latitude: hotel.Latitude, longitude: hotel.Longitude)
-            let distanceInMeters = userLocation.distance(from: hotelLocation)
-            let distanceInKm = distanceInMeters / 1000
-            distanceText = String(format: "%.2f km", distanceInKm)
-        } else {
-            print("Location not ready when loading cell for \(hotel.HotelName)")
-        }
-        
-        cell.configure(with: hotel, room: cheapestRoom, policy: policy, distance: distanceText)
+        let nearBy = viewModel.allHotelNearbyLandmarks[indexPath.row]
+
+        cell.configure(with: hotel, room: cheapestRoom, policy: policy, distance: nearBy)
         
         return cell
     }

@@ -13,6 +13,12 @@ class RoomsListLwrTableViewCell: UITableViewCell {
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var partnerView: UIView!
     @IBOutlet weak var rateView: UIView!
+    @IBOutlet weak var roomTypeLabel: UILabel!
+    @IBOutlet weak var adultsCountLabel: UILabel!
+    @IBOutlet weak var bedsCountLabel: UILabel!
+    @IBOutlet weak var roomSizeLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
