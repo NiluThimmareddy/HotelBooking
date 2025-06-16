@@ -5,6 +5,7 @@
 //  Created by ToqSoft on 19/05/25.
 //
 
+
 import UIKit
 
 class HomePageViewController: UIViewController, CalenderVCDelegate {
@@ -25,6 +26,9 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
     
     let viewModel = HotelJsonViewModel()
     
+    var offerScrollTimer: Timer?
+    var currentOfferIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
@@ -33,6 +37,12 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         bestPlaceImgView.applyStrongLeftGradient()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        offerScrollTimer?.invalidate()
+        offerScrollTimer = nil
     }
 
     @IBAction func selectdateButtonAction(_ sender: Any) {
@@ -102,12 +112,18 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
 
     @IBAction func searchButtonAction(_ sender: Any) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "HotelListPageVC") as! HotelListPageVC
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        self.navigationItem.backBarButtonItem = backItem
         self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBAction func seeDealsButtonAction(_ sender: Any) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "HotelListPageVC") as! HotelListPageVC
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        self.navigationItem.backBarButtonItem = backItem
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
@@ -185,16 +201,18 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemWidth = collectionView.frame.width * 0.49
+        let itemWidth = collectionView.frame.width * 0.44
         let itemHeight = collectionView.frame.height
         return CGSize(width: itemWidth, height: itemHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 8
+        return 0
     }
-    
-    
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
 
 }
 
@@ -220,6 +238,7 @@ extension HomePageViewController {
         }
         
         if let offersLayouts = offersCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            offersLayouts.scrollDirection = .horizontal
             offersLayouts.estimatedItemSize = .zero
         }
         
@@ -232,6 +251,30 @@ extension HomePageViewController {
             }
         }
         
+        startOfferAutoScroll()
+        offersCollectionView.isPagingEnabled = true
+
     }
+    
+    func startOfferAutoScroll() {
+        offerScrollTimer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { [weak self] _ in
+            guard let self = self,
+                  let collectionView = self.offersCollectionView else { return }
+
+            let currentOffset = collectionView.contentOffset.x
+            let contentWidth = collectionView.contentSize.width
+            let frameWidth = collectionView.frame.size.width
+            let nextOffset = currentOffset + frameWidth
+
+            if nextOffset >= contentWidth {
+                collectionView.setContentOffset(.zero, animated: false)
+            } else {
+                let newOffset = CGPoint(x: nextOffset, y: 0)
+                collectionView.setContentOffset(newOffset, animated: true)
+            }
+        }
+    }
+
 }
+
 

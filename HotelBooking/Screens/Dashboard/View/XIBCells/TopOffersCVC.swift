@@ -45,14 +45,11 @@ class TopOffersCVC: UICollectionViewCell {
 
         percentLabel.text = discount.title
         descriptionLabel.text = discount.description
-//        percentLabel.text = viewModel.percentage[safe: index] ?? ""
-//        descriptionLabel.text = viewModel.descriptions[safe: index] ?? ""
 
         let code = viewModel.offerCode[safe: index] ?? ""
         offerCodeLabel.text = code
         offerCodeLabel.isHidden = code.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
-
 }
 
 

@@ -63,6 +63,7 @@ struct Hotel: Codable {
     let LanguagesSpoken: String
     let IsActive: Bool
     let CreatedDate: String
+    let reviewScore: Double?
 }
 
 struct HotelImage: Codable {
@@ -261,4 +262,20 @@ struct RoomAvailability: Codable {
 struct Room {
     var hasOffer: Bool?
     var hasImage: Bool?
+}
+
+struct AvailabilitiesModel{
+    let name: String
+    let image: String
+}
+struct userReviewModel{
+    let name: String
+    let image: String
+    let desc: String
+    let country: String
+    
+}
+struct GuestReviewModel{
+    let name: String
+    let rating: String
 }

@@ -457,6 +457,11 @@
                                 <real key="value" value="5"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="UoD-wz-9qN"/>
+                            </mask>
+                        </variation>
                     </view>
                 </subviews>
                 <constraints>

@@ -6,9 +6,8 @@
 //
 
 import UIKit
-import CoreLocation
 
-class HotelListPageVC: UIViewController, CLLocationManagerDelegate {
+class HotelListPageVC: UIViewController {
     
     @IBOutlet weak var hotelListTableview: UITableView!
     @IBOutlet weak var filterButton: UIButton!
@@ -21,11 +20,6 @@ class HotelListPageVC: UIViewController, CLLocationManagerDelegate {
     var selectedSortOption: String?
     
     var isClicked : Bool = false
-    
-    let locationManager = CLLocationManager()
-    var currentLocation: CLLocation?
-    var locationFetched = false
-    var hotelsFetched = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,23 +51,13 @@ class HotelListPageVC: UIViewController, CLLocationManagerDelegate {
         })
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let loc = locations.last else { return }
-        currentLocation = loc
-        locationFetched = true
-        if hotelsFetched {
-            hotelListTableview.reloadData()
-        }
-        locationManager.stopUpdatingLocation()
-    }
-    
     @IBAction func sortButtonAction(_ sender: Any) {
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "SortFilterViewController") as? SortFilterViewController else { return }
         
         if let sheet = controller.sheetPresentationController {
             sheet.detents = [
                 .custom { context in
-                    return context.maximumDetentValue * 0.65
+                    return context.maximumDetentValue * 0.73
                 }
             ]
             sheet.prefersGrabberVisible = true
@@ -87,7 +71,7 @@ class HotelListPageVC: UIViewController, CLLocationManagerDelegate {
                 )
             }
         }
-        
+        controller.delegate = self
         controller.modalPresentationStyle = .pageSheet
         present(controller, animated: true)
     }
@@ -134,7 +118,10 @@ extension HotelListPageVC: UITableViewDelegate, UITableViewDataSource {
         let controller = storyboard.instantiateViewController(identifier: "DetailsViewController") as! DetailsViewController
         controller.hotelDetailsData = viewModel.allHotels[indexPath.row]
         controller.modalPresentationStyle = .fullScreen
-        present(controller, animated: true)
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        self.navigationItem.backBarButtonItem = backItem
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }
 
@@ -146,11 +133,8 @@ extension HotelListPageVC {
         hotelListTableview.register(UINib(nibName: "HotelsListTVC", bundle: nil), forCellReuseIdentifier: "HotelsListTVC")
         
         viewModel.fetchHotels {
-            self.hotelsFetched = true
             DispatchQueue.main.async {
-                if self.locationFetched {
                     self.hotelListTableview.reloadData()
-                }
             }
         }
         
@@ -173,9 +157,6 @@ extension HotelListPageVC {
         filterVC.view.alpha = 0
         filterVC.view.layer.cornerRadius = 12
         filterVC.view.clipsToBounds = true
-        
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
+
     }
 }

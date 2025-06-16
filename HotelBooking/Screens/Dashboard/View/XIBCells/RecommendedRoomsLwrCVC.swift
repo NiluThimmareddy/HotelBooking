@@ -27,7 +27,7 @@ class RecommendedRoomsLwrCVC: UICollectionViewCell {
     
     func configure(with room: HotelRoom, index: Int) {
         roomTypeLabel.text = room.roomType
-        priceLabel.text = "$\(room.basePrice)"
+        priceLabel.text = "$\(room.basePrice) / Night"
 
         let imageName = roomsImages[index % roomsImages.count] 
         roomImgView.image = UIImage(named: imageName)
