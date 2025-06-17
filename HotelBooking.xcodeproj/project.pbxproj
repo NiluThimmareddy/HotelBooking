@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B555294A2DED981400F4171A /* JTAppleCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B55529492DED981400F4171A /* JTAppleCalendar */; };
 		B55529552DEDC25500F4171A /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B55529542DEDC25500F4171A /* FSCalendar */; };
 		B5FE94DA2DDCAC8F00EEE0B9 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = B5FE94D92DDCAC8F00EEE0B9 /* Reachability */; };
 /* End PBXBuildFile section */
@@ -45,7 +44,6 @@
 			files = (
 				B5FE94DA2DDCAC8F00EEE0B9 /* Reachability in Frameworks */,
 				B55529552DEDC25500F4171A /* FSCalendar in Frameworks */,
-				B555294A2DED981400F4171A /* JTAppleCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +96,6 @@
 			name = HotelBooking;
 			packageProductDependencies = (
 				B5FE94D92DDCAC8F00EEE0B9 /* Reachability */,
-				B55529492DED981400F4171A /* JTAppleCalendar */,
 				B55529542DEDC25500F4171A /* FSCalendar */,
 			);
 			productName = HotelBooking;
@@ -131,7 +128,6 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				B5FE94D82DDCAC8F00EEE0B9 /* XCRemoteSwiftPackageReference "Reachability" */,
-				B55529482DED981400F4171A /* XCRemoteSwiftPackageReference "JTAppleCalendar" */,
 				B55529532DEDC25500F4171A /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -368,14 +364,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B55529482DED981400F4171A /* XCRemoteSwiftPackageReference "JTAppleCalendar" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/patchthecode/JTAppleCalendar";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.5;
-			};
-		};
 		B55529532DEDC25500F4171A /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
@@ -395,11 +383,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B55529492DED981400F4171A /* JTAppleCalendar */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B55529482DED981400F4171A /* XCRemoteSwiftPackageReference "JTAppleCalendar" */;
-			productName = JTAppleCalendar;
-		};
 		B55529542DEDC25500F4171A /* FSCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B55529532DEDC25500F4171A /* XCRemoteSwiftPackageReference "FSCalendar" */;

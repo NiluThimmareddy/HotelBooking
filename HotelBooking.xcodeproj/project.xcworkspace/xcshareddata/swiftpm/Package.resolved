@@ -1,5 +1,5 @@
 {
-  "originHash" : "ad8bec10fd59798413bdecadc7e7a549d86e239e449eb90ad3e357a73b8d752b",
+  "originHash" : "d12818b53d4b466762b93ed2f8347195a84987ece491976e80e6e23182d21949",
   "pins" : [
     {
       "identity" : "fscalendar",
@@ -8,15 +8,6 @@
       "state" : {
         "revision" : "0fbdec5172fccb90f707472eeaea4ffe095278f6",
         "version" : "2.8.4"
-      }
-    },
-    {
-      "identity" : "jtapplecalendar",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/patchthecode/JTAppleCalendar",
-      "state" : {
-        "revision" : "718f0ab68ba0fcd2bc134f6e9d30edc1b9b038e1",
-        "version" : "8.0.5"
       }
     },
     {
