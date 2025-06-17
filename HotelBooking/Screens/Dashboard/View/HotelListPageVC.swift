@@ -57,7 +57,11 @@ class HotelListPageVC: UIViewController {
         if let sheet = controller.sheetPresentationController {
             sheet.detents = [
                 .custom { context in
-                    return context.maximumDetentValue * 0.73
+                    if UIDevice.current.userInterfaceIdiom == .pad {
+                        return context.maximumDetentValue * 0.57
+                    } else {
+                        return context.maximumDetentValue * 0.73
+                    }
                 }
             ]
             sheet.prefersGrabberVisible = true
@@ -77,8 +81,28 @@ class HotelListPageVC: UIViewController {
     }
     
     @IBAction func filterButtonAction(_ sender: Any) {
-        isClicked.toggle()
-        isClicked ? showFilters() : hideFilters()
+        guard let controller = storyboard?.instantiateViewController(withIdentifier: "FilterOptionsViewController") as? FilterOptionsViewController else { return }
+        
+        if let sheet = controller.sheetPresentationController {
+            sheet.detents = [
+                .custom { context in
+                    return context.maximumDetentValue * 0.83
+                }
+            ]
+            sheet.prefersGrabberVisible = true
+            sheet.preferredCornerRadius = 20
+            
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                sheet.largestUndimmedDetentIdentifier = .medium
+                controller.preferredContentSize = CGSize(
+                    width: UIScreen.main.bounds.width,
+                    height: UIScreen.main.bounds.height * 0.6
+                )
+            }
+        }
+        
+        controller.modalPresentationStyle = .pageSheet
+        present(controller, animated: true)
     }
     
 }

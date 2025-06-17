@@ -40,7 +40,9 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="X7X-yl-CA7" secondAttribute="trailing" constant="5" id="7Qi-FR-zJw"/>
+                    <constraint firstAttribute="trailing" secondItem="X7X-yl-CA7" secondAttribute="trailing" constant="5" id="7Qi-FR-zJw">
+                        <variation key="heightClass=regular-widthClass=regular" constant="15"/>
+                    </constraint>
                     <constraint firstAttribute="bottom" secondItem="X7X-yl-CA7" secondAttribute="bottom" constant="5" id="GNg-6x-oeO"/>
                     <constraint firstItem="Qt7-nh-gv9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Ni4-8s-jdS"/>
                     <constraint firstItem="Qt7-nh-gv9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="dZJ-yC-9GY"/>

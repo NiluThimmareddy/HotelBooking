@@ -69,9 +69,9 @@ extension RoomsListPageVC : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "BookingOverviewVC") as! BookingOverviewVC
-        controller.navigationItem.title = "Booking Overview"
+        let storyboard = UIStoryboard.init(name: "RoomDetailsPage", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "RoomDetailsPageViewController") as! RoomDetailsPageViewController
+        controller.navigationItem.title = "Room Details"
         let backItem = UIBarButtonItem()
         backItem.title = ""
         self.navigationItem.backBarButtonItem = backItem
