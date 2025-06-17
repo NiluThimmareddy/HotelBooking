@@ -42,6 +42,14 @@ class UserReviewsVC: UIViewController {
     var filterDate = ["Mar - May","Jun - Aug","Sep - Nov","Dec - Feb"]
     var sortedData = ["Most Relevant","Newest First","Oldest First","Highest Scores","Lowest Scores"]
     var hotelName: String?
+    let topNameLbl: UILabel = {
+       let label = UILabel()
+       label.textColor = .white
+       label.text = "Review"
+       label.font = UIFont.boldSystemFont(ofSize: 18)
+       label.textAlignment = .center
+       return label
+   }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +67,8 @@ class UserReviewsVC: UIViewController {
         filterByBackView.BackViewShadow()
         sortByBackView.BackViewShadow()
         hotelNameLbl.text = hotelName
+        navigationItem.titleView = topNameLbl
+        
     }
    
 

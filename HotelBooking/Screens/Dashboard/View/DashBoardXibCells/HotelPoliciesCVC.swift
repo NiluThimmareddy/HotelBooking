@@ -13,7 +13,7 @@ class HotelPoliciesCVC: UICollectionViewCell {
     @IBOutlet weak var titleLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        backView.BackViewShadow()
+       
     }
 
 }

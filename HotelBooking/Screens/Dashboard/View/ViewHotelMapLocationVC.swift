@@ -15,6 +15,9 @@ class HotelAnnotation: MKPointAnnotation {
 
 class ViewHotelMapLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDelegate, CLLocationManagerDelegate {
     
+    @IBOutlet weak var shimmerEffectView: UIView!
+    @IBOutlet weak var hotelDetailsUpdatedPopUpLbl: UILabel!
+    @IBOutlet weak var hotelDetailsUpdatedPopUpView: UIView!
     @IBOutlet weak var searchBarBackView: UIView!
     @IBOutlet weak var satelliteImageBackView: UIView!
     @IBOutlet weak var defaultImageBackView: UIView!
@@ -73,7 +76,44 @@ class ViewHotelMapLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDe
         searchBarBackView.layer.cornerRadius = 10
         searchBarBackView.layer.borderWidth = 2
         searchBarBackView.layer.borderColor = color?.cgColor
+        
+        hotelDetailsUpdatedPopUpView.isHidden = true
+        hotelDetailsUpdatedPopUpView.layer.cornerRadius = 8
+        hotelDetailsUpdatedPopUpView.layer.shadowColor = UIColor.black.cgColor
+        hotelDetailsUpdatedPopUpView.layer.shadowOpacity = 0.2
+        hotelDetailsUpdatedPopUpView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        shimmerEffectView.isHidden = true
+        shimmerEffectView.alpha = 0.6
+
+
     }
+    func showHotelUpdatedPopup(with name: String) {
+        hotelDetailsUpdatedPopUpLbl.text = "\(name) Details Updated"
+        
+        // Start from just off the left side of the screen
+        let screenWidth = UIScreen.main.bounds.width
+        hotelDetailsUpdatedPopUpView.transform = CGAffineTransform(translationX: -screenWidth, y: 0)
+        hotelDetailsUpdatedPopUpView.alpha = 1
+        hotelDetailsUpdatedPopUpView.isHidden = false
+
+        // Slide into center
+        UIView.animate(withDuration: 0.5, animations: {
+            self.hotelDetailsUpdatedPopUpView.transform = .identity
+        }) { _ in
+            // After 2 seconds, slide out to the right
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.hotelDetailsUpdatedPopUpView.transform = CGAffineTransform(translationX: screenWidth, y: 0)
+                    self.hotelDetailsUpdatedPopUpView.alpha = 0
+                }) { _ in
+                    self.hotelDetailsUpdatedPopUpView.isHidden = true
+                }
+            }
+        }
+    }
+
+
+
     func mapViewHidden(){
         mapTypeCloseButton.isHidden = true
         mapTypeCloseButtonView.isHidden = true
@@ -120,7 +160,7 @@ class ViewHotelMapLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDe
                             annotation.coordinate = coordinate
                             annotation.hotelName = hotel.HotelName
                             let hotelsImages = self.viewModel.allhotelImages.filter { $0.hotelId == hotel.HotelId  }
-                            let imageGet = hotelsImages.first?.imageUrl
+                            
                             if let room = self.viewModel.allRooms.first(where: { $0.hotelId == hotel.HotelId }) {
                                 annotation.title = "$\(room.basePrice)"
                             } else {
@@ -150,7 +190,7 @@ class ViewHotelMapLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDe
         if annotation is MKUserLocation {
             return nil
         }
-
+        
         if let selectedHotel = hotelDataPass,
            annotation.coordinate.latitude == selectedHotel.Latitude,
            annotation.coordinate.longitude == selectedHotel.Longitude {
@@ -244,27 +284,44 @@ class ViewHotelMapLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDe
 
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         guard let annotation = view.annotation as? HotelAnnotation else { return }
-        hotelName.text = annotation.hotelName ?? "Unknown Hotel"
-        let fil =   viewModel.allHotels.filter({$0.HotelName == annotation.hotelName})
-        let hotelId = viewModel.allhotelImages.filter({$0.hotelId == fil.first?.HotelId})
-        let hotelUrl = hotelId.first?.imageUrl
-        print("Hotel Url: \(hotelUrl ?? "")")
-        hotelImage.image = UIImage(named: hotelUrl ?? "")
-        if let url = URL(string: hotelUrl ?? "") {
-            DispatchQueue.global().async {
-                if let data = try? Data(contentsOf: url),
-                   let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self.hotelImage.image = image
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        self.hotelImage.image = UIImage(systemName: "photo")
+        
+
+        // Step 1: Start shimmer
+        shimmerEffectView.isHidden = false
+        shimmerEffectView.startPulseShimmerr()
+       
+        // Step 2: Delay the update by 1 second (until shimmer is complete)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            // Stop shimmer
+            self.shimmerEffectView.stopShimmering()
+            self.shimmerEffectView.isHidden = true
+            
+            // Step 3: Update hotel name and show popup
+            let hotelNameText = annotation.hotelName ?? "Unknown Hotel"
+            self.hotelName.text = hotelNameText
+            self.showHotelUpdatedPopup(with: hotelNameText)
+            
+            // Step 4: Load hotel image
+            let fil = self.viewModel.allHotels.filter { $0.HotelName == hotelNameText }
+            let hotelId = self.viewModel.allhotelImages.filter { $0.hotelId == fil.first?.HotelId }
+            let hotelUrl = hotelId.first?.imageUrl
+            print("Hotel Url: \(hotelUrl ?? "")")
+            
+            if let url = URL(string: hotelUrl ?? "") {
+                DispatchQueue.global().async {
+                    if let data = try? Data(contentsOf: url),
+                       let image = UIImage(data: data) {
+                        DispatchQueue.main.async {
+                            self.hotelImage.image = image
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                            self.hotelImage.image = UIImage(systemName: "photo")
+                        }
                     }
                 }
             }
         }
-        
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -360,3 +417,7 @@ class ViewHotelMapLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDe
     }
     
 }
+
+
+
+

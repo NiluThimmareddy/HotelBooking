@@ -8,8 +8,15 @@
 import UIKit
 import MapKit
 
+
 class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDelegate {
     
+    
+    
+    
+    
+    @IBOutlet weak var policiesCollectionViewHeightCons: NSLayoutConstraint!// default height 50
+    @IBOutlet weak var selectRoomButton: UIButton!
     @IBOutlet weak var mapKitBackView: UIView!
     @IBOutlet weak var starFive: UIImageView!
     @IBOutlet weak var starFour: UIImageView!
@@ -65,14 +72,14 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var viewMapButton: UIButton!
     
+    let imageCache = NSCache<NSString, UIImage>()
     var currentIndex = 0
     let countryViewModel = CountryListViewModel()
     let viewModel = HotelJsonViewModel()
-    
-    var callAvailabilities = [AvailabilitiesModel(name: "wellness", image: "wellness"),
-                              AvailabilitiesModel(name: "dining", image: "dining"),
-                              AvailabilitiesModel(name: "entertainment", image: "entertainment"),
-                              AvailabilitiesModel(name: "business", image: "business")]
+    var callAvailabilities = [AvailabilitiesModel(name: "Wellness", image: "wellness"),
+                              AvailabilitiesModel(name: "Dining", image: "dining"),
+                              AvailabilitiesModel(name: "Entertainment", image: "entertainment"),
+                              AvailabilitiesModel(name: "Business", image: "business")]
     var callUserReview = [
         userReviewModel(name: "John Doe", image: "profile", desc: "Had a wonderful stay, very clean and comfortable.", country: "India"),
         userReviewModel(name: "Aisha Khan", image: "man", desc: "Amazing food and great hospitality. Would come again!", country: "United States"),
@@ -88,33 +95,39 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         GuestReviewModel(name: "Value for Money", rating: "8.2"),
         GuestReviewModel(name: "Location", rating: "9.3")
     ]
-    
+
     var hotelImages = ["1","2","3","4","5","6","7","8","9","10","11"]
     var policies = ["Cancellation","Child","Comfort","Pet"]
-    
+   
     var isGuestReviewExpanded = false
     var hotelDetailsData: Hotel?
     
+    var filteredHotelImages: [HotelImage] {
+        return viewModel.allhotelImages.filter { $0.hotelId == hotelDetailsData?.HotelId ?? ""}
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         CountryCodeManager.shared.fetchCountryCodes {
-            DispatchQueue.main.async {
-                self.GuestWhoStayedHereTV.reloadData()
+                DispatchQueue.main.async {
+                    self.GuestWhoStayedHereTV.reloadData()
+                }
             }
-        }
+        navigationProcess()
         updateStarRating()
         hideViewAllButton()
+        changeTextColorWhileSwipe()
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
         swipeLeft.direction = .left
         popularSurroundingBackView.addGestureRecognizer(swipeLeft)
-        
+
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
         swipeRight.direction = .right
         popularSurroundingBackView.addGestureRecognizer(swipeRight)
-        
+
         popularSurroundingBackView.isUserInteractionEnabled = true
-        
+
         
         attractionDownView.isHidden = false
         eatAndDrinkDownView.isHidden = true
@@ -122,7 +135,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         topAttrocitiesBackView.isHidden = false
         eatAndDrinkBackView.isHidden = true
         transportBackView.isHidden = true
-        
+      
         callData()
         countryViewModel.fetchCountries()
         hotelImagesCollectionView.register(UINib(nibName: "DetailsPageHotelImagesCVC", bundle: nil), forCellWithReuseIdentifier: "DetailsPageHotelImagesCVC")
@@ -142,7 +155,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         
         summerOfferLbl.layer.cornerRadius = 5
         summerOfferLbl.clipsToBounds = true
-        
+
         offerPercentageLbl.layer.cornerRadius = 5
         offerPercentageLbl.clipsToBounds = true
         
@@ -154,14 +167,14 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         
         hotelRatingLbl.layer.cornerRadius = 5
         hotelRatingLbl.clipsToBounds = true
-        
+
         locationWithPin()
         mapKitBackView.layer.cornerRadius = 10
         mapKitViewLatitudeLocation.layer.cornerRadius = 10
         mapKitViewLatitudeLocation.delegate = self
         topNameLbl.text = ""
         scrollViewScroll.delegate = self
-        
+
         let originalPrice = "$ 280"
         let attributedString = NSAttributedString(
             string: originalPrice,
@@ -170,12 +183,16 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
                 
             ]
         )
-        
+
         priceStrikeLbl.attributedText = attributedString
-        
-        
+        attractionButton.setTitleColor(currentIndex == 0 ? .systemBlue : .darkGray, for: .normal)
+        eatAndDrinkButton.setTitleColor(currentIndex == 1 ? .systemBlue : .darkGray, for: .normal)
+        transportButton.setTitleColor(currentIndex == 2 ? .systemBlue : .darkGray, for: .normal)
+
+        navigationItem.titleView = topNameLbl
         callPoliciesData()
         callAllHotelsRoomData()
+        callImagesData()
     }
     func callAllHotelsRoomData(){
         viewModel.switchDisplayMode(to: .hotelRooms)
@@ -187,20 +204,32 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
                 }
                 print("HotelId: \(filter)")
                 print("HotelId: \(filter)")
-                //                if let finalFilterData = filter.first {
-                //                    self.actualPriceLbl.text = "\(finalFilterData.basePrice)"
-                //                } else {
-                //                    self.actualPriceLbl.text = "N/A"
-                //                }
+//                if let finalFilterData = filter.first {
+//                    self.actualPriceLbl.text = "\(finalFilterData.basePrice)"
+//                } else {
+//                    self.actualPriceLbl.text = "N/A"
+//                }
             }
         }
     }
     func callPoliciesData(){
         viewModel.switchDisplayMode(to: .policy)
-        
+
         viewModel.fetchHotels {
             DispatchQueue.main.async {
                 self.policiesCollectionView.reloadData()
+                self.updateDynamicHeights()
+            }
+        }
+    }
+    func callImagesData(){
+        viewModel.switchDisplayMode(to: .hotelImages)
+
+        viewModel.fetchHotels {
+            DispatchQueue.main.async {
+                let filtered = self.filteredHotelImages
+                print("Filter Images-----> \(filtered)")
+                self.hotelImagesCollectionView.reloadData()
             }
         }
     }
@@ -215,7 +244,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
             }
         }
     }
-    
+
     func hideViewAllButton(){
         let maxUserReviewCount = callUserReview.count
         if maxUserReviewCount > 5{
@@ -223,7 +252,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
             
         }else{
             guestWhoStayedHereLovedViewAllButton.isHidden = true
-            
+           
         }
     }
     @objc func handleSwipe(_ gesture: UISwipeGestureRecognizer) {
@@ -231,11 +260,13 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
             if currentIndex < 2 {
                 currentIndex += 1
                 switchToCategory(index: currentIndex)
+               
             }
         } else if gesture.direction == .right {
             if currentIndex > 0 {
                 currentIndex -= 1
                 switchToCategory(index: currentIndex)
+                
             }
         }
     }
@@ -243,37 +274,90 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         attractionDownView.isHidden = index != 0
         eatAndDrinkDownView.isHidden = index != 1
         transportDownView.isHidden = index != 2
-        
+
         topAttrocitiesBackView.isHidden = index != 0
         eatAndDrinkBackView.isHidden = index != 1
         transportBackView.isHidden = index != 2
+        changeTextColorWhileSwipe()
     }
-    
+    func navigationProcess(){
+        let heartButton = UIBarButtonItem(
+            image: UIImage(named: "heart"),
+            style: .plain,
+            target: self,
+            action: #selector(heartButtonTapped)
+        )
+        
+        
+        let shareButton = UIBarButtonItem(
+            image: UIImage(named: "share"),
+            style: .plain,
+            target: self,
+            action: #selector(shareButtonTapped)
+        )
+       
+        navigationItem.rightBarButtonItems = [shareButton, heartButton]
+        navigationController?.navigationBar.tintColor = .white
+    }
+    @objc func heartButtonTapped() {
+        print("❤️ Heart tapped")
+        // Add favorite logic here
+    }
+
+    @objc func shareButtonTapped() {
+        print("🔗 Share tapped")
+        // Add share logic here
+    }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         updateDynamicHeights()
     }
-    
     func updateDynamicHeights() {
         let guestReviewCount = isGuestReviewExpanded ? callGuestReview.count : min(callGuestReview.count, 3)
         let guestReviewHeight = CGFloat(guestReviewCount) * 50
-        
+
         let maxUserReviewCount = min(callUserReview.count, 5)
         let guestWhoStayedHeight = CGFloat(maxUserReviewCount) * 100
-        
+
         guestReviewTVHightCons.constant = guestReviewHeight
         GuestWhoStayedHereTVHeightCons.constant = guestWhoStayedHeight
-        
-        let baseContentHeight: CGFloat = 2184 - 50 - 100
-        scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight
-        
+
+        // Policies collection view height calculation
+        let policyCount = self.viewModel.allPolicies.filter { $0.HotelId == self.hotelDetailsData?.HotelId }
+        let itemsPerRow: CGFloat = 2
+        let rowHeight: CGFloat = 50
+        let numberOfRows = ceil(CGFloat(policyCount.count) / itemsPerRow)
+        let policiesHeight = numberOfRows * rowHeight
+
+        policiesCollectionViewHeightCons.constant = policiesHeight
+
+        let baseContentHeight: CGFloat = 2154 - 50 - 100
+        scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight + policiesHeight
+
         view.layoutIfNeeded()
     }
-    
+
+//    func updateDynamicHeights() {
+//        let guestReviewCount = isGuestReviewExpanded ? callGuestReview.count : min(callGuestReview.count, 3)
+//        let guestReviewHeight = CGFloat(guestReviewCount) * 50
+//
+//        let maxUserReviewCount = min(callUserReview.count, 5)
+//        let guestWhoStayedHeight = CGFloat(maxUserReviewCount) * 100
+//
+//        guestReviewTVHightCons.constant = guestReviewHeight
+//        GuestWhoStayedHereTVHeightCons.constant = guestWhoStayedHeight
+//
+//        let baseContentHeight: CGFloat = 2204 - 50 - 100 
+//        scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight
+//
+//        view.layoutIfNeeded()
+//    }
+
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
-        
-        
+
+       
         if offsetY > 100 {
             topNameLbl.text = hotelNameLBL.text
             topNameLbl.isHidden = false
@@ -282,44 +366,66 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
             topNameLbl.isHidden = true
         }
     }
-    
     func callData(){
         hotelNameLBL.text = hotelDetailsData?.HotelName
         aboutThisHotelDescP.text = hotelDetailsData?.Description
     }
     
+    @IBAction func selectRoomButtonAction(_ sender: Any) {
+    }
     @IBAction func guestWhoStayedHereLovedViewAllButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "UserReviewsVC")as! UserReviewsVC
         vc.hotelName = hotelNameLBL.text
-        present(vc, animated: true)
+        navigationItem.backButtonTitle = ""
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func importantInformationReadMoreButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "RoomsListPageVC") as! RoomsListPageVC
-        controller.navigationItem.title = "Rooms List"
-        let backItem = UIBarButtonItem()
-        backItem.title = ""
-        self.navigationItem.backBarButtonItem = backItem
-        self.navigationController?.pushViewController(controller, animated: true)
+        let storyboard = UIStoryboard(name: "UserFeedBack", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "UserFeedBackAfterCheckOutVC")as! UserFeedBackAfterCheckOutVC
+        navigationItem.backButtonTitle = ""
+        navigationController?.pushViewController(vc, animated: true)
     }
-    
+    func changeTextColorWhileSwipe(){
+        if currentIndex == 0{
+            attractionButton.tintColor = .systemBlue
+            eatAndDrinkButton.tintColor = .darkGray
+            transportButton.tintColor = .darkGray
+            attractionButton.setTitleColor(.systemBlue, for: .normal)
+            eatAndDrinkButton.setTitleColor(.darkGray, for: .normal)
+            transportButton.setTitleColor(.darkGray, for: .normal)
+        }else if currentIndex == 1{
+            attractionButton.tintColor = .darkGray
+            eatAndDrinkButton.tintColor = .systemBlue
+            transportButton.tintColor = .darkGray
+            attractionButton.setTitleColor(.darkGray, for: .normal)
+            eatAndDrinkButton.setTitleColor(.systemBlue, for: .normal)
+            transportButton.setTitleColor(.darkGray, for: .normal)
+        }else if currentIndex == 2{
+            attractionButton.tintColor = .darkGray
+            eatAndDrinkButton.tintColor = .darkGray
+            transportButton.tintColor = .systemBlue
+            attractionButton.setTitleColor(.darkGray, for: .normal)
+            eatAndDrinkButton.setTitleColor(.darkGray, for: .normal)
+            transportButton.setTitleColor(.systemBlue, for: .normal)
+        }
+    }
     @IBAction func attractionButton(_ sender: Any) {
         currentIndex = 0
         switchToCategory(index: currentIndex)
+        changeTextColorWhileSwipe()
     }
-    
     @IBAction func eatAndDrinkButton(_ sender: Any) {
         currentIndex = 1
         switchToCategory(index: currentIndex)
+        changeTextColorWhileSwipe()
     }
-    
     @IBAction func transportButton(_ sender: Any) {
         currentIndex = 2
         switchToCategory(index: currentIndex)
+        changeTextColorWhileSwipe()
     }
-    
     @IBAction func showMoreButton(_ sender: UIButton) {
         isGuestReviewExpanded.toggle()
         
@@ -333,7 +439,6 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         guestReviewTV.reloadData()
         updateDynamicHeights()
     }
-    
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true)
     }
@@ -344,7 +449,6 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         vc.hotelDataPass = hotelDetailsData
         present(vc, animated: true)
     }
-    
     @IBAction func heartButton(_ sender: Any) {
     }
     
@@ -353,56 +457,51 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         let vc = storyboard.instantiateViewController(identifier: "CheckInCalendarVC")as! CheckInCalendarVC
         present(vc, animated: true)
     }
-    
     @IBAction func checkIndateSelectButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "CheckInCalendarVC")as! CheckInCalendarVC
         present(vc, animated: true)
     }
-    
     @IBAction func guestCountTotalButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "GuestAndRoomsVC")as! GuestAndRoomsVC
         present(vc, animated: true)
     }
-    
     @IBAction func shareButton(_ sender: Any) {
     }
-    
     func locationWithPin() {
         let latitude: CLLocationDegrees = hotelDetailsData?.Latitude ?? 0
         let longitude: CLLocationDegrees = hotelDetailsData?.Longitude ?? 0
-        
+
         let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         let region = MKCoordinateRegion(center: location, latitudinalMeters: 1000, longitudinalMeters: 1000)
         mapKitViewLatitudeLocation.setRegion(region, animated: true)
-        
+
         let annotation = MKPointAnnotation()
         annotation.coordinate = location
         annotation.title = hotelDetailsData?.HotelName
         mapKitViewLatitudeLocation.addAnnotation(annotation)
     }
-    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation {
             return nil
         }
-        
+
         let identifier = "CustomPin"
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-        
+
         if annotationView == nil {
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             annotationView?.canShowCallout = true
-            annotationView?.image = UIImage(named: "mapPin")
+            annotationView?.image = UIImage(named: "mapPin") 
             annotationView?.frame.size = CGSize(width: 30, height: 30)
         } else {
             annotationView?.annotation = annotation
         }
-        
+
         return annotationView
     }
-    
+
 }
 
 extension DetailsViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
@@ -422,12 +521,23 @@ extension DetailsViewController: UICollectionViewDelegate,UICollectionViewDataSo
             let widthCons = (hotelImagesCollectionView.frame.size.width - 10 )
             return CGSize(width: widthCons, height: heightCons)
         }else if collectionView == availabilitiesCollectionView{
-            let heightCons = availabilitiesCollectionView.frame.size.height
-            let widthCons = (availabilitiesCollectionView.frame.size.width - 10 ) / 3.8
-            return CGSize(width: widthCons, height: heightCons)
+            let labelText = callAvailabilities[indexPath.row].name
+            let font = UIFont.systemFont(ofSize: 12)
+            let padding: CGFloat = 8
+            
+            let textWidth = (labelText as NSString).size(withAttributes: [.font: font]).width + padding * 2
+            
+            let availableWidth = collectionView.frame.width
+            let interItemSpacing: CGFloat = 10
+            let maxCellsPerRow: CGFloat = floor((availableWidth + interItemSpacing) / (textWidth + interItemSpacing))
+            let finalCellWidth = (availableWidth - (maxCellsPerRow - 1) * interItemSpacing) / maxCellsPerRow
+            
+            let cellHeight = availabilitiesCollectionView.frame.size.height
+            
+            return CGSize(width: finalCellWidth, height: cellHeight)
         }else{
-            let heightCons = policiesCollectionView.frame.size.height
-            let widthCons = (policiesCollectionView.frame.size.width - 10 ) / 3
+            let heightCons: CGFloat = 50
+            let widthCons = (policiesCollectionView.frame.size.width - 10 ) / 2
             return CGSize(width: widthCons, height: heightCons)
         }
         
@@ -436,34 +546,58 @@ extension DetailsViewController: UICollectionViewDelegate,UICollectionViewDataSo
         if collectionView == hotelImagesCollectionView{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DetailsPageHotelImagesCVC", for: indexPath)as! DetailsPageHotelImagesCVC
             
-            cell.hotelImageOne.image = nil
-            cell.hotelImageTwo.image = nil
-            cell.hotelImageThree.image = nil
-            cell.hotelImageFour.image = nil
-            cell.hotelImageFive.image = nil
+            let images = filteredHotelImages
+            let startIndex = indexPath.row * 5
+            let endIndex = min(startIndex + 5, images.count)
+            let imagesToShow = Array(images[startIndex..<endIndex])
+            
+            let imageViews = [
+                cell.hotelImageOne,
+                cell.hotelImageTwo,
+                cell.hotelImageThree,
+                cell.hotelImageFour,
+                cell.hotelImageFive
+            ]
+            
+            
+            for imageView in imageViews {
+                imageView?.image = nil
+                imageView?.stopShimmering()
+            }
+            
             cell.countLabel.isHidden = true
+            cell.shadowView.isHidden = imagesToShow.count < 5
+            cell.shadowViewButton.isHidden = imagesToShow.count < 5
             
             
-            if hotelImages.indices.contains(0) {
-                cell.hotelImageOne.image = UIImage(named: hotelImages[0])
+            // Load images
+            for (i, imageView) in imageViews.enumerated() {
+                if i < imagesToShow.count {
+                    let imageUrl = imagesToShow[i].imageUrl
+                    
+                    if let cachedImage = imageCache.object(forKey: imageUrl as NSString) {
+                        imageView?.image = cachedImage
+                        imageView?.stopShimmering()
+                    } else {
+                        imageView?.image = nil
+                        imageView?.layoutIfNeeded()
+                        imageView?.backgroundColor = UIColor.lightGray.withAlphaComponent(0.5)
+                        imageView?.startPulseShimmer()
+                        
+                        loadImage(from: imageUrl, into: imageView!) {
+                            imageView?.stopShimmering()
+                            imageView?.backgroundColor = .clear
+                        }
+                    }
+                }
             }
-            if hotelImages.indices.contains(1) {
-                cell.hotelImageTwo.image = UIImage(named: hotelImages[1])
-            }
-            if hotelImages.indices.contains(2) {
-                cell.hotelImageThree.image = UIImage(named: hotelImages[2])
-            }
-            if hotelImages.indices.contains(3) {
-                cell.hotelImageFour.image = UIImage(named: hotelImages[3])
-            }
-            if hotelImages.indices.contains(4) {
-                cell.hotelImageFive.image = UIImage(named: hotelImages[4])
-                
-                
-                let remaining = hotelImages.count - 5
+            
+            if imagesToShow.count == 5 {
+                let remaining = images.count - (startIndex + 5)
                 if remaining > 0 {
                     cell.countLabel.isHidden = false
                     cell.countLabel.text = "+\(remaining)"
+                    
                 }
             }
             
@@ -486,11 +620,11 @@ extension DetailsViewController: UICollectionViewDelegate,UICollectionViewDataSo
         if collectionView == hotelImagesCollectionView {
             
             let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
-            let vc = storyboard.instantiateViewController(identifier: "ViewHotelImageVC")as! ViewHotelImageVC
-            let titleValue = hotelNameLBL.text
-            vc.images = hotelImages
-            vc.titleData = titleValue
-            present(vc, animated: true)
+            let vc = storyboard.instantiateViewController(identifier: "HotelImageOverViewVC")as! HotelImageOverViewVC
+            let titleValue = hotelDetailsData
+            vc.hotelIdPass = titleValue
+            navigationItem.backButtonTitle = ""
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
@@ -552,5 +686,32 @@ extension DetailsViewController: UITableViewDelegate,UITableViewDataSource{
         }else{
             return 100
         }
+    }
+    func loadImage(from urlString: String, into imageView: UIImageView, completion: (() -> Void)? = nil) {
+        // Check cache first
+        if let cachedImage = imageCache.object(forKey: urlString as NSString) {
+            imageView.image = cachedImage
+            completion?()
+            return
+        }
+        
+        guard let url = URL(string: urlString) else {
+            imageView.image = UIImage(named: "placeholder")
+            completion?()
+            return
+        }
+        
+        // Download image
+        URLSession.shared.dataTask(with: url) { data, _, _ in
+            DispatchQueue.main.async {
+                if let data = data, let image = UIImage(data: data) {
+                    self.imageCache.setObject(image, forKey: urlString as NSString)
+                    imageView.image = image
+                } else {
+                    imageView.image = UIImage(named: "placeholder")
+                }
+                completion?()
+            }
+        }.resume()
     }
 }

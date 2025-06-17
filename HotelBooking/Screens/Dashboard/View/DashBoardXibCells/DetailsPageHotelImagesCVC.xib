@@ -74,21 +74,41 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gad-UT-FPQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="97"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6f-st-UXY">
-                                                        <rect key="frame" x="7.6666666666666536" y="33.666666666666657" width="63.666666666666657" height="30"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDW-No-rXR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="97"/>
+                                                        <subviews>
+                                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWE-e7-U7x">
+                                                                <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="97"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6f-st-UXY">
+                                                                <rect key="frame" x="7.6666666666666536" y="33.666666666666657" width="63.666666666666657" height="30"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="mWE-e7-U7x" firstAttribute="leading" secondItem="MDW-No-rXR" secondAttribute="leading" id="0ve-te-Vem"/>
+                                                            <constraint firstItem="b6f-st-UXY" firstAttribute="centerY" secondItem="MDW-No-rXR" secondAttribute="centerY" id="8Ig-Ox-fe2"/>
+                                                            <constraint firstAttribute="bottom" secondItem="mWE-e7-U7x" secondAttribute="bottom" id="b7d-3l-bkB"/>
+                                                            <constraint firstItem="b6f-st-UXY" firstAttribute="centerX" secondItem="MDW-No-rXR" secondAttribute="centerX" id="cjS-ke-wMz"/>
+                                                            <constraint firstItem="mWE-e7-U7x" firstAttribute="top" secondItem="MDW-No-rXR" secondAttribute="top" id="jdC-se-s0z"/>
+                                                            <constraint firstAttribute="trailing" secondItem="mWE-e7-U7x" secondAttribute="trailing" id="rcu-kN-ZAc"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="MDW-No-rXR" secondAttribute="bottom" id="9Op-pg-c6X"/>
                                                     <constraint firstItem="Gad-UT-FPQ" firstAttribute="leading" secondItem="GUk-2j-6fQ" secondAttribute="leading" id="Fd4-qq-3Js"/>
+                                                    <constraint firstItem="MDW-No-rXR" firstAttribute="top" secondItem="GUk-2j-6fQ" secondAttribute="top" id="QX0-GH-3if"/>
                                                     <constraint firstAttribute="bottom" secondItem="Gad-UT-FPQ" secondAttribute="bottom" id="Toh-rb-KeI"/>
-                                                    <constraint firstItem="b6f-st-UXY" firstAttribute="centerY" secondItem="GUk-2j-6fQ" secondAttribute="centerY" id="Yoz-WT-XJS"/>
-                                                    <constraint firstItem="b6f-st-UXY" firstAttribute="centerY" secondItem="Gad-UT-FPQ" secondAttribute="centerY" id="eww-rU-sLF"/>
-                                                    <constraint firstItem="b6f-st-UXY" firstAttribute="centerX" secondItem="Gad-UT-FPQ" secondAttribute="centerX" id="hlJ-uX-ka6"/>
-                                                    <constraint firstItem="b6f-st-UXY" firstAttribute="centerX" secondItem="GUk-2j-6fQ" secondAttribute="centerX" id="kSP-YH-fij"/>
+                                                    <constraint firstItem="MDW-No-rXR" firstAttribute="leading" secondItem="GUk-2j-6fQ" secondAttribute="leading" id="lUP-on-9Vb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MDW-No-rXR" secondAttribute="trailing" id="p1V-oB-3A8"/>
                                                     <constraint firstAttribute="trailing" secondItem="Gad-UT-FPQ" secondAttribute="trailing" id="qLc-GV-Ekp"/>
                                                     <constraint firstItem="Gad-UT-FPQ" firstAttribute="top" secondItem="GUk-2j-6fQ" secondAttribute="top" id="rE6-kv-Zho"/>
                                                 </constraints>
@@ -124,6 +144,8 @@
                 <outlet property="hotelImageOne" destination="7kr-Vt-HG8" id="nE4-4V-YaH"/>
                 <outlet property="hotelImageThree" destination="q94-Lv-314" id="0Ac-6U-jaH"/>
                 <outlet property="hotelImageTwo" destination="wHM-y4-uGe" id="uMj-or-Xt3"/>
+                <outlet property="shadowView" destination="MDW-No-rXR" id="4ur-T5-5Yo"/>
+                <outlet property="shadowViewButton" destination="mWE-e7-U7x" id="UUd-xp-d97"/>
             </connections>
             <point key="canvasLocation" x="276.3358778625954" y="39.7887323943662"/>
         </collectionViewCell>

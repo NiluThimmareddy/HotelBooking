@@ -71,7 +71,9 @@ class CheckInCalendarVC: UIViewController, FSCalendarDelegate, FSCalendarDataSou
         
         calendar.appearance.headerTitleColor = .systemBlue
         calendar.appearance.weekdayTextColor = .darkGray
-        
+        calendar.appearance.titleTodayColor = .black
+        calendar.appearance.subtitleTodayColor = .darkGray
+
         calendar.appearance.todayColor = nil
         
         calendar.appearance.borderRadius = 0.2

@@ -2905,14 +2905,42 @@
     {
       "ImageId": "5598b1d7-58a4-45b6-adf3-8942c5665b5d",
       "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
-      "ImageUrl": "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "ImageUrl": "https://media.istockphoto.com/id/104731717/photo/luxury-resort.jpg?s=612x612&w=0&k=20&c=cODMSPbYyrn1FHake1xYz9M8r15iOfGz9Aosy9Db7mI=",
       "Description": "Image 0 of hotel Hotel 0",
       "IsPrimary": true
     },
     {
       "ImageId": "1e0cde1f-7399-4e07-b9db-cb30ee886524",
       "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
-      "ImageUrl": "https://images.pexels.com/photos/121801/pexels-photo-121801.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "ImageUrl": "https://cdn.britannica.com/96/115096-050-5AFDAF5D/Bellagio-Hotel-Casino-Las-Vegas.jpg",
+      "Description": "Image 1 of hotel Hotel 0",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "5598b1d7-58a4-45b6-adf3-8942c5665b5d",
+      "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
+      "ImageUrl": "https://media.istockphoto.com/id/119926339/photo/resort-swimming-pool.jpg?s=612x612&w=0&k=20&c=9QtwJC2boq3GFHaeDsKytF4-CavYKQuy1jBD2IRfYKc=",
+      "Description": "Image 0 of hotel Hotel 0",
+      "IsPrimary": true
+    },
+    {
+      "ImageId": "5598b1d7-58a4-45b6-adf3-8942c5665b5d",
+      "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
+      "ImageUrl": "https://www.palaceresorts.com/playacar_resort_palace_resorts_431d891c3e.webp",
+      "Description": "Image 0 of hotel Hotel 0",
+      "IsPrimary": true
+    },
+    {
+      "ImageId": "1e0cde1f-7399-4e07-b9db-cb30ee886524",
+      "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
+      "ImageUrl": "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?cs=srgb&dl=pexels-pixabay-261102.jpg&fm=jpg",
+      "Description": "Image 1 of hotel Hotel 0",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "1e0cde1f-7399-4e07-b9db-cb30ee886524",
+      "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
+      "ImageUrl": "https://3.imimg.com/data3/FM/MD/MY-1906485/hotel-booking.jpg",
       "Description": "Image 1 of hotel Hotel 0",
       "IsPrimary": false
     },
@@ -2922,6 +2950,34 @@
       "ImageUrl": "https://images.pexels.com/photos/4628181/pexels-photo-4628181.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "Description": "Image 0 of hotel Hotel 1",
       "IsPrimary": true
+    },
+    {
+      "ImageId": "b280b314-8ce0-4b50-a1dd-05b5d7a8e270",
+      "HotelId": "d89b276b-7436-4a95-b8c7-de51abb9d634",
+      "ImageUrl": "https://images.pexels.com/photos/12387908/pexels-photo-12387908.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 1",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "ddda16dd-4d52-413c-b29f-a951fa5e06da",
+      "HotelId": "d89b276b-7436-4a95-b8c7-de51abb9d634",
+      "ImageUrl": "https://images.pexels.com/photos/4628181/pexels-photo-4628181.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 0 of hotel Hotel 1",
+      "IsPrimary": true
+    },
+    {
+      "ImageId": "b280b314-8ce0-4b50-a1dd-05b5d7a8e270",
+      "HotelId": "d89b276b-7436-4a95-b8c7-de51abb9d634",
+      "ImageUrl": "https://images.pexels.com/photos/12387908/pexels-photo-12387908.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 1",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "b280b314-8ce0-4b50-a1dd-05b5d7a8e270",
+      "HotelId": "d89b276b-7436-4a95-b8c7-de51abb9d634",
+      "ImageUrl": "https://images.pexels.com/photos/12387908/pexels-photo-12387908.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 1",
+      "IsPrimary": false
     },
     {
       "ImageId": "b280b314-8ce0-4b50-a1dd-05b5d7a8e270",
@@ -2945,11 +3001,67 @@
       "IsPrimary": false
     },
     {
+      "ImageId": "2a7f13f0-78d7-4d3b-bf05-be221fea38a2",
+      "HotelId": "62ce3529-4c55-4405-8a09-e81c15971eec",
+      "ImageUrl": "https://images.pexels.com/photos/8861427/pexels-photo-8861427.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 0 of hotel Hotel 2",
+      "IsPrimary": true
+    },
+    {
+      "ImageId": "be46a599-ac3d-4bae-9470-c1d8f31cbdbc",
+      "HotelId": "62ce3529-4c55-4405-8a09-e81c15971eec",
+      "ImageUrl": "https://images.pexels.com/photos/24913567/pexels-photo-24913567/free-photo-of-sea-star-beau-rivage-hotel-in-egypt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 2",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "be46a599-ac3d-4bae-9470-c1d8f31cbdbc",
+      "HotelId": "62ce3529-4c55-4405-8a09-e81c15971eec",
+      "ImageUrl": "https://images.pexels.com/photos/24913567/pexels-photo-24913567/free-photo-of-sea-star-beau-rivage-hotel-in-egypt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 2",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "be46a599-ac3d-4bae-9470-c1d8f31cbdbc",
+      "HotelId": "62ce3529-4c55-4405-8a09-e81c15971eec",
+      "ImageUrl": "https://images.pexels.com/photos/24913567/pexels-photo-24913567/free-photo-of-sea-star-beau-rivage-hotel-in-egypt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 2",
+      "IsPrimary": false
+    },
+    {
       "ImageId": "04ac3606-198d-4ca3-a101-487b0dcce1a8",
       "HotelId": "a1a44c17-7f8a-4640-b8e3-db217e6b0ba5",
       "ImageUrl": "https://images.pexels.com/photos/31166906/pexels-photo-31166906/free-photo-of-vibrant-tropical-water-park-by-the-sea.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "Description": "Image 0 of hotel Hotel 3",
       "IsPrimary": true
+    },
+    {
+      "ImageId": "a1cdea17-af58-402d-8586-8f1381733c3c",
+      "HotelId": "a1a44c17-7f8a-4640-b8e3-db217e6b0ba5",
+      "ImageUrl": "https://images.pexels.com/photos/14024952/pexels-photo-14024952.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 3",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "04ac3606-198d-4ca3-a101-487b0dcce1a8",
+      "HotelId": "a1a44c17-7f8a-4640-b8e3-db217e6b0ba5",
+      "ImageUrl": "https://images.pexels.com/photos/31166906/pexels-photo-31166906/free-photo-of-vibrant-tropical-water-park-by-the-sea.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 0 of hotel Hotel 3",
+      "IsPrimary": true
+    },
+    {
+      "ImageId": "a1cdea17-af58-402d-8586-8f1381733c3c",
+      "HotelId": "a1a44c17-7f8a-4640-b8e3-db217e6b0ba5",
+      "ImageUrl": "https://images.pexels.com/photos/14024952/pexels-photo-14024952.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 3",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "a1cdea17-af58-402d-8586-8f1381733c3c",
+      "HotelId": "a1a44c17-7f8a-4640-b8e3-db217e6b0ba5",
+      "ImageUrl": "https://images.pexels.com/photos/14024952/pexels-photo-14024952.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 3",
+      "IsPrimary": false
     },
     {
       "ImageId": "a1cdea17-af58-402d-8586-8f1381733c3c",
@@ -2973,6 +3085,34 @@
       "IsPrimary": false
     },
     {
+      "ImageId": "489be017-5da9-448f-b52a-270a8b454038",
+      "HotelId": "da7bef77-0bbe-4cc0-8e22-2f6c31f84b08",
+      "ImageUrl": "https://images.pexels.com/photos/14012236/pexels-photo-14012236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 0 of hotel Hotel 4",
+      "IsPrimary": true
+    },
+    {
+      "ImageId": "af90e97d-85ee-438d-b20e-ea2e28e83e95",
+      "HotelId": "da7bef77-0bbe-4cc0-8e22-2f6c31f84b08",
+      "ImageUrl": "https://images.pexels.com/photos/6460876/pexels-photo-6460876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 4",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "af90e97d-85ee-438d-b20e-ea2e28e83e95",
+      "HotelId": "da7bef77-0bbe-4cc0-8e22-2f6c31f84b08",
+      "ImageUrl": "https://images.pexels.com/photos/6460876/pexels-photo-6460876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 4",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "af90e97d-85ee-438d-b20e-ea2e28e83e95",
+      "HotelId": "da7bef77-0bbe-4cc0-8e22-2f6c31f84b08",
+      "ImageUrl": "https://images.pexels.com/photos/6460876/pexels-photo-6460876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 4",
+      "IsPrimary": false
+    },
+    {
       "ImageId": "e42df2dd-843b-45db-9b9e-a3b6553de210",
       "HotelId": "4b087496-2d4a-42b2-a231-d0dc3595b2b9",
       "ImageUrl": "https://images.pexels.com/photos/3209055/pexels-photo-3209055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -2984,6 +3124,62 @@
       "HotelId": "4b087496-2d4a-42b2-a231-d0dc3595b2b9",
       "ImageUrl": "https://images.pexels.com/photos/6129989/pexels-photo-6129989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "Description": "Image 1 of hotel Hotel 5",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "e42df2dd-843b-45db-9b9e-a3b6553de210",
+      "HotelId": "4b087496-2d4a-42b2-a231-d0dc3595b2b9",
+      "ImageUrl": "https://images.pexels.com/photos/3209055/pexels-photo-3209055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 0 of hotel Hotel 5",
+      "IsPrimary": true
+    },
+    {
+      "ImageId": "5508aa93-da88-4513-8f89-251c11bbe87d",
+      "HotelId": "4b087496-2d4a-42b2-a231-d0dc3595b2b9",
+      "ImageUrl": "https://images.pexels.com/photos/6129989/pexels-photo-6129989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 5",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "5508aa93-da88-4513-8f89-251c11bbe87d",
+      "HotelId": "4b087496-2d4a-42b2-a231-d0dc3595b2b9",
+      "ImageUrl": "https://images.pexels.com/photos/6129989/pexels-photo-6129989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 5",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "5508aa93-da88-4513-8f89-251c11bbe87d",
+      "HotelId": "4b087496-2d4a-42b2-a231-d0dc3595b2b9",
+      "ImageUrl": "https://images.pexels.com/photos/6129989/pexels-photo-6129989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 5",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "408645f5-1cec-43df-b956-8023da28c266",
+      "HotelId": "f8f5903a-bfde-48cd-95e2-1c50260e6fd4",
+      "ImageUrl": "https://images.pexels.com/photos/11846970/pexels-photo-11846970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 0 of hotel Hotel 6",
+      "IsPrimary": true
+    },
+    {
+      "ImageId": "85127a32-0a7a-4bbf-8aa3-babc9ef7777d",
+      "HotelId": "f8f5903a-bfde-48cd-95e2-1c50260e6fd4",
+      "ImageUrl": "https://images.pexels.com/photos/24805054/pexels-photo-24805054/free-photo-of-view-of-the-terrace-with-a-swimming-pool-at-the-resort.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 6",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "408645f5-1cec-43df-b956-8023da28c266",
+      "HotelId": "f8f5903a-bfde-48cd-95e2-1c50260e6fd4",
+      "ImageUrl": "https://images.pexels.com/photos/11846970/pexels-photo-11846970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 0 of hotel Hotel 6",
+      "IsPrimary": true
+    },
+    {
+      "ImageId": "85127a32-0a7a-4bbf-8aa3-babc9ef7777d",
+      "HotelId": "f8f5903a-bfde-48cd-95e2-1c50260e6fd4",
+      "ImageUrl": "https://images.pexels.com/photos/24805054/pexels-photo-24805054/free-photo-of-view-of-the-terrace-with-a-swimming-pool-at-the-resort.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 6",
       "IsPrimary": false
     },
     {
@@ -3015,6 +3211,62 @@
       "IsPrimary": false
     },
     {
+      "ImageId": "6cd8b06d-858b-4e31-a5c9-501862c3fa86",
+      "HotelId": "402218c4-e9aa-42f3-8aab-4cf5ff1473b5",
+      "ImageUrl": "https://images.pexels.com/photos/27195984/pexels-photo-27195984/free-photo-of-a-large-pool-and-patio-area-in-front-of-a-house.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 0 of hotel Hotel 7",
+      "IsPrimary": true
+    },
+    {
+      "ImageId": "9545f955-6b04-449e-a9c0-e95683067761",
+      "HotelId": "402218c4-e9aa-42f3-8aab-4cf5ff1473b5",
+      "ImageUrl": "https://images.pexels.com/photos/32153580/pexels-photo-32153580/free-photo-of-modern-villa-with-pool-and-hammock-in-scenic-setting.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 7",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "6cd8b06d-858b-4e31-a5c9-501862c3fa86",
+      "HotelId": "402218c4-e9aa-42f3-8aab-4cf5ff1473b5",
+      "ImageUrl": "https://images.pexels.com/photos/27195984/pexels-photo-27195984/free-photo-of-a-large-pool-and-patio-area-in-front-of-a-house.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 0 of hotel Hotel 7",
+      "IsPrimary": true
+    },
+    {
+      "ImageId": "9545f955-6b04-449e-a9c0-e95683067761",
+      "HotelId": "402218c4-e9aa-42f3-8aab-4cf5ff1473b5",
+      "ImageUrl": "https://images.pexels.com/photos/32153580/pexels-photo-32153580/free-photo-of-modern-villa-with-pool-and-hammock-in-scenic-setting.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 7",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "2b668b34-6198-46f7-b11f-8b031c26e963",
+      "HotelId": "982310b6-dd24-4c23-9e41-57b85e31d8e5",
+      "ImageUrl": "https://images.pexels.com/photos/27195984/pexels-photo-27195984/free-photo-of-a-large-pool-and-patio-area-in-front-of-a-house.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 0 of hotel Hotel 8",
+      "IsPrimary": true
+    },
+    {
+      "ImageId": "11e8919a-34d1-414b-b829-894154f2cda6",
+      "HotelId": "982310b6-dd24-4c23-9e41-57b85e31d8e5",
+      "ImageUrl": "https://images.pexels.com/photos/8143675/pexels-photo-8143675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 8",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "2b668b34-6198-46f7-b11f-8b031c26e963",
+      "HotelId": "982310b6-dd24-4c23-9e41-57b85e31d8e5",
+      "ImageUrl": "https://images.pexels.com/photos/27195984/pexels-photo-27195984/free-photo-of-a-large-pool-and-patio-area-in-front-of-a-house.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 0 of hotel Hotel 8",
+      "IsPrimary": true
+    },
+    {
+      "ImageId": "11e8919a-34d1-414b-b829-894154f2cda6",
+      "HotelId": "982310b6-dd24-4c23-9e41-57b85e31d8e5",
+      "ImageUrl": "https://images.pexels.com/photos/8143675/pexels-photo-8143675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 8",
+      "IsPrimary": false
+    },
+    {
       "ImageId": "2b668b34-6198-46f7-b11f-8b031c26e963",
       "HotelId": "982310b6-dd24-4c23-9e41-57b85e31d8e5",
       "ImageUrl": "https://images.pexels.com/photos/27195984/pexels-photo-27195984/free-photo-of-a-large-pool-and-patio-area-in-front-of-a-house.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -3043,11 +3295,67 @@
       "IsPrimary": false
     },
     {
+      "ImageId": "6789fd2e-6cc4-44d3-a517-eaa2a9cc9fa9",
+      "HotelId": "69718f94-16de-4a60-abff-599127e4f30a",
+      "ImageUrl": "https://images.pexels.com/photos/32105076/pexels-photo-32105076/free-photo-of-elegant-european-mansion-with-manicured-garden.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 0 of hotel Hotel 9",
+      "IsPrimary": true
+    },
+    {
+      "ImageId": "3398000a-77c6-4011-9802-1649985a1019",
+      "HotelId": "69718f94-16de-4a60-abff-599127e4f30a",
+      "ImageUrl": "https://images.pexels.com/photos/5157335/pexels-photo-5157335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 9",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "3398000a-77c6-4011-9802-1649985a1019",
+      "HotelId": "69718f94-16de-4a60-abff-599127e4f30a",
+      "ImageUrl": "https://images.pexels.com/photos/5157335/pexels-photo-5157335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 9",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "3398000a-77c6-4011-9802-1649985a1019",
+      "HotelId": "69718f94-16de-4a60-abff-599127e4f30a",
+      "ImageUrl": "https://images.pexels.com/photos/5157335/pexels-photo-5157335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 9",
+      "IsPrimary": false
+    },
+    {
       "ImageId": "1c96428a-6172-4078-b516-d80308d90780",
       "HotelId": "ad557b47-b465-4465-8edc-38c384441bb3",
       "ImageUrl": "https://images.pexels.com/photos/208736/pexels-photo-208736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "Description": "Image 0 of hotel Hotel 10",
       "IsPrimary": true
+    },
+    {
+      "ImageId": "12c23d37-d471-483e-9cc5-f4a7bf195ab6",
+      "HotelId": "ad557b47-b465-4465-8edc-38c384441bb3",
+      "ImageUrl": "https://images.pexels.com/photos/208732/pexels-photo-208732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 10",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "1c96428a-6172-4078-b516-d80308d90780",
+      "HotelId": "ad557b47-b465-4465-8edc-38c384441bb3",
+      "ImageUrl": "https://images.pexels.com/photos/208736/pexels-photo-208736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 0 of hotel Hotel 10",
+      "IsPrimary": true
+    },
+    {
+      "ImageId": "12c23d37-d471-483e-9cc5-f4a7bf195ab6",
+      "HotelId": "ad557b47-b465-4465-8edc-38c384441bb3",
+      "ImageUrl": "https://images.pexels.com/photos/208732/pexels-photo-208732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 10",
+      "IsPrimary": false
+    },
+    {
+      "ImageId": "12c23d37-d471-483e-9cc5-f4a7bf195ab6",
+      "HotelId": "ad557b47-b465-4465-8edc-38c384441bb3",
+      "ImageUrl": "https://images.pexels.com/photos/208732/pexels-photo-208732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Description": "Image 1 of hotel Hotel 10",
+      "IsPrimary": false
     },
     {
       "ImageId": "12c23d37-d471-483e-9cc5-f4a7bf195ab6",
@@ -13168,7 +13476,7 @@
       "RefundPolicy": "Non-refundable",
       "BreakfastIncluded": false,
       "AvailableRooms": 9,
-      "RoomImagesJson": "[\"https://rooms.example.com/0f5c8923-e6b1-45b7-8444-f7dccd13531d/img0.jpg\", \"https://rooms.example.com/0f5c8923-e6b1-45b7-8444-f7dccd13531d/img1.jpg\", \"https://rooms.example.com/0f5c8923-e6b1-45b7-8444-f7dccd13531d/img2.jpg\"]"
+      "RoomImagesJson": "[\"https://newambikainternationalmanali.com/wp-content/uploads/2022/02/Super-Deluxe-Room-with-Balcony-scaled.jpg\", \"https://www.kayak.com/rimg/himg/a6/ac/b4/expediav2-731448-2459219986-855665.jpg?width=1366&height=768&crop=true\", \"https://content.r9cdn.net/rimg/himg/73/bf/b3/agoda-757131-124781441-559247.jpg?width=500&height=350&xhint=1017&yhint=798&crop=true\"]"
     },
     {
       "RoomId": "b3e71bfb-65e6-4fdf-9f1a-3d615c020d5f",
@@ -13184,12 +13492,12 @@
       "RefundPolicy": "Non-refundable",
       "BreakfastIncluded": true,
       "AvailableRooms": 9,
-      "RoomImagesJson": "[\"https://rooms.example.com/b3e71bfb-65e6-4fdf-9f1a-3d615c020d5f/img0.jpg\", \"https://rooms.example.com/b3e71bfb-65e6-4fdf-9f1a-3d615c020d5f/img1.jpg\", \"https://rooms.example.com/b3e71bfb-65e6-4fdf-9f1a-3d615c020d5f/img2.jpg\"]"
+      "RoomImagesJson": "[\"https://www.oberoihotels.com/-/media/oberoi-hotels/website-images/the-oberoi-bengaluru/room-and-suites/detail/premier-room.jpg?w=724&hash=dcb2f1dddb611f8002c6586d784de795\", \"https://www.oberoihotels.com/-/media/oberoi-hotels/website-images/the-oberoi-bengaluru/room-and-suites/detail/deluxe-room.jpg?w=384&hash=8471de81075ced32226ecf60aa9d023c\", \"https://cf.bstatic.com/xdata/images/hotel/max1024x768/273575175.jpg?k=55b935f2ed51b908b337b03a3bc9b75c8c381556c2aa5a76927bc8932654849e&o=&hp=1\"]"
     },
     {
       "RoomId": "afe02531-db1d-4e98-8e61-cc0f9d762228",
       "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
-      "RoomType": "Deluxe", 
+      "RoomType": "Luxury",
       "RoomName": "Ocean View King Room",
       "BedType": "Twin",
       "MaxAdults": 2,
@@ -13200,7 +13508,7 @@
       "RefundPolicy": "Flexible",
       "BreakfastIncluded": true,
       "AvailableRooms": 10,
-      "RoomImagesJson": "[\"https://rooms.example.com/afe02531-db1d-4e98-8e61-cc0f9d762228/img0.jpg\", \"https://rooms.example.com/afe02531-db1d-4e98-8e61-cc0f9d762228/img1.jpg\", \"https://rooms.example.com/afe02531-db1d-4e98-8e61-cc0f9d762228/img2.jpg\"]"
+      "RoomImagesJson": "[\"https://assets.simplotel.com/simplotel/image/upload/x_0,y_86,w_1631,h_918,r_0,c_crop,q_80,fl_progressive/w_240,h_135,c_fit,f_auto/adarsh-hamilton/Hotel_Adarsh_Hamilton_in_Richmond_Town_Bangalore_Luxury_Hotel_EXECUTIVE_TWIN_1\", \"https://i.pinimg.com/474x/28/a9/0b/28a90bda65d1b5b4f3e832eb03f750cb.jpg\", \"https://images2.bovpg.net/r/media/1/3/4/9/6/349619.jpg\"]"
     },
     {
       "RoomId": "944352ce-e5db-4961-892b-42689596be12",
@@ -13216,12 +13524,12 @@
       "RefundPolicy": "Flexible",
       "BreakfastIncluded": true,
       "AvailableRooms": 2,
-      "RoomImagesJson": "[\"https://rooms.example.com/944352ce-e5db-4961-892b-42689596be12/img0.jpg\", \"https://rooms.example.com/944352ce-e5db-4961-892b-42689596be12/img1.jpg\", \"https://rooms.example.com/944352ce-e5db-4961-892b-42689596be12/img2.jpg\"]"
+      "RoomImagesJson": "[\"https://www.oberoihotels.com/-/media/oberoi-hotels/website-images/the-oberoi-new-delhi/room-and-suites/deluxe-room/detail/deluxe-room-1.jpg\", \"https://www.oberoihotels.com/-/media/oberoi-hotels/website-images/the-oberoi-new-delhi/room-and-suites/luxury-room/detail/luxury-room-1.jpg?w=724&hash=238073aac024b5aaac537885d1c4dc37\", \"https://www.oberoihotels.com/-/media/oberoi-hotels/website-images/the-oberoi-new-delhi/room-and-suites/oberoi-suite/detail/the-oberoi-suite1.jpg?w=724&hash=f0c7613b1ee0b52da25afd98011fe965\"]"
     },
     {
       "RoomId": "5cf80f5d-67c9-4254-b3d4-600b6149ff49",
       "HotelId": "d89b276b-7436-4a95-b8c7-de51abb9d634",
-      "RoomType": "Deluxe",
+      "RoomType": "Suite",
       "RoomName": "City View Twin Room",
       "BedType": "Queen",
       "MaxAdults": 1,
@@ -13232,12 +13540,28 @@
       "RefundPolicy": "Flexible",
       "BreakfastIncluded": false,
       "AvailableRooms": 1,
-      "RoomImagesJson": "[\"https://rooms.example.com/5cf80f5d-67c9-4254-b3d4-600b6149ff49/img0.jpg\", \"https://rooms.example.com/5cf80f5d-67c9-4254-b3d4-600b6149ff49/img1.jpg\", \"https://rooms.example.com/5cf80f5d-67c9-4254-b3d4-600b6149ff49/img2.jpg\"]"
+      "RoomImagesJson": "[\"https://media.architecturaldigest.com/photos/659d9cb42446c7171718ecf0/master/w_1600%2Cc_limit/atr.royalmansion-bedroom2-mr.jpg\", \"https://www.v-hotels.in/assets/site-images/blogs/3.png\", \"https://cdn.luxe.digital/media/20230830105612/most-expensive-hotels-atlantis-the-royal-dubai-luxe-digital-780x520.jpg\"]"
+    },
+    {
+      "RoomId": "5cf80f5d-67c9-4254-b3d4-600b6149ff49",
+      "HotelId": "d89b276b-7436-4a95-b8c7-de51abb9d634",
+      "RoomType": "Luxury",
+      "RoomName": "City View Twin Room",
+      "BedType": "Queen",
+      "MaxAdults": 1,
+      "MaxChildren": 2,
+      "RoomSize": "53 sqm",
+      "BasePrice": 231.54,
+      "RoomStatus": "Active",
+      "RefundPolicy": "Flexible",
+      "BreakfastIncluded": false,
+      "AvailableRooms": 1,
+      "RoomImagesJson": "[\"https://cdn.shopify.com/s/files/1/0427/3383/0309/files/DALL_E_2024-10-17_15.44.29_-_A_luxurious_hotel_room_showcasing_a_light_white_color_scheme_emphasizing_elegance_and_sophistication._The_space_features_a_plush_king-sized_bed_with_1024x1024.webp?v=1729151083\", \"https://media.istockphoto.com/id/1066999762/photo/3d-rendering-beautiful-luxury-bedroom-suite-in-hotel-with-tv.jpg?s=612x612&w=0&k=20&c=kh1SoNvZYDdAFOadeKxPVssVKVzbMTIuOHQu-RBDoX0=\", \"https://img.freepik.com/free-photo/3d-rendering-luxury-modern-bedroom-suite-hotel-with-tv-cabinet_105762-2276.jpg\"]"
     },
     {
       "RoomId": "cb6d37fa-dc7c-4737-828b-d7be3fb0072f",
       "HotelId": "62ce3529-4c55-4405-8a09-e81c15971eec",
-      "RoomType": "Suite",
+      "RoomType": "Deluxe",
       "RoomName": "Ocean View Twin Room",
       "BedType": "Twin",
       "MaxAdults": 3,
@@ -13248,7 +13572,7 @@
       "RefundPolicy": "Flexible",
       "BreakfastIncluded": false,
       "AvailableRooms": 8,
-      "RoomImagesJson": "[\"https://rooms.example.com/cb6d37fa-dc7c-4737-828b-d7be3fb0072f/img0.jpg\", \"https://rooms.example.com/cb6d37fa-dc7c-4737-828b-d7be3fb0072f/img1.jpg\", \"https://rooms.example.com/cb6d37fa-dc7c-4737-828b-d7be3fb0072f/img2.jpg\"]"
+      "RoomImagesJson": "[\"https://www.conradpune.com/wp-content/uploads/2022/11/1-16.png\", \"https://www.conradpune.com/wp-content/uploads/2022/11/3-14.png\", \"https://www.conradpune.com/wp-content/uploads/2022/11/4-14.png\"]"
     },
     {
       "RoomId": "9eadb427-ca89-466c-8347-48da841e3560",
@@ -13264,12 +13588,12 @@
       "RefundPolicy": "Non-refundable",
       "BreakfastIncluded": false,
       "AvailableRooms": 1,
-      "RoomImagesJson": "[\"https://rooms.example.com/9eadb427-ca89-466c-8347-48da841e3560/img0.jpg\", \"https://rooms.example.com/9eadb427-ca89-466c-8347-48da841e3560/img1.jpg\", \"https://rooms.example.com/9eadb427-ca89-466c-8347-48da841e3560/img2.jpg\"]"
+      "RoomImagesJson": "[\"https://sitecore-cd-imgr.shangri-la.com/MediaFiles/9/C/0/%7B9C00B280-2C52-4D43-89F2-D6D5F6668451%7D4e2b23f8abd9401c962a744901a02073.jpg\", \"https://sitecore-cd-imgr.shangri-la.com/MediaFiles/9/8/4/%7B984A8BD0-FC33-4BC1-BF9A-661E56C4412F%7D72d8e1b8f63648b3a21cabed0642f70c.jpg?w=750&mode=crop&scale=both\", \"https://images.trvl-media.com/lodging/13000000/12250000/12246300/12246261/6f0750db.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium\"]"
     },
     {
       "RoomId": "e8aa102e-c876-4d1a-b8d0-8833dfce9da3",
       "HotelId": "62ce3529-4c55-4405-8a09-e81c15971eec",
-      "RoomType": "Suite",
+      "RoomType": "Luxury",
       "RoomName": "Ocean View Queen Room",
       "BedType": "King",
       "MaxAdults": 2,
@@ -13280,7 +13604,7 @@
       "RefundPolicy": "Partial",
       "BreakfastIncluded": false,
       "AvailableRooms": 9,
-      "RoomImagesJson": "[\"https://rooms.example.com/e8aa102e-c876-4d1a-b8d0-8833dfce9da3/img0.jpg\", \"https://rooms.example.com/e8aa102e-c876-4d1a-b8d0-8833dfce9da3/img1.jpg\", \"https://rooms.example.com/e8aa102e-c876-4d1a-b8d0-8833dfce9da3/img2.jpg\"]"
+      "RoomImagesJson": "[\"https://i.pinimg.com/736x/a3/f1/7d/a3f17df381f2c9fc3f0047a9922e80c4.jpg\", \"https://i.pinimg.com/736x/6f/72/35/6f7235447ca2c37edf7df110269d363b.jpg\", \"https://st.hzcdn.com/simgs/pictures/bedrooms/5-star-hotel-project-sara-ho-design-llc-img~a79172fa09234dda_4-1446-1-deba2d1.jpg\"]"
     },
     {
       "RoomId": "974eb609-5512-42b4-9b3f-a909f2b9c4d2",

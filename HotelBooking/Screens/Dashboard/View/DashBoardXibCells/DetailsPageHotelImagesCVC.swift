@@ -15,10 +15,12 @@ class DetailsPageHotelImagesCVC: UICollectionViewCell {
     @IBOutlet weak var hotelImageThree: UIImageView!
     @IBOutlet weak var hotelImageFour: UIImageView!
     @IBOutlet weak var hotelImageFive: UIImageView!
+    @IBOutlet weak var shadowView: UIView!
+    @IBOutlet weak var shadowViewButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-       
+        shadowViewButton.alpha = 0.3
     }
 
 }
