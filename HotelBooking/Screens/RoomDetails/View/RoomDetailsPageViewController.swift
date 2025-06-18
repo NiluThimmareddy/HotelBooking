@@ -44,7 +44,11 @@ class RoomDetailsPageViewController: UIViewController {
     
     @IBAction func selectButtonAction(_ sender: UIButton) {
         reserveButtonView.isHidden = false
-        stackViewBottomConstraints.constant = 180
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            stackViewBottomConstraints.constant = 200
+        } else {
+            stackViewBottomConstraints.constant = 150
+        }
         selectButtonView.isHidden = true
         deleteButtonView.isHidden = false
     }
@@ -72,6 +76,10 @@ extension  RoomDetailsPageViewController: UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 230
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            return 350
+        } else {
+            return 250
+        }
     }
 }

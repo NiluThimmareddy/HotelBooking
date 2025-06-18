@@ -12,11 +12,6 @@
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="TimesNewRoman.ttf">
-            <string>.SFUI-Semibold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Hotel List PageVC-->
         <scene sceneID="PgH-WZ-CDq">
@@ -772,7 +767,9 @@
                                                     <constraint firstItem="OwW-5f-cxM" firstAttribute="top" secondItem="7Tm-Mq-nwV" secondAttribute="bottom" constant="5" id="CLO-jY-MGa"/>
                                                     <constraint firstItem="OwW-5f-cxM" firstAttribute="leading" secondItem="QVI-ZF-PzX" secondAttribute="leading" id="Jmz-lN-i2A"/>
                                                     <constraint firstItem="OwW-5f-cxM" firstAttribute="trailing" secondItem="7Tm-Mq-nwV" secondAttribute="trailing" id="N0K-ue-eev"/>
-                                                    <constraint firstAttribute="height" constant="220" id="O9b-yw-vSn"/>
+                                                    <constraint firstAttribute="height" constant="220" id="O9b-yw-vSn">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="250"/>
+                                                    </constraint>
                                                     <constraint firstAttribute="trailing" secondItem="Ksz-ZN-1TX" secondAttribute="trailing" constant="10" id="OaY-fV-h8b"/>
                                                     <constraint firstItem="QVI-ZF-PzX" firstAttribute="leading" secondItem="aMg-GI-Uqf" secondAttribute="leading" id="e4b-Hy-FNq"/>
                                                     <constraint firstItem="7Tm-Mq-nwV" firstAttribute="trailing" secondItem="aMg-GI-Uqf" secondAttribute="trailing" id="laQ-Kq-DN7"/>
@@ -844,7 +841,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WkC-YR-Ths">
-                                                        <rect key="frame" x="10" y="134.66666666666663" width="333" height="80.333333333333314"/>
+                                                        <rect key="frame" x="10" y="134.66666666666663" width="333" height="78"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UlJ-yr-A5u">
                                                                 <rect key="frame" x="0.0" y="5" width="333" height="18"/>
@@ -853,7 +850,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FCi-5t-RG7">
-                                                                <rect key="frame" x="84.333333333333329" y="33" width="243.66666666666669" height="37.333333333333343"/>
+                                                                <rect key="frame" x="84.333333333333329" y="33" width="243.66666666666669" height="35"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -869,7 +866,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkB-G3-Ahs">
-                                                                <rect key="frame" x="0.0" y="33" width="74.333333333333329" height="37.333333333333343"/>
+                                                                <rect key="frame" x="0.0" y="33" width="74.333333333333329" height="35"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <menu key="menu" id="2cH-A8-8II">
@@ -906,6 +903,9 @@
                                                             <constraint firstAttribute="trailing" secondItem="UlJ-yr-A5u" secondAttribute="trailing" id="51B-nU-xxA"/>
                                                             <constraint firstItem="EkB-G3-Ahs" firstAttribute="top" secondItem="UlJ-yr-A5u" secondAttribute="bottom" constant="10" id="Cfg-kz-bdc"/>
                                                             <constraint firstAttribute="trailing" secondItem="FCi-5t-RG7" secondAttribute="trailing" constant="5" id="ESS-8m-cYZ"/>
+                                                            <constraint firstAttribute="height" constant="78" id="EcW-YE-xrw">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="90"/>
+                                                            </constraint>
                                                             <constraint firstItem="FCi-5t-RG7" firstAttribute="top" secondItem="UlJ-yr-A5u" secondAttribute="bottom" constant="10" id="Plo-sc-wAr"/>
                                                             <constraint firstItem="UlJ-yr-A5u" firstAttribute="leading" secondItem="WkC-YR-Ths" secondAttribute="leading" id="Rvj-QU-QzJ"/>
                                                             <constraint firstItem="FCi-5t-RG7" firstAttribute="leading" secondItem="EkB-G3-Ahs" secondAttribute="trailing" constant="10" id="nhw-u3-FZ1"/>
@@ -921,7 +921,7 @@
                                                     <constraint firstItem="WkC-YR-Ths" firstAttribute="top" secondItem="tbK-DG-Io1" secondAttribute="bottom" constant="5" id="1CY-MO-b6f"/>
                                                     <constraint firstAttribute="trailing" secondItem="f4z-7R-lXu" secondAttribute="trailing" constant="10" id="4oh-6G-qCf"/>
                                                     <constraint firstItem="WkC-YR-Ths" firstAttribute="leading" secondItem="tbK-DG-Io1" secondAttribute="leading" id="9Il-4U-C0g"/>
-                                                    <constraint firstAttribute="bottom" secondItem="WkC-YR-Ths" secondAttribute="bottom" constant="5" id="EUu-Dw-1yI"/>
+                                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="WkC-YR-Ths" secondAttribute="bottom" constant="5" id="EUu-Dw-1yI"/>
                                                     <constraint firstItem="tbK-DG-Io1" firstAttribute="leading" secondItem="0Yd-lw-sfQ" secondAttribute="leading" id="GHa-ew-z9w"/>
                                                     <constraint firstItem="tbK-DG-Io1" firstAttribute="trailing" secondItem="0Yd-lw-sfQ" secondAttribute="trailing" id="Iyn-c8-xmc"/>
                                                     <constraint firstItem="0Yd-lw-sfQ" firstAttribute="trailing" secondItem="f4z-7R-lXu" secondAttribute="trailing" id="Lp4-rI-jOF"/>
@@ -929,7 +929,9 @@
                                                     <constraint firstItem="WkC-YR-Ths" firstAttribute="trailing" secondItem="tbK-DG-Io1" secondAttribute="trailing" id="Rfu-We-lmc"/>
                                                     <constraint firstItem="f4z-7R-lXu" firstAttribute="top" secondItem="L1B-MA-FDl" secondAttribute="top" constant="10" id="UyZ-0K-QQx"/>
                                                     <constraint firstItem="0Yd-lw-sfQ" firstAttribute="leading" secondItem="f4z-7R-lXu" secondAttribute="leading" id="grC-rX-oAw"/>
-                                                    <constraint firstAttribute="height" constant="220" id="kbU-LN-c0r"/>
+                                                    <constraint firstAttribute="height" constant="220" id="kbU-LN-c0r">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="230"/>
+                                                    </constraint>
                                                     <constraint firstItem="f4z-7R-lXu" firstAttribute="leading" secondItem="L1B-MA-FDl" secondAttribute="leading" constant="10" id="q9J-aT-7k2"/>
                                                     <constraint firstItem="tbK-DG-Io1" firstAttribute="top" secondItem="0Yd-lw-sfQ" secondAttribute="bottom" constant="5" id="sBe-Zm-psj"/>
                                                 </constraints>
@@ -992,12 +994,20 @@
                                                     <constraint firstItem="5Sd-aq-i2c" firstAttribute="leading" secondItem="iXc-b3-WbH" secondAttribute="leading" constant="10" id="7ne-8U-mTb"/>
                                                     <constraint firstItem="61O-bD-gSs" firstAttribute="leading" secondItem="Txx-L2-eAw" secondAttribute="leading" id="9Nr-Yg-Lea"/>
                                                     <constraint firstItem="61O-bD-gSs" firstAttribute="trailing" secondItem="Txx-L2-eAw" secondAttribute="trailing" id="BTL-hs-ltv"/>
-                                                    <constraint firstAttribute="bottom" secondItem="61O-bD-gSs" secondAttribute="bottom" constant="5" id="FnV-b4-Ang"/>
-                                                    <constraint firstItem="61O-bD-gSs" firstAttribute="top" secondItem="P5D-zf-QuG" secondAttribute="bottom" constant="5" id="H9d-nl-L4E"/>
+                                                    <constraint firstAttribute="bottom" secondItem="61O-bD-gSs" secondAttribute="bottom" constant="5" id="FnV-b4-Ang">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                                                    </constraint>
+                                                    <constraint firstItem="61O-bD-gSs" firstAttribute="top" secondItem="P5D-zf-QuG" secondAttribute="bottom" constant="5" id="H9d-nl-L4E">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                                                    </constraint>
                                                     <constraint firstItem="5Sd-aq-i2c" firstAttribute="top" secondItem="iXc-b3-WbH" secondAttribute="top" constant="5" id="Nd4-yl-9YB"/>
-                                                    <constraint firstItem="P5D-zf-QuG" firstAttribute="top" secondItem="Txx-L2-eAw" secondAttribute="bottom" constant="5" id="OrY-aE-VcF"/>
+                                                    <constraint firstItem="P5D-zf-QuG" firstAttribute="top" secondItem="Txx-L2-eAw" secondAttribute="bottom" constant="5" id="OrY-aE-VcF">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                                                    </constraint>
                                                     <constraint firstItem="Txx-L2-eAw" firstAttribute="top" secondItem="5Sd-aq-i2c" secondAttribute="bottom" constant="10" id="PX3-w3-qcv"/>
-                                                    <constraint firstAttribute="height" constant="110" id="TCe-vC-Dwa"/>
+                                                    <constraint firstAttribute="height" constant="110" id="TCe-vC-Dwa">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="160"/>
+                                                    </constraint>
                                                     <constraint firstItem="Txx-L2-eAw" firstAttribute="leading" secondItem="5Sd-aq-i2c" secondAttribute="leading" id="Vbx-yv-5b6"/>
                                                     <constraint firstItem="Txx-L2-eAw" firstAttribute="trailing" secondItem="5Sd-aq-i2c" secondAttribute="trailing" id="pvs-Jh-u6u"/>
                                                     <constraint firstItem="P5D-zf-QuG" firstAttribute="leading" secondItem="Txx-L2-eAw" secondAttribute="leading" id="vmP-1P-EqP"/>
@@ -1018,7 +1028,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="DRs-gg-r9w" firstAttribute="top" secondItem="iXc-b3-WbH" secondAttribute="bottom" constant="20" id="4vW-x1-hth"/>
-                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DRs-gg-r9w" secondAttribute="bottom" constant="20" id="Aak-7Y-i3n"/>
+                                            <constraint firstAttribute="bottom" secondItem="DRs-gg-r9w" secondAttribute="bottom" constant="20" id="Aak-7Y-i3n"/>
                                             <constraint firstItem="L1B-MA-FDl" firstAttribute="leading" secondItem="0WH-gs-kgr" secondAttribute="leading" id="HEA-K9-3OP"/>
                                             <constraint firstItem="FSM-nP-L09" firstAttribute="top" secondItem="6r0-d8-hC7" secondAttribute="top" constant="20" id="Jdk-bI-DKW"/>
                                             <constraint firstItem="iXc-b3-WbH" firstAttribute="top" secondItem="L1B-MA-FDl" secondAttribute="bottom" constant="20" id="ODp-Oi-OjD"/>
@@ -1256,6 +1266,11 @@
                             <constraint firstItem="rkX-Ca-NrG" firstAttribute="leading" secondItem="NLC-ms-srP" secondAttribute="leading" id="rV0-h2-N2L"/>
                             <constraint firstItem="rkX-Ca-NrG" firstAttribute="top" secondItem="nKb-Wg-gXB" secondAttribute="bottom" id="tQm-98-FN5"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="nKb-Wg-gXB"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="backView" destination="6r0-d8-hC7" id="yhf-Vv-rFd"/>
@@ -2475,10 +2490,10 @@ In many countries, travellers with an assistance animal are entitled to book any
                                 <rect key="frame" x="0.0" y="69" width="393" height="749"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2SD-0O-AVU">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1703"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1690.6666666666667"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gA-yW-ElE">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="1703"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="1690.6666666666667"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xV2-Ns-duM">
                                                         <rect key="frame" x="38" y="20" width="325" height="20.333333333333329"/>
@@ -2808,11 +2823,13 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                     </label>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eIw-tX-y28">
                                                         <rect key="frame" x="10" y="596.33333333333337" width="129.66666666666666" height="34.333333333333371"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="JW Marriott" imagePadding="10">
                                                             <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                            <color key="baseForegroundColor" systemColor="labelColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="raf-uA-W5H"/>
@@ -2820,11 +2837,13 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wt-re-2ZV">
                                                         <rect key="frame" x="10" y="634.66666666666663" width="157" height="34.333333333333371"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Tribute Portfolio" imagePadding="10">
                                                             <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                            <color key="baseForegroundColor" systemColor="labelColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="bTA-X1-okm"/>
@@ -2832,11 +2851,13 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqP-4r-vce">
                                                         <rect key="frame" x="10" y="673" width="227.66666666666666" height="34.333333333333371"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Taj Hotels, Resorts Palaces" imagePadding="10">
                                                             <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                            <color key="baseForegroundColor" systemColor="labelColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="Npa-nc-4DJ"/>
@@ -2879,14 +2900,14 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
                                                     </button>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xbP-jc-4c6">
-                                                        <rect key="frame" x="10" y="779.33333333333337" width="373" height="127.33333333333337"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xbP-jc-4c6">
+                                                        <rect key="frame" x="10" y="779.33333333333337" width="373" height="115"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gio-gL-jgp">
-                                                                <rect key="frame" x="0.0" y="0.0" width="373" height="51.333333333333336"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="373" height="53.333333333333336"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veE-Ww-GXS">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="152.66666666666666" height="51.333333333333336"/>
+                                                                        <rect key="frame" x="0.0" y="1" width="152.66666666666666" height="51.333333333333336"/>
                                                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="Button"/>
@@ -2909,7 +2930,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpg-ys-fa6">
-                                                                        <rect key="frame" x="162.66666666666666" y="0.0" width="90" height="51.333333333333336"/>
+                                                                        <rect key="frame" x="162.66666666666666" y="1" width="90" height="51.333333333333336"/>
                                                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" image="wifi" catalog="system" imagePlacement="top" title="Free wifi">
@@ -2931,7 +2952,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zg-SX-4co">
-                                                                        <rect key="frame" x="262.66666666666669" y="0.0" width="110.33333333333331" height="51.333333333333336"/>
+                                                                        <rect key="frame" x="262.66666666666669" y="1" width="110.33333333333331" height="51.333333333333336"/>
                                                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="Button"/>
@@ -2956,10 +2977,10 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iqh-Ks-hHa">
-                                                                <rect key="frame" x="0.0" y="59.333333333333258" width="373" height="68"/>
+                                                                <rect key="frame" x="0.0" y="61.333333333333258" width="373" height="53.666666666666657"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byC-cb-bTM">
-                                                                        <rect key="frame" x="0.0" y="8.3333333333333748" width="121" height="51.333333333333343"/>
+                                                                        <rect key="frame" x="0.0" y="1" width="121" height="51.333333333333336"/>
                                                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="Button"/>
@@ -2982,7 +3003,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWj-cA-qUc">
-                                                                        <rect key="frame" x="126" y="8.3333333333333748" width="121" height="51.333333333333343"/>
+                                                                        <rect key="frame" x="126" y="1" width="121" height="51.333333333333336"/>
                                                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" image="p.circle" catalog="system" imagePlacement="top" title="Free parking">
@@ -3004,7 +3025,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POe-Bk-fK4">
-                                                                        <rect key="frame" x="252" y="0.0" width="121" height="68"/>
+                                                                        <rect key="frame" x="252" y="0.0" width="121" height="53.666666666666664"/>
                                                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="Button"/>
@@ -3027,207 +3048,243 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
+                                                                <variation key="heightClass=regular-widthClass=regular" spacing="10"/>
                                                             </stackView>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstItem="Gio-gL-jgp" firstAttribute="top" secondItem="xbP-jc-4c6" secondAttribute="top" id="7Ia-eX-D4K"/>
+                                                            <constraint firstAttribute="height" constant="115" id="OGK-3m-Eqj">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                                                            </constraint>
                                                             <constraint firstItem="Gio-gL-jgp" firstAttribute="leading" secondItem="xbP-jc-4c6" secondAttribute="leading" id="hCi-yO-5uP"/>
                                                             <constraint firstAttribute="trailing" secondItem="Gio-gL-jgp" secondAttribute="trailing" id="hXy-lD-Xlf"/>
                                                         </constraints>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="On4-3o-P5l">
-                                                        <rect key="frame" x="10" y="936.66666666666663" width="175.66666666666666" height="34.333333333333371"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <rect key="frame" x="10" y="924.33333333333337" width="175.66666666666666" height="34.333333333333371"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="24-hour front desk" imagePadding="10">
                                                             <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="Hxn-M4-gNq"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l13-6H-i65">
-                                                        <rect key="frame" x="10" y="981" width="164" height="34.333333333333371"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <rect key="frame" x="10" y="968.66666666666674" width="164" height="34.333333333333371"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Laundary service" imagePadding="10">
                                                             <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="P8p-Pf-6fw"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hdv-5T-Dsi">
-                                                        <rect key="frame" x="10" y="1025.3333333333333" width="217" height="34.333333333333258"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <rect key="frame" x="10" y="1013.0000000000001" width="217" height="34.333333333333371"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Designated smoking area" imagePadding="10">
                                                             <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="k3Z-0T-Rxg"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ae-Eu-Nf3">
-                                                        <rect key="frame" x="10" y="1069.6666666666667" width="78.333333333333329" height="34.333333333333258"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <rect key="frame" x="10" y="1057.3333333333333" width="78.333333333333329" height="34.333333333333258"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Spa" imagePadding="10">
                                                             <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="Ux9-Cl-3CL"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RW-dt-Yf7">
-                                                        <rect key="frame" x="10" y="1114" width="105.66666666666667" height="34.333333333333258"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <rect key="frame" x="10" y="1101.6666666666667" width="105.66666666666667" height="34.333333333333258"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Elevator" imagePadding="10">
                                                             <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="WQ3-kM-298"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXn-99-ozS">
-                                                        <rect key="frame" x="10" y="1158.3333333333333" width="160" height="34.333333333333258"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <rect key="frame" x="10" y="1146" width="160" height="34.333333333333258"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Metting facilities" imagePadding="10">
                                                             <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="Wd5-x4-c50"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tf-KG-4Vt">
-                                                        <rect key="frame" x="10" y="1202.6666666666667" width="134.33333333333334" height="34.333333333333258"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <rect key="frame" x="10" y="1190.3333333333333" width="134.33333333333334" height="34.333333333333258"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Dry cleaning" imagePadding="10">
                                                             <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="IP0-Qk-z0Y"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ln4-Ou-AnP">
-                                                        <rect key="frame" x="10" y="1247" width="216.33333333333334" height="34.333333333333258"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <rect key="frame" x="10" y="1234.6666666666667" width="216.33333333333334" height="34.333333333333258"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Non-smoking throughout" imagePadding="10">
                                                             <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="vme-Ud-2OT"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room facilities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zU-qM-Gqr">
-                                                        <rect key="frame" x="10" y="1296.3333333333333" width="105" height="18"/>
+                                                        <rect key="frame" x="10" y="1284" width="105" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0E-D0-6Ix">
-                                                        <rect key="frame" x="10" y="1324.3333333333333" width="101.66666666666667" height="34.333333333333258"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <rect key="frame" x="10" y="1312" width="101.66666666666667" height="34.333333333333258"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Shower" imagePadding="10">
                                                             <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="xwK-17-Irp"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7q-NJ-PrE">
-                                                        <rect key="frame" x="10" y="1362.6666666666667" width="174" height="34.333333333333258"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <rect key="frame" x="10" y="1350.3333333333333" width="174" height="34.333333333333258"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Safety deposit box" imagePadding="10">
                                                             <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="zLK-HA-skh"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74L-KA-SHy">
-                                                        <rect key="frame" x="10" y="1401" width="171.66666666666666" height="34.333333333333258"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <rect key="frame" x="10" y="1388.6666666666667" width="171.66666666666666" height="34.333333333333258"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Free bottled water" imagePadding="10">
                                                             <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="NOC-1K-hTT"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLj-PB-D5f">
-                                                        <rect key="frame" x="10" y="1439.3333333333333" width="104.66666666666667" height="34.333333333333258"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <rect key="frame" x="10" y="1427" width="104.66666666666667" height="34.333333333333258"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Balcony" imagePadding="10">
                                                             <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="il3-5Y-eQv"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tla-xU-fC9">
-                                                        <rect key="frame" x="9.9999999999999929" y="1477.6666666666667" width="116.33333333333331" height="34.333333333333258"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <rect key="frame" x="9.9999999999999929" y="1465.3333333333333" width="116.33333333333331" height="34.333333333333258"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Bathroom" imagePadding="10">
                                                             <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="pf0-fD-Vl8"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ui7-Kc-3io">
-                                                        <rect key="frame" x="10" y="1516" width="198.33333333333334" height="34.333333333333258"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <rect key="frame" x="10" y="1503.6666666666667" width="198.33333333333334" height="34.333333333333258"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Private swimming pool" imagePadding="10">
                                                             <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="DCd-qM-dcv"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAN-g4-kaC">
-                                                        <rect key="frame" x="10" y="1560.3333333333333" width="160.66666666666666" height="34.333333333333258"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <rect key="frame" x="10" y="1548" width="160.66666666666666" height="34.333333333333258"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="smoking allowed" imagePadding="10">
                                                             <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="9lm-LO-O8o"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CL1-ap-JYt">
-                                                        <rect key="frame" x="10" y="1598.6666666666667" width="104.66666666666667" height="34.333333333333258"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <rect key="frame" x="10" y="1586.3333333333333" width="104.66666666666667" height="34.333333333333258"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Bathtub" imagePadding="10">
                                                             <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="P2l-PC-0uZ"/>
@@ -3250,7 +3307,9 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                     <constraint firstItem="9zU-qM-Gqr" firstAttribute="leading" secondItem="0gA-yW-ElE" secondAttribute="leading" constant="10" id="6RU-NP-5DD"/>
                                                     <constraint firstItem="Tw0-nQ-BB2" firstAttribute="leading" secondItem="0gA-yW-ElE" secondAttribute="leading" constant="10" id="6VF-XN-Z3q"/>
                                                     <constraint firstItem="eIw-tX-y28" firstAttribute="leading" secondItem="0gA-yW-ElE" secondAttribute="leading" constant="10" id="7W3-pg-jN8"/>
-                                                    <constraint firstAttribute="bottom" secondItem="CL1-ap-JYt" secondAttribute="bottom" constant="70" id="7im-al-p9B"/>
+                                                    <constraint firstAttribute="bottom" secondItem="CL1-ap-JYt" secondAttribute="bottom" constant="70" id="7im-al-p9B">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                                    </constraint>
                                                     <constraint firstItem="5Wt-re-2ZV" firstAttribute="leading" secondItem="0gA-yW-ElE" secondAttribute="leading" constant="10" id="7ip-az-6A7"/>
                                                     <constraint firstItem="zue-At-POM" firstAttribute="leading" secondItem="0gA-yW-ElE" secondAttribute="leading" constant="10" id="7kF-GW-qqi"/>
                                                     <constraint firstItem="xbP-jc-4c6" firstAttribute="leading" secondItem="0gA-yW-ElE" secondAttribute="leading" constant="10" id="8R9-Ch-pbH"/>
@@ -3353,16 +3412,20 @@ In many countries, travellers with an assistance animal are entitled to book any
                                 <rect key="frame" x="0.0" y="758" width="393" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLe-bW-QOf">
-                                        <rect key="frame" x="40" y="15.333333333333373" width="56" height="29.666666666666671"/>
-                                        <fontDescription key="fontDescription" name=".SFUI-Semibold" family=".AppleSystemUIFont" pointSize="13"/>
+                                        <rect key="frame" x="20" y="12.666666666666629" width="34" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="csd-VR-Ifr">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="45"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Clear">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <buttonConfiguration key="configuration" style="plain" title="Clear">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        </variation>
                                         <connections>
                                             <action selector="clearButtonAction:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="EjW-Jw-5CN"/>
                                         </connections>
@@ -3371,7 +3434,9 @@ In many countries, travellers with an assistance animal are entitled to book any
                                         <rect key="frame" x="275" y="12.666666666666629" width="103" height="35"/>
                                         <color key="backgroundColor" name="defaultColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="t8v-Sc-ohn"/>
+                                            <constraint firstAttribute="height" constant="35" id="t8v-Sc-ohn">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="45"/>
+                                            </constraint>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3395,13 +3460,17 @@ In many countries, travellers with an assistance animal are entitled to book any
                                 <constraints>
                                     <constraint firstItem="LLe-bW-QOf" firstAttribute="centerY" secondItem="LPJ-6Y-toK" secondAttribute="centerY" id="BsJ-0t-tDZ"/>
                                     <constraint firstItem="bjR-bJ-A8R" firstAttribute="centerY" secondItem="LPJ-6Y-toK" secondAttribute="centerY" id="FjZ-VY-GaF"/>
-                                    <constraint firstAttribute="height" constant="60" id="NbC-lm-7n1"/>
+                                    <constraint firstAttribute="height" constant="60" id="NbC-lm-7n1">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                    </constraint>
                                     <constraint firstAttribute="trailing" secondItem="bjR-bJ-A8R" secondAttribute="trailing" constant="15" id="cqp-mX-d6e"/>
-                                    <constraint firstItem="LLe-bW-QOf" firstAttribute="leading" secondItem="LPJ-6Y-toK" secondAttribute="leading" constant="40" id="hzs-J3-CLY"/>
+                                    <constraint firstItem="LLe-bW-QOf" firstAttribute="leading" secondItem="LPJ-6Y-toK" secondAttribute="leading" constant="20" id="hzs-J3-CLY">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                    </constraint>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qq2-Pu-U8r">
-                                <rect key="frame" x="50" y="796" width="36" height="1"/>
+                                <rect key="frame" x="20" y="796.66666666666663" width="34" height="1"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="hJ6-zj-IbM"/>
@@ -3414,13 +3483,13 @@ In many countries, travellers with an assistance animal are entitled to book any
                             <constraint firstItem="Fg8-QV-fFz" firstAttribute="trailing" secondItem="vn3-7m-Wid" secondAttribute="trailing" id="7k8-cz-f8G"/>
                             <constraint firstItem="vn3-7m-Wid" firstAttribute="leading" secondItem="Fg8-QV-fFz" secondAttribute="leading" id="CLj-xP-Bdh"/>
                             <constraint firstItem="Fg8-QV-fFz" firstAttribute="bottom" secondItem="LPJ-6Y-toK" secondAttribute="bottom" id="EHU-LV-p0h"/>
-                            <constraint firstItem="qq2-Pu-U8r" firstAttribute="bottom" secondItem="LLe-bW-QOf" secondAttribute="bottom" constant="-6" id="ShV-jh-hES"/>
-                            <constraint firstItem="qq2-Pu-U8r" firstAttribute="trailing" secondItem="LLe-bW-QOf" secondAttribute="trailing" constant="-10" id="fQ1-mw-AgB"/>
+                            <constraint firstItem="qq2-Pu-U8r" firstAttribute="bottom" secondItem="LLe-bW-QOf" secondAttribute="bottom" constant="-8" id="ShV-jh-hES"/>
+                            <constraint firstItem="qq2-Pu-U8r" firstAttribute="trailing" secondItem="LLe-bW-QOf" secondAttribute="trailing" id="arg-Dm-nb9"/>
                             <constraint firstItem="Fg8-QV-fFz" firstAttribute="trailing" secondItem="LPJ-6Y-toK" secondAttribute="trailing" id="nIx-61-x59"/>
                             <constraint firstItem="LPJ-6Y-toK" firstAttribute="leading" secondItem="Fg8-QV-fFz" secondAttribute="leading" id="u5Z-4V-XJf"/>
                             <constraint firstItem="Fg8-QV-fFz" firstAttribute="bottom" secondItem="vn3-7m-Wid" secondAttribute="bottom" id="vSw-NY-k7J"/>
-                            <constraint firstItem="qq2-Pu-U8r" firstAttribute="leading" secondItem="LLe-bW-QOf" secondAttribute="leading" constant="10" id="xx9-yo-psJ"/>
                             <constraint firstItem="vn3-7m-Wid" firstAttribute="top" secondItem="Fg8-QV-fFz" secondAttribute="top" constant="10" id="yRU-sz-3ab"/>
+                            <constraint firstItem="qq2-Pu-U8r" firstAttribute="leading" secondItem="LLe-bW-QOf" secondAttribute="leading" id="zJ5-8N-zLe"/>
                         </constraints>
                     </view>
                     <connections>

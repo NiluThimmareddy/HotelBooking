@@ -23,7 +23,7 @@ class FilterOptionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        bottomView.addTopShadow()
     }
     
     func setUpUI(){

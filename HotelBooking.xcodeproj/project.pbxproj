@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B55529552DEDC25500F4171A /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B55529542DEDC25500F4171A /* FSCalendar */; };
-		B5FE94DA2DDCAC8F00EEE0B9 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = B5FE94D92DDCAC8F00EEE0B9 /* Reachability */; };
+		B5661C5D2E017FF700A6E376 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B5661C5C2E017FF700A6E376 /* FSCalendar */; };
+		B5661C602E01802300A6E376 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = B5661C5F2E01802300A6E376 /* Reachability */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5FE94DA2DDCAC8F00EEE0B9 /* Reachability in Frameworks */,
-				B55529552DEDC25500F4171A /* FSCalendar in Frameworks */,
+				B5661C5D2E017FF700A6E376 /* FSCalendar in Frameworks */,
+				B5661C602E01802300A6E376 /* Reachability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +95,8 @@
 			);
 			name = HotelBooking;
 			packageProductDependencies = (
-				B5FE94D92DDCAC8F00EEE0B9 /* Reachability */,
-				B55529542DEDC25500F4171A /* FSCalendar */,
+				B5661C5C2E017FF700A6E376 /* FSCalendar */,
+				B5661C5F2E01802300A6E376 /* Reachability */,
 			);
 			productName = HotelBooking;
 			productReference = B541E7C82DDB07E800B2B692 /* HotelBooking.app */;
@@ -127,8 +127,8 @@
 			mainGroup = B541E7BF2DDB07E800B2B692;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				B5FE94D82DDCAC8F00EEE0B9 /* XCRemoteSwiftPackageReference "Reachability" */,
 				B55529532DEDC25500F4171A /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				B5661C5E2E01802300A6E376 /* XCRemoteSwiftPackageReference "Reachability" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B541E7C92DDB07E800B2B692 /* Products */;
@@ -372,7 +372,7 @@
 				minimumVersion = 2.8.4;
 			};
 		};
-		B5FE94D82DDCAC8F00EEE0B9 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+		B5661C5E2E01802300A6E376 /* XCRemoteSwiftPackageReference "Reachability" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
 			requirement = {
@@ -383,14 +383,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B55529542DEDC25500F4171A /* FSCalendar */ = {
+		B5661C5C2E017FF700A6E376 /* FSCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B55529532DEDC25500F4171A /* XCRemoteSwiftPackageReference "FSCalendar" */;
 			productName = FSCalendar;
 		};
-		B5FE94D92DDCAC8F00EEE0B9 /* Reachability */ = {
+		B5661C5F2E01802300A6E376 /* Reachability */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B5FE94D82DDCAC8F00EEE0B9 /* XCRemoteSwiftPackageReference "Reachability" */;
+			package = B5661C5E2E01802300A6E376 /* XCRemoteSwiftPackageReference "Reachability" */;
 			productName = Reachability;
 		};
 /* End XCSwiftPackageProductDependency section */
