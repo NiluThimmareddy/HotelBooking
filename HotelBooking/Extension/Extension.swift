@@ -296,3 +296,12 @@ extension UIView {
         layer.addSublayer(border)
     }
 }
+
+extension UIView {
+    func makeAllSubviewsSkeletonable() {
+        self.isSkeletonable = true
+        for subview in self.subviews {
+            subview.makeAllSubviewsSkeletonable()
+        }
+    }
+}

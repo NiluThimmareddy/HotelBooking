@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import SkeletonView
 
-class HotelsListTVC : UITableViewCell {
-
+class HotelsListTVC: UITableViewCell {
+    
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var hotelImgView: UIImageView!
     @IBOutlet weak var hotelNameLabel: UILabel!
@@ -28,12 +29,25 @@ class HotelsListTVC : UITableViewCell {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var reviewTypeLabel: UILabel!
     @IBOutlet weak var totalReviewsCountLabel: UILabel!
+    @IBOutlet weak var availableView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+
+        isSkeletonable = true
+        contentView.isSkeletonable = true
+        backView.isSkeletonable = true
+        availableView.isSkeletonable = true
+        availableView.isHiddenWhenSkeletonIsActive = true
+
+        ratingsView.isSkeletonable = true
+        ratingsView.isHiddenWhenSkeletonIsActive = true
+
+        makeAllSubviewsSkeletonable(in: contentView)
+        
         backView.applyCardStyle()
     }
-    
+
     func configure(with hotel: Hotel, room: HotelRoom?, policy: Policy, distance: HotelLandmark) {
         hotelNameLabel.text = hotel.HotelName
         hotelTypeLabel.text = hotel.HotelType
@@ -56,5 +70,11 @@ class HotelsListTVC : UITableViewCell {
         ratingLabel.text = String(format: "%.1f", rating)
     }
 
-
+    private func makeAllSubviewsSkeletonable(in view: UIView) {
+        view.subviews.forEach {
+            $0.isSkeletonable = true
+            makeAllSubviewsSkeletonable(in: $0)
+        }
+    }
 }
+

@@ -301,12 +301,10 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
     }
     @objc func heartButtonTapped() {
         print("❤️ Heart tapped")
-        // Add favorite logic here
     }
 
     @objc func shareButtonTapped() {
         print("🔗 Share tapped")
-        // Add share logic here
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -372,7 +370,13 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
     }
     
     @IBAction func selectRoomButtonAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "RoomsListPageVC")as! RoomsListPageVC
+        vc.navigationItem.title = "Rooms List"
+        navigationItem.backButtonTitle = ""
+        navigationController?.pushViewController(vc, animated: true)
     }
+    
     @IBAction func guestWhoStayedHereLovedViewAllButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "UserReviewsVC")as! UserReviewsVC

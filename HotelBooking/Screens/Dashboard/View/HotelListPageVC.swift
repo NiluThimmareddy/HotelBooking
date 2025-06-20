@@ -6,54 +6,32 @@
 //
 
 import UIKit
+import SkeletonView
 
 class HotelListPageVC: UIViewController {
-    
+
+    @IBOutlet weak var topView: UIView!
     @IBOutlet weak var hotelListTableview: UITableView!
     @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var sortButton: UIButton!
-    
+
     let viewModel = HotelJsonViewModel()
-    
-    private let filterVC = FilterViewController()
-    private let overlayView = UIView()
+
     var selectedSortOption: String?
-    
-    var isClicked : Bool = false
-    
+
+    var isClicked: Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         setUpUI()
     }
-    
-    @objc func overlayTapped() {
-        isClicked = false
-        hideFilters()
-    }
-    
-    func showFilters() {
-        filterVC.view.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        filterVC.view.alpha = 0
-        overlayView.alpha = 0
-        
-        UIView.animate(withDuration: 0.3) {
-            self.overlayView.alpha = 1
-            self.filterVC.view.alpha = 1
-            self.filterVC.view.transform = .identity
-        }
-    }
-    
-    func hideFilters() {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.filterVC.view.alpha = 0
-            self.overlayView.alpha = 0
-            self.filterVC.view.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        })
-    }
-    
+
+   
+
     @IBAction func sortButtonAction(_ sender: Any) {
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "SortFilterViewController") as? SortFilterViewController else { return }
-        
+
         if let sheet = controller.sheetPresentationController {
             sheet.detents = [
                 .custom { context in
@@ -66,7 +44,7 @@ class HotelListPageVC: UIViewController {
             ]
             sheet.prefersGrabberVisible = true
             sheet.preferredCornerRadius = 20
-            
+
             if UIDevice.current.userInterfaceIdiom == .pad {
                 sheet.largestUndimmedDetentIdentifier = .medium
                 controller.preferredContentSize = CGSize(
@@ -79,10 +57,10 @@ class HotelListPageVC: UIViewController {
         controller.modalPresentationStyle = .pageSheet
         present(controller, animated: true)
     }
-    
+
     @IBAction func filterButtonAction(_ sender: Any) {
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "FilterOptionsViewController") as? FilterOptionsViewController else { return }
-        
+
         if let sheet = controller.sheetPresentationController {
             sheet.detents = [
                 .custom { context in
@@ -91,7 +69,7 @@ class HotelListPageVC: UIViewController {
             ]
             sheet.prefersGrabberVisible = true
             sheet.preferredCornerRadius = 20
-            
+
             if UIDevice.current.userInterfaceIdiom == .pad {
                 sheet.largestUndimmedDetentIdentifier = .medium
                 controller.preferredContentSize = CGSize(
@@ -100,24 +78,23 @@ class HotelListPageVC: UIViewController {
                 )
             }
         }
-        
+
         controller.modalPresentationStyle = .pageSheet
         present(controller, animated: true)
     }
-    
 }
 
-extension HotelListPageVC: UITableViewDelegate, UITableViewDataSource {
-    
+extension HotelListPageVC: UITableViewDelegate, SkeletonTableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.allHotels.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HotelsListTVC", for: indexPath) as? HotelsListTVC else {
             return UITableViewCell()
         }
-        
+
         let hotel = viewModel.allHotels[indexPath.row]
         let rooms = viewModel.allRooms.filter { $0.hotelId == hotel.HotelId }
         let cheapestRoom = rooms.min(by: { $0.basePrice < $1.basePrice })
@@ -125,62 +102,49 @@ extension HotelListPageVC: UITableViewDelegate, UITableViewDataSource {
         let nearBy = viewModel.allHotelNearbyLandmarks[indexPath.row]
 
         cell.configure(with: hotel, room: cheapestRoom, policy: policy, distance: nearBy)
-        
+
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            return 460
-        } else {
-            return 390
-        }
+        return UIDevice.current.userInterfaceIdiom == .pad ? 460 : 390
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
         let controller = storyboard.instantiateViewController(identifier: "DetailsViewController") as! DetailsViewController
         controller.hotelDetailsData = viewModel.allHotels[indexPath.row]
         controller.modalPresentationStyle = .fullScreen
-        let backItem = UIBarButtonItem()
-        backItem.title = ""
-        self.navigationItem.backBarButtonItem = backItem
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.navigationController?.pushViewController(controller, animated: true)
+    }
+
+    func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "HotelsListTVC"
     }
 }
 
 extension HotelListPageVC {
     func setUpUI() {
-        hotelListTableview.delegate = self
-        hotelListTableview.dataSource = self
-        
+//        topView.applyCardStyle()
         hotelListTableview.register(UINib(nibName: "HotelsListTVC", bundle: nil), forCellReuseIdentifier: "HotelsListTVC")
+
+
+
+        hotelListTableview.isSkeletonable = true
+        hotelListTableview.showAnimatedGradientSkeleton()
         
         viewModel.fetchHotels {
-            DispatchQueue.main.async {
-                    self.hotelListTableview.reloadData()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                self.hotelListTableview.stopSkeletonAnimation()
+                self.hotelListTableview.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.25))
             }
         }
-        
-        overlayView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
-        overlayView.alpha = 0
-        overlayView.frame = view.bounds
-        overlayView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(overlayTapped)))
-        view.addSubview(overlayView)
-        
-        addChild(filterVC)
-        view.addSubview(filterVC.view)
-        filterVC.didMove(toParent: self)
-        
-        let width = view.frame.width * 0.8
-        let height = view.frame.height * 0.7
-        filterVC.view.frame = CGRect(x: (view.frame.width - width) / 2,
-                                     y: (view.frame.height - 450) / 2,
-                                     width: width,
-                                     height: height)
-        filterVC.view.alpha = 0
-        filterVC.view.layer.cornerRadius = 12
-        filterVC.view.clipsToBounds = true
-
     }
+
 }
+

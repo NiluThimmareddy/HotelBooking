@@ -1,5 +1,5 @@
 {
-  "originHash" : "d12818b53d4b466762b93ed2f8347195a84987ece491976e80e6e23182d21949",
+  "originHash" : "20f35bac93ba8c89877bf61625b7c7617fb91f9f596680f2b01fa393f1810efb",
   "pins" : [
     {
       "identity" : "fscalendar",
@@ -17,6 +17,15 @@
       "state" : {
         "branch" : "master",
         "revision" : "21d1dc412cfecbe6e34f1f4c4eb88d3f912654a6"
+      }
+    },
+    {
+      "identity" : "skeletonview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Juanpe/SkeletonView",
+      "state" : {
+        "revision" : "2f5274827d310e32c09325dd3e0007120940988e",
+        "version" : "1.31.0"
       }
     }
   ],

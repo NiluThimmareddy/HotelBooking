@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RLF-p4-cKS">
-                                <rect key="frame" x="0.0" y="104" width="393" height="75"/>
+                                <rect key="frame" x="0.0" y="89" width="393" height="75"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxN-vc-BXc">
                                         <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="75"/>
@@ -115,17 +115,17 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="idE-2w-jKz">
-                                <rect key="frame" x="60" y="69" width="273" height="60"/>
+                                <rect key="frame" x="60" y="59" width="273" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bangalore 28 May - 29 May" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fV-Oi-15Z">
-                                        <rect key="frame" x="0.0" y="0.0" width="273" height="60"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47564119397759103" blue="1" alpha="0.2697382036423841" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="273" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47564119397759103" blue="1" alpha="0.19733029801324503" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
+                                                <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                 <color key="value" systemColor="tableCellBlueTextColor"/>
@@ -139,25 +139,19 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="3fV-Oi-15Z" firstAttribute="leading" secondItem="idE-2w-jKz" secondAttribute="leading" id="7Dy-P0-vIL"/>
-                                    <constraint firstAttribute="height" constant="60" id="GFc-qj-A9P"/>
+                                    <constraint firstAttribute="height" constant="50" id="GFc-qj-A9P"/>
                                     <constraint firstAttribute="bottom" secondItem="3fV-Oi-15Z" secondAttribute="bottom" id="SOR-k0-I3v"/>
                                     <constraint firstItem="3fV-Oi-15Z" firstAttribute="top" secondItem="idE-2w-jKz" secondAttribute="top" id="Wxs-cM-Ofo"/>
                                     <constraint firstAttribute="trailing" secondItem="3fV-Oi-15Z" secondAttribute="trailing" id="wVT-HQ-YHy"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.5"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="POM-EM-ZEY">
-                                <rect key="frame" x="0.0" y="179" width="393" height="673"/>
+                                <rect key="frame" x="0.0" y="164" width="393" height="688"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="wRq-kI-yJs" id="BGu-kz-SE6"/>
@@ -170,8 +164,8 @@
                         <constraints>
                             <constraint firstItem="POM-EM-ZEY" firstAttribute="top" secondItem="RLF-p4-cKS" secondAttribute="bottom" id="1li-nL-zn3"/>
                             <constraint firstItem="bpL-qh-e6U" firstAttribute="trailing" secondItem="POM-EM-ZEY" secondAttribute="trailing" id="6qb-Lf-gBU"/>
-                            <constraint firstItem="idE-2w-jKz" firstAttribute="top" secondItem="bpL-qh-e6U" secondAttribute="top" constant="10" id="8xQ-Zu-wla"/>
-                            <constraint firstItem="RLF-p4-cKS" firstAttribute="top" secondItem="idE-2w-jKz" secondAttribute="bottom" constant="-25" id="MxN-mt-blv"/>
+                            <constraint firstItem="idE-2w-jKz" firstAttribute="top" secondItem="bpL-qh-e6U" secondAttribute="top" id="8xQ-Zu-wla"/>
+                            <constraint firstItem="RLF-p4-cKS" firstAttribute="top" secondItem="idE-2w-jKz" secondAttribute="bottom" constant="-20" id="MxN-mt-blv"/>
                             <constraint firstItem="bpL-qh-e6U" firstAttribute="bottom" secondItem="POM-EM-ZEY" secondAttribute="bottom" constant="-34" id="U33-e6-ozv"/>
                             <constraint firstItem="RLF-p4-cKS" firstAttribute="leading" secondItem="ONx-tn-Z7d" secondAttribute="leading" id="X0w-6u-1Rk"/>
                             <constraint firstItem="bpL-qh-e6U" firstAttribute="trailing" secondItem="RLF-p4-cKS" secondAttribute="trailing" id="f6O-7d-3es"/>
@@ -184,6 +178,7 @@
                         <outlet property="filterButton" destination="mw1-hj-6bU" id="P9J-TD-EDt"/>
                         <outlet property="hotelListTableview" destination="POM-EM-ZEY" id="GvL-j3-8Yz"/>
                         <outlet property="sortButton" destination="gfz-je-18X" id="kX1-9w-6oW"/>
+                        <outlet property="topView" destination="idE-2w-jKz" id="3Hr-Ow-VCd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="phf-VD-qkf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -674,6 +669,9 @@
                                                         <state key="normal" title="Select">
                                                             <imageReference key="image" image="person" catalog="system" symbolScale="small"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="selectGuestButtonAction:" destination="E9J-c9-9sG" eventType="touchUpInside" id="hig-sv-NNa"/>
+                                                        </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OwW-5f-cxM">
                                                         <rect key="frame" x="10" y="75" width="333" height="130"/>
@@ -1057,59 +1055,369 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="1JV-fu-ctS"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="YY1-8p-ImV"/>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rkX-Ca-NrG">
-                                <rect key="frame" x="0.0" y="738" width="393" height="80"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amM-P4-4Oe">
+                                <rect key="frame" x="0.0" y="238" width="393" height="500"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="   $ 100.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28G-7x-pkZ">
-                                        <rect key="frame" x="20.000000000000007" y="12.666666666666631" width="88.666666666666686" height="21.666666666666671"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCA-qj-G8V">
+                                        <rect key="frame" x="20" y="20" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="XCA-qj-G8V" secondAttribute="height" id="DHX-dY-IIx"/>
+                                            <constraint firstAttribute="height" constant="25" id="LIu-Be-fky"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="xmark" catalog="system" symbolScale="medium"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="closeButton:" destination="E9J-c9-9sG" eventType="touchUpInside" id="zEi-Yl-zGn"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guest List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yO-0c-QnX">
+                                        <rect key="frame" x="55" y="22.333333333333314" width="308" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZt-ww-ZOP">
-                                        <rect key="frame" x="271.66666666666669" y="12.666666666666629" width="101.33333333333331" height="55"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axS-ye-fW9">
+                                        <rect key="frame" x="0.0" y="52.666666666666686" width="393" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Qsf-0v-UM4"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ay-2h-wPX">
+                                        <rect key="frame" x="20" y="73.666666666666686" width="353" height="34.333333333333343"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Add a Guest" imagePadding="10">
+                                            <imageReference key="image" image="plus.app" catalog="system" symbolScale="medium"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addGuestButtonAction:" destination="E9J-c9-9sG" eventType="touchUpInside" id="dvt-tN-1T6"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Guests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sN-0S-9tn">
+                                        <rect key="frame" x="20" y="118" width="353" height="19.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cfs-LZ-R1U">
+                                        <rect key="frame" x="10" y="147.33333333333329" width="373" height="352.66666666666674"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="E9J-c9-9sG" id="GO9-WV-1Aa"/>
+                                            <outlet property="delegate" destination="E9J-c9-9sG" id="tcH-O1-Hac"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="axS-ye-fW9" firstAttribute="top" secondItem="7yO-0c-QnX" secondAttribute="bottom" constant="10" id="3lL-FN-3He"/>
+                                    <constraint firstItem="8ay-2h-wPX" firstAttribute="leading" secondItem="amM-P4-4Oe" secondAttribute="leading" constant="20" id="6Ih-gn-Doa"/>
+                                    <constraint firstItem="axS-ye-fW9" firstAttribute="leading" secondItem="amM-P4-4Oe" secondAttribute="leading" id="9ES-cQ-MHn"/>
+                                    <constraint firstItem="7yO-0c-QnX" firstAttribute="leading" secondItem="XCA-qj-G8V" secondAttribute="trailing" constant="10" id="EhB-Yk-92i"/>
+                                    <constraint firstItem="XCA-qj-G8V" firstAttribute="top" secondItem="amM-P4-4Oe" secondAttribute="top" constant="20" id="KwT-UJ-W3G"/>
+                                    <constraint firstAttribute="trailing" secondItem="axS-ye-fW9" secondAttribute="trailing" id="LKX-UE-vSf"/>
+                                    <constraint firstAttribute="trailing" secondItem="8ay-2h-wPX" secondAttribute="trailing" constant="20" id="LNQ-Rp-NfY"/>
+                                    <constraint firstAttribute="bottom" secondItem="cfs-LZ-R1U" secondAttribute="bottom" id="QIG-gM-tUN"/>
+                                    <constraint firstAttribute="height" constant="500" id="aM3-kw-zGe"/>
+                                    <constraint firstItem="8ay-2h-wPX" firstAttribute="top" secondItem="axS-ye-fW9" secondAttribute="bottom" constant="20" id="bTF-ms-0Yt"/>
+                                    <constraint firstItem="5sN-0S-9tn" firstAttribute="top" secondItem="8ay-2h-wPX" secondAttribute="bottom" constant="10" id="dA1-hE-b6h"/>
+                                    <constraint firstItem="cfs-LZ-R1U" firstAttribute="top" secondItem="5sN-0S-9tn" secondAttribute="bottom" constant="10" id="dpN-O0-c56"/>
+                                    <constraint firstItem="7yO-0c-QnX" firstAttribute="centerY" secondItem="XCA-qj-G8V" secondAttribute="centerY" id="ePd-p0-4Bw"/>
+                                    <constraint firstItem="cfs-LZ-R1U" firstAttribute="leading" secondItem="amM-P4-4Oe" secondAttribute="leading" constant="10" id="f4q-Wa-Jaa"/>
+                                    <constraint firstAttribute="trailing" secondItem="7yO-0c-QnX" secondAttribute="trailing" constant="30" id="pAh-Zu-jqc"/>
+                                    <constraint firstItem="5sN-0S-9tn" firstAttribute="leading" secondItem="8ay-2h-wPX" secondAttribute="leading" id="prq-sa-yGb"/>
+                                    <constraint firstItem="5sN-0S-9tn" firstAttribute="trailing" secondItem="8ay-2h-wPX" secondAttribute="trailing" id="t8O-O8-o3S"/>
+                                    <constraint firstItem="XCA-qj-G8V" firstAttribute="leading" secondItem="amM-P4-4Oe" secondAttribute="leading" constant="20" id="uVj-b2-8xz"/>
+                                    <constraint firstAttribute="trailing" secondItem="cfs-LZ-R1U" secondAttribute="trailing" constant="10" id="w1c-sy-FgL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ocx-bn-qT6">
+                                <rect key="frame" x="0.0" y="238" width="393" height="500"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQe-ia-rhr">
+                                        <rect key="frame" x="20" y="20" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="lpj-jv-KAF"/>
+                                            <constraint firstAttribute="width" secondItem="sQe-ia-rhr" secondAttribute="height" id="vcn-HG-nAc"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="xmark" catalog="system" symbolScale="medium"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="closeButton:" destination="E9J-c9-9sG" eventType="touchUpInside" id="DvT-Wh-IEm"/>
+                                            <action selector="dismissAddGuestPageButtonAction:" destination="E9J-c9-9sG" eventType="touchUpInside" id="7xs-Wd-hSJ"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Guest " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmU-Tr-caQ">
+                                        <rect key="frame" x="55" y="22.333333333333314" width="308" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFC-Sz-Str">
+                                        <rect key="frame" x="0.0" y="52.666666666666686" width="393" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="313-FT-uWY"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phl-qd-fTI">
+                                        <rect key="frame" x="20" y="63.666666666666693" width="79.666666666666671" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eIn-pr-4Dr">
+                                        <rect key="frame" x="20" y="94" width="353" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Vaa-Ci-QhM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIA-S3-xsQ">
+                                        <rect key="frame" x="20" y="154" width="353" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ENY-d6-Xzo">
+                                        <rect key="frame" x="20" y="194.33333333333331" width="353" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Ol9-Ls-Gw0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckp-lY-dfh">
+                                        <rect key="frame" x="20" y="264.33333333333331" width="353" height="40"/>
                                         <color key="backgroundColor" name="defaultColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="55" id="LuS-Np-gLw"/>
+                                            <constraint firstAttribute="height" constant="40" id="UDh-FR-Kbq"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Book Now"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Confirm"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mU-4S-mzn">
-                                        <rect key="frame" x="20" y="34.333333333333371" width="200" height="33.333333333333343"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="3UT-1j-5at"/>
-                                        </constraints>
-                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="13" maxY="0.0"/>
-                                        <state key="normal" title="see price summary">
-                                            <imageReference key="image" image="chevron.up" catalog="system" symbolScale="small"/>
-                                        </state>
-                                        <buttonConfiguration key="configuration" style="plain" title="see price summary" imagePadding="10">
-                                            <imageReference key="image" image="chevron.up" catalog="system" symbolScale="small"/>
-                                        </buttonConfiguration>
                                         <connections>
-                                            <action selector="priceSummaryButtonAction:" destination="E9J-c9-9sG" eventType="touchUpInside" id="Fpw-rs-oD8"/>
+                                            <action selector="confirmButtonAction:" destination="E9J-c9-9sG" eventType="touchUpInside" id="6Al-iE-hpS"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Op4-Hn-vOv">
+                                        <rect key="frame" x="20" y="324.33333333333337" width="353" height="93.333333333333314"/>
+                                        <string key="text">I understand that any ID information provided will only be used for booking travel and leisure activities that require name registration. I also understand that Booking will protect this information using encryption and other security methods, and Booking will only authorize its use to relevant third parties for specific transactions.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="6mU-4S-mzn" firstAttribute="leading" secondItem="28G-7x-pkZ" secondAttribute="leading" id="77P-4S-CdL"/>
-                                    <constraint firstItem="gZt-ww-ZOP" firstAttribute="centerY" secondItem="rkX-Ca-NrG" secondAttribute="centerY" id="BJA-Om-LXV"/>
-                                    <constraint firstItem="6mU-4S-mzn" firstAttribute="bottom" secondItem="gZt-ww-ZOP" secondAttribute="bottom" id="Cs1-Vs-y6p"/>
-                                    <constraint firstItem="gZt-ww-ZOP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="28G-7x-pkZ" secondAttribute="trailing" constant="10" id="GpN-r0-2wY"/>
-                                    <constraint firstItem="6mU-4S-mzn" firstAttribute="top" secondItem="28G-7x-pkZ" secondAttribute="bottom" id="Iig-To-fko"/>
-                                    <constraint firstItem="28G-7x-pkZ" firstAttribute="top" secondItem="gZt-ww-ZOP" secondAttribute="top" id="T5W-oc-dq7"/>
-                                    <constraint firstItem="28G-7x-pkZ" firstAttribute="leading" secondItem="rkX-Ca-NrG" secondAttribute="leading" constant="20" id="VqX-g4-Z8o"/>
-                                    <constraint firstAttribute="height" constant="80" id="YKi-Nd-J4W"/>
-                                    <constraint firstAttribute="trailing" secondItem="gZt-ww-ZOP" secondAttribute="trailing" constant="20" id="nEg-Ta-TFI"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Op4-Hn-vOv" secondAttribute="bottom" constant="10" id="1uh-YL-6MG"/>
+                                    <constraint firstItem="eIn-pr-4Dr" firstAttribute="top" secondItem="Phl-qd-fTI" secondAttribute="bottom" constant="10" id="2B6-2T-3bi"/>
+                                    <constraint firstItem="CFC-Sz-Str" firstAttribute="leading" secondItem="ocx-bn-qT6" secondAttribute="leading" id="2jS-cw-Vpo"/>
+                                    <constraint firstItem="Op4-Hn-vOv" firstAttribute="leading" secondItem="ckp-lY-dfh" secondAttribute="leading" id="6Bs-KJ-dts"/>
+                                    <constraint firstItem="uIA-S3-xsQ" firstAttribute="trailing" secondItem="eIn-pr-4Dr" secondAttribute="trailing" id="8K8-Bk-Vy2"/>
+                                    <constraint firstItem="uIA-S3-xsQ" firstAttribute="leading" secondItem="eIn-pr-4Dr" secondAttribute="leading" id="9da-RU-FgM"/>
+                                    <constraint firstItem="CFC-Sz-Str" firstAttribute="top" secondItem="CmU-Tr-caQ" secondAttribute="bottom" constant="10" id="9oT-7D-D2A"/>
+                                    <constraint firstItem="Phl-qd-fTI" firstAttribute="top" secondItem="CFC-Sz-Str" secondAttribute="bottom" constant="10" id="BKo-Zx-I5U"/>
+                                    <constraint firstItem="ckp-lY-dfh" firstAttribute="trailing" secondItem="ENY-d6-Xzo" secondAttribute="trailing" id="Ek8-Wt-hbX"/>
+                                    <constraint firstItem="CmU-Tr-caQ" firstAttribute="centerY" secondItem="sQe-ia-rhr" secondAttribute="centerY" id="FOH-UZ-Sja"/>
+                                    <constraint firstItem="Op4-Hn-vOv" firstAttribute="top" secondItem="ckp-lY-dfh" secondAttribute="bottom" constant="20" id="GJU-2j-WaB"/>
+                                    <constraint firstItem="eIn-pr-4Dr" firstAttribute="leading" secondItem="Phl-qd-fTI" secondAttribute="leading" id="MTb-88-CeY"/>
+                                    <constraint firstItem="sQe-ia-rhr" firstAttribute="top" secondItem="ocx-bn-qT6" secondAttribute="top" constant="20" id="QD2-PA-aoS"/>
+                                    <constraint firstItem="ckp-lY-dfh" firstAttribute="leading" secondItem="ENY-d6-Xzo" secondAttribute="leading" id="SA6-a6-009"/>
+                                    <constraint firstItem="sQe-ia-rhr" firstAttribute="leading" secondItem="ocx-bn-qT6" secondAttribute="leading" constant="20" id="Wuf-8X-Pjq"/>
+                                    <constraint firstItem="CmU-Tr-caQ" firstAttribute="leading" secondItem="sQe-ia-rhr" secondAttribute="trailing" constant="10" id="ZWw-ZI-hrI"/>
+                                    <constraint firstItem="ENY-d6-Xzo" firstAttribute="leading" secondItem="uIA-S3-xsQ" secondAttribute="leading" id="b2W-SZ-bCm"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Phl-qd-fTI" secondAttribute="trailing" constant="20" id="cDw-MG-5N7"/>
+                                    <constraint firstItem="ENY-d6-Xzo" firstAttribute="top" secondItem="uIA-S3-xsQ" secondAttribute="bottom" constant="20" id="dhr-Ee-Js1"/>
+                                    <constraint firstItem="uIA-S3-xsQ" firstAttribute="top" secondItem="eIn-pr-4Dr" secondAttribute="bottom" constant="20" id="eih-uG-0nm"/>
+                                    <constraint firstAttribute="trailing" secondItem="CFC-Sz-Str" secondAttribute="trailing" id="f4t-Ng-8h5"/>
+                                    <constraint firstAttribute="trailing" secondItem="CmU-Tr-caQ" secondAttribute="trailing" constant="30" id="gx4-rw-xn0"/>
+                                    <constraint firstItem="Phl-qd-fTI" firstAttribute="leading" secondItem="ocx-bn-qT6" secondAttribute="leading" constant="20" id="iI1-mc-psG"/>
+                                    <constraint firstAttribute="height" constant="500" id="jmq-DA-ZmT"/>
+                                    <constraint firstItem="Op4-Hn-vOv" firstAttribute="trailing" secondItem="ckp-lY-dfh" secondAttribute="trailing" id="kX9-KG-Q6e"/>
+                                    <constraint firstAttribute="trailing" secondItem="eIn-pr-4Dr" secondAttribute="trailing" constant="20" id="tco-E5-2bA"/>
+                                    <constraint firstItem="ckp-lY-dfh" firstAttribute="top" secondItem="ENY-d6-Xzo" secondAttribute="bottom" constant="30" id="x00-Gh-1hQ"/>
+                                    <constraint firstItem="ENY-d6-Xzo" firstAttribute="trailing" secondItem="uIA-S3-xsQ" secondAttribute="trailing" id="xqt-Ve-YGH"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mMs-Hl-r5k">
+                                <rect key="frame" x="0.0" y="238" width="393" height="500"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kp8-vP-Vn2">
+                                        <rect key="frame" x="20" y="20" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="1gj-wh-6uk"/>
+                                            <constraint firstAttribute="width" secondItem="Kp8-vP-Vn2" secondAttribute="height" id="AAv-e6-scn"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="xmark" catalog="system" symbolScale="medium"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="closeButton:" destination="E9J-c9-9sG" eventType="touchUpInside" id="MeA-5R-dzY"/>
+                                            <action selector="closeInfoButtonAction:" destination="E9J-c9-9sG" eventType="touchUpInside" id="ii2-oR-6nl"/>
+                                            <action selector="dismissAddGuestPageButtonAction:" destination="E9J-c9-9sG" eventType="touchUpInside" id="VpR-0l-yIO"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guest Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgk-Zo-KYM">
+                                        <rect key="frame" x="55" y="22.333333333333314" width="308" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXz-cQ-Bgz">
+                                        <rect key="frame" x="0.0" y="52.666666666666686" width="393" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="jK7-cx-uxG"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VO4-2F-HVd">
+                                        <rect key="frame" x="20" y="63.666666666666693" width="79.666666666666671" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Fu-Sn-D6s">
+                                        <rect key="frame" x="20" y="94" width="353" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="XnP-ub-cWA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNE-B6-Ukf">
+                                        <rect key="frame" x="20" y="154" width="353" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gdq-mY-ERG">
+                                        <rect key="frame" x="20" y="194.33333333333331" width="353" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="9Hu-1r-peN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uow-BT-9iS">
+                                        <rect key="frame" x="20" y="264.33333333333331" width="353" height="40"/>
+                                        <color key="backgroundColor" name="defaultColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="HpJ-DE-IQ9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Save"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="confirmButtonAction:" destination="E9J-c9-9sG" eventType="touchUpInside" id="5nW-r6-dbG"/>
+                                            <action selector="saveButtonAction:" destination="E9J-c9-9sG" eventType="touchUpInside" id="Jxo-a7-Uho"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eed-Mc-SLX">
+                                        <rect key="frame" x="20" y="324.33333333333337" width="353" height="124.33333333333331"/>
+                                        <string key="text">If you'd like to remove this guest from your guest list, please go to 'Participant details'
+I understand that any ID information provided will only be used for booking travel and leisure activities that require name registration. I also understand that Booking will protect this information using encryption and other security methods, and Klook will only authorize its use to relevant third parties for specific transactions.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eed-Mc-SLX" secondAttribute="bottom" constant="10" id="0Ct-QY-7LN"/>
+                                    <constraint firstItem="uow-BT-9iS" firstAttribute="leading" secondItem="gdq-mY-ERG" secondAttribute="leading" id="12N-Gk-UNZ"/>
+                                    <constraint firstItem="hXz-cQ-Bgz" firstAttribute="top" secondItem="Qgk-Zo-KYM" secondAttribute="bottom" constant="10" id="2wK-UF-EMy"/>
+                                    <constraint firstItem="4Fu-Sn-D6s" firstAttribute="top" secondItem="VO4-2F-HVd" secondAttribute="bottom" constant="10" id="4nA-ej-QUD"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VO4-2F-HVd" secondAttribute="trailing" constant="20" id="8ne-Oe-ARN"/>
+                                    <constraint firstItem="Kp8-vP-Vn2" firstAttribute="top" secondItem="mMs-Hl-r5k" secondAttribute="top" constant="20" id="9Lw-P6-Jr9"/>
+                                    <constraint firstItem="gdq-mY-ERG" firstAttribute="top" secondItem="oNE-B6-Ukf" secondAttribute="bottom" constant="20" id="B5I-e6-hF1"/>
+                                    <constraint firstItem="gdq-mY-ERG" firstAttribute="trailing" secondItem="oNE-B6-Ukf" secondAttribute="trailing" id="Blq-Ek-p6F"/>
+                                    <constraint firstItem="Kp8-vP-Vn2" firstAttribute="leading" secondItem="mMs-Hl-r5k" secondAttribute="leading" constant="20" id="DGi-Js-Gii"/>
+                                    <constraint firstItem="oNE-B6-Ukf" firstAttribute="leading" secondItem="4Fu-Sn-D6s" secondAttribute="leading" id="ET3-vl-IFU"/>
+                                    <constraint firstItem="Qgk-Zo-KYM" firstAttribute="leading" secondItem="Kp8-vP-Vn2" secondAttribute="trailing" constant="10" id="I5i-IQ-eNm"/>
+                                    <constraint firstItem="hXz-cQ-Bgz" firstAttribute="leading" secondItem="mMs-Hl-r5k" secondAttribute="leading" id="KAd-e6-qVC"/>
+                                    <constraint firstItem="eed-Mc-SLX" firstAttribute="trailing" secondItem="uow-BT-9iS" secondAttribute="trailing" id="Qk6-iD-w4i"/>
+                                    <constraint firstItem="VO4-2F-HVd" firstAttribute="top" secondItem="hXz-cQ-Bgz" secondAttribute="bottom" constant="10" id="Sg5-ZA-zPl"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Fu-Sn-D6s" secondAttribute="trailing" constant="20" id="TbV-In-Bl9"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qgk-Zo-KYM" secondAttribute="trailing" constant="30" id="TrH-HP-BhU"/>
+                                    <constraint firstItem="oNE-B6-Ukf" firstAttribute="trailing" secondItem="4Fu-Sn-D6s" secondAttribute="trailing" id="bg4-Zo-qP1"/>
+                                    <constraint firstItem="oNE-B6-Ukf" firstAttribute="top" secondItem="4Fu-Sn-D6s" secondAttribute="bottom" constant="20" id="gAb-rm-ckw"/>
+                                    <constraint firstAttribute="trailing" secondItem="hXz-cQ-Bgz" secondAttribute="trailing" id="jYQ-Fg-s4s"/>
+                                    <constraint firstItem="eed-Mc-SLX" firstAttribute="top" secondItem="uow-BT-9iS" secondAttribute="bottom" constant="20" id="jq7-V1-xnS"/>
+                                    <constraint firstItem="Qgk-Zo-KYM" firstAttribute="centerY" secondItem="Kp8-vP-Vn2" secondAttribute="centerY" id="kk7-fd-yG0"/>
+                                    <constraint firstItem="uow-BT-9iS" firstAttribute="top" secondItem="gdq-mY-ERG" secondAttribute="bottom" constant="30" id="l30-aM-OC4"/>
+                                    <constraint firstItem="eed-Mc-SLX" firstAttribute="leading" secondItem="uow-BT-9iS" secondAttribute="leading" id="lMj-Wl-Cr7"/>
+                                    <constraint firstAttribute="height" constant="500" id="pl0-7v-NYb"/>
+                                    <constraint firstItem="VO4-2F-HVd" firstAttribute="leading" secondItem="mMs-Hl-r5k" secondAttribute="leading" constant="20" id="pzp-tJ-9Y4"/>
+                                    <constraint firstItem="gdq-mY-ERG" firstAttribute="leading" secondItem="oNE-B6-Ukf" secondAttribute="leading" id="tZW-Os-aBd"/>
+                                    <constraint firstItem="uow-BT-9iS" firstAttribute="trailing" secondItem="gdq-mY-ERG" secondAttribute="trailing" id="ulS-H4-RZo"/>
+                                    <constraint firstItem="4Fu-Sn-D6s" firstAttribute="leading" secondItem="VO4-2F-HVd" secondAttribute="leading" id="x7T-vE-f0e"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKb-Wg-gXB">
@@ -1251,43 +1559,398 @@
                                     <constraint firstItem="Y6v-bF-jpg" firstAttribute="trailing" secondItem="hOd-ia-Yba" secondAttribute="trailing" id="yIh-6L-kro"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rkX-Ca-NrG">
+                                <rect key="frame" x="0.0" y="738" width="393" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="   $ 100.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28G-7x-pkZ">
+                                        <rect key="frame" x="20.000000000000007" y="12.666666666666631" width="88.666666666666686" height="21.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZt-ww-ZOP">
+                                        <rect key="frame" x="271.66666666666669" y="12.666666666666629" width="101.33333333333331" height="55"/>
+                                        <color key="backgroundColor" name="defaultColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="LuS-Np-gLw"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Book Now"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="bookNowButtonAction:" destination="E9J-c9-9sG" eventType="touchUpInside" id="sUJ-79-hBp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mU-4S-mzn">
+                                        <rect key="frame" x="20" y="34.333333333333371" width="200" height="33.333333333333343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="3UT-1j-5at"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="13" maxY="0.0"/>
+                                        <state key="normal" title="see price summary">
+                                            <imageReference key="image" image="chevron.up" catalog="system" symbolScale="small"/>
+                                        </state>
+                                        <buttonConfiguration key="configuration" style="plain" title="see price summary" imagePadding="10">
+                                            <imageReference key="image" image="chevron.up" catalog="system" symbolScale="small"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="priceSummaryButtonAction:" destination="E9J-c9-9sG" eventType="touchUpInside" id="Fpw-rs-oD8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="6mU-4S-mzn" firstAttribute="leading" secondItem="28G-7x-pkZ" secondAttribute="leading" id="77P-4S-CdL"/>
+                                    <constraint firstItem="gZt-ww-ZOP" firstAttribute="centerY" secondItem="rkX-Ca-NrG" secondAttribute="centerY" id="BJA-Om-LXV"/>
+                                    <constraint firstItem="6mU-4S-mzn" firstAttribute="bottom" secondItem="gZt-ww-ZOP" secondAttribute="bottom" id="Cs1-Vs-y6p"/>
+                                    <constraint firstItem="gZt-ww-ZOP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="28G-7x-pkZ" secondAttribute="trailing" constant="10" id="GpN-r0-2wY"/>
+                                    <constraint firstItem="6mU-4S-mzn" firstAttribute="top" secondItem="28G-7x-pkZ" secondAttribute="bottom" id="Iig-To-fko"/>
+                                    <constraint firstItem="28G-7x-pkZ" firstAttribute="top" secondItem="gZt-ww-ZOP" secondAttribute="top" id="T5W-oc-dq7"/>
+                                    <constraint firstItem="28G-7x-pkZ" firstAttribute="leading" secondItem="rkX-Ca-NrG" secondAttribute="leading" constant="20" id="VqX-g4-Z8o"/>
+                                    <constraint firstAttribute="height" constant="80" id="YKi-Nd-J4W"/>
+                                    <constraint firstAttribute="trailing" secondItem="gZt-ww-ZOP" secondAttribute="trailing" constant="20" id="nEg-Ta-TFI"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NLC-ms-srP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ocx-bn-qT6" firstAttribute="leading" secondItem="NLC-ms-srP" secondAttribute="leading" id="2NZ-cm-ZgN"/>
+                            <constraint firstItem="rkX-Ca-NrG" firstAttribute="top" secondItem="ocx-bn-qT6" secondAttribute="bottom" id="ALN-Sb-LxZ"/>
+                            <constraint firstItem="rkX-Ca-NrG" firstAttribute="top" secondItem="amM-P4-4Oe" secondAttribute="bottom" id="AiH-sT-zVn"/>
                             <constraint firstItem="KBY-B2-Gan" firstAttribute="top" secondItem="NLC-ms-srP" secondAttribute="top" id="FoU-Ln-LqT"/>
                             <constraint firstItem="NLC-ms-srP" firstAttribute="trailing" secondItem="rkX-Ca-NrG" secondAttribute="trailing" id="GVv-7z-IIW"/>
                             <constraint firstItem="rkX-Ca-NrG" firstAttribute="bottom" secondItem="NLC-ms-srP" secondAttribute="bottom" id="LlE-Ru-dB1"/>
+                            <constraint firstItem="amM-P4-4Oe" firstAttribute="leading" secondItem="NLC-ms-srP" secondAttribute="leading" id="NGe-Ro-bVm"/>
                             <constraint firstItem="NLC-ms-srP" firstAttribute="trailing" secondItem="nKb-Wg-gXB" secondAttribute="trailing" id="SSM-tz-9Tt"/>
                             <constraint firstItem="nKb-Wg-gXB" firstAttribute="leading" secondItem="NLC-ms-srP" secondAttribute="leading" id="WNE-7b-G3Y"/>
+                            <constraint firstItem="ocx-bn-qT6" firstAttribute="trailing" secondItem="NLC-ms-srP" secondAttribute="trailing" id="eIr-3H-Kcs"/>
                             <constraint firstItem="rkX-Ca-NrG" firstAttribute="top" secondItem="KBY-B2-Gan" secondAttribute="bottom" id="ff5-RS-reS"/>
+                            <constraint firstItem="rkX-Ca-NrG" firstAttribute="top" secondItem="mMs-Hl-r5k" secondAttribute="bottom" id="gMQ-Y8-K6v"/>
+                            <constraint firstItem="mMs-Hl-r5k" firstAttribute="trailing" secondItem="NLC-ms-srP" secondAttribute="trailing" id="l23-xG-ShW"/>
                             <constraint firstItem="KBY-B2-Gan" firstAttribute="trailing" secondItem="NLC-ms-srP" secondAttribute="trailing" id="mKW-I2-W0a"/>
+                            <constraint firstItem="mMs-Hl-r5k" firstAttribute="leading" secondItem="NLC-ms-srP" secondAttribute="leading" id="mPd-O7-XhO"/>
                             <constraint firstItem="KBY-B2-Gan" firstAttribute="leading" secondItem="NLC-ms-srP" secondAttribute="leading" id="mmX-Fc-IgA"/>
                             <constraint firstItem="rkX-Ca-NrG" firstAttribute="leading" secondItem="NLC-ms-srP" secondAttribute="leading" id="rV0-h2-N2L"/>
                             <constraint firstItem="rkX-Ca-NrG" firstAttribute="top" secondItem="nKb-Wg-gXB" secondAttribute="bottom" id="tQm-98-FN5"/>
+                            <constraint firstItem="amM-P4-4Oe" firstAttribute="trailing" secondItem="NLC-ms-srP" secondAttribute="trailing" id="zGY-Hb-oal"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="nKb-Wg-gXB"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
+                        <outlet property="addGuestButton" destination="8ay-2h-wPX" id="JfJ-bQ-3Pk"/>
+                        <outlet property="addGuestView" destination="ocx-bn-qT6" id="2Ub-gV-pPj"/>
                         <outlet property="backView" destination="6r0-d8-hC7" id="yhf-Vv-rFd"/>
+                        <outlet property="bookNowButton" destination="gZt-ww-ZOP" id="D6e-eU-b7h"/>
                         <outlet property="bookingCashView" destination="iXc-b3-WbH" id="zLH-er-vuq"/>
                         <outlet property="bottomView" destination="rkX-Ca-NrG" id="6uH-pb-U8t"/>
                         <outlet property="checkView" destination="0WH-gs-kgr" id="Gv0-HG-2QZ"/>
+                        <outlet property="closeButton" destination="XCA-qj-G8V" id="asN-gi-r7y"/>
+                        <outlet property="closeInfoButton" destination="Kp8-vP-Vn2" id="l3w-Ji-OMN"/>
+                        <outlet property="confirmButton" destination="ckp-lY-dfh" id="XwB-ue-Siu"/>
                         <outlet property="contactView" destination="L1B-MA-FDl" id="GTc-d0-g1M"/>
                         <outlet property="countryCodeButton" destination="EkB-G3-Ahs" id="msq-ZZ-ehx"/>
+                        <outlet property="dismissAddGuestPage" destination="sQe-ia-rhr" id="NNZ-DE-gK3"/>
                         <outlet property="dismissButton" destination="6iM-x7-Mwg" id="KUu-fX-1xM"/>
+                        <outlet property="firstNameTF" destination="eIn-pr-4Dr" id="7mx-k5-SyY"/>
+                        <outlet property="firstNameTextField" destination="D1Y-im-pkB" id="cZp-GL-dnU"/>
+                        <outlet property="guestInfoView" destination="mMs-Hl-r5k" id="IB4-j5-70b"/>
+                        <outlet property="guestView" destination="amM-P4-4Oe" id="5Bn-OC-RBU"/>
+                        <outlet property="guestsListTableview" destination="cfs-LZ-R1U" id="oze-XG-GwA"/>
+                        <outlet property="lastNameTF" destination="ENY-d6-Xzo" id="qSV-R2-XqP"/>
+                        <outlet property="lastNameTextField" destination="TIb-2X-pLq" id="o4U-Ql-RGc"/>
                         <outlet property="pricePopView" destination="nKb-Wg-gXB" id="mG7-pJ-vPf"/>
                         <outlet property="priceSummaryButton" destination="6mU-4S-mzn" id="Qhj-pw-Kt9"/>
+                        <outlet property="saveButton" destination="uow-BT-9iS" id="M2q-pp-gNE"/>
+                        <outlet property="selectGuestButton" destination="7Tm-Mq-nwV" id="n9Y-gM-WVP"/>
                         <outlet property="topView" destination="FSM-nP-L09" id="rbj-Lh-jLJ"/>
+                        <outlet property="updateFirstName" destination="4Fu-Sn-D6s" id="40Z-ka-OE4"/>
+                        <outlet property="updateLastName" destination="gdq-mY-ERG" id="QNY-YC-PKZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8K-Bw-hBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3896.9465648854962" y="329.57746478873241"/>
+        </scene>
+        <!--Booking ConformationVC-->
+        <scene sceneID="axp-1G-cgQ">
+            <objects>
+                <viewController storyboardIdentifier="BookingConformationVC" id="Eqv-gx-LRS" customClass="BookingConformationVC" customModule="HotelBooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YdQ-ql-FCf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vhc-uW-Qic">
+                                <rect key="frame" x="146.66666666666666" y="108.33333333333334" width="100" height="101.33333333333331"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="AJj-Jg-5oL"/>
+                                    <constraint firstAttribute="width" secondItem="vhc-uW-Qic" secondAttribute="height" id="UaF-WK-LFp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booking Confirmed!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUc-5q-saQ">
+                                <rect key="frame" x="20" y="229" width="353" height="21.666666666666657"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your reservation has been successfully processed." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFt-s4-Le8">
+                                <rect key="frame" x="20" y="260.66666666666669" width="353" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                </variation>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pXa-ya-gpD">
+                                <rect key="frame" x="30" y="327.66666666666669" width="333" height="200.00000000000006"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Booking Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2c-ea-PRO">
+                                        <rect key="frame" x="10" y="10" width="313" height="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" name="defaultColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        </variation>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tQz-xK-Q3q">
+                                        <rect key="frame" x="0.0" y="32" width="333" height="163"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJq-2g-fZo">
+                                                <rect key="frame" x="0.0" y="0.0" width="333" height="54.333333333333336"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gak-8V-Zed">
+                                                        <rect key="frame" x="0.0" y="10" width="100" height="34.333333333333336"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="CKQ-9e-tI3"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="3" maxY="0.0"/>
+                                                        <state key="normal" title="Hotel :">
+                                                            <imageReference key="image" image="building.2" catalog="system" symbolScale="medium"/>
+                                                        </state>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Hotel :" imagePadding="3">
+                                                            <imageReference key="image" image="building.2" catalog="system" symbolScale="medium"/>
+                                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel Paradise, Goa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fe-Ka-aVu">
+                                                        <rect key="frame" x="105" y="5" width="223" height="44.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        </variation>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xG8-gI-KbG">
+                                                        <rect key="frame" x="15" y="53.333333333333314" width="303" height="1"/>
+                                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="YQD-kt-2lU"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="0fe-Ka-aVu" firstAttribute="top" secondItem="jJq-2g-fZo" secondAttribute="top" constant="5" id="1X2-aG-YqD"/>
+                                                    <constraint firstAttribute="bottom" secondItem="gak-8V-Zed" secondAttribute="bottom" constant="10" id="5R2-gU-EtG"/>
+                                                    <constraint firstItem="0fe-Ka-aVu" firstAttribute="leading" secondItem="gak-8V-Zed" secondAttribute="trailing" constant="5" id="7EY-zu-9HG"/>
+                                                    <constraint firstItem="gak-8V-Zed" firstAttribute="top" secondItem="jJq-2g-fZo" secondAttribute="top" constant="10" id="80x-gL-hvu"/>
+                                                    <constraint firstAttribute="bottom" secondItem="0fe-Ka-aVu" secondAttribute="bottom" constant="5" id="8QP-vA-aqV"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xG8-gI-KbG" secondAttribute="trailing" constant="15" id="GJU-Qm-lSB"/>
+                                                    <constraint firstItem="gak-8V-Zed" firstAttribute="leading" secondItem="jJq-2g-fZo" secondAttribute="leading" id="TQl-Lx-5EM"/>
+                                                    <constraint firstAttribute="trailing" secondItem="0fe-Ka-aVu" secondAttribute="trailing" constant="5" id="Xyc-W4-2G7"/>
+                                                    <constraint firstItem="xG8-gI-KbG" firstAttribute="leading" secondItem="jJq-2g-fZo" secondAttribute="leading" constant="15" id="bQG-nu-arK"/>
+                                                    <constraint firstAttribute="bottom" secondItem="xG8-gI-KbG" secondAttribute="bottom" id="h3a-o0-9rI"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3B-t9-N13">
+                                                <rect key="frame" x="0.0" y="54.333333333333314" width="333" height="54.333333333333343"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85V-Ta-SfX">
+                                                        <rect key="frame" x="0.0" y="10" width="100" height="34.333333333333336"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="vTg-dl-aOa"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="3" maxY="0.0"/>
+                                                        <state key="normal" title="Dates:">
+                                                            <imageReference key="image" image="calendar.badge.plus" catalog="system" symbolScale="medium"/>
+                                                        </state>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Dates:" imagePadding="3">
+                                                            <imageReference key="image" image="calendar.badge.plus" catalog="system" symbolScale="medium"/>
+                                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19 June 2025 - 20 June 2025" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mp-ks-FPF">
+                                                        <rect key="frame" x="105" y="5" width="223" height="44.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        </variation>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvD-NI-dad">
+                                                        <rect key="frame" x="15" y="53.333333333333314" width="303" height="1"/>
+                                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="gW3-Cu-Smr"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="85V-Ta-SfX" firstAttribute="leading" secondItem="J3B-t9-N13" secondAttribute="leading" id="9Yb-eU-UDd"/>
+                                                    <constraint firstAttribute="bottom" secondItem="85V-Ta-SfX" secondAttribute="bottom" constant="10" id="IpA-nN-GHU"/>
+                                                    <constraint firstItem="85V-Ta-SfX" firstAttribute="top" secondItem="J3B-t9-N13" secondAttribute="top" constant="10" id="RCc-qe-afv"/>
+                                                    <constraint firstItem="gvD-NI-dad" firstAttribute="leading" secondItem="J3B-t9-N13" secondAttribute="leading" constant="15" id="aNO-1Y-3JL"/>
+                                                    <constraint firstItem="0mp-ks-FPF" firstAttribute="top" secondItem="J3B-t9-N13" secondAttribute="top" constant="5" id="b5r-I6-ADd"/>
+                                                    <constraint firstAttribute="bottom" secondItem="0mp-ks-FPF" secondAttribute="bottom" constant="5" id="bB9-gH-Qzx"/>
+                                                    <constraint firstItem="0mp-ks-FPF" firstAttribute="leading" secondItem="85V-Ta-SfX" secondAttribute="trailing" constant="5" id="dNY-E9-qb5"/>
+                                                    <constraint firstAttribute="bottom" secondItem="gvD-NI-dad" secondAttribute="bottom" id="fnQ-x0-7k9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="0mp-ks-FPF" secondAttribute="trailing" constant="5" id="puk-4z-GAY"/>
+                                                    <constraint firstAttribute="trailing" secondItem="gvD-NI-dad" secondAttribute="trailing" constant="15" id="wvn-YN-O4b"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ppk-vi-Dhc">
+                                                <rect key="frame" x="0.0" y="108.66666666666661" width="333" height="54.333333333333329"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6s-fY-9EZ">
+                                                        <rect key="frame" x="0.0" y="10" width="100" height="34.333333333333336"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="xFA-vo-9au"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="3" maxY="0.0"/>
+                                                        <state key="normal" title="Guest:">
+                                                            <imageReference key="image" image="person.fill" catalog="system" symbolScale="medium"/>
+                                                        </state>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Guest:" imagePadding="3">
+                                                            <imageReference key="image" image="person.fill" catalog="system" symbolScale="medium"/>
+                                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Johnson" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgD-bg-8PW">
+                                                        <rect key="frame" x="105" y="5" width="223" height="44.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="YgD-bg-8PW" secondAttribute="trailing" constant="5" id="Ag8-z3-YR7"/>
+                                                    <constraint firstItem="R6s-fY-9EZ" firstAttribute="top" secondItem="Ppk-vi-Dhc" secondAttribute="top" constant="10" id="Cw9-kH-C8t"/>
+                                                    <constraint firstAttribute="bottom" secondItem="YgD-bg-8PW" secondAttribute="bottom" constant="5" id="NXN-0U-ti2"/>
+                                                    <constraint firstItem="R6s-fY-9EZ" firstAttribute="leading" secondItem="Ppk-vi-Dhc" secondAttribute="leading" id="jKm-xX-hiq"/>
+                                                    <constraint firstItem="YgD-bg-8PW" firstAttribute="leading" secondItem="R6s-fY-9EZ" secondAttribute="trailing" constant="5" id="mWh-FI-JY4"/>
+                                                    <constraint firstAttribute="bottom" secondItem="R6s-fY-9EZ" secondAttribute="bottom" constant="10" id="vXM-Vw-bL5"/>
+                                                    <constraint firstItem="YgD-bg-8PW" firstAttribute="top" secondItem="Ppk-vi-Dhc" secondAttribute="top" constant="5" id="xgX-Pg-UJV"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="tQz-xK-Q3q" firstAttribute="top" secondItem="b2c-ea-PRO" secondAttribute="bottom" constant="5" id="1dv-Bb-yYJ"/>
+                                    <constraint firstItem="b2c-ea-PRO" firstAttribute="top" secondItem="pXa-ya-gpD" secondAttribute="top" constant="10" id="2qT-T4-rnX"/>
+                                    <constraint firstAttribute="trailing" secondItem="tQz-xK-Q3q" secondAttribute="trailing" id="AkQ-GI-sYP"/>
+                                    <constraint firstItem="tQz-xK-Q3q" firstAttribute="leading" secondItem="pXa-ya-gpD" secondAttribute="leading" id="Asy-gt-G3V"/>
+                                    <constraint firstItem="b2c-ea-PRO" firstAttribute="leading" secondItem="pXa-ya-gpD" secondAttribute="leading" constant="10" id="Eyd-EW-cm2"/>
+                                    <constraint firstAttribute="trailing" secondItem="b2c-ea-PRO" secondAttribute="trailing" constant="10" id="UXF-kO-c8I"/>
+                                    <constraint firstAttribute="height" constant="200" id="rFp-5H-Xvy"/>
+                                    <constraint firstAttribute="bottom" secondItem="tQz-xK-Q3q" secondAttribute="bottom" constant="5" id="vXS-jP-X61"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A confirmation email has been sent to jonson@gmail.com with all booking details." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uK2-kb-rdB">
+                                <rect key="frame" x="30" y="577.66666666666663" width="333" height="33.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KI-En-Pws">
+                                <rect key="frame" x="30" y="738" width="333" height="50"/>
+                                <color key="backgroundColor" name="defaultColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zlb-S0-3vA">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="70"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Go to Home"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                </variation>
+                                <connections>
+                                    <action selector="gotoHomeButtonAction:" destination="Eqv-gx-LRS" eventType="touchUpInside" id="EPc-l4-7aq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jWm-Mp-tTi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pXa-ya-gpD" firstAttribute="leading" secondItem="jWm-Mp-tTi" secondAttribute="leading" constant="30" id="0kG-kM-3RW"/>
+                            <constraint firstItem="jWm-Mp-tTi" firstAttribute="bottom" secondItem="5KI-En-Pws" secondAttribute="bottom" constant="30" id="3KW-cZ-s5v"/>
+                            <constraint firstItem="jWm-Mp-tTi" firstAttribute="trailing" secondItem="pXa-ya-gpD" secondAttribute="trailing" constant="30" id="3xk-vP-fl1"/>
+                            <constraint firstItem="vhc-uW-Qic" firstAttribute="centerX" secondItem="jWm-Mp-tTi" secondAttribute="centerX" id="6CP-Ro-fCP"/>
+                            <constraint firstItem="vhc-uW-Qic" firstAttribute="top" secondItem="jWm-Mp-tTi" secondAttribute="top" constant="50" id="9SN-EW-bRv"/>
+                            <constraint firstItem="uK2-kb-rdB" firstAttribute="leading" secondItem="pXa-ya-gpD" secondAttribute="leading" id="BBU-Ok-d3M"/>
+                            <constraint firstItem="OUc-5q-saQ" firstAttribute="leading" secondItem="jWm-Mp-tTi" secondAttribute="leading" constant="20" id="DdZ-qb-xYv"/>
+                            <constraint firstItem="OUc-5q-saQ" firstAttribute="top" secondItem="vhc-uW-Qic" secondAttribute="bottom" constant="20" id="HIK-6H-FWK"/>
+                            <constraint firstItem="XFt-s4-Le8" firstAttribute="top" secondItem="OUc-5q-saQ" secondAttribute="bottom" constant="10" id="JDp-oH-TSb"/>
+                            <constraint firstItem="5KI-En-Pws" firstAttribute="leading" secondItem="uK2-kb-rdB" secondAttribute="leading" id="Ve5-la-NMc"/>
+                            <constraint firstItem="pXa-ya-gpD" firstAttribute="top" secondItem="XFt-s4-Le8" secondAttribute="bottom" constant="50" id="ZF7-Ri-dZd"/>
+                            <constraint firstItem="XFt-s4-Le8" firstAttribute="leading" secondItem="OUc-5q-saQ" secondAttribute="leading" id="eOx-g7-Gok"/>
+                            <constraint firstItem="jWm-Mp-tTi" firstAttribute="trailing" secondItem="OUc-5q-saQ" secondAttribute="trailing" constant="20" id="gyV-YZ-Ztl"/>
+                            <constraint firstItem="5KI-En-Pws" firstAttribute="trailing" secondItem="uK2-kb-rdB" secondAttribute="trailing" id="hSf-8x-md1"/>
+                            <constraint firstItem="uK2-kb-rdB" firstAttribute="trailing" secondItem="pXa-ya-gpD" secondAttribute="trailing" id="jor-Cs-FAk"/>
+                            <constraint firstItem="uK2-kb-rdB" firstAttribute="top" secondItem="pXa-ya-gpD" secondAttribute="bottom" constant="50" id="kVJ-TL-eCs"/>
+                            <constraint firstItem="XFt-s4-Le8" firstAttribute="trailing" secondItem="OUc-5q-saQ" secondAttribute="trailing" id="mFs-qt-7V7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bookingDetailsView" destination="pXa-ya-gpD" id="fu8-lN-jsK"/>
+                        <outlet property="confirmationEmailLabel" destination="uK2-kb-rdB" id="uNb-zb-9iz"/>
+                        <outlet property="gotoHomeButton" destination="5KI-En-Pws" id="wDL-Qa-tYs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wSg-3V-ree" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4684.7328244274804" y="329.57746478873241"/>
         </scene>
         <!--CalenderVC-->
         <scene sceneID="NHF-YN-caF">
@@ -2456,6 +3119,84 @@ In many countries, travellers with an assistance animal are entitled to book any
             </objects>
             <point key="canvasLocation" x="921.37404580152668" y="-332.3943661971831"/>
         </scene>
+        <!--Search Bar View Controller-->
+        <scene sceneID="xNY-jp-H2q">
+            <objects>
+                <viewController storyboardIdentifier="SearchBarViewController" id="Dss-Me-x54" customClass="SearchBarViewController" customModule="HotelBooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E5T-ao-LoZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Enter destination" translatesAutoresizingMaskIntoConstraints="NO" id="dIU-Pe-7L9">
+                                <rect key="frame" x="20" y="79" width="353" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="Dss-Me-x54" id="qeh-0r-frs"/>
+                                </connections>
+                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRg-yi-474">
+                                <rect key="frame" x="20" y="145" width="353" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locate-fixed" translatesAutoresizingMaskIntoConstraints="NO" id="v6T-kp-ABg">
+                                        <rect key="frame" x="10" y="10" width="30" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.23137254900000001" blue="0.58431372550000005" alpha="0.1574658526139073" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" name="defaultColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="BFx-qx-gAn"/>
+                                            <constraint firstAttribute="width" secondItem="v6T-kp-ABg" secondAttribute="height" id="NBg-hv-04e"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pg-JF-SgN">
+                                        <rect key="frame" x="50" y="0.0" width="303" height="50"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Arround current location">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bengaluru" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3Y-MO-R28">
+                                        <rect key="frame" x="65" y="30" width="288" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3Pg-JF-SgN" secondAttribute="trailing" id="1D5-8W-X4u"/>
+                                    <constraint firstItem="v6T-kp-ABg" firstAttribute="leading" secondItem="lRg-yi-474" secondAttribute="leading" constant="10" id="SAA-dM-CqL"/>
+                                    <constraint firstAttribute="bottom" secondItem="3Pg-JF-SgN" secondAttribute="bottom" id="XTc-8T-fRJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="aSI-QF-mTH"/>
+                                    <constraint firstItem="3Pg-JF-SgN" firstAttribute="leading" secondItem="v6T-kp-ABg" secondAttribute="trailing" constant="10" id="hga-NF-TSb"/>
+                                    <constraint firstItem="l3Y-MO-R28" firstAttribute="top" secondItem="lRg-yi-474" secondAttribute="top" constant="30" id="s57-5n-9WB"/>
+                                    <constraint firstItem="l3Y-MO-R28" firstAttribute="leading" secondItem="3Pg-JF-SgN" secondAttribute="leading" constant="15" id="sat-XG-VR1"/>
+                                    <constraint firstItem="3Pg-JF-SgN" firstAttribute="top" secondItem="lRg-yi-474" secondAttribute="top" id="uja-w4-InO"/>
+                                    <constraint firstItem="l3Y-MO-R28" firstAttribute="trailing" secondItem="3Pg-JF-SgN" secondAttribute="trailing" id="xnF-tP-Duf"/>
+                                    <constraint firstItem="v6T-kp-ABg" firstAttribute="centerY" secondItem="lRg-yi-474" secondAttribute="centerY" id="yNy-Zd-8Ki"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1TF-eI-XP4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lRg-yi-474" firstAttribute="leading" secondItem="dIU-Pe-7L9" secondAttribute="leading" id="2uz-WO-5zg"/>
+                            <constraint firstItem="lRg-yi-474" firstAttribute="trailing" secondItem="dIU-Pe-7L9" secondAttribute="trailing" id="5qI-lC-d5a"/>
+                            <constraint firstItem="dIU-Pe-7L9" firstAttribute="leading" secondItem="1TF-eI-XP4" secondAttribute="leading" constant="20" id="H1Z-mT-n0s"/>
+                            <constraint firstItem="dIU-Pe-7L9" firstAttribute="top" secondItem="1TF-eI-XP4" secondAttribute="top" constant="20" id="Lkr-12-2Da"/>
+                            <constraint firstItem="lRg-yi-474" firstAttribute="top" secondItem="dIU-Pe-7L9" secondAttribute="bottom" constant="10" id="hnV-37-Rst"/>
+                            <constraint firstItem="dIU-Pe-7L9" firstAttribute="trailing" secondItem="1TF-eI-XP4" secondAttribute="trailing" constant="-20" id="tP1-S7-iVC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ci6-sP-GEM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921.37404580152668" y="347.18309859154931"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="WoR-Of-la2">
             <objects>
@@ -2490,10 +3231,10 @@ In many countries, travellers with an assistance animal are entitled to book any
                                 <rect key="frame" x="0.0" y="69" width="393" height="749"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2SD-0O-AVU">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1690.6666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1792.6666666666667"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gA-yW-ElE">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="1690.6666666666667"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="1792.6666666666667"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xV2-Ns-duM">
                                                         <rect key="frame" x="38" y="20" width="325" height="20.333333333333329"/>
@@ -2666,13 +3407,13 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Property type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H87-Oe-sPk">
-                                                        <rect key="frame" x="10" y="333.66666666666669" width="373" height="18"/>
+                                                        <rect key="frame" x="10" y="451.66666666666663" width="373" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Property facilities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CN7-nf-N3v">
-                                                        <rect key="frame" x="10" y="753.33333333333337" width="373" height="18"/>
+                                                        <rect key="frame" x="10" y="855.33333333333337" width="373" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2774,7 +3515,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </constraints>
                                                     </stackView>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4zr-q9-rRo">
-                                                        <rect key="frame" x="10.000000000000007" y="361.66666666666669" width="125.66666666666669" height="34.333333333333314"/>
+                                                        <rect key="frame" x="10.000000000000007" y="479.66666666666663" width="125.66666666666669" height="34.333333333333371"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -2788,7 +3529,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNk-I9-ETw">
-                                                        <rect key="frame" x="10" y="400" width="95.666666666666671" height="34.333333333333314"/>
+                                                        <rect key="frame" x="10" y="518" width="95.666666666666671" height="34.333333333333371"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -2802,7 +3543,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XI2-xQ-Ukb">
-                                                        <rect key="frame" x="10" y="438.33333333333331" width="80.333333333333329" height="34.333333333333314"/>
+                                                        <rect key="frame" x="10" y="556.33333333333337" width="80.333333333333329" height="34.333333333333371"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -2816,13 +3557,13 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zue-At-POM">
-                                                        <rect key="frame" x="10" y="568.33333333333337" width="42.666666666666664" height="18"/>
+                                                        <rect key="frame" x="10" y="686.33333333333337" width="42.666666666666664" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eIw-tX-y28">
-                                                        <rect key="frame" x="10" y="596.33333333333337" width="129.66666666666666" height="34.333333333333371"/>
+                                                        <rect key="frame" x="10" y="714.33333333333337" width="129.66666666666666" height="34.333333333333371"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -2836,7 +3577,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wt-re-2ZV">
-                                                        <rect key="frame" x="10" y="634.66666666666663" width="157" height="34.333333333333371"/>
+                                                        <rect key="frame" x="10" y="752.66666666666663" width="157" height="34.333333333333371"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -2850,7 +3591,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqP-4r-vce">
-                                                        <rect key="frame" x="10" y="673" width="227.66666666666666" height="34.333333333333371"/>
+                                                        <rect key="frame" x="10" y="791" width="227.66666666666666" height="34.333333333333371"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -2864,7 +3605,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cV1-0K-zvT">
-                                                        <rect key="frame" x="10" y="476.66666666666663" width="122" height="34.333333333333314"/>
+                                                        <rect key="frame" x="10" y="594.66666666666663" width="122" height="34.333333333333371"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -2878,7 +3619,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpg-Kd-36y">
-                                                        <rect key="frame" x="10" y="515" width="100.66666666666667" height="34.333333333333371"/>
+                                                        <rect key="frame" x="10" y="633" width="100.66666666666667" height="34.333333333333371"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -2892,7 +3633,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3i-q5-dWV">
-                                                        <rect key="frame" x="10" y="553.33333333333337" width="24" height="0.0"/>
+                                                        <rect key="frame" x="10" y="671.33333333333337" width="24" height="0.0"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" id="GfN-cd-oKD"/>
                                                         </constraints>
@@ -2901,7 +3642,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         <buttonConfiguration key="configuration" style="plain"/>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xbP-jc-4c6">
-                                                        <rect key="frame" x="10" y="779.33333333333337" width="373" height="115"/>
+                                                        <rect key="frame" x="10" y="881.33333333333337" width="373" height="115"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gio-gL-jgp">
                                                                 <rect key="frame" x="0.0" y="0.0" width="373" height="53.333333333333336"/>
@@ -3061,7 +3802,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </constraints>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="On4-3o-P5l">
-                                                        <rect key="frame" x="10" y="924.33333333333337" width="175.66666666666666" height="34.333333333333371"/>
+                                                        <rect key="frame" x="10" y="1026.3333333333333" width="175.66666666666666" height="34.333333333333258"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -3075,7 +3816,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l13-6H-i65">
-                                                        <rect key="frame" x="10" y="968.66666666666674" width="164" height="34.333333333333371"/>
+                                                        <rect key="frame" x="10" y="1070.6666666666667" width="164" height="34.333333333333258"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -3089,7 +3830,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hdv-5T-Dsi">
-                                                        <rect key="frame" x="10" y="1013.0000000000001" width="217" height="34.333333333333371"/>
+                                                        <rect key="frame" x="10" y="1115" width="217" height="34.333333333333258"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -3103,7 +3844,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ae-Eu-Nf3">
-                                                        <rect key="frame" x="10" y="1057.3333333333333" width="78.333333333333329" height="34.333333333333258"/>
+                                                        <rect key="frame" x="10" y="1159.3333333333333" width="78.333333333333329" height="34.333333333333258"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -3117,7 +3858,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RW-dt-Yf7">
-                                                        <rect key="frame" x="10" y="1101.6666666666667" width="105.66666666666667" height="34.333333333333258"/>
+                                                        <rect key="frame" x="10" y="1203.6666666666667" width="105.66666666666667" height="34.333333333333258"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -3131,7 +3872,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXn-99-ozS">
-                                                        <rect key="frame" x="10" y="1146" width="160" height="34.333333333333258"/>
+                                                        <rect key="frame" x="10" y="1248" width="160" height="34.333333333333258"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -3145,7 +3886,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tf-KG-4Vt">
-                                                        <rect key="frame" x="10" y="1190.3333333333333" width="134.33333333333334" height="34.333333333333258"/>
+                                                        <rect key="frame" x="10" y="1292.3333333333333" width="134.33333333333334" height="34.333333333333258"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -3159,7 +3900,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ln4-Ou-AnP">
-                                                        <rect key="frame" x="10" y="1234.6666666666667" width="216.33333333333334" height="34.333333333333258"/>
+                                                        <rect key="frame" x="10" y="1336.6666666666667" width="216.33333333333334" height="34.333333333333258"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -3173,13 +3914,13 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room facilities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zU-qM-Gqr">
-                                                        <rect key="frame" x="10" y="1284" width="105" height="18"/>
+                                                        <rect key="frame" x="10" y="1386" width="105" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0E-D0-6Ix">
-                                                        <rect key="frame" x="10" y="1312" width="101.66666666666667" height="34.333333333333258"/>
+                                                        <rect key="frame" x="10" y="1414" width="101.66666666666667" height="34.333333333333258"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -3193,7 +3934,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7q-NJ-PrE">
-                                                        <rect key="frame" x="10" y="1350.3333333333333" width="174" height="34.333333333333258"/>
+                                                        <rect key="frame" x="10" y="1452.3333333333333" width="174" height="34.333333333333258"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -3207,7 +3948,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74L-KA-SHy">
-                                                        <rect key="frame" x="10" y="1388.6666666666667" width="171.66666666666666" height="34.333333333333258"/>
+                                                        <rect key="frame" x="10" y="1490.6666666666667" width="171.66666666666666" height="34.333333333333258"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -3221,7 +3962,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLj-PB-D5f">
-                                                        <rect key="frame" x="10" y="1427" width="104.66666666666667" height="34.333333333333258"/>
+                                                        <rect key="frame" x="10" y="1529" width="104.66666666666667" height="34.333333333333258"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -3235,7 +3976,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tla-xU-fC9">
-                                                        <rect key="frame" x="9.9999999999999929" y="1465.3333333333333" width="116.33333333333331" height="34.333333333333258"/>
+                                                        <rect key="frame" x="9.9999999999999929" y="1567.3333333333333" width="116.33333333333331" height="34.333333333333258"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -3249,7 +3990,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ui7-Kc-3io">
-                                                        <rect key="frame" x="10" y="1503.6666666666667" width="198.33333333333334" height="34.333333333333258"/>
+                                                        <rect key="frame" x="10" y="1605.6666666666667" width="198.33333333333334" height="34.333333333333258"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -3263,7 +4004,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAN-g4-kaC">
-                                                        <rect key="frame" x="10" y="1548" width="160.66666666666666" height="34.333333333333258"/>
+                                                        <rect key="frame" x="10" y="1650" width="160.66666666666666" height="34.333333333333258"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -3277,7 +4018,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CL1-ap-JYt">
-                                                        <rect key="frame" x="10" y="1586.3333333333333" width="104.66666666666667" height="34.333333333333258"/>
+                                                        <rect key="frame" x="10" y="1688.3333333333333" width="104.66666666666667" height="34.333333333333258"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -3290,11 +4031,61 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                             <action selector="ScoreCheckboxTapped:" destination="JNn-cZ-3SY" eventType="touchUpInside" id="P2l-PC-0uZ"/>
                                                         </connections>
                                                     </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mo3-wI-c05" customClass="RangeSeekSlider" customModule="HotelBooking" customModuleProvider="target">
+                                                        <rect key="frame" x="10" y="371.66666666666669" width="373" height="70"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="70" id="1l4-Og-beu"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="handleBorderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="labelPadding">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="enableStep" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="colorBetweenHandles">
+                                                                <color key="value" name="defaultColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="handleBorderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="handleColor">
+                                                                <color key="value" name="defaultColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                                                <real key="value" value="1000"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedMaxValue">
+                                                                <real key="value" value="1000"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedMinValue">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMG-sQ-kAx">
+                                                        <rect key="frame" x="10" y="338.66666666666669" width="373" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="iMG-sQ-kAx" firstAttribute="trailing" secondItem="nRP-6T-Mp5" secondAttribute="trailing" id="0Dx-NP-8rS"/>
                                                     <constraint firstItem="zue-At-POM" firstAttribute="top" secondItem="Y3i-q5-dWV" secondAttribute="bottom" constant="15" id="0cR-y2-7au"/>
+                                                    <constraint firstItem="H87-Oe-sPk" firstAttribute="top" secondItem="mo3-wI-c05" secondAttribute="bottom" constant="10" id="0lN-Da-YZR"/>
                                                     <constraint firstItem="4Ae-Eu-Nf3" firstAttribute="top" secondItem="Hdv-5T-Dsi" secondAttribute="bottom" constant="10" id="1YP-r9-qDN"/>
+                                                    <constraint firstItem="iMG-sQ-kAx" firstAttribute="top" secondItem="ppH-s4-xbV" secondAttribute="bottom" constant="15" id="1dA-bi-kKz"/>
                                                     <constraint firstItem="3RW-dt-Yf7" firstAttribute="top" secondItem="4Ae-Eu-Nf3" secondAttribute="bottom" constant="10" id="2Sg-CG-Abs"/>
                                                     <constraint firstItem="On4-3o-P5l" firstAttribute="leading" secondItem="0gA-yW-ElE" secondAttribute="leading" constant="10" id="2nl-hp-Xgg"/>
                                                     <constraint firstItem="Ln4-Ou-AnP" firstAttribute="leading" secondItem="0gA-yW-ElE" secondAttribute="leading" constant="10" id="30R-Jy-WNV"/>
@@ -3364,7 +4155,9 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                     <constraint firstItem="CXn-99-ozS" firstAttribute="top" secondItem="3RW-dt-Yf7" secondAttribute="bottom" constant="10" id="mpt-WZ-kow"/>
                                                     <constraint firstItem="VqP-4r-vce" firstAttribute="top" secondItem="5Wt-re-2ZV" secondAttribute="bottom" constant="4" id="nWx-vJ-Gc0"/>
                                                     <constraint firstAttribute="trailing" secondItem="Tw0-nQ-BB2" secondAttribute="trailing" constant="8" id="nX8-z9-dss"/>
+                                                    <constraint firstItem="mo3-wI-c05" firstAttribute="top" secondItem="iMG-sQ-kAx" secondAttribute="bottom" constant="15" id="nfj-ak-4XL"/>
                                                     <constraint firstItem="qNk-I9-ETw" firstAttribute="leading" secondItem="0gA-yW-ElE" secondAttribute="leading" constant="10" id="p0K-oX-xBF"/>
+                                                    <constraint firstItem="iMG-sQ-kAx" firstAttribute="leading" secondItem="nRP-6T-Mp5" secondAttribute="leading" id="rTX-mh-fAw"/>
                                                     <constraint firstItem="T7q-NJ-PrE" firstAttribute="leading" secondItem="0gA-yW-ElE" secondAttribute="leading" constant="10" id="rYc-nN-qBh"/>
                                                     <constraint firstItem="8tf-KG-4Vt" firstAttribute="leading" secondItem="0gA-yW-ElE" secondAttribute="leading" constant="10" id="s69-ik-dIK"/>
                                                     <constraint firstAttribute="trailing" secondItem="H87-Oe-sPk" secondAttribute="trailing" constant="10" id="s99-gy-FCG"/>
@@ -3372,14 +4165,15 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                     <constraint firstItem="ij7-LL-3vE" firstAttribute="leading" secondItem="0gA-yW-ElE" secondAttribute="leading" constant="10" id="swj-4Z-L2j"/>
                                                     <constraint firstItem="Y3i-q5-dWV" firstAttribute="leading" secondItem="0gA-yW-ElE" secondAttribute="leading" constant="10" id="tBf-TC-wIp"/>
                                                     <constraint firstItem="TzP-yx-Yzh" firstAttribute="top" secondItem="Tw0-nQ-BB2" secondAttribute="bottom" constant="10" id="tsE-uq-RfN"/>
+                                                    <constraint firstItem="CN7-nf-N3v" firstAttribute="top" secondItem="VqP-4r-vce" secondAttribute="bottom" constant="30" id="uX6-Yr-CtJ"/>
                                                     <constraint firstItem="Ui7-Kc-3io" firstAttribute="top" secondItem="Tla-xU-fC9" secondAttribute="bottom" constant="4" id="ua5-nI-OZh"/>
                                                     <constraint firstItem="gLj-PB-D5f" firstAttribute="top" secondItem="74L-KA-SHy" secondAttribute="bottom" constant="4" id="uaD-wg-hbB"/>
                                                     <constraint firstItem="CN7-nf-N3v" firstAttribute="leading" secondItem="0gA-yW-ElE" secondAttribute="leading" constant="10" id="v1H-3g-iOa"/>
                                                     <constraint firstItem="6pC-HX-5RI" firstAttribute="top" secondItem="AKY-FK-pQF" secondAttribute="bottom" constant="10" id="vCd-MM-Fmu"/>
-                                                    <constraint firstItem="H87-Oe-sPk" firstAttribute="top" secondItem="ppH-s4-xbV" secondAttribute="bottom" constant="10" id="vYx-oq-VMf"/>
                                                     <constraint firstItem="pZo-kP-0fL" firstAttribute="top" secondItem="k8c-N1-9iY" secondAttribute="bottom" constant="10" id="vdX-zx-WuV"/>
+                                                    <constraint firstItem="mo3-wI-c05" firstAttribute="leading" secondItem="0gA-yW-ElE" secondAttribute="leading" constant="10" id="w6T-bY-J2t"/>
+                                                    <constraint firstAttribute="trailing" secondItem="mo3-wI-c05" secondAttribute="trailing" constant="10" id="wzu-0x-95e"/>
                                                     <constraint firstItem="XI2-xQ-Ukb" firstAttribute="top" secondItem="qNk-I9-ETw" secondAttribute="bottom" constant="4" id="xNL-Ur-Vfl"/>
-                                                    <constraint firstItem="CN7-nf-N3v" firstAttribute="top" secondItem="Y3i-q5-dWV" secondAttribute="bottom" constant="200" id="xTh-vR-FQt"/>
                                                     <constraint firstItem="eIw-tX-y28" firstAttribute="top" secondItem="zue-At-POM" secondAttribute="bottom" constant="10" id="y6F-ZG-03B"/>
                                                     <constraint firstAttribute="trailing" secondItem="xV2-Ns-duM" secondAttribute="trailing" constant="30" id="y7p-99-xr4"/>
                                                     <constraint firstItem="Hdv-5T-Dsi" firstAttribute="leading" secondItem="0gA-yW-ElE" secondAttribute="leading" constant="10" id="z3b-md-koQ"/>
@@ -3549,8 +4343,11 @@ In many countries, travellers with an assistance animal are entitled to book any
         <image name="bag.fill" catalog="system" width="128" height="128"/>
         <image name="bed.double" catalog="system" width="128" height="82"/>
         <image name="bolt.fill" catalog="system" width="100" height="128"/>
+        <image name="building.2" catalog="system" width="120" height="128"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="calendar.badge.plus" catalog="system" width="128" height="109"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="checkmark.seal.fill" catalog="system" width="128" height="124"/>
         <image name="chevron.up" catalog="system" width="128" height="70"/>
         <image name="dumbbell" catalog="system" width="128" height="72"/>
         <image name="figure.open.water.swim" catalog="system" width="128" height="86"/>
@@ -3559,11 +4356,14 @@ In many countries, travellers with an assistance animal are entitled to book any
         <image name="ic_hotel" width="1872" height="1249.3333740234375"/>
         <image name="ic_vidhanSabha" width="204" height="141.66667175292969"/>
         <image name="info.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="locate-fixed" width="24" height="24"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="minus" catalog="system" width="128" height="26"/>
         <image name="p.circle" catalog="system" width="128" height="123"/>
         <image name="person" catalog="system" width="128" height="121"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="plus.app" catalog="system" width="128" height="114"/>
         <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>
         <image name="square" catalog="system" width="128" height="114"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
@@ -3578,17 +4378,23 @@ In many countries, travellers with an assistance animal are entitled to book any
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tableCellBlueTextColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

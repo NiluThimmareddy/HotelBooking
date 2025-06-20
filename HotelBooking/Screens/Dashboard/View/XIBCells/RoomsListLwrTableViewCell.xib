@@ -24,16 +24,22 @@
                         <rect key="frame" x="10" y="10" width="305" height="398"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Standard Twin Room " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iu-2U-Pgi">
-                                <rect key="frame" x="10" y="5" width="146" height="17"/>
+                                <rect key="frame" x="10" y="5" width="146" height="17.333333333333332"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• 2 Adults" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4o-iK-wwy">
-                                <rect key="frame" x="166" y="5" width="63.333333333333343" height="17"/>
+                                <rect key="frame" x="166" y="5.3333333333333339" width="63.333333333333343" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waN-PD-q9r">
                                 <rect key="frame" x="234.33333333333334" y="3.6666666666666661" width="20" height="20"/>
@@ -72,7 +78,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="85" height="25"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3hZ-Vn-907">
-                                                                <rect key="frame" x="5" y="4.3333333333333339" width="20" height="16"/>
+                                                                <rect key="frame" x="5" y="4.6666666666666696" width="20" height="16"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="3hZ-Vn-907" secondAttribute="height" id="93Q-AM-wqN"/>
@@ -85,6 +91,9 @@
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -101,7 +110,7 @@
                                                         <rect key="frame" x="0.0" y="25" width="85" height="25"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B4N-lg-MNx">
-                                                                <rect key="frame" x="5" y="2.6666666666666679" width="20" height="19.333333333333336"/>
+                                                                <rect key="frame" x="5" y="2.9999999999999964" width="20" height="19.333333333333336"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="B4N-lg-MNx" secondAttribute="height" id="G2b-Jj-YUq"/>
@@ -114,6 +123,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -130,7 +142,7 @@
                                                         <rect key="frame" x="0.0" y="50.000000000000007" width="85" height="24.999999999999993"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="building.2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hRh-uo-wK3">
-                                                                <rect key="frame" x="5" y="1.6666666666666607" width="20" height="21.333333333333336"/>
+                                                                <rect key="frame" x="5" y="1.9999999999999893" width="20" height="21.333333333333336"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="20" id="eGm-zs-JKL"/>
@@ -142,6 +154,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -158,7 +173,7 @@
                                                         <rect key="frame" x="0.0" y="75" width="85" height="25"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="air.conditioner.horizontal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3bh-Fr-K6F">
-                                                                <rect key="frame" x="5" y="1.6666666666666607" width="20" height="21.333333333333336"/>
+                                                                <rect key="frame" x="5" y="1.9999999999999893" width="20" height="21.333333333333336"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="3bh-Fr-K6F" secondAttribute="height" id="isU-60-zfV"/>
@@ -170,6 +185,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -191,7 +209,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="85" height="25"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gtW-Kz-iLb">
-                                                                <rect key="frame" x="5" y="3.6666666666666679" width="20" height="17.333333333333336"/>
+                                                                <rect key="frame" x="5" y="4.0000000000000036" width="20" height="17.333333333333336"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="20" id="8CL-qu-jqN"/>
@@ -204,6 +222,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -220,7 +241,7 @@
                                                         <rect key="frame" x="0.0" y="25" width="85" height="25"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6oo-gO-Rzp">
-                                                                <rect key="frame" x="5" y="1" width="20" height="23.333333333333336"/>
+                                                                <rect key="frame" x="5" y="1.3333333333333286" width="20" height="23.333333333333336"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="6oo-gO-Rzp" secondAttribute="height" id="NSm-1I-NQB"/>
@@ -233,6 +254,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -249,7 +273,7 @@
                                                         <rect key="frame" x="0.0" y="50.000000000000007" width="85" height="24.999999999999993"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CTy-7D-vOY">
-                                                                <rect key="frame" x="5" y="3.6666666666666607" width="20" height="17.666666666666668"/>
+                                                                <rect key="frame" x="5" y="3.9999999999999893" width="20" height="17.666666666666668"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="CTy-7D-vOY" secondAttribute="height" id="Ph8-Mv-yXO"/>
@@ -262,6 +286,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -278,7 +305,7 @@
                                                         <rect key="frame" x="0.0" y="75" width="85" height="25"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n5F-fg-omg">
-                                                                <rect key="frame" x="5" y="3.3333333333333268" width="20" height="18.333333333333336"/>
+                                                                <rect key="frame" x="5" y="3.6666666666666554" width="20" height="18.333333333333336"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="n5F-fg-omg" secondAttribute="height" id="3EG-4l-QYJ"/>
@@ -291,6 +318,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -337,18 +367,24 @@
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                 <color key="textColor" name="defaultColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facilitated by a Booking.com partner company" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Smt-zd-Bh6">
                                                 <rect key="frame" x="5.0000000000000071" y="25.666666666666686" width="127.66666666666669" height="43"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                </variation>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p8Y-io-84p">
                                                 <rect key="frame" x="5.0000000000000071" y="78.666666666666686" width="127.66666666666669" height="30"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Nbc-BL-bYW">
-                                                        <rect key="frame" x="5" y="11.99999999999998" width="7" height="5.6666666666666696"/>
+                                                        <rect key="frame" x="5" y="12.333333333333323" width="7" height="5.6666666666666696"/>
                                                         <color key="tintColor" name="defaultColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Nbc-BL-bYW" secondAttribute="height" id="e8V-LL-21K"/>
@@ -360,6 +396,9 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -377,7 +416,7 @@
                                                 <rect key="frame" x="5.0000000000000071" y="113.66666666666666" width="127.66666666666669" height="30"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JTK-qM-JvH">
-                                                        <rect key="frame" x="5" y="12.000000000000037" width="7" height="5.6666666666666696"/>
+                                                        <rect key="frame" x="5" y="12.333333333333352" width="7" height="5.6666666666666696"/>
                                                         <color key="tintColor" name="defaultColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="JTK-qM-JvH" secondAttribute="height" id="2uP-98-1I5"/>
@@ -389,6 +428,9 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -406,7 +448,7 @@
                                                 <rect key="frame" x="5.0000000000000071" y="148.66666666666666" width="127.66666666666669" height="30"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QQg-Nv-RWP">
-                                                        <rect key="frame" x="5" y="12.000000000000037" width="7" height="5.6666666666666696"/>
+                                                        <rect key="frame" x="5" y="12.333333333333352" width="7" height="5.6666666666666696"/>
                                                         <color key="tintColor" name="defaultColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="7" id="4Ri-pX-0gX"/>
@@ -418,6 +460,9 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -475,6 +520,9 @@
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -503,6 +551,9 @@
                                                                 <rect key="frame" x="29.999999999999993" y="0.0" width="97.333333333333314" height="33.333333333333336"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -532,6 +583,9 @@
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -560,18 +614,27 @@
                                                 <rect key="frame" x="9.9999999999999929" y="116.00000000000004" width="127.33333333333331" height="28.666666666666671"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 120.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLU-Ro-5vq">
                                                 <rect key="frame" x="9.9999999999999929" y="149.66666666666666" width="127.33333333333331" height="20.333333333333343"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Includes taxes and charges" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uft-OA-3cQ">
                                                 <rect key="frame" x="9.9999999999999929" y="175.00000000000003" width="127.33333333333331" height="28.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                </variation>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -602,6 +665,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fs1-Vk-M0G">
                                 <rect key="frame" x="20" y="354.66666666666669" width="265" height="33.333333333333314"/>
                                 <color key="backgroundColor" name="defaultColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33.329999999999998" id="ejk-Nb-xkJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Select">
@@ -624,7 +690,9 @@
                             <constraint firstItem="P4o-iK-wwy" firstAttribute="centerY" secondItem="0iu-2U-Pgi" secondAttribute="centerY" id="8fK-dj-17n"/>
                             <constraint firstItem="5bV-ml-58R" firstAttribute="top" secondItem="U0V-bt-3O3" secondAttribute="bottom" constant="5" id="CPZ-ix-Laj"/>
                             <constraint firstItem="Fs1-Vk-M0G" firstAttribute="top" secondItem="5bV-ml-58R" secondAttribute="bottom" constant="10" id="FFy-Tr-sID"/>
-                            <constraint firstItem="Fs1-Vk-M0G" firstAttribute="leading" secondItem="Hsp-3n-Fbu" secondAttribute="leading" constant="20" id="H8I-C9-VI0"/>
+                            <constraint firstItem="Fs1-Vk-M0G" firstAttribute="leading" secondItem="Hsp-3n-Fbu" secondAttribute="leading" constant="20" id="H8I-C9-VI0">
+                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                            </constraint>
                             <constraint firstItem="waN-PD-q9r" firstAttribute="leading" secondItem="P4o-iK-wwy" secondAttribute="trailing" constant="5" id="Jee-y5-oBb"/>
                             <constraint firstItem="Yrk-dn-hUE" firstAttribute="leading" secondItem="0iu-2U-Pgi" secondAttribute="leading" id="KTr-gx-mYv"/>
                             <constraint firstItem="U0V-bt-3O3" firstAttribute="top" secondItem="Yrk-dn-hUE" secondAttribute="bottom" constant="10" id="LX1-Zc-imI"/>
@@ -633,7 +701,9 @@
                             <constraint firstAttribute="trailing" secondItem="Yrk-dn-hUE" secondAttribute="trailing" constant="10" id="eeS-lL-OTa"/>
                             <constraint firstItem="Yrk-dn-hUE" firstAttribute="top" secondItem="waN-PD-q9r" secondAttribute="bottom" constant="5" id="m4G-t1-4Io"/>
                             <constraint firstItem="5bV-ml-58R" firstAttribute="leading" secondItem="U0V-bt-3O3" secondAttribute="leading" id="p56-YI-f0C"/>
-                            <constraint firstAttribute="trailing" secondItem="Fs1-Vk-M0G" secondAttribute="trailing" constant="20" id="q9u-o8-nS6"/>
+                            <constraint firstAttribute="trailing" secondItem="Fs1-Vk-M0G" secondAttribute="trailing" constant="20" id="q9u-o8-nS6">
+                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                            </constraint>
                             <constraint firstItem="U0V-bt-3O3" firstAttribute="trailing" secondItem="Yrk-dn-hUE" secondAttribute="trailing" id="vuP-FO-QEZ"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -661,7 +731,7 @@
                 <outlet property="roomSizeLabel" destination="IeV-Ve-PMb" id="VxK-wA-MmQ"/>
                 <outlet property="roomTypeLabel" destination="0iu-2U-Pgi" id="xc1-WM-0NE"/>
             </connections>
-            <point key="canvasLocation" x="80.152671755725194" y="120.42253521126761"/>
+            <point key="canvasLocation" x="34" y="113"/>
         </tableViewCell>
     </objects>
     <resources>

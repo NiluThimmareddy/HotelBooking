@@ -359,6 +359,9 @@
             <size key="customSize" width="269" height="362"/>
             <connections>
                 <outlet property="backView" destination="OBX-Zt-Nlh" id="rmS-vM-xm3"/>
+                <outlet property="offer2View" destination="zXd-ji-jH2" id="qQc-f7-6I7"/>
+                <outlet property="offer3View" destination="Nrm-cW-Psu" id="WOj-9h-PxF"/>
+                <outlet property="offerOneView" destination="mkq-Ew-DmH" id="jt3-qL-Jd7"/>
                 <outlet property="priceLabel" destination="d2y-Kv-ZZS" id="Vqb-uk-JLH"/>
             </connections>
             <point key="canvasLocation" x="180.91603053435114" y="98.591549295774655"/>
