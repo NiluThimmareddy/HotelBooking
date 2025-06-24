@@ -8,7 +8,7 @@
 import UIKit
 import SkeletonView
 
-class HotelListPageVC: UIViewController {
+class HotelListPageVC: UIViewController, ScrollToTopCapable {
 
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var hotelListTableview: UITableView!
@@ -21,13 +21,16 @@ class HotelListPageVC: UIViewController {
 
     var isClicked: Bool = false
 
+    var scrollToTopButton = UIButton(type: .system)
+    var scrolltoTopHelper : ScrollToTopHelper!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
         setUpUI()
     }
 
-   
+    var tableView: UITableView { hotelListTableview}
 
     @IBAction func sortButtonAction(_ sender: Any) {
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "SortFilterViewController") as? SortFilterViewController else { return }
@@ -126,11 +129,14 @@ extension HotelListPageVC: UITableViewDelegate, SkeletonTableViewDataSource {
     func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
         return "HotelsListTVC"
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        scrolltoTopHelper.scrollViewDidScroll(scrollView)
+    }
 }
 
 extension HotelListPageVC {
     func setUpUI() {
-//        topView.applyCardStyle()
         hotelListTableview.register(UINib(nibName: "HotelsListTVC", bundle: nil), forCellReuseIdentifier: "HotelsListTVC")
 
 
@@ -144,6 +150,11 @@ extension HotelListPageVC {
                 self.hotelListTableview.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.25))
             }
         }
+        
+        scrollToTopButton.setImage(UIImage(systemName: "arrow.up.to.line.compact"), for: .normal)
+        scrollToTopButton.imageView?.contentMode = .scaleToFill
+        
+        scrolltoTopHelper = ScrollToTopHelper(parent: self)
     }
 
 }

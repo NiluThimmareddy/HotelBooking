@@ -87,6 +87,8 @@ class BookingOverviewVC: UIViewController {
         backItem.title = ""
         self.navigationItem.backBarButtonItem = backItem
         self.navigationController?.pushViewController(controller, animated: true)
+//        controller.modalPresentationStyle = .fullScreen
+//        present(controller, animated: true)
     }
     
     @IBAction func closeButton(_ sender: Any) {
@@ -99,17 +101,67 @@ class BookingOverviewVC: UIViewController {
     
     @IBAction func dismissAddGuestPageButtonAction(_ sender: Any) {
         addGuestView.isHidden = true
+        guestView.isHidden = false
     }
     
     @IBAction func confirmButtonAction(_ sender: Any) {
+        guard let firstName = firstNameTF.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+              let lastName = lastNameTF.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+              !firstName.isEmpty else {
+            return
+        }
+        
+        let fullName = lastName.isEmpty ? firstName : "\(firstName) \(lastName)"
+        
+        guestsList.append(fullName)
+        
+        guestsListTableview.reloadData()
+        
+        addGuestView.isHidden = true
+        guestView.isHidden = false
+        
+        firstNameTF.text = ""
+        lastNameTF.text = ""
     }
+
     
     @IBAction func closeInfoButtonAction(_ sender: Any) {
         guestInfoView.isHidden = true
+        guestView.isHidden = true
+        guestView.isHidden = false
     }
     
     @IBAction func saveButtonAction(_ sender: Any) {
+        guard let index = selectedIndex else {
+            print("No guest selected to update.")
+            return
+        }
+
+        guard let firstName = updateFirstName.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+              let lastName = updateLastName.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+              !firstName.isEmpty else {
+            print("First name is required.")
+            return
+        }
+
+        let updatedFullName = lastName.isEmpty ? firstName : "\(firstName) \(lastName)"
+        
+        guestsList[index] = updatedFullName
+
+        guestsListTableview.reloadData()
+
+        updateFirstName.text = ""
+        updateLastName.text = ""
+
+        guestInfoView.isHidden = true
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.guestView.isHidden = false
+            print("Guest info updated successfully. Showing guestView.")
+        }
     }
+
+
     
     
 }
@@ -129,8 +181,11 @@ extension BookingOverviewVC : UITableViewDelegate, UITableViewDataSource {
         cell.selectButton.tintColor = isSelected ? selectedColor : .systemGray
         
         cell.delegate = self
-        print("Configured cell for row \(indexPath.row)")
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
     }
 }
 
@@ -140,16 +195,13 @@ extension BookingOverviewVC {
             shadow?.applyCardStyle()
         }
         bottomView.addTopShadow()
-        
-        pricePopView.isHidden = true
-        pricePopView.layer.cornerRadius = 16
-        pricePopView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        pricePopView.layer.masksToBounds = true
-        pricePopView.addTopShadow()
         configureCountryCodeMenu()
 
         guestsListTableview.register(UINib(nibName: "GuestListTVC", bundle: nil), forCellReuseIdentifier: "GuestListTVC")
-        [guestView,addGuestView,guestInfoView].forEach { view in
+        [guestView,addGuestView,guestInfoView,pricePopView].forEach { view in
+            view?.layer.cornerRadius = 16
+            view?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+            view?.layer.masksToBounds = true
             view?.addTopShadow()
             view?.isHidden = true
         }
@@ -174,6 +226,8 @@ extension BookingOverviewVC {
 extension BookingOverviewVC: GuestListCellDelegate {
     func didTapEditButton(in cell: GuestListTVC) {
         if let indexPath = guestsListTableview.indexPath(for: cell) {
+            selectedIndex = indexPath.row
+
             let fullName = guestsList[indexPath.row]
             let nameComponents = fullName.components(separatedBy: " ")
             
@@ -185,6 +239,7 @@ extension BookingOverviewVC: GuestListCellDelegate {
                 updateLastName.text = ""
             }
         }
+        
         guestInfoView.isHidden = false
     }
     
@@ -210,3 +265,4 @@ extension BookingOverviewVC: GuestListCellDelegate {
         guestView.isHidden = true
     }
 }
+ 

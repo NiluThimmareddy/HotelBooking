@@ -322,7 +322,9 @@
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="427-bv-Ssd" secondAttribute="trailing" id="Dhx-2M-YEX"/>
-                                                    <constraint firstAttribute="width" constant="130" id="EXL-Ab-y6M"/>
+                                                    <constraint firstAttribute="width" constant="130" id="EXL-Ab-y6M">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="160"/>
+                                                    </constraint>
                                                     <constraint firstItem="427-bv-Ssd" firstAttribute="top" secondItem="M20-ul-rqg" secondAttribute="top" id="Hng-wp-Nb4"/>
                                                     <constraint firstAttribute="bottom" secondItem="427-bv-Ssd" secondAttribute="bottom" id="lCv-LN-Qq1"/>
                                                     <constraint firstItem="IHu-7m-G47" firstAttribute="centerY" secondItem="M20-ul-rqg" secondAttribute="centerY" id="lXA-fQ-j1v"/>

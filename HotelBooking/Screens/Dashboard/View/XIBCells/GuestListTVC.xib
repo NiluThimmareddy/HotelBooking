@@ -30,7 +30,7 @@
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <imageReference key="image" image="circle" catalog="system" symbolScale="medium"/>
+                                    <imageReference key="image" image="circle" catalog="system" symbolScale="small"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="selectButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ygp-tV-jl9"/>
@@ -59,14 +59,18 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nv4-Uh-bim" firstAttribute="leading" secondItem="dYU-QV-cYq" secondAttribute="leading" id="F1H-nG-YxS"/>
+                            <constraint firstItem="nv4-Uh-bim" firstAttribute="leading" secondItem="dYU-QV-cYq" secondAttribute="leading" id="F1H-nG-YxS">
+                                <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                            </constraint>
                             <constraint firstAttribute="bottom" secondItem="Xi5-IE-hL1" secondAttribute="bottom" id="FHE-xk-f6G"/>
                             <constraint firstItem="Xi5-IE-hL1" firstAttribute="top" secondItem="dYU-QV-cYq" secondAttribute="top" id="Jod-IP-OM2"/>
                             <constraint firstItem="ZTC-ZQ-5D1" firstAttribute="leading" secondItem="nv4-Uh-bim" secondAttribute="trailing" constant="5" id="M1A-H9-UhO"/>
                             <constraint firstAttribute="bottom" secondItem="ZTC-ZQ-5D1" secondAttribute="bottom" id="P6w-Ga-erZ"/>
                             <constraint firstItem="ZTC-ZQ-5D1" firstAttribute="top" secondItem="dYU-QV-cYq" secondAttribute="top" id="XcK-Qx-NZc"/>
                             <constraint firstAttribute="bottom" secondItem="nv4-Uh-bim" secondAttribute="bottom" id="Xn8-bG-XMb"/>
-                            <constraint firstAttribute="trailing" secondItem="Xi5-IE-hL1" secondAttribute="trailing" id="jut-dU-nI9"/>
+                            <constraint firstAttribute="trailing" secondItem="Xi5-IE-hL1" secondAttribute="trailing" id="jut-dU-nI9">
+                                <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                            </constraint>
                             <constraint firstItem="nv4-Uh-bim" firstAttribute="top" secondItem="dYU-QV-cYq" secondAttribute="top" id="ou7-Ak-kaq"/>
                             <constraint firstItem="Xi5-IE-hL1" firstAttribute="leading" secondItem="ZTC-ZQ-5D1" secondAttribute="trailing" constant="5" id="wvu-GR-RDW"/>
                         </constraints>

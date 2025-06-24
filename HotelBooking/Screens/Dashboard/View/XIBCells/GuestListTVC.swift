@@ -27,7 +27,6 @@ class GuestListTVC: UITableViewCell {
     }
     
     @IBAction func selectButtonAction(_ sender: Any) {
-        print("Select button tapped")
         delegate?.didTapSelectButton(in: self)
     }
     

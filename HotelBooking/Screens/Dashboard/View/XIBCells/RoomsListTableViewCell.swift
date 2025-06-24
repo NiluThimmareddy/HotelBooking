@@ -5,58 +5,6 @@
 //  Created by toqsoft on 10/06/25.
 //
 
-/*
-import UIKit
-
-class RoomsListTableViewCell: UITableViewCell {
-
-    
-    @IBOutlet weak var backView: UIView!
-    @IBOutlet weak var offerCollectionView: UICollectionView!
-    @IBOutlet weak var roomTypeLabel: UILabel!
-    @IBOutlet weak var adultsCountLabel: UILabel!
-    @IBOutlet weak var bedsCountLabel: UILabel!
-    @IBOutlet weak var roomSizeLabel: UILabel!
-    
-    var viewModel = HotelJsonViewModel()
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        backView.applyCardStyle()
-        offerCollectionView.register(UINib(nibName: "RoomOffersCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "RoomOffersCollectionViewCell")
-        
-        if let layout = offerCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.estimatedItemSize = .zero
-        }
-    }
-
-}
-
-extension RoomsListTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RoomOffersCollectionViewCell", for: indexPath) as! RoomOffersCollectionViewCell
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            let itemWidth = collectionView.frame.width * 0.4
-            let itemHeight = collectionView.frame.height
-            return CGSize(width: itemWidth, height: itemHeight)
-        } else {
-            let itemWidth = collectionView.frame.width * 0.8
-            let itemHeight = collectionView.frame.height
-            return CGSize(width: itemWidth, height: itemHeight)
-        }
-    }
-}
-*/
-
 import UIKit
 import SkeletonView
 

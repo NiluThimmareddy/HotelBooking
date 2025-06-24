@@ -284,10 +284,10 @@
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="bold"/>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqf-PM-LaM">
-                                                        <rect key="frame" x="50" y="229.66666666666663" width="293" height="45"/>
+                                                        <rect key="frame" x="10" y="229.66666666666663" width="363" height="45"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvT-zp-M5C">
-                                                                <rect key="frame" x="0.0" y="0.0" width="293" height="45"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="363" height="45"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Select">
                                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="0.0"/>
@@ -328,10 +328,10 @@
                                                         </variation>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z44-w6-ctl">
-                                                        <rect key="frame" x="50" y="229.66666666666663" width="293" height="45"/>
+                                                        <rect key="frame" x="10" y="229.66666666666663" width="363" height="45"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSC-05-4Wy">
-                                                                <rect key="frame" x="0.0" y="0.0" width="191" height="45"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="261" height="45"/>
                                                                 <color key="tintColor" name="defaultColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="1 Room " imagePadding="10">
@@ -353,7 +353,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfG-ud-Mcy">
-                                                                <rect key="frame" x="211" y="0.0" width="80" height="45"/>
+                                                                <rect key="frame" x="281" y="0.0" width="80" height="45"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="80" id="jh2-ly-dwu"/>
                                                                 </constraints>
@@ -717,12 +717,16 @@ Fan</string>
                                                     <constraint firstItem="oQ7-qp-fhC" firstAttribute="centerY" secondItem="Bu2-Cq-VNQ" secondAttribute="centerY" id="Qot-0o-vgc"/>
                                                     <constraint firstItem="pHA-z8-Y2V" firstAttribute="leading" secondItem="nUo-XZ-Zfk" secondAttribute="trailing" constant="8" id="QuB-yp-bUn"/>
                                                     <constraint firstItem="1ze-PZ-P2w" firstAttribute="centerX" secondItem="4Q6-ht-BAv" secondAttribute="centerX" id="Rgu-yG-t5D"/>
-                                                    <constraint firstAttribute="trailing" secondItem="fqf-PM-LaM" secondAttribute="trailing" constant="50" id="SVh-e3-hmG"/>
+                                                    <constraint firstAttribute="trailing" secondItem="fqf-PM-LaM" secondAttribute="trailing" constant="20" id="SVh-e3-hmG">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                                    </constraint>
                                                     <constraint firstItem="cMr-KU-4WQ" firstAttribute="top" secondItem="vLw-6u-N0M" secondAttribute="bottom" constant="4" id="TVc-EA-Yyj"/>
                                                     <constraint firstItem="w6T-yB-ZiD" firstAttribute="leading" secondItem="BpA-Ay-9ML" secondAttribute="trailing" constant="4" id="Tvy-9O-pv4"/>
                                                     <constraint firstItem="1ze-PZ-P2w" firstAttribute="top" secondItem="fqf-PM-LaM" secondAttribute="bottom" constant="15" id="VL6-MO-viU"/>
                                                     <constraint firstItem="fZC-VB-l0J" firstAttribute="top" secondItem="Bu2-Cq-VNQ" secondAttribute="bottom" constant="8" id="VyZ-0v-He1"/>
-                                                    <constraint firstItem="fqf-PM-LaM" firstAttribute="leading" secondItem="4Q6-ht-BAv" secondAttribute="leading" constant="50" id="X74-WN-QgN"/>
+                                                    <constraint firstItem="fqf-PM-LaM" firstAttribute="leading" secondItem="4Q6-ht-BAv" secondAttribute="leading" constant="10" id="X74-WN-QgN">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                                    </constraint>
                                                     <constraint firstItem="Qsx-mY-ppY" firstAttribute="top" secondItem="YyV-Tm-dlZ" secondAttribute="bottom" constant="8" id="a2r-9J-oZm"/>
                                                     <constraint firstItem="GrA-Fa-HIt" firstAttribute="top" secondItem="oaR-Oh-Mh2" secondAttribute="bottom" constant="8" id="bIq-7N-OH1"/>
                                                     <constraint firstItem="Qsx-mY-ppY" firstAttribute="leading" secondItem="YyV-Tm-dlZ" secondAttribute="leading" id="cIo-I8-tdh"/>
@@ -735,7 +739,9 @@ Fan</string>
                                                     <constraint firstAttribute="trailing" secondItem="KzO-xM-R7P" secondAttribute="trailing" constant="8" id="fgN-TV-dXz"/>
                                                     <constraint firstItem="P8a-Jf-LDj" firstAttribute="leading" secondItem="zfy-Sx-Fxf" secondAttribute="leading" id="fkm-7H-0ln"/>
                                                     <constraint firstItem="tBS-oh-fBv" firstAttribute="top" secondItem="3nk-Qm-Jr0" secondAttribute="bottom" constant="4" id="hPc-oc-A1m"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Z44-w6-ctl" secondAttribute="trailing" constant="50" id="hV4-h8-GGk"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Z44-w6-ctl" secondAttribute="trailing" constant="20" id="hV4-h8-GGk">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                                    </constraint>
                                                     <constraint firstItem="nUo-XZ-Zfk" firstAttribute="leading" secondItem="3uq-te-6H3" secondAttribute="leading" id="iWh-l8-PUg"/>
                                                     <constraint firstItem="pHA-z8-Y2V" firstAttribute="top" secondItem="nUo-XZ-Zfk" secondAttribute="top" id="jsD-fF-VMo"/>
                                                     <constraint firstItem="zfy-Sx-Fxf" firstAttribute="leading" secondItem="V13-BV-3we" secondAttribute="leading" id="n8N-Jf-EZS"/>
@@ -756,7 +762,9 @@ Fan</string>
                                                     <constraint firstAttribute="trailing" secondItem="Qsx-mY-ppY" secondAttribute="trailing" constant="8" id="xqP-RH-ZLl"/>
                                                     <constraint firstItem="3nk-Qm-Jr0" firstAttribute="leading" secondItem="zfy-Sx-Fxf" secondAttribute="trailing" constant="10" id="ySF-tc-O3b"/>
                                                     <constraint firstItem="Owg-0R-yi9" firstAttribute="top" secondItem="KzO-xM-R7P" secondAttribute="bottom" constant="6" id="yo2-4X-JIx"/>
-                                                    <constraint firstItem="Z44-w6-ctl" firstAttribute="leading" secondItem="4Q6-ht-BAv" secondAttribute="leading" constant="50" id="zKt-gg-N4i"/>
+                                                    <constraint firstItem="Z44-w6-ctl" firstAttribute="leading" secondItem="4Q6-ht-BAv" secondAttribute="leading" constant="10" id="zKt-gg-N4i">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                                    </constraint>
                                                     <constraint firstItem="oRt-JI-qiB" firstAttribute="leading" secondItem="Qsx-mY-ppY" secondAttribute="leading" id="zWS-1r-00C"/>
                                                 </constraints>
                                             </view>
@@ -772,7 +780,7 @@ Fan</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P1b-FE-Xh7">
-                                        <rect key="frame" x="0.0" y="1008" width="393" height="150"/>
+                                        <rect key="frame" x="0.0" y="609" width="393" height="150"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3c-Fs-dtu">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="35"/>
@@ -837,7 +845,7 @@ Fan</string>
                                                 </variation>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7EY-Je-5pw">
-                                                <rect key="frame" x="190.66666666666666" y="31.333333333333332" width="12" height="13.333333333333346"/>
+                                                <rect key="frame" x="190.66666666666666" y="31.333333333333336" width="12" height="13.333333333333343"/>
                                                 <color key="tintColor" red="1" green="0.8980392157" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="12" id="G6v-JX-25q"/>
@@ -931,13 +939,13 @@ Fan</string>
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
