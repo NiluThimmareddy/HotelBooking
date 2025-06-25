@@ -14,7 +14,7 @@ class OneToTenRatingCVC: UICollectionViewCell {
     var onButtonTapped: (() -> Void)?
     override func awakeFromNib() {
         super.awakeFromNib()
-      styleBackView(backView)
+//      styleBackView(backView)
     }
 
     @IBAction func oneToTenRatingButton(_ sender: Any) {

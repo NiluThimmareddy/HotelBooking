@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ThreeSixtyDegreeTVC" rowHeight="153" id="KGk-i7-Jjw" customClass="ThreeSixtyDegreeTVC" customModule="HotelBooking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="153"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="153"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4X7-Eo-QcL">
+                        <rect key="frame" x="20" y="10" width="280" height="133"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="G4h-9r-poQ">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="133"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="360-degree-2" translatesAutoresizingMaskIntoConstraints="NO" id="W1C-Un-DGV">
+                                <rect key="frame" x="240" y="93" width="30" height="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="cxt-Gu-hdF"/>
+                                    <constraint firstAttribute="height" constant="30" id="fgK-oN-8aP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wZ-Dl-wNQ">
+                                <rect key="frame" x="10" y="105" width="220" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G4h-9r-poQ" firstAttribute="leading" secondItem="4X7-Eo-QcL" secondAttribute="leading" id="L7M-dF-Qwk"/>
+                            <constraint firstAttribute="trailing" secondItem="G4h-9r-poQ" secondAttribute="trailing" id="Oa3-ak-Vvw"/>
+                            <constraint firstAttribute="bottom" secondItem="W1C-Un-DGV" secondAttribute="bottom" constant="10" id="QGE-PN-EiZ"/>
+                            <constraint firstItem="1wZ-Dl-wNQ" firstAttribute="leading" secondItem="4X7-Eo-QcL" secondAttribute="leading" constant="10" id="QrC-rx-l5l"/>
+                            <constraint firstAttribute="trailing" secondItem="W1C-Un-DGV" secondAttribute="trailing" constant="10" id="RrS-l1-2y4"/>
+                            <constraint firstAttribute="bottom" secondItem="1wZ-Dl-wNQ" secondAttribute="bottom" constant="10" id="TKi-M1-Jx6"/>
+                            <constraint firstItem="W1C-Un-DGV" firstAttribute="leading" secondItem="1wZ-Dl-wNQ" secondAttribute="trailing" constant="10" id="U1u-P0-UT5"/>
+                            <constraint firstItem="G4h-9r-poQ" firstAttribute="top" secondItem="4X7-Eo-QcL" secondAttribute="top" id="YwD-xl-J63"/>
+                            <constraint firstAttribute="bottom" secondItem="G4h-9r-poQ" secondAttribute="bottom" id="xQJ-a3-K1q"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4X7-Eo-QcL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="DAe-8Y-mTX"/>
+                    <constraint firstAttribute="trailing" secondItem="4X7-Eo-QcL" secondAttribute="trailing" constant="20" id="HMa-bY-HbY"/>
+                    <constraint firstAttribute="bottom" secondItem="4X7-Eo-QcL" secondAttribute="bottom" constant="10" id="lQ7-NR-Sta"/>
+                    <constraint firstItem="4X7-Eo-QcL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="qEv-WC-Peh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="backView" destination="4X7-Eo-QcL" id="7AA-Es-b2N"/>
+                <outlet property="hotelTitle" destination="1wZ-Dl-wNQ" id="Xqi-lg-Hjm"/>
+                <outlet property="imageData" destination="G4h-9r-poQ" id="UYx-q1-5Mv"/>
+            </connections>
+            <point key="canvasLocation" x="42.748091603053432" y="27.112676056338028"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="1" width="682" height="360"/>
+        <image name="360-degree-2" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

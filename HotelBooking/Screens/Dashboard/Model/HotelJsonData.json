@@ -4611,6 +4611,27 @@
       "IsPrimary": false
     }
   ],
+  "HotelThreeSixtyImages": [
+    {
+      "ImageId": "hotel_001",
+      "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
+      "ImageUrl": "https://cdn.create.vista.com/api/media/medium/241880824/stock-photo-restaurant-by-the-sea-vr360?token=",
+      "RoomTypes": [
+        {
+          "RoomName": "Deluxe",
+          "Image": "https://cdn.create.vista.com/api/media/medium/223825868/stock-photo-render-360-degrees-hotel-room-bedroom?token="
+        },
+        {
+          "RoomName": "Luxury",
+          "Image": "https://cdn.create.vista.com/api/media/medium/226056910/stock-photo-360-degrees-home-interior-view-render?token="
+        },
+        {
+          "RoomName": "Suite",
+          "Image": "https://cdn.create.vista.com/api/media/medium/730023940/stock-photo-render-modern-living-room-360-degrees-view?token="
+        }
+      ]
+    }
+  ],
   "HotelPolicies": [
       {
         "PolicyId": "4b6f9f69-f0be-4a05-b2b8-4bfbe016fae7",
@@ -7017,16 +7038,72 @@
     {
       "LandmarkId": "57fecfdb-3711-4f67-82c0-fc6e3eb324d5",
       "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
-      "LandmarkName": "Landmark 0 near City 7",
+      "LandmarkName": "Airport Terminal",
       "DistanceInKm": 8.52,
-      "LandmarkType": "City Center"
+      "LandmarkType": "Transport"
     },
     {
       "LandmarkId": "7ccec072-21cd-426c-8ef7-7f8f0486698a",
       "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
-      "LandmarkName": "Landmark 1 near City 7",
+      "LandmarkName": "Central station",
       "DistanceInKm": 7.47,
-      "LandmarkType": "Airport"
+      "LandmarkType": "Transport"
+    },
+    {
+      "LandmarkId": "57fecfdb-3711-4f67-82c0-fc6e3eb324d5",
+      "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
+      "LandmarkName": "Kaaveri Cafe",
+      "DistanceInKm": 3.2,
+      "LandmarkType": "Eat and Drink"
+    },
+    {
+      "LandmarkId": "7ccec072-21cd-426c-8ef7-7f8f0486698a",
+      "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
+      "LandmarkName": "Murugan Cafe",
+      "DistanceInKm": 1.3,
+      "LandmarkType": "Eat and Drink"
+    },
+    {
+      "LandmarkId": "57fecfdb-3711-4f67-82c0-fc6e3eb324d5",
+      "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
+      "LandmarkName": "City Museum",
+      "DistanceInKm": 1.2,
+      "LandmarkType": "Attractions"
+    },
+    {
+      "LandmarkId": "7ccec072-21cd-426c-8ef7-7f8f0486698a",
+      "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
+      "LandmarkName": "Convention Center",
+      "DistanceInKm": 8.3,
+      "LandmarkType": "Attractions"
+    },
+    {
+      "LandmarkId": "57fecfdb-3711-4f67-82c0-fc6e3eb324d5",
+      "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
+      "LandmarkName": "City Zoo",
+      "DistanceInKm": 0.9,
+      "LandmarkType": "Attractions"
+    },
+    {
+      "LandmarkId": "7ccec072-21cd-426c-8ef7-7f8f0486698a",
+      "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
+      "LandmarkName": "Beach Front",
+      "DistanceInKm": 5.6,
+      "LandmarkType": "Attractions"
+    },
+    {
+      "LandmarkId": "57fecfdb-3711-4f67-82c0-fc6e3eb324d5",
+      "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
+      "LandmarkName": "Historic Castle",
+      "DistanceInKm": 7.3,
+      "LandmarkType": "Attractions"
+    },
+    {
+      "LandmarkId": "7ccec072-21cd-426c-8ef7-7f8f0486698a",
+      "HotelId": "546083d0-28f4-479b-b845-7d32f3d56a96",
+      "LandmarkName": "City Park",
+      "DistanceInKm": 6,
+      "LandmarkType": "Attractions"
     },
     {
       "LandmarkId": "b2af5b78-8757-4599-8edb-e67656da1407",

@@ -13,7 +13,7 @@ class ExpectationMeetsTVC: UITableViewCell {
     @IBOutlet weak var tickImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        titleLbl.font = .poppinsMedium(12)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

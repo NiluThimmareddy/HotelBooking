@@ -34,6 +34,11 @@ class UserReviewFilterTVC: UITableViewCell {
         reviewInsideTV.delegate = self
         reviewInsideTV.dataSource = self
         reviewInsideTV.register(UINib(nibName: "GuestReviewTVC", bundle: nil), forCellReuseIdentifier: "GuestReviewTVC")
+        ratingLbl.font = .poppinsBold(14)
+        ratingContentLbl.font = .poppinsBold(14)
+        seeAllCountReviews.font = .poppinsMedium(10)
+        filterByLbl.font = .poppinsBold(14)
+        timeOfYearLbl.font = .poppinsMedium(12)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

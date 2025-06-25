@@ -227,6 +227,15 @@ extension UIView {
        }
 }
 
+extension UIFont {
+    static func poppinsMedium(_ size: CGFloat) -> UIFont {
+        UIFont(name: "Poppins-Medium", size: size) ?? UIFont.systemFont(ofSize: size)
+    }
+
+    static func poppinsBold(_ size: CGFloat) -> UIFont {
+        UIFont(name: "Poppins-Bold", size: size) ?? UIFont.boldSystemFont(ofSize: size)
+    }
+}
 
 extension UIColor {
     convenience init(hex: String) {

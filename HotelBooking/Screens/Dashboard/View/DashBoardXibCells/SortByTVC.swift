@@ -12,7 +12,7 @@ class SortByTVC: UITableViewCell {
     @IBOutlet weak var sortByTitleLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        sortByTitleLbl.font = .poppinsMedium(12)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

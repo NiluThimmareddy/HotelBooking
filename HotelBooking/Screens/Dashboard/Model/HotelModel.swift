@@ -19,6 +19,7 @@ struct HotelJsonRoot: Codable {
     let Facilities: [HotelFacility]?
     let HotelFacilities : [HotelFacilityAvailability]?
     let RoomFacility : [RoomFacility]?
+    let HotelThreeSixtyImages : [HotelThreeSixtyImage]?
     
     enum CodingKeys: String, CodingKey {
         case Hotels
@@ -32,6 +33,7 @@ struct HotelJsonRoot: Codable {
         case Facilities = "Facilities"
         case HotelFacilities = "HotelFacilities"
         case RoomFacility = "RoomFacilities"
+        case HotelThreeSixtyImages = "HotelThreeSixtyImages"
     }
 }
 
@@ -79,6 +81,37 @@ struct HotelImage: Codable {
         case imageUrl = "ImageUrl"
         case description = "Description"
         case isPrimary = "IsPrimary"
+    }
+}
+struct HotelThreeSixtyImageResponse: Codable {
+    let hotelThreeSixtyImages: [HotelThreeSixtyImage]
+
+    enum CodingKeys: String, CodingKey {
+        case hotelThreeSixtyImages = "HotelThreeSixtyImages"
+    }
+}
+
+struct HotelThreeSixtyImage: Codable {
+    let imageId: String
+    let hotelId: String
+    let imageUrl: String
+    let roomTypes: [RoomTypeThreeSixtyImage]
+
+    enum CodingKeys: String, CodingKey {
+        case imageId = "ImageId"
+        case hotelId = "HotelId"
+        case imageUrl = "ImageUrl"
+        case roomTypes = "RoomTypes"
+    }
+}
+
+struct RoomTypeThreeSixtyImage: Codable {
+    let roomName: String
+    let image: String
+
+    enum CodingKeys: String, CodingKey {
+        case roomName = "RoomName"
+        case image = "Image"
     }
 }
 

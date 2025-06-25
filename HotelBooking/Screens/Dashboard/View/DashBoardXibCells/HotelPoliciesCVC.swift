@@ -13,7 +13,7 @@ class HotelPoliciesCVC: UICollectionViewCell {
     @IBOutlet weak var titleLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-       
+        titleLbl.font = UIFont(name: "Poppins-Medium", size: 12)
     }
 
 }

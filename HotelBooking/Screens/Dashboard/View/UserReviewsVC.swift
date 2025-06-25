@@ -9,9 +9,15 @@ import UIKit
 
 class UserReviewsVC: UIViewController {
     
-  
-    @IBOutlet weak var closeButtonSortBy: UIButton!
-    @IBOutlet weak var closeButtonFilterBy: UIButton!
+    @IBOutlet weak var sortByCloseButton: UIButton!
+    @IBOutlet weak var sortByCloseView: UIView!
+    @IBOutlet weak var filterByCloseButtob: UIButton!
+    @IBOutlet weak var filterByCloseView: UIView!
+    @IBOutlet weak var applyButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var GuestReviewTitle: UILabel!
+    @IBOutlet weak var sortByTitle: UILabel!
+    @IBOutlet weak var filterByTitle: UILabel!
     @IBOutlet weak var sortByTV: UITableView!
     @IBOutlet weak var sortByBackView: UIView!
     @IBOutlet weak var filterByBackView: UIView!
@@ -50,7 +56,7 @@ class UserReviewsVC: UIViewController {
        label.textAlignment = .center
        return label
    }()
-    
+    let color = UIColor(named: "defaultColor")
     override func viewDidLoad() {
         super.viewDidLoad()
         CountryCodeManager.shared.fetchCountryCodes {
@@ -62,13 +68,16 @@ class UserReviewsVC: UIViewController {
         reviewFilterTableView.register(UINib(nibName: "UserReviewFilterTVC", bundle: nil), forCellReuseIdentifier: "UserReviewFilterTVC")
         filterByTableView.register(UINib(nibName: "FilterByDateTVC", bundle: nil), forCellReuseIdentifier: "FilterByDateTVC")
         sortByTV.register(UINib(nibName: "SortByTVC", bundle: nil), forCellReuseIdentifier: "SortByTVC")
-        filterByBackView.isHidden = true
-        sortByBackView.isHidden = true
+       
         filterByBackView.BackViewShadow()
         sortByBackView.BackViewShadow()
         hotelNameLbl.text = hotelName
         navigationItem.titleView = topNameLbl
-        
+        fontStyle()
+        filterByCloseView.isHidden = true
+        sortByCloseView.isHidden = true
+        filterByCloseButtob.alpha = 0.2
+        sortByCloseButton.alpha = 0.2
     }
    
 
@@ -84,23 +93,41 @@ class UserReviewsVC: UIViewController {
         scrollViewContentViewHightCons.constant = baseContentHeight +  guestWhoStayedHeight
         view.layoutIfNeeded()
     }
-
+    func fontStyle(){
+        sortByTitle.font = .poppinsBold(14)
+        filterByTitle.font = .poppinsBold(14)
+        GuestReviewTitle.font = .poppinsBold(14)
+        let apply = NSAttributedString(
+            string: "Apply",
+            attributes: [.font: UIFont.poppinsBold(14), .foregroundColor: color ?? UIColor.blue]
+        )
+        applyButton.setAttributedTitle(apply, for: .normal)
+        let cancel = NSAttributedString(
+            string: "Cancel",
+            attributes: [.font: UIFont.poppinsBold(14), .foregroundColor: color ?? UIColor.blue]
+        )
+        cancelButton.setAttributedTitle(cancel, for: .normal)
+        hotelNameLbl.font = .poppinsBold(14)
+    }
    
-    @IBAction func closeButtonSortBy(_ sender: Any) {
-        sortByBackView.isHidden = true
-    }
-    @IBAction func closeButtonFilterBy(_ sender: Any) {
-        filterByBackView.isHidden = true
-    }
-    
     @IBAction func filterByApplyButton(_ sender: Any) {
     }
     @IBAction func filterByCancelButto(_ sender: Any) {
+        filterByCloseView.isHidden = true
+        sortByCloseView.isHidden = true
     }
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true)
     }
     
+    @IBAction func filterByCloseButton(_ sender: Any) {
+        filterByCloseView.isHidden = true
+        sortByCloseView.isHidden = true
+    }
+    @IBAction func sortByCloseButton(_ sender: Any) {
+        filterByCloseView.isHidden = true
+        sortByCloseView.isHidden = true
+    }
 }
 
 extension UserReviewsVC: UITableViewDelegate,UITableViewDataSource{
@@ -210,9 +237,11 @@ extension UserReviewsVC: UITableViewDelegate,UITableViewDataSource{
                 reviewFilterTableView.beginUpdates()
                 reviewFilterTableView.endUpdates()
             }else if indexPath.row == 1{
-                filterByBackView.isHidden = false
+                filterByCloseView.isHidden = false
+                sortByCloseView.isHidden = true
             }else if indexPath.row == 2{
-                sortByBackView.isHidden = false
+                filterByCloseView.isHidden = true
+                sortByCloseView.isHidden = false
             }
         }
     }

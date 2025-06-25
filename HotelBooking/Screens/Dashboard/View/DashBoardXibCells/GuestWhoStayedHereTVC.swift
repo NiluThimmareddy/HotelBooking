@@ -17,6 +17,9 @@ class GuestWhoStayedHereTVC: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         userImage.layer.cornerRadius = userImage.frame.size.height / 2
+        userName.font = UIFont(name: "Poppins-Medium", size: 12)
+        userReview.font = UIFont(name: "Poppins-Medium", size: 12)
+        userCountry.font = UIFont(name: "Poppins-Medium", size: 10)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

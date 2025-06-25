@@ -10,6 +10,13 @@ import UIKit
 class GuestAndRoomsVC: UIViewController {
     
       
+    @IBOutlet weak var childAgesContentTitle: UILabel!
+    @IBOutlet weak var ageOfChildrenAtCheckOutTitle: UILabel!
+    @IBOutlet weak var travellingWithPetsTitle: UILabel!
+    @IBOutlet weak var childrenTitle: UILabel!
+    @IBOutlet weak var adultsTitle: UILabel!
+    @IBOutlet weak var roomstitle: UILabel!
+    @IBOutlet weak var selectRoomTitle: UILabel!
     @IBOutlet weak var selectRoomsTitleTop: NSLayoutConstraint!
     @IBOutlet weak var simpleTopView: UIView!
     @IBOutlet weak var xmarkCloseButton: UIButton!
@@ -41,7 +48,7 @@ class GuestAndRoomsVC: UIViewController {
     @IBOutlet weak var roomsPlusButton: UIButton!
     @IBOutlet weak var roomsMinusButton: UIButton!
     @IBOutlet weak var backView: UIView!
-    @IBOutlet weak var travellingWithPetLbl: UITextView!
+    @IBOutlet weak var travellingWithPetLbl: UILabel!
     
     var childrenAges: [String] = []
     var selectedPickerRow: Int?
@@ -76,13 +83,27 @@ class GuestAndRoomsVC: UIViewController {
         
         updateChildConstraintIfNeeded()
         childrenGuestTV.register(UINib(nibName: "ChildrenGuestTVC", bundle: nil), forCellReuseIdentifier: "ChildrenGuestTVC")
-        
+        applyFontText()
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         updateDynamicHeights()
     }
-
+    func applyFontText(){
+        let applyBt = NSAttributedString(
+            string: "Select Date and Search",
+            attributes: [.font: UIFont.poppinsBold(14), .foregroundColor: UIColor.white]
+        )
+        applyButton.setAttributedTitle(applyBt, for: .normal)
+        selectRoomTitle.font = .poppinsBold(16)
+        roomstitle.font = .poppinsBold(14)
+        adultsTitle.font = .poppinsBold(14)
+        childrenTitle.font = .poppinsBold(14)
+        travellingWithPetsTitle.font = .poppinsBold(14)
+        travellingWithPetLbl.font = .poppinsMedium(12)
+        ageOfChildrenAtCheckOutTitle.font = .poppinsBold(14)
+        childAgesContentTitle.font = .poppinsMedium(12)
+    }
     func updateDynamicHeights() {
            guard let count = Int(childrensCountTF.text ?? "0") else {
                print("Invalid children count")
@@ -126,6 +147,8 @@ class GuestAndRoomsVC: UIViewController {
                 selectRoomsTitleTop.constant = 30
                 xmarkCloseButton.isHidden = true
                 simpleTopView.isHidden = false
+                ageOfChildrenAtCheckOutTitle.isHidden = true
+                childAgesContentTitle.isHidden = true
                 
             }else if UIDevice.current.userInterfaceIdiom == .pad {
                 topConstraint.constant = 250
@@ -134,6 +157,8 @@ class GuestAndRoomsVC: UIViewController {
                 selectRoomsTitleTop.constant = 30
                 xmarkCloseButton.isHidden = true
                 simpleTopView.isHidden = false
+                ageOfChildrenAtCheckOutTitle.isHidden = true
+                childAgesContentTitle.isHidden = true
             }else{
                 topConstraint.constant = 250
                 alphaView.isHidden = false
@@ -141,6 +166,8 @@ class GuestAndRoomsVC: UIViewController {
                 selectRoomsTitleTop.constant = 30
                 xmarkCloseButton.isHidden = true
                 simpleTopView.isHidden = false
+                ageOfChildrenAtCheckOutTitle.isHidden = true
+                childAgesContentTitle.isHidden = true
             }
         case 1:
             topConstraint.constant = 0
@@ -149,6 +176,8 @@ class GuestAndRoomsVC: UIViewController {
             selectRoomsTitleTop.constant = 50
             xmarkCloseButton.isHidden = false
             simpleTopView.isHidden = true
+            ageOfChildrenAtCheckOutTitle.isHidden = false
+            childAgesContentTitle.isHidden = false
             updateDynamicHeights()
         default:
             print("Unhandled count")
@@ -218,6 +247,8 @@ class GuestAndRoomsVC: UIViewController {
         
     }
     
+    @IBAction func applyButton(_ sender: Any) {
+    }
     @IBAction func childrensPlusButton(_ sender: Any) {
         updateCount(for: childrensCountTF, increase: true)
         updateChildConstraintIfNeeded()
@@ -243,9 +274,6 @@ class GuestAndRoomsVC: UIViewController {
         }
         
         travellingWithPetLbl.attributedText = attributedString
-        travellingWithPetLbl.isEditable = false
-        travellingWithPetLbl.isScrollEnabled = false
-        travellingWithPetLbl.dataDetectorTypes = .link
         travellingWithPetLbl.textAlignment = .left
         travellingWithPetLbl.backgroundColor = .clear
     }
@@ -282,8 +310,15 @@ extension GuestAndRoomsVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChildrenGuestTVC")as! ChildrenGuestTVC
         let count = childrenAges[indexPath.row]
+        let attributedTitle = NSAttributedString(
+            string: count,
+            attributes: [
+                .font: UIFont.poppinsBold(14),
+                .foregroundColor: UIColor.gray
+            ]
+        )
+        cell.selectAgeButton.setAttributedTitle(attributedTitle, for: .normal)
         cell.childCountLbl.text = "Child \(indexPath.row + 1)"
-        cell.selectAgeButton.setTitle(count, for: .normal)
             cell.onSelectAgeTapped = { [weak self] in
                 self?.selectedChildRowIndex = indexPath.row
                 self?.popUpView.isHidden = false

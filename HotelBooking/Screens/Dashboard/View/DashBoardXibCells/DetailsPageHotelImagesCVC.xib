@@ -19,30 +19,30 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2o-VW-tpL">
-                        <rect key="frame" x="0.0" y="0.0" width="242" height="197"/>
+                        <rect key="frame" x="10" y="10" width="222" height="177"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Plj-od-siC">
-                                <rect key="frame" x="0.0" y="0.0" width="242" height="197"/>
+                                <rect key="frame" x="0.0" y="0.0" width="222" height="177"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="erA-eq-WSL">
-                                        <rect key="frame" x="0.0" y="0.0" width="242" height="97"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="222" height="87"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7kr-Vt-HG8">
-                                                <rect key="frame" x="0.0" y="0.0" width="119.66666666666667" height="97"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="109.66666666666667" height="87"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wHM-y4-uGe">
-                                                <rect key="frame" x="122.66666666666669" y="0.0" width="119.33333333333331" height="97"/>
+                                                <rect key="frame" x="112.66666666666669" y="0.0" width="109.33333333333331" height="87"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="3rs-84-XgC">
-                                        <rect key="frame" x="0.0" y="100" width="242" height="97"/>
+                                        <rect key="frame" x="0.0" y="90" width="222" height="87"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9PC-mu-DfB">
-                                                <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="97"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="87"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q94-Lv-314">
-                                                        <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="97"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="72" height="87"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -54,10 +54,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjV-Ld-bzd">
-                                                <rect key="frame" x="81.666666666666657" y="0.0" width="78.666666666666657" height="97"/>
+                                                <rect key="frame" x="75" y="0.0" width="72" height="87"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6fK-kK-SVc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="97"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="72" height="87"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -69,22 +69,22 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUk-2j-6fQ">
-                                                <rect key="frame" x="163.33333333333334" y="0.0" width="78.666666666666657" height="97"/>
+                                                <rect key="frame" x="150" y="0.0" width="72" height="87"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gad-UT-FPQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="97"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="72" height="87"/>
                                                     </imageView>
                                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDW-No-rXR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="97"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="72" height="87"/>
                                                         <subviews>
                                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWE-e7-U7x">
-                                                                <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="97"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="72" height="87"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6f-st-UXY">
-                                                                <rect key="frame" x="7.6666666666666536" y="33.666666666666657" width="63.666666666666657" height="30"/>
+                                                                <rect key="frame" x="4.3333333333333393" y="28.666666666666657" width="63.666666666666657" height="30"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -101,7 +101,7 @@
                                                         </constraints>
                                                     </view>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="MDW-No-rXR" secondAttribute="bottom" id="9Op-pg-c6X"/>
                                                     <constraint firstItem="Gad-UT-FPQ" firstAttribute="leading" secondItem="GUk-2j-6fQ" secondAttribute="leading" id="Fd4-qq-3Js"/>
@@ -130,15 +130,16 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="X2o-VW-tpL" secondAttribute="bottom" id="HM2-ah-elN"/>
-                <constraint firstItem="X2o-VW-tpL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KUm-h6-nn4"/>
-                <constraint firstItem="X2o-VW-tpL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ryv-SN-sj2"/>
-                <constraint firstAttribute="trailing" secondItem="X2o-VW-tpL" secondAttribute="trailing" id="hjG-8h-fvH"/>
+                <constraint firstItem="X2o-VW-tpL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="ACp-35-cOw"/>
+                <constraint firstAttribute="trailing" secondItem="X2o-VW-tpL" secondAttribute="trailing" constant="10" id="I1J-TO-6CL"/>
+                <constraint firstItem="X2o-VW-tpL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="SXR-Zp-5IM"/>
+                <constraint firstAttribute="bottom" secondItem="X2o-VW-tpL" secondAttribute="bottom" constant="10" id="jTv-Iq-i9K"/>
             </constraints>
             <size key="customSize" width="242" height="197"/>
             <connections>
-                <outlet property="backView" destination="X2o-VW-tpL" id="Dqw-36-13g"/>
+                <outlet property="backView" destination="X2o-VW-tpL" id="trr-7d-EWy"/>
                 <outlet property="countLabel" destination="b6f-st-UXY" id="RcQ-8q-BKa"/>
+                <outlet property="fifthImageBackView" destination="GUk-2j-6fQ" id="rHl-GL-CV7"/>
                 <outlet property="hotelImageFive" destination="Gad-UT-FPQ" id="QSO-jf-lmo"/>
                 <outlet property="hotelImageFour" destination="6fK-kK-SVc" id="wSf-du-9y9"/>
                 <outlet property="hotelImageOne" destination="7kr-Vt-HG8" id="nE4-4V-YaH"/>
@@ -146,6 +147,7 @@
                 <outlet property="hotelImageTwo" destination="wHM-y4-uGe" id="uMj-or-Xt3"/>
                 <outlet property="shadowView" destination="MDW-No-rXR" id="4ur-T5-5Yo"/>
                 <outlet property="shadowViewButton" destination="mWE-e7-U7x" id="UUd-xp-d97"/>
+                <outlet property="thirdImageBackView" destination="9PC-mu-DfB" id="cj9-7I-92n"/>
             </connections>
             <point key="canvasLocation" x="276.3358778625954" y="39.7887323943662"/>
         </collectionViewCell>

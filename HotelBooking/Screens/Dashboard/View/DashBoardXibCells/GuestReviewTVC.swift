@@ -16,7 +16,8 @@ class GuestReviewTVC: UITableViewCell {
     @IBOutlet weak var titleLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-       
+        titleLbl.font = UIFont(name: "Poppins-Medium", size: 12)
+        countLbl.font = UIFont(name: "Poppins-Medium", size: 12)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

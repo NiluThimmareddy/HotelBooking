@@ -8,6 +8,9 @@
 import UIKit
 
 class DetailsPageHotelImagesCVC: UICollectionViewCell {
+
+    @IBOutlet weak var thirdImageBackView: UIView!
+    @IBOutlet weak var fifthImageBackView: UIView!
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var hotelImageOne: UIImageView!
@@ -21,6 +24,86 @@ class DetailsPageHotelImagesCVC: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         shadowViewButton.alpha = 0.3
+        backView.BackViewShadow()
+
+
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        roundCornersOfImageOneContainer()
+        roundCornersOfImageTwoContainer()
+        roundCornersOfImageThreeContainer()
+        roundCornersOfImageFiveContainer()
+        roundCornersOfImageFiveBackViewContainer()
+        roundCornersOfImageThreeBackViewContainer()
     }
 
+
+
+    private func roundCornersOfImageOneContainer() {
+        let maskPath = UIBezierPath(
+            roundedRect: hotelImageOne.bounds,
+            byRoundingCorners: [.topLeft],
+            cornerRadii: CGSize(width: 10, height: 10)
+        )
+
+        let shape = CAShapeLayer()
+        shape.path = maskPath.cgPath
+        hotelImageOne.layer.mask = shape
+    }
+    private func roundCornersOfImageTwoContainer() {
+        let maskPath = UIBezierPath(
+            roundedRect: hotelImageTwo.bounds,
+            byRoundingCorners: [.topRight],
+            cornerRadii: CGSize(width: 10, height: 10)
+        )
+
+        let shape = CAShapeLayer()
+        shape.path = maskPath.cgPath
+        hotelImageTwo.layer.mask = shape
+    }
+    private func roundCornersOfImageThreeContainer() {
+        let maskPath = UIBezierPath(
+            roundedRect: hotelImageThree.bounds,
+            byRoundingCorners: [.bottomLeft],
+            cornerRadii: CGSize(width: 10, height: 10)
+        )
+
+        let shape = CAShapeLayer()
+        shape.path = maskPath.cgPath
+        hotelImageThree.layer.mask = shape
+    }
+    private func roundCornersOfImageThreeBackViewContainer() {
+        let maskPath = UIBezierPath(
+            roundedRect: thirdImageBackView.bounds,
+            byRoundingCorners: [.bottomLeft],
+            cornerRadii: CGSize(width: 10, height: 10)
+        )
+
+        let shape = CAShapeLayer()
+        shape.path = maskPath.cgPath
+        thirdImageBackView.layer.mask = shape
+    }
+    private func roundCornersOfImageFiveContainer() {
+        let maskPath = UIBezierPath(
+            roundedRect: hotelImageFive.bounds,
+            byRoundingCorners: [.bottomRight],
+            cornerRadii: CGSize(width: 10, height: 10)
+        )
+
+        let shape = CAShapeLayer()
+        shape.path = maskPath.cgPath
+        hotelImageFive.layer.mask = shape
+    }
+    private func roundCornersOfImageFiveBackViewContainer() {
+        let maskPath = UIBezierPath(
+            roundedRect: fifthImageBackView.bounds,
+            byRoundingCorners: [.bottomRight],
+            cornerRadii: CGSize(width: 10, height: 10)
+        )
+
+        let shape = CAShapeLayer()
+        shape.path = maskPath.cgPath
+        fifthImageBackView.layer.mask = shape
+    }
 }

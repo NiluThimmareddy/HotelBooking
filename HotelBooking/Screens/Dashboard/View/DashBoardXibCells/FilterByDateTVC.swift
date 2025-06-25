@@ -17,6 +17,7 @@ class FilterByDateTVC: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setCheckboxState()
+        titleLbl.font = .poppinsMedium(12)
     }
     private func setCheckboxState() {
         let imageName = isChecked ? "square-check" : "square"

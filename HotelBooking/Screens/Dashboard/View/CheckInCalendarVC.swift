@@ -39,6 +39,7 @@ class CheckInCalendarVC: UIViewController, FSCalendarDelegate, FSCalendarDataSou
         backView.BackViewShadowAppyManually(cornerRadius: 20)
         alphaView.alpha = 0.1
         updateSelectedDateRangeLabel()
+        applyTextFont()
     }
   
     private func updateSelectedDateRangeLabel() {
@@ -57,7 +58,16 @@ class CheckInCalendarVC: UIViewController, FSCalendarDelegate, FSCalendarDataSou
     @IBAction func exitButton(_ sender: Any) {
         dismiss(animated: true)
     }
-
+    func applyTextFont(){
+        approximatePriceForOneNightLbl.font = .poppinsMedium(10)
+        selectedDateRange.font = .poppinsBold(12)
+        howManyNightsLbl.font = .poppinsBold(12)
+        let selectDate = NSAttributedString(
+            string: "Select Date and Search",
+            attributes: [.font: UIFont.poppinsBold(14), .foregroundColor: UIColor.white]
+        )
+        selectDateAndSearchButton.setAttributedTitle(selectDate, for: .normal)
+    }
     private func setupCalendar() {
         calendar = FSCalendar()
         calendar.translatesAutoresizingMaskIntoConstraints = false
@@ -80,10 +90,10 @@ class CheckInCalendarVC: UIViewController, FSCalendarDelegate, FSCalendarDataSou
         
         calendar.appearance.subtitleOffset = CGPoint(x: 0, y: 5)
 
-        calendar.appearance.headerTitleFont = UIFont.boldSystemFont(ofSize: 22)
-        calendar.appearance.weekdayFont = UIFont.boldSystemFont(ofSize: 16)
-        calendar.appearance.titleFont = UIFont.systemFont(ofSize: 20)
-        calendar.appearance.subtitleFont = UIFont.systemFont(ofSize: 12)
+        calendar.appearance.headerTitleFont = UIFont.poppinsBold(14)
+        calendar.appearance.weekdayFont = UIFont.poppinsMedium(12)
+        calendar.appearance.titleFont = UIFont.poppinsMedium(12)
+        calendar.appearance.subtitleFont = UIFont.poppinsMedium(10)
 
         calendarView.addSubview(calendar)
 
@@ -180,7 +190,7 @@ class CheckInCalendarVC: UIViewController, FSCalendarDelegate, FSCalendarDataSou
     }
 
     // MARK: - FSCalendarDelegateAppearance
-
+    
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
         let today = Calendar.current.startOfDay(for: Date())
         

@@ -19,8 +19,16 @@ class ChildrenGuestTVC: UITableViewCell {
         selectAgeButton.layer.cornerRadius = 10
         selectAgeButton.layer.borderWidth = 2
         selectAgeButton.layer.borderColor = UIColor.lightGray.cgColor
+        applyFontText()
     }
-
+    func applyFontText(){
+        let applyBt = NSAttributedString(
+            string: "Select",
+            attributes: [.font: UIFont.poppinsBold(14), .foregroundColor: UIColor.gray]
+        )
+        selectAgeButton.setAttributedTitle(applyBt, for: .normal)
+        childCountLbl.font = .poppinsBold(14)
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

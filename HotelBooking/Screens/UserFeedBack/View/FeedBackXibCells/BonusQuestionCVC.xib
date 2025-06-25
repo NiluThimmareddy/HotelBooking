@@ -12,25 +12,79 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BonusQuestionCVC" id="gTV-IL-0wX" customClass="BonusQuestionCVC" customModule="HotelBooking" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="145" height="116"/>
+            <rect key="frame" x="0.0" y="0.0" width="458" height="142"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="145" height="116"/>
+                <rect key="frame" x="0.0" y="0.0" width="458" height="142"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QEV-Sy-uVv">
-                        <rect key="frame" x="0.0" y="0.0" width="145" height="116"/>
+                        <rect key="frame" x="0.0" y="0.0" width="458" height="142"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="caU-dV-7HT">
-                                <rect key="frame" x="0.0" y="0.0" width="145" height="116"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lO9-nN-JKu">
+                                <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j8Y-cM-tCr">
+                                <rect key="frame" x="0.0" y="35.333333333333336" width="458" height="38.000000000000007"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUk-Jj-4vV">
+                                        <rect key="frame" x="0.0" y="0.0" width="83.666666666666671" height="38"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="angry"/>
+                                        <connections>
+                                            <action selector="RatingButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="l1A-Pu-tcQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7n-gP-vjF">
+                                        <rect key="frame" x="93.666666666666657" y="0.0" width="83.666666666666657" height="38"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="frown"/>
+                                        <connections>
+                                            <action selector="RatingButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="IM8-cf-GvZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4X5-AV-uQC">
+                                        <rect key="frame" x="187.33333333333334" y="0.0" width="83.333333333333343" height="38"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="meh"/>
+                                        <connections>
+                                            <action selector="RatingButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="z2E-42-VC8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ylo-zq-ptJ">
+                                        <rect key="frame" x="280.66666666666669" y="0.0" width="83.666666666666686" height="38"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="smile"/>
+                                        <connections>
+                                            <action selector="RatingButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="XNZ-a6-lan"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZv-J8-0Pw">
+                                        <rect key="frame" x="374.33333333333331" y="0.0" width="83.666666666666686" height="38"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="laugh"/>
+                                        <connections>
+                                            <action selector="RatingButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="MGj-GB-G8a"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="caU-dV-7HT" firstAttribute="leading" secondItem="QEV-Sy-uVv" secondAttribute="leading" id="Vv2-A0-YBg"/>
-                            <constraint firstItem="caU-dV-7HT" firstAttribute="top" secondItem="QEV-Sy-uVv" secondAttribute="top" id="ZuH-TM-BFU"/>
-                            <constraint firstAttribute="bottom" secondItem="caU-dV-7HT" secondAttribute="bottom" id="i3S-gP-Fdl"/>
-                            <constraint firstAttribute="trailing" secondItem="caU-dV-7HT" secondAttribute="trailing" id="nDN-Ns-uFv"/>
+                            <constraint firstAttribute="trailing" secondItem="j8Y-cM-tCr" secondAttribute="trailing" id="Cbk-S2-CAI"/>
+                            <constraint firstItem="j8Y-cM-tCr" firstAttribute="top" secondItem="lO9-nN-JKu" secondAttribute="bottom" constant="15" id="GZm-WE-AhO"/>
+                            <constraint firstItem="j8Y-cM-tCr" firstAttribute="leading" secondItem="QEV-Sy-uVv" secondAttribute="leading" id="NiS-p9-F2P"/>
+                            <constraint firstItem="lO9-nN-JKu" firstAttribute="top" secondItem="QEV-Sy-uVv" secondAttribute="top" id="p0Y-oo-wnF"/>
+                            <constraint firstItem="lO9-nN-JKu" firstAttribute="leading" secondItem="QEV-Sy-uVv" secondAttribute="leading" id="y3d-OO-LFM"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -42,14 +96,24 @@
                 <constraint firstAttribute="trailing" secondItem="QEV-Sy-uVv" secondAttribute="trailing" id="q0J-OX-Cd5"/>
                 <constraint firstAttribute="bottom" secondItem="QEV-Sy-uVv" secondAttribute="bottom" id="yYb-ze-cLP"/>
             </constraints>
-            <size key="customSize" width="145" height="116"/>
+            <size key="customSize" width="458" height="142"/>
             <connections>
-                <outlet property="emojiImage" destination="caU-dV-7HT" id="TDa-sp-CIP"/>
+                <outlet property="questionTitle" destination="lO9-nN-JKu" id="Hd9-hP-GnE"/>
+                <outlet property="ratingFiveButton" destination="XZv-J8-0Pw" id="rLL-9M-TH9"/>
+                <outlet property="ratingFourButton" destination="Ylo-zq-ptJ" id="LUk-jn-TIg"/>
+                <outlet property="ratingOneButton" destination="MUk-Jj-4vV" id="UPI-ge-5Cv"/>
+                <outlet property="ratingThreeButton" destination="4X5-AV-uQC" id="jR9-h6-ugB"/>
+                <outlet property="ratingTwoButton" destination="g7n-gP-vjF" id="yMi-1j-kox"/>
             </connections>
-            <point key="canvasLocation" x="106.10687022900763" y="11.971830985915494"/>
+            <point key="canvasLocation" x="343.51145038167937" y="21.126760563380284"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="angry" width="24" height="24"/>
+        <image name="frown" width="24" height="24"/>
+        <image name="laugh" width="24" height="24"/>
+        <image name="meh" width="24" height="24"/>
+        <image name="smile" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
