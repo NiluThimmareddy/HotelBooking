@@ -10,6 +10,11 @@ import UIKit
 class HotelImageOverViewVC: UIViewController {
 
    
+    
+    @IBOutlet weak var threeSixtyDegreeTV: UITableView!
+    @IBOutlet weak var PropertyView: UIView!
+    @IBOutlet weak var threeSixtyDegreeView: UIView!
+    @IBOutlet weak var propertyAndFullViewSegmentedController: UISegmentedControl!
     @IBOutlet weak var loaderImage: UIImageView!
     @IBOutlet weak var loaderBackView: UIView!
     @IBOutlet weak var roomsTypeImagesCollectionView: UICollectionView!
@@ -29,20 +34,65 @@ class HotelImageOverViewVC: UIViewController {
     var filteredHotelImages: [HotelImage] {
         return viewModel.allhotelImages.filter { $0.hotelId == hotelIdPass?.HotelId ?? ""}
     }
+    var filteredHotelThreeSixtyImages: [HotelThreeSixtyImage] {
+        return viewModel.threeSixtyImages.filter { $0.hotelId == hotelIdPass?.HotelId ?? ""}
+    }
     var filteredRoomType: [HotelRoom] = []
     var allRooms: [HotelRoom] = []
-    
+    var threeSixtyImages = ["room1","room2","room3","room4","room5"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loaderImage.isHidden = true
         loaderBackView.isHidden = true
         callRoomData()
+        callThreeSixtyImagesData()
         roomsTypeImagesCollectionView.register(UINib(nibName: "RoomTypeImagesCVC", bundle: nil),forCellWithReuseIdentifier: "RoomTypeImagesCVC")
         roomTypeCollectionView.register(UINib(nibName: "RoomTypeCVC", bundle: nil),forCellWithReuseIdentifier: "RoomTypeCVC")
+        threeSixtyDegreeTV.register(UINib(nibName: "ThreeSixtyDegreeTVC", bundle: nil), forCellReuseIdentifier: "ThreeSixtyDegreeTVC")
         hotelTitleLbl.text = hotelIdPass?.HotelName
         callImagesData()
         navigationItem.titleView = hotelTitleLbl
+        threeSixtyDegreeView.isHidden = true
+        PropertyView.isHidden = false
+        propertyAndFullViewSegmentedController.selectedSegmentIndex = 0
+        propertyAndFullViewSegmentedController(propertyAndFullViewSegmentedController)
+        threeSixtyDegreeTV.showsVerticalScrollIndicator = false
+        threeSixtyDegreeTV.showsHorizontalScrollIndicator = false
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupDefaultNavigationBarAppearance()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        setupDefaultNavigationBarDisAppearance()
+    }
+    func setupDefaultNavigationBarAppearance() {
+        if let color = UIColor(named: "defaultColor") {
+            navigationController?.navigationBar.barTintColor = color
+            navigationController?.navigationBar.backgroundColor = color
+            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.tintColor = .white
+        }
+    }
+    func setupDefaultNavigationBarDisAppearance() {
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.backgroundColor = .white
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        navigationController?.navigationBar.tintColor = .black
+    }
+    func callThreeSixtyImagesData(){
+        viewModel.switchDisplayMode(to: .hotelThreeSixtyImages)
+
+        viewModel.fetchHotels {
+            DispatchQueue.main.async {
+                let filtered = self.filteredHotelThreeSixtyImages
+                print("Filter Three Sixty Images-----> \(filtered.first?.imageUrl ?? "")")
+                self.threeSixtyDegreeTV.reloadData()
+                
+            }
+        }
     }
     func callImagesData(){
         viewModel.switchDisplayMode(to: .hotelImages)
@@ -73,7 +123,18 @@ class HotelImageOverViewVC: UIViewController {
         }
     }
   
-
+    @IBAction func propertyAndFullViewSegmentedController(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+               
+                threeSixtyDegreeView.isHidden = true
+                PropertyView.isHidden = false
+            } else {
+               
+                threeSixtyDegreeView.isHidden = false
+                PropertyView.isHidden = true
+            }
+    }
+    
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true)
     }
@@ -219,3 +280,81 @@ extension HotelImageOverViewVC: UICollectionViewDelegate,UICollectionViewDataSou
     
 }
 
+
+
+extension HotelImageOverViewVC: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard section < filteredHotelThreeSixtyImages.count else { return 0 }
+        let hotelImage = filteredHotelThreeSixtyImages[section]
+        return 1 + visibleRoomTypes(for: hotelImage).count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ThreeSixtyDegreeTVC")as! ThreeSixtyDegreeTVC
+        let hotelImage = filteredHotelThreeSixtyImages[indexPath.section]
+        let hotelImages = filteredHotelImages.first?.imageUrl
+        let roomDeluxeData = filteredRooms.filter({$0.roomType == "Deluxe"})
+        let deluxeRoom = roomDeluxeData.first?.roomImages
+        let roomSuiteData = filteredRooms.filter({$0.roomType == "Suite"})
+        let suiteRoom = roomSuiteData.first?.roomImages
+        let roomLuxuryData = filteredRooms.filter({$0.roomType == "Luxury"})
+        let luxuryRoom = roomLuxuryData.first?.roomImages
+        if indexPath.row == 0 {
+            loadImage(from: hotelImages ?? "", into: cell.imageData)
+        } else if indexPath.row == 1 {
+            loadImage(from: deluxeRoom?.first ?? "", into: cell.imageData)
+        } else if indexPath.row == 2 {
+            loadImage(from: suiteRoom?.first ?? "", into: cell.imageData)
+        } else if indexPath.row == 3 {
+            loadImage(from: luxuryRoom?.first ?? "", into: cell.imageData)
+        }
+        if indexPath.row == 0 {
+            cell.hotelTitle.text = hotelTitleLbl.text
+        } else {
+            let filteredRooms = visibleRoomTypes(for: hotelImage)
+            let room = filteredRooms[indexPath.row - 1]
+            cell.hotelTitle.text = room.roomName
+        }
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "ThreeSixtyDegreeImageViewVC") as! ThreeSixtyDegreeImageViewVC
+        let hotelImage = filteredHotelThreeSixtyImages[indexPath.section]
+        
+        if indexPath.row == 0 {
+            vc.image = hotelImage.imageUrl
+        } else {
+            let filteredRooms = visibleRoomTypes(for: hotelImage)
+            let room = filteredRooms[indexPath.row - 1]
+            vc.image = room.image
+        }
+        
+        present(vc, animated: true)
+    }
+    
+    func visibleRoomTypes(for hotelImage: HotelThreeSixtyImage) -> [RoomTypeThreeSixtyImage] {
+        var visibleRooms: [RoomTypeThreeSixtyImage] = []
+        var seenTypes = Set<String>()
+
+        for room in hotelImage.roomTypes {
+            let name = room.roomName.lowercased()
+            if name.contains("deluxe"), !seenTypes.contains("deluxe") {
+                visibleRooms.append(room)
+                seenTypes.insert("deluxe")
+            } else if name.contains("suite"), !seenTypes.contains("suite") {
+                visibleRooms.append(room)
+                seenTypes.insert("suite")
+            } else if name.contains("luxury"), !seenTypes.contains("luxury") {
+                visibleRooms.append(room)
+                seenTypes.insert("luxury")
+            }
+        }
+
+        return visibleRooms
+    }
+
+}
