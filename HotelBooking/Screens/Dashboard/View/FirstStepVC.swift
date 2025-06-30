@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FirstStepVC: UIViewController {
+class FirstStepVC: UIViewController, UIAdaptivePresentationControllerDelegate {
 
     @IBOutlet weak var roomNameLabel: UILabel!
     @IBOutlet weak var minusButton: UIButton!
@@ -17,7 +17,10 @@ class FirstStepVC: UIViewController {
     @IBOutlet weak var taxLabel: UILabel!
     
     var roomCount = 1
-    let roomPrice = 120.0
+    let roomPrice = 100.0
+    let taxPercentage: Double = 0.05
+    
+    weak var delegate: ThirdStepVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +29,18 @@ class FirstStepVC: UIViewController {
     
     func updateRoomDetails() {
         roomCountLabel.text = "\(roomCount)"
-        let totalPrice = Int(roomPrice) * roomCount
-        priceLabel.text = "$ \(totalPrice)"
-
+        
+        let totalPrice = roomPrice * Double(roomCount)
+        let taxAmount = totalPrice * taxPercentage
+        let totalPriceInt = Int(totalPrice)
+        let taxAmountInt = Int(taxAmount)
+        
+        priceLabel.text = "$ \(totalPriceInt)"
+        taxLabel.text = "$ \(taxAmountInt) taxes & fees"
+        
+        minusButton.isEnabled = roomCount > 1
+        plusButton.isEnabled = roomCount < 10
+        
     }
     
     @IBAction func dismissButtonAction(_ sender: Any) {
@@ -49,10 +61,11 @@ class FirstStepVC: UIViewController {
     
     @IBAction func nextButtonAction(_ sender: Any) {
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "SecondStepVC") as? SecondStepVC else { return }
-
+        controller.delegate = delegate
+        
         if let sheet = controller.sheetPresentationController {
             let heightFactor: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 0.5 : 0.6
-
+            
             sheet.detents = [
                 .custom { context in
                     return context.maximumDetentValue * heightFactor
@@ -60,7 +73,7 @@ class FirstStepVC: UIViewController {
             ]
             sheet.prefersGrabberVisible = true
             sheet.preferredCornerRadius = 20
-
+            
             if UIDevice.current.userInterfaceIdiom == .pad {
                 sheet.largestUndimmedDetentIdentifier = .medium
                 controller.preferredContentSize = CGSize(
@@ -73,4 +86,5 @@ class FirstStepVC: UIViewController {
         controller.modalPresentationStyle = .pageSheet
         present(controller, animated: true)
     }
+
 }

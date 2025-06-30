@@ -8,7 +8,11 @@
 import UIKit
 import SkeletonView
 
-class RoomsListPageVC: UIViewController {
+protocol ThirdStepVCDelegate: AnyObject {
+    func navigateToBookingOverview()
+}
+
+class RoomsListPageVC: UIViewController, ThirdStepVCDelegate {
 
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var roomsListTableView: UITableView!
@@ -28,12 +32,21 @@ class RoomsListPageVC: UIViewController {
         setUpUI()
     }
 
+    func navigateToBookingOverview() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "BookingOverviewVC") as! BookingOverviewVC
+        vc.navigationItem.title = "Booking Overview"
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        self.navigationItem.backBarButtonItem = backItem
+        vc.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     @IBAction func selectButtonAction(_ sender: UIBarButtonItem) {}
 
     @IBAction func continueButtonAction(_ sender: Any) {
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "FirstStepVC") as? FirstStepVC else { return }
-
+        controller.delegate = self
         if let sheet = controller.sheetPresentationController {
             let heightFactor: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 0.35 : 0.46
             
@@ -53,7 +66,7 @@ class RoomsListPageVC: UIViewController {
                 )
             }
         }
-
+        
         controller.modalPresentationStyle = .pageSheet
         present(controller, animated: true)
     }
@@ -123,7 +136,7 @@ extension RoomsListPageVC {
         roomsListTableView.isSkeletonable = true
         roomsListTableView.showAnimatedGradientSkeleton()
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.roomsListTableView.stopSkeletonAnimation()
             self.roomsListTableView.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.25))
         }

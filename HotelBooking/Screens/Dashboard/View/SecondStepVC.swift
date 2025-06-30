@@ -11,7 +11,7 @@ enum BedPreference {
     case noPreference, extraLarge, large
 }
 
-class SecondStepVC: UIViewController {
+class SecondStepVC: UIViewController, UIAdaptivePresentationControllerDelegate {
 
     @IBOutlet weak var noPreferenceButton: UIButton!
     @IBOutlet weak var extraLargeBedButton: UIButton!
@@ -20,12 +20,18 @@ class SecondStepVC: UIViewController {
     @IBOutlet weak var taxLabel: UILabel!
 
     var selectedPreference: BedPreference?
+    weak var delegate: ThirdStepVCDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         updateBedPreferenceUI()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     func updateBedPreferenceUI() {
         let selectedImage = UIImage(systemName: "record.circle.fill")?.withRenderingMode(.alwaysTemplate)
         let unselectedImage = UIImage(systemName: "circle")?.withRenderingMode(.alwaysTemplate)
@@ -61,9 +67,10 @@ class SecondStepVC: UIViewController {
     @IBAction func backButtonAction(_ sender: Any) {
         self.dismiss(animated: true)
     }
-
+    
     @IBAction func nextStepButtonAction(_ sender: Any) {
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "ThirdStepVC") as? ThirdStepVC else { return }
+        controller.delegate = delegate
 
         if let sheet = controller.sheetPresentationController {
             let heightFactor: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 0.43 : 0.6
@@ -87,6 +94,7 @@ class SecondStepVC: UIViewController {
 
         controller.modalPresentationStyle = .pageSheet
         present(controller, animated: true)
-    }
+    } 
+
 }
 

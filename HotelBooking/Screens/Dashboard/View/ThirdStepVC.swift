@@ -17,7 +17,9 @@ class ThirdStepVC: UIViewController {
     
     var bedCount = 1
     let bedPrice = 20
-    let taxPercentage: Double = 0.10
+    let taxPercentage: Double = 0.05
+    
+    weak var delegate: ThirdStepVCDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,9 @@ class ThirdStepVC: UIViewController {
         
         priceLabel.text = "$ \(totalPrice) • 1 room"
         taxLabel.text = "$ \(Int(taxAmount)) taxes & fees"
+        
+        minusButton.isEnabled = bedCount > 1
+        plusButton.isEnabled = bedCount < 3
     }
 
     @IBAction func minusButtonAction(_ sender: Any) {
@@ -51,10 +56,9 @@ class ThirdStepVC: UIViewController {
     }
     
     @IBAction func confirmButtonAction(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "BookingOverviewVC") as! BookingOverviewVC
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: {
+            self.delegate?.navigateToBookingOverview()
+        })
     }
 }
 

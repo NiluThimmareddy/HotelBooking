@@ -1,5 +1,5 @@
 {
-  "originHash" : "20f35bac93ba8c89877bf61625b7c7617fb91f9f596680f2b01fa393f1810efb",
+  "originHash" : "032b498036e578cce57e45e8f2ef8a44656272c4828b31bfd620a59a641b9c96",
   "pins" : [
     {
       "identity" : "fscalendar",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "0fbdec5172fccb90f707472eeaea4ffe095278f6",
         "version" : "2.8.4"
+      }
+    },
+    {
+      "identity" : "lottie-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/airbnb/lottie-ios.git",
+      "state" : {
+        "revision" : "a004050748dc197c56256a14dca49a035d74726c",
+        "version" : "4.5.2"
       }
     },
     {

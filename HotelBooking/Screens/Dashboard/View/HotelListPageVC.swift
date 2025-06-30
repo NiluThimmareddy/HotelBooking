@@ -166,7 +166,7 @@ extension HotelListPageVC {
         hotelListTableview.showAnimatedGradientSkeleton()
         
         viewModel.fetchHotels {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                 self.hotelListTableview.stopSkeletonAnimation()
                 self.hotelListTableview.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.25))
             }

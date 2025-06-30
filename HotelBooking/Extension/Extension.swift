@@ -314,3 +314,13 @@ extension UIView {
         }
     }
 }
+
+extension UIViewController {
+    func hideNavigationBar(animated: Bool = true) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    func showNavigationBar(animated: Bool = true) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+}

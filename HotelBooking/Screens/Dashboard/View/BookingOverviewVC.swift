@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class BookingOverviewVC: UIViewController {
 
@@ -80,15 +81,27 @@ class BookingOverviewVC: UIViewController {
     }
     
     @IBAction func bookNowButtonAction(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "BookingConformationVC") as! BookingConformationVC
-        controller.navigationItem.title = "Booking Confirmed"
-        let backItem = UIBarButtonItem()
-        backItem.title = ""
-        self.navigationItem.backBarButtonItem = backItem
-        self.navigationController?.pushViewController(controller, animated: true)
-//        controller.modalPresentationStyle = .fullScreen
-//        present(controller, animated: true)
+        let animationView = LottieAnimationView(name: "Animation - 1750924738867")
+        animationView.frame = view.bounds
+        animationView.contentMode = .scaleAspectFit
+        animationView.backgroundColor = .white
+        animationView.loopMode = .playOnce
+        view.addSubview(animationView)
+
+        animationView.play { [weak self] finished in
+            if finished {
+                animationView.removeFromSuperview()
+
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let controller = storyboard.instantiateViewController(withIdentifier: "BookingConformationVC") as! BookingConformationVC
+                controller.navigationItem.title = "Booking Confirmed"
+                let backItem = UIBarButtonItem()
+                backItem.title = ""
+                self?.navigationItem.backBarButtonItem = backItem
+                self?.navigationController?.pushViewController(controller, animated: true)
+            }
+        }
+        hideNavigationBar()
     }
     
     @IBAction func closeButton(_ sender: Any) {

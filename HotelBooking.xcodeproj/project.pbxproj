@@ -9,8 +9,22 @@
 /* Begin PBXBuildFile section */
 		B5661C5D2E017FF700A6E376 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B5661C5C2E017FF700A6E376 /* FSCalendar */; };
 		B5661C602E01802300A6E376 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = B5661C5F2E01802300A6E376 /* Reachability */; };
+		B56BB1182E0D2A53003FF772 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B56BB1172E0D2A53003FF772 /* Lottie */; };
 		B5BB7A3D2E02A26D003BF7A8 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = B5BB7A3C2E02A26D003BF7A8 /* SkeletonView */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B56BB11C2E0D2AEC003FF772 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B541E7C82DDB07E800B2B692 /* HotelBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +60,7 @@
 				B5661C5D2E017FF700A6E376 /* FSCalendar in Frameworks */,
 				B5BB7A3D2E02A26D003BF7A8 /* SkeletonView in Frameworks */,
 				B5661C602E01802300A6E376 /* Reachability in Frameworks */,
+				B56BB1182E0D2A53003FF772 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +102,7 @@
 				B541E7C42DDB07E800B2B692 /* Sources */,
 				B541E7C52DDB07E800B2B692 /* Frameworks */,
 				B541E7C62DDB07E800B2B692 /* Resources */,
+				B56BB11C2E0D2AEC003FF772 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -100,6 +116,7 @@
 				B5661C5C2E017FF700A6E376 /* FSCalendar */,
 				B5661C5F2E01802300A6E376 /* Reachability */,
 				B5BB7A3C2E02A26D003BF7A8 /* SkeletonView */,
+				B56BB1172E0D2A53003FF772 /* Lottie */,
 			);
 			productName = HotelBooking;
 			productReference = B541E7C82DDB07E800B2B692 /* HotelBooking.app */;
@@ -133,6 +150,7 @@
 				B55529532DEDC25500F4171A /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				B5661C5E2E01802300A6E376 /* XCRemoteSwiftPackageReference "Reachability" */,
 				B5BB7A3B2E02A26D003BF7A8 /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				B56BB1162E0D2A53003FF772 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B541E7C92DDB07E800B2B692 /* Products */;
@@ -384,6 +402,14 @@
 				kind = branch;
 			};
 		};
+		B56BB1162E0D2A53003FF772 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.2;
+			};
+		};
 		B5BB7A3B2E02A26D003BF7A8 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Juanpe/SkeletonView";
@@ -404,6 +430,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B5661C5E2E01802300A6E376 /* XCRemoteSwiftPackageReference "Reachability" */;
 			productName = Reachability;
+		};
+		B56BB1172E0D2A53003FF772 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B56BB1162E0D2A53003FF772 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 		B5BB7A3C2E02A26D003BF7A8 /* SkeletonView */ = {
 			isa = XCSwiftPackageProductDependency;

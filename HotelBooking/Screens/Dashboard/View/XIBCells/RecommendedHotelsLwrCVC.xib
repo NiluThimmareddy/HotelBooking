@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="215" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="bEm-VK-h9j">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="190"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="210"/>
                                     </constraint>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
