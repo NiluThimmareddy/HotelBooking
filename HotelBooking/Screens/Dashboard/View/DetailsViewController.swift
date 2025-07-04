@@ -152,7 +152,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         popularSurroundingBackView.addGestureRecognizer(swipeRight)
         
         popularSurroundingBackView.isUserInteractionEnabled = true
-        setupDefaultNavigationBarAppearance()
+//        setupDefaultNavigationBarAppearance()
         scrollViewScroll.delegate = self
         
         attractionDownView.isHidden = false
@@ -491,17 +491,14 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         navigationController?.navigationBar.tintColor = .white
     }
 
-
     @objc func heartButtonTapped() {
-        isHeartSelected.toggle() // Toggle the state
+        isHeartSelected.toggle()
         
         let imageName = isHeartSelected ? "heartFill" : "heart"
         heartBarButton?.image = UIImage(named: imageName)
     }
     
-    @objc func shareButtonTapped() {
-        print("🔗 Share tapped")
-        
+    @objc func shareButtonTapped() {        
         let shareText = """
             Check out this hotel!
             
@@ -597,22 +594,23 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
             }
         } else {
             
-            setupDefaultNavigationBarAppearance()
+//            setupDefaultNavigationBarAppearance()
         }
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setupDefaultNavigationBarAppearance()
-    }
-    func setupDefaultNavigationBarAppearance() {
-        if let color = UIColor(named: "backgroundColor") {
-            topBarView.backgroundColor = color
-            navigationController?.navigationBar.barTintColor = color
-            navigationController?.navigationBar.backgroundColor = color
-            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
-            navigationController?.navigationBar.tintColor = .black
-        }
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        setupDefaultNavigationBarAppearance()
+//    }
+    
+//    func setupDefaultNavigationBarAppearance() {
+//        if let color = UIColor(named: "backgroundColor") {
+//            topBarView.backgroundColor = color
+//            navigationController?.navigationBar.barTintColor = color
+//            navigationController?.navigationBar.backgroundColor = color
+//            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+//            navigationController?.navigationBar.tintColor = .black
+//        }
+//    }
     
 
 
@@ -622,8 +620,13 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
     }
     
     @IBAction func selectRoomButtonAction(_ sender: Any) {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "RoomsListPageVC")as! RoomsListPageVC
+        vc.navigationItem.title = "Rooms List"
+        navigationItem.backButtonTitle = ""
+        navigationController?.pushViewController(vc, animated: true)
     }
+    
     @IBAction func guestWhoStayedHereLovedViewAllButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "UserReviewsVC")as! UserReviewsVC
@@ -640,6 +643,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         navigationItem.backBarButtonItem = backItem
         navigationController?.pushViewController(vc, animated: true)
     }
+    
     func changeTextColorWhileSwipe(){
         if currentIndex == 0{
             attractionButton.tintColor = color
@@ -761,13 +765,14 @@ extension DetailsViewController: UICollectionViewDelegate,UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == hotelImagesCollectionView{
             return 1
-        }else if collectionView == availabilitiesCollectionView{
+        } else if collectionView == availabilitiesCollectionView {
             return callAvailabilities.count
-        }else{
+        } else {
             let filter = self.viewModel.allPolicies.filter { $0.HotelId == self.hotelDetailsData?.HotelId }
             return filter.count
         }
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == hotelImagesCollectionView{
             let heightCons = hotelImagesCollectionView.frame.size.height - 10
@@ -940,7 +945,6 @@ extension DetailsViewController: UITableViewDelegate,UITableViewDataSource{
             let countryName = data.country.lowercased()
             if let countryCode = CountryCodeManager.shared.nameToCode[countryName] {
                 let flagUrl = "https://flagsapi.com/\(countryCode.uppercased())/flat/64.png"
-                print("🌍 Flag URL: \(flagUrl)")
                 if let url = URL(string: flagUrl) {
                     DispatchQueue.global().async {
                         if let data = try? Data(contentsOf: url),

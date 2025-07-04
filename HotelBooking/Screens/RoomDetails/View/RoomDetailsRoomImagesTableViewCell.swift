@@ -14,7 +14,7 @@ class RoomDetailsRoomImagesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var pageControl: UIPageControl!
     
-    var roomsImages = ["room1","room2","room3","room4","room5","room6"]
+    var roomsImages = ["ic_room1","ic_room2","ic_room3","ic_room4","ic_room5","ic_room6"]
     var timer: Timer?
     var currentIndex = 0
     

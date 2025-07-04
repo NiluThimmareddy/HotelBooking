@@ -130,6 +130,10 @@ extension RoomDetailsPageViewController: UIScrollViewDelegate {
 
 import UIKit
 
+enum MealOption {
+    case none, noExtras, breakfast, lunch
+}
+
 class RoomDetailsPageViewController: UIViewController {
 
     @IBOutlet weak var roomImagesTableview: UITableView!
@@ -145,7 +149,11 @@ class RoomDetailsPageViewController: UIViewController {
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var offerView: UIView!
     @IBOutlet weak var amenitiesView: UIView!
+    @IBOutlet weak var noExtrasButton: UIButton!
+    @IBOutlet weak var breakfastButton: UIButton!
+    @IBOutlet weak var lunchButton: UIButton!
     
+    var selectedMealOption: MealOption = .none
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -167,6 +175,27 @@ class RoomDetailsPageViewController: UIViewController {
     }
     
     @IBAction func shareButtonAction(_ sender: Any) {
+    }
+    
+    @IBAction func noExtraButtonAction(_ sender: Any) {
+        selectedMealOption = .noExtras
+        updateMealButtonSelection()
+    }
+    
+    @IBAction func breakfastButtonAction(_ sender: Any) {
+        selectedMealOption = .breakfast
+        updateMealButtonSelection()
+    }
+    
+    @IBAction func lunchButtonAction(_ sender: Any) {
+        selectedMealOption = .lunch
+        updateMealButtonSelection()
+    }
+    
+    private func updateMealButtonSelection() {
+        noExtrasButton.setImage(UIImage(systemName: selectedMealOption == .noExtras ? "record.circle.fill" : "circle"), for: .normal)
+        breakfastButton.setImage(UIImage(systemName: selectedMealOption == .breakfast ? "record.circle.fill" : "circle"), for: .normal)
+        lunchButton.setImage(UIImage(systemName: selectedMealOption == .lunch ? "record.circle.fill" : "circle"), for: .normal)
     }
     
     @IBAction func deleteButtonAction(_ sender: UIButton) {

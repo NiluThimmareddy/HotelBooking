@@ -159,6 +159,30 @@ extension UIView {
         self.layer.shadowRadius = 4
     }
     
+    func addBottomShadow() {
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.2
+        self.layer.shadowOffset = CGSize(width: 0, height: 3)
+        self.layer.shadowRadius = 4
+
+        let shadowRect = CGRect(x: 0, y: self.bounds.height - 4, width: self.bounds.width, height: 4)
+        self.layer.shadowPath = UIBezierPath(rect: shadowRect).cgPath
+    }
+    
+    func applyVerticalGradient(fromColor: UIColor, toColor: UIColor) {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [fromColor.cgColor, toColor.cgColor]
+        gradientLayer.locations = [0.0, 0.35]
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 1.0)
+        gradientLayer.frame = self.bounds
+        
+        self.layer.sublayers?.removeAll(where: { $0 is CAGradientLayer })
+        
+        self.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
     func setHighlightedText(for label: UILabel, fullText: String, highlightText: String, normalFont: UIFont = .systemFont(ofSize: 14), highlightFont: UIFont = .boldSystemFont(ofSize: 18), normalColor: UIColor = .darkGray, highlightColor: UIColor = .black) {
         let attributedString = NSMutableAttributedString(string: fullText)
         
@@ -275,6 +299,23 @@ extension UIImageView {
         self.layer.sublayers?.removeAll(where: { $0.name == "blackOverlay" })
         self.layer.addSublayer(gradient)
     }
+    
+    func applyFullBlackGradient() {
+        let gradient = CAGradientLayer()
+        gradient.colors = [
+            UIColor.black.withAlphaComponent(0.50).cgColor,
+            UIColor.black.withAlphaComponent(0.50).cgColor
+        ]
+        gradient.locations = [0.0, 1.0]
+        gradient.startPoint = CGPoint(x: 0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1, y: 0.5)
+        gradient.frame = self.bounds
+        gradient.cornerRadius = self.layer.cornerRadius
+        gradient.name = "blackOverlay"
+        
+        self.layer.sublayers?.removeAll(where: { $0.name == "blackOverlay" })
+        self.layer.addSublayer(gradient)
+    }
 }
 
 extension Array {
@@ -301,7 +342,6 @@ extension UIView {
         default:
             break
         }
-        
         layer.addSublayer(border)
     }
 }

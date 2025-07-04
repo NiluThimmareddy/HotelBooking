@@ -295,6 +295,7 @@ extension HomePageViewController {
 
 */
 
+
 import UIKit
 
 class HomePageViewController: UIViewController, CalenderVCDelegate {
@@ -315,8 +316,9 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
     @IBOutlet weak var roomAndAdultsButton: UIButton!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var searchNameButton: UIButton!
+    @IBOutlet weak var stackView: UIStackView!
     
-    
+    var selectedDateRange: String?
     
     let viewModel = HotelJsonViewModel()
     var offerScrollTimer: Timer?
@@ -348,14 +350,18 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
         offerScrollTimer = nil
     }
     
+   
+    
     @IBAction func searchNameButtonAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchBarViewController") as! SearchBarViewController
+        storyboard.delegate = self
+        storyboard.selectedDateRange = selectedDateRange
         let backItem = UIBarButtonItem()
         backItem.title = ""
         self.navigationItem.backBarButtonItem = backItem
         self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.pushViewController(storyboard, animated: true)
-    }
+    }  
     
     @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
         selectedSegmentIndex = sender.selectedSegmentIndex
@@ -390,6 +396,7 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
     
     func didSelectDateRange(_ dateRangeText: String) {
         selectdateButton.setTitle(dateRangeText, for: .normal)
+        selectedDateRange = dateRangeText
     }
     
     @IBAction func roomAndAdultsButtonAction(_ sender: Any) {
@@ -442,6 +449,14 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
         backItem.title = ""
         self.navigationItem.backBarButtonItem = backItem
         self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @IBAction func recentlySeemoreButtonAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "History", bundle: nil).instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController
+        self.navigationController?.pushViewController(storyboard, animated: true)
+    }
+    
+    @IBAction func popularSeemoreButtonAction(_ sender: Any) {
     }
     
 }
@@ -573,7 +588,12 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
 
 }
 
-extension HomePageViewController {
+extension HomePageViewController : SearchBarViewControllerDelegate {
+    
+    func didSelectSearchResult(_ result: String) {
+        searchNameButton.setTitle(result, for: .normal)
+    }
+    
     func setUpUI() {
         searchView.applyCardStyle()
         scrollView.delegate = self
@@ -616,7 +636,12 @@ extension HomePageViewController {
             .foregroundColor: UIColor.white
         ]
         segmentControl.setTitleTextAttributes(selectedTextAttributes, for: .selected)
-//        configureTransparentNavBar()
+        
+        stackView.clipsToBounds = true
+        stackView.layer.cornerRadius = 20
+        stackView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
+        //        configureTransparentNavBar()
     }
     
 //    func configureTransparentNavBar() {

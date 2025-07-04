@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="116" id="IQk-zu-iuh" customClass="ContinueSearchTVC" customModule="HotelBooking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IQk-zu-iuh" id="ppQ-fH-QKb">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKI-Dd-usk">
+                        <rect key="frame" x="5" y="5" width="310" height="40"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6sX-uD-osN">
+                                <rect key="frame" x="9.6666666666666679" y="0.66666666666666785" width="40.333333333333329" height="38.666666666666657"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.22552773170000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6sX-uD-osN" secondAttribute="height" id="V51-S7-a04"/>
+                                    <constraint firstAttribute="height" constant="40" id="bLr-fy-adR"/>
+                                </constraints>
+                                <imageReference key="image" image="clock.arrow.trianglehead.counterclockwise.rotate.90" catalog="system" symbolScale="medium"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mumbai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivG-a3-lky">
+                                <rect key="frame" x="55" y="0.0" width="250" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03 Jul - 04 Jul, 2 adults" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBp-8e-ud1">
+                                <rect key="frame" x="55" y="24" width="250" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6sX-uD-osN" firstAttribute="leading" secondItem="tKI-Dd-usk" secondAttribute="leading" constant="10" id="6Kp-uR-IEE"/>
+                            <constraint firstAttribute="trailing" secondItem="ivG-a3-lky" secondAttribute="trailing" constant="5" id="6WX-eq-hnl"/>
+                            <constraint firstItem="OBp-8e-ud1" firstAttribute="leading" secondItem="ivG-a3-lky" secondAttribute="leading" id="9XC-Md-U3S"/>
+                            <constraint firstItem="ivG-a3-lky" firstAttribute="top" secondItem="6sX-uD-osN" secondAttribute="top" id="D6E-20-ymT"/>
+                            <constraint firstItem="OBp-8e-ud1" firstAttribute="bottom" secondItem="6sX-uD-osN" secondAttribute="bottom" id="Oe1-0g-FGM"/>
+                            <constraint firstItem="6sX-uD-osN" firstAttribute="centerY" secondItem="tKI-Dd-usk" secondAttribute="centerY" id="QNa-eV-7qH"/>
+                            <constraint firstItem="OBp-8e-ud1" firstAttribute="trailing" secondItem="ivG-a3-lky" secondAttribute="trailing" id="Swc-UT-kcE"/>
+                            <constraint firstItem="ivG-a3-lky" firstAttribute="leading" secondItem="6sX-uD-osN" secondAttribute="trailing" constant="5" id="YUg-mn-0Ux"/>
+                            <constraint firstItem="OBp-8e-ud1" firstAttribute="top" secondItem="ivG-a3-lky" secondAttribute="bottom" constant="6" id="YzE-p8-ZdC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tKI-Dd-usk" firstAttribute="top" secondItem="ppQ-fH-QKb" secondAttribute="top" constant="5" id="11r-nQ-FWe"/>
+                    <constraint firstItem="tKI-Dd-usk" firstAttribute="leading" secondItem="ppQ-fH-QKb" secondAttribute="leading" constant="5" id="Wco-sK-reb"/>
+                    <constraint firstAttribute="bottom" secondItem="tKI-Dd-usk" secondAttribute="bottom" constant="5" id="mwk-vm-VBz"/>
+                    <constraint firstAttribute="trailing" secondItem="tKI-Dd-usk" secondAttribute="trailing" constant="5" id="xov-Wz-Yfb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="awk-kF-xwP"/>
+            <connections>
+                <outlet property="backView" destination="tKI-Dd-usk" id="lai-5J-YPu"/>
+                <outlet property="searchedDestinationLabel" destination="ivG-a3-lky" id="NHV-0R-UJj"/>
+                <outlet property="selectedDatesLabel" destination="OBp-8e-ud1" id="DOV-hl-AeL"/>
+            </connections>
+            <point key="canvasLocation" x="59.541984732824424" y="11.971830985915494"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="clock.arrow.trianglehead.counterclockwise.rotate.90" catalog="system" width="128" height="119"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

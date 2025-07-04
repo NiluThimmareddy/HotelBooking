@@ -56,7 +56,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yrk-dn-hUE">
                                 <rect key="frame" x="10" y="28.666666666666657" width="285" height="100"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="room2" translatesAutoresizingMaskIntoConstraints="NO" id="Dlg-CJ-rLE">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_room2" translatesAutoresizingMaskIntoConstraints="NO" id="Dlg-CJ-rLE">
                                         <rect key="frame" x="5" y="0.0" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Dlg-CJ-rLE" secondAttribute="height" id="MgL-J5-R4K"/>
@@ -742,8 +742,8 @@
         <image name="dollarsign.arrow.trianglehead.counterclockwise.rotate.90" catalog="system" width="128" height="119"/>
         <image name="figure.pool.swim" catalog="system" width="128" height="72"/>
         <image name="fork.knife.circle" catalog="system" width="128" height="123"/>
+        <image name="ic_room2" width="1333.3333740234375" height="889"/>
         <image name="info.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="room2" width="1333.3333740234375" height="889"/>
         <image name="square.resize" catalog="system" width="128" height="116"/>
         <image name="tree.fill" catalog="system" width="128" height="118"/>
         <image name="tv" catalog="system" width="128" height="95"/>

@@ -312,3 +312,9 @@ struct GuestReviewModel{
     let name: String
     let rating: String
 }
+
+struct SearchHistoryItem: Codable {
+    let destination: String
+    let dateRange: String
+}
+
