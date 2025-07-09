@@ -18,13 +18,9 @@ class RoomsListPageVC: UIViewController, ThirdStepVCDelegate {
     @IBOutlet weak var roomsListTableView: UITableView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var filterCollectionView: UICollectionView!
     
-    var rooms: [Room] = [
-        Room(hasOffer: true, hasImage: true),
-        Room(hasOffer: nil, hasImage: true),
-        Room(hasOffer: true, hasImage: true),
-        Room(hasOffer: nil, hasImage: nil)
-    ]
+    var filterOptions = ["Hotel offers","Breakfast included","Free cancellation"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +68,24 @@ class RoomsListPageVC: UIViewController, ThirdStepVCDelegate {
     }
 }
 
+extension RoomsListPageVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return filterOptions.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FilterRoomsCVC", for: indexPath) as! FilterRoomsCVC
+        cell.filterButton.setTitle(filterOptions[indexPath.row], for: .normal)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+}
 extension RoomsListPageVC: SkeletonTableViewDataSource, UITableViewDelegate {
 
     func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,38 +93,20 @@ extension RoomsListPageVC: SkeletonTableViewDataSource, UITableViewDelegate {
     }
 
     func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
-        return "RoomsListTableViewCell"
+        return "RoomsListTVC"
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rooms.count
+        return 4
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let room = rooms[indexPath.row]
-
-        if room.hasOffer == true && room.hasImage == true {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "RoomsListTableViewCell", for: indexPath) as! RoomsListTableViewCell
-            return cell
-        } else if room.hasImage == true {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "RoomsListLwrTableViewCell", for: indexPath) as! RoomsListLwrTableViewCell
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "RoomsListUprTableviewCell", for: indexPath) as! RoomsListUprTableviewCell
-            return cell
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RoomsListTVC") as! RoomsListTVC
+        return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let room = rooms[indexPath.row]
-
-        if room.hasOffer == true && room.hasImage == true {
-            return 537
-        } else if room.hasImage == true {
-            return 425
-        } else {
-            return 522.3
-        }
+       return 350
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -124,15 +120,15 @@ extension RoomsListPageVC: SkeletonTableViewDataSource, UITableViewDelegate {
     }
 }
 
+
+
 extension RoomsListPageVC {
     func setUpUI() {
         bottomView.addTopShadow()
-        roomsListTableView.delegate = self
-        roomsListTableView.dataSource = self
-        roomsListTableView.register(UINib(nibName: "RoomsListTableViewCell", bundle: nil), forCellReuseIdentifier: "RoomsListTableViewCell")
-        roomsListTableView.register(UINib(nibName: "RoomsListLwrTableViewCell", bundle: nil), forCellReuseIdentifier: "RoomsListLwrTableViewCell")
-        roomsListTableView.register(UINib(nibName: "RoomsListUprTableviewCell", bundle: nil), forCellReuseIdentifier: "RoomsListUprTableviewCell")
 
+        filterCollectionView.register(UINib(nibName: "FilterRoomsCVC", bundle: nil), forCellWithReuseIdentifier: "FilterRoomsCVC")
+        roomsListTableView.register(UINib(nibName: "RoomsListTVC", bundle: nil), forCellReuseIdentifier: "RoomsListTVC")
+       
         roomsListTableView.isSkeletonable = true
         roomsListTableView.showAnimatedGradientSkeleton()
 

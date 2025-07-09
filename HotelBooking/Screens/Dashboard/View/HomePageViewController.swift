@@ -350,8 +350,6 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
         offerScrollTimer = nil
     }
     
-   
-    
     @IBAction func searchNameButtonAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchBarViewController") as! SearchBarViewController
         storyboard.delegate = self
@@ -457,6 +455,12 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
     }
     
     @IBAction func popularSeemoreButtonAction(_ sender: Any) {
+        let controller = UIStoryboard(name: "Review", bundle: nil).instantiateViewController(withIdentifier: "PostReviewViewController") as! PostReviewViewController
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        self.navigationItem.backBarButtonItem = backItem
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
 }
