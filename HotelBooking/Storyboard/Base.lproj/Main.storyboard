@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zhe-Kr-tO8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zhe-Kr-tO8">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="idE-2w-jKz">
-                                <rect key="frame" x="50" y="69" width="293" height="30"/>
+                                <rect key="frame" x="50" y="128" width="293" height="30"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="99D-ui-QGa">
                                         <rect key="frame" x="0.0" y="8" width="293" height="14"/>
@@ -72,7 +72,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RLF-p4-cKS">
-                                <rect key="frame" x="0.0" y="104" width="393" height="40"/>
+                                <rect key="frame" x="0.0" y="163" width="393" height="40"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxN-vc-BXc">
                                         <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="40"/>
@@ -155,7 +155,7 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="POM-EM-ZEY">
-                                <rect key="frame" x="0.0" y="149" width="393" height="703"/>
+                                <rect key="frame" x="0.0" y="208" width="393" height="610"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="wRq-kI-yJs" id="BGu-kz-SE6"/>
@@ -163,7 +163,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACf-Qa-faI">
-                                <rect key="frame" x="10" y="69" width="30" height="30"/>
+                                <rect key="frame" x="10" y="128" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Xy0-rq-kan">
                                         <variation key="heightClass=regular-widthClass=regular" constant="40"/>
@@ -180,7 +180,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAA-Qj-mlh">
-                                <rect key="frame" x="353" y="69" width="30" height="30"/>
+                                <rect key="frame" x="353" y="128" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vAA-Qj-mlh" secondAttribute="height" id="dnj-mK-Iya"/>
                                     <constraint firstAttribute="height" constant="30" id="t1e-kI-h4o"/>
@@ -195,7 +195,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMs-81-4t8">
-                                <rect key="frame" x="0.0" y="107" width="393" height="180"/>
+                                <rect key="frame" x="0.0" y="166" width="393" height="180"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="5wu-S5-MWg">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="110"/>
@@ -385,7 +385,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jIF-EX-J9G">
-                                <rect key="frame" x="0.0" y="64" width="393" height="50"/>
+                                <rect key="frame" x="0.0" y="123" width="393" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0kK-4P-RAq"/>
@@ -403,7 +403,7 @@
                                 </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TnO-x2-ROP">
-                                <rect key="frame" x="0.0" y="124" width="393" height="565"/>
+                                <rect key="frame" x="0.0" y="183" width="393" height="472"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="nKK-Lb-kMS" id="oZa-4R-HJ4"/>
@@ -411,7 +411,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zwy-k1-pBt">
-                                <rect key="frame" x="0.0" y="689" width="393" height="80"/>
+                                <rect key="frame" x="0.0" y="655" width="393" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wf7-Sz-64h">
                                         <rect key="frame" x="253" y="15" width="120" height="50"/>
@@ -512,7 +512,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBo-9p-f6U">
-                                <rect key="frame" x="20" y="79" width="25" height="25"/>
+                                <rect key="frame" x="20" y="138" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="6mh-yc-CcM"/>
                                     <constraint firstAttribute="width" secondItem="DBo-9p-f6U" secondAttribute="height" id="qFF-dw-VsP"/>
@@ -527,25 +527,25 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1 of 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mg0-Wa-JuR">
-                                <rect key="frame" x="55" y="81.333333333333329" width="288" height="20.333333333333329"/>
+                                <rect key="frame" x="55" y="140.33333333333334" width="288" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delux Twin Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2y0-Wz-2qo">
-                                <rect key="frame" x="20" y="134" width="353" height="20.333333333333343"/>
+                                <rect key="frame" x="20" y="193" width="353" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of rooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuz-Jb-uTJ">
-                                <rect key="frame" x="20" y="184.33333333333334" width="133.33333333333334" height="20.333333333333343"/>
+                                <rect key="frame" x="20" y="243.33333333333334" width="133.33333333333334" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HGZ-3r-1Ln">
-                                <rect key="frame" x="232" y="169.66666666666666" width="141" height="50"/>
+                                <rect key="frame" x="232" y="228.66666666666666" width="141" height="49.999999999999972"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mvm-UA-PVr">
                                         <rect key="frame" x="0.0" y="0.0" width="47" height="50"/>
@@ -592,39 +592,39 @@
                                 </userDefinedRuntimeAttributes>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VEh-FB-PXS">
-                                <rect key="frame" x="0.0" y="239.66666666666666" width="393" height="1"/>
+                                <rect key="frame" x="0.0" y="298.66666666666669" width="393" height="1"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="x3L-EU-mAE"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 150.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CV5-yw-2WF">
-                                <rect key="frame" x="20.000000000000004" y="260.66666666666669" width="63.333333333333343" height="19.333333333333314"/>
+                                <rect key="frame" x="20.000000000000004" y="319.66666666666669" width="63.333333333333343" height="19.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="1" green="0.28627450980000002" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OlZ-0H-yhz">
-                                <rect key="frame" x="20.000000000000004" y="269.66666666666669" width="63.333333333333343" height="1"/>
+                                <rect key="frame" x="20.000000000000004" y="328.66666666666669" width="63.333333333333343" height="1"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="6bJ-sG-019"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 100.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyz-NN-ktY">
-                                <rect key="frame" x="93.333333333333314" y="259.33333333333331" width="76" height="21.666666666666686"/>
+                                <rect key="frame" x="93.333333333333314" y="318.33333333333331" width="76" height="21.666666666666686"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 10 taxes &amp; fees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQ4-c3-btQ">
-                                <rect key="frame" x="20" y="286" width="149.33333333333334" height="19.333333333333314"/>
+                                <rect key="frame" x="20" y="345" width="149.33333333333334" height="19.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CX6-hQ-zFg">
-                                <rect key="frame" x="20" y="335.33333333333331" width="353" height="50"/>
+                                <rect key="frame" x="20" y="394.33333333333331" width="353" height="50"/>
                                 <color key="backgroundColor" name="defaultColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="M9b-EM-YaU"/>
@@ -700,7 +700,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUb-Hv-Dg4">
-                                <rect key="frame" x="20" y="79" width="25" height="25"/>
+                                <rect key="frame" x="20" y="138" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="sUb-Hv-Dg4" secondAttribute="height" id="faC-Wc-kmX"/>
                                     <constraint firstAttribute="height" constant="25" id="rzL-Kz-iHN"/>
@@ -720,25 +720,25 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 2 of 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0c-Vf-guz">
-                                <rect key="frame" x="65" y="82" width="278" height="19.333333333333329"/>
+                                <rect key="frame" x="65" y="141" width="278" height="19.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your prefered bed option" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyf-cG-0Zx">
-                                <rect key="frame" x="20" y="134" width="353" height="20.333333333333343"/>
+                                <rect key="frame" x="20" y="193" width="353" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The property will do its best to meet your needs " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zb2-SI-H4v">
-                                <rect key="frame" x="20" y="164.33333333333334" width="353" height="17"/>
+                                <rect key="frame" x="20" y="223.33333333333334" width="353" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Scg-7h-llD">
-                                <rect key="frame" x="20" y="201.33333333333337" width="353" height="150"/>
+                                <rect key="frame" x="20" y="260.33333333333331" width="353" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPw-PM-Ow0">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="43.333333333333336"/>
@@ -763,7 +763,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8S-Zp-KpC">
-                                        <rect key="frame" x="0.0" y="53.333333333333314" width="353" height="43.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="53.333333333333371" width="353" height="43.333333333333343"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="1 extra-large double bed" imagePadding="20">
@@ -785,7 +785,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnN-Pp-FIc">
-                                        <rect key="frame" x="0.0" y="106.66666666666664" width="353" height="43.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="106.66666666666667" width="353" height="43.333333333333329"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="1 large double bed" imagePadding="20">
@@ -814,19 +814,19 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 100.00 • 2 rooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAe-Bf-K6C">
-                                <rect key="frame" x="20" y="381.33333333333331" width="353" height="21.666666666666686"/>
+                                <rect key="frame" x="20" y="440.33333333333331" width="353" height="21.666666666666686"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 10 taxes &amp; fees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6I7-18-B5Z">
-                                <rect key="frame" x="20" y="408" width="353" height="19.333333333333314"/>
+                                <rect key="frame" x="20" y="467" width="353" height="19.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvu-ET-LdL">
-                                <rect key="frame" x="20" y="457.33333333333331" width="353" height="50"/>
+                                <rect key="frame" x="20" y="516.33333333333337" width="353" height="50"/>
                                 <color key="backgroundColor" name="defaultColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Kg7-Q6-sPk"/>
@@ -894,13 +894,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjj-pm-tuG">
-                                <rect key="frame" x="20" y="79" width="353" height="24"/>
+                                <rect key="frame" x="20" y="138" width="353" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zxE-mG-AjP">
-                                <rect key="frame" x="0.0" y="113" width="393" height="634.33333333333337"/>
+                                <rect key="frame" x="0.0" y="172" width="393" height="541.33333333333337"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="pu9-bu-Ys7" id="z9O-iu-4mw"/>
@@ -908,7 +908,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wA1-uW-Hk8">
-                                <rect key="frame" x="308" y="767.33333333333337" width="75" height="35.666666666666629"/>
+                                <rect key="frame" x="308" y="733.33333333333337" width="75" height="35.666666666666629"/>
                                 <color key="backgroundColor" name="defaultColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="gh0-AI-g9V">
@@ -969,7 +969,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBY-B2-Gan">
-                                <rect key="frame" x="0.0" y="59" width="393" height="679"/>
+                                <rect key="frame" x="0.0" y="118" width="393" height="586"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6r0-d8-hC7">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1056"/>
@@ -1067,7 +1067,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sVw-tf-3nb">
-                                                                <rect key="frame" x="0.0" y="35" width="208" height="17"/>
+                                                                <rect key="frame" x="0.0" y="35.000000000000028" width="208" height="17"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mLc-qi-Bop">
                                                                         <rect key="frame" x="0.0" y="-0.3333333333333357" width="25" height="18.000000000000004"/>
@@ -1096,10 +1096,10 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEM-r0-V8N">
-                                                                <rect key="frame" x="0.0" y="57" width="208" height="33.666666666666657"/>
+                                                                <rect key="frame" x="0.0" y="57.000000000000028" width="208" height="33.666666666666657"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hdL-3f-HQH">
-                                                                        <rect key="frame" x="0.0" y="4.3333333333333428" width="25" height="25"/>
+                                                                        <rect key="frame" x="0.0" y="4.3333333333333144" width="25" height="25"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="25" id="3gC-Ww-fpm"/>
                                                                             <constraint firstAttribute="width" secondItem="hdL-3f-HQH" secondAttribute="height" id="x2z-3N-FAi"/>
@@ -1263,20 +1263,20 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ksz-ZN-1TX">
-                                                        <rect key="frame" x="291.66666666666669" y="7.6666666666666838" width="51.333333333333314" height="20.333333333333329"/>
+                                                        <rect key="frame" x="291.66666666666669" y="7.666666666666627" width="51.333333333333314" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMg-GI-Uqf">
-                                                        <rect key="frame" x="10" y="35.666666666666686" width="333" height="1"/>
+                                                        <rect key="frame" x="10" y="35.666666666666629" width="333" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="20j-s4-gTY"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guest info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVI-ZF-PzX">
-                                                        <rect key="frame" x="10" y="46.666666666666686" width="88" height="21.666666666666671"/>
+                                                        <rect key="frame" x="10" y="46.666666666666629" width="88" height="21.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1678,7 +1678,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="YY1-8p-ImV"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amM-P4-4Oe">
-                                <rect key="frame" x="0.0" y="238" width="393" height="500"/>
+                                <rect key="frame" x="0.0" y="204" width="393" height="500"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCA-qj-G8V">
                                         <rect key="frame" x="20" y="20" width="25" height="25"/>
@@ -1696,7 +1696,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guest List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yO-0c-QnX">
-                                        <rect key="frame" x="55" y="22.333333333333314" width="308" height="20.333333333333329"/>
+                                        <rect key="frame" x="55" y="22.333333333333343" width="308" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1775,7 +1775,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ocx-bn-qT6">
-                                <rect key="frame" x="0.0" y="238" width="393" height="500"/>
+                                <rect key="frame" x="0.0" y="204" width="393" height="500"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQe-ia-rhr">
                                         <rect key="frame" x="20" y="20" width="25" height="25"/>
@@ -1794,7 +1794,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Guest " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmU-Tr-caQ">
-                                        <rect key="frame" x="55" y="22.333333333333314" width="308" height="20.333333333333329"/>
+                                        <rect key="frame" x="55" y="22.333333333333343" width="308" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1912,7 +1912,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mMs-Hl-r5k">
-                                <rect key="frame" x="0.0" y="238" width="393" height="500"/>
+                                <rect key="frame" x="0.0" y="204" width="393" height="500"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kp8-vP-Vn2">
                                         <rect key="frame" x="20" y="20" width="25" height="25"/>
@@ -1932,7 +1932,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guest Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgk-Zo-KYM">
-                                        <rect key="frame" x="55" y="22.333333333333314" width="308" height="20.333333333333329"/>
+                                        <rect key="frame" x="55" y="22.333333333333343" width="308" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -2052,7 +2052,7 @@ I understand that any ID information provided will only be used for booking trav
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKb-Wg-gXB">
-                                <rect key="frame" x="0.0" y="538" width="393" height="200"/>
+                                <rect key="frame" x="0.0" y="504" width="393" height="200"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iM-x7-Mwg">
                                         <rect key="frame" x="10" y="20" width="25" height="25"/>
@@ -2191,7 +2191,7 @@ I understand that any ID information provided will only be used for booking trav
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rkX-Ca-NrG">
-                                <rect key="frame" x="0.0" y="738" width="393" height="80"/>
+                                <rect key="frame" x="0.0" y="704" width="393" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="   $ 100.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28G-7x-pkZ">
                                         <rect key="frame" x="20.000000000000007" y="15.000000000000002" width="88.666666666666686" height="21.666666666666671"/>
@@ -2317,7 +2317,7 @@ I understand that any ID information provided will only be used for booking trav
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XsM-Ye-Did">
-                                <rect key="frame" x="0.0" y="79" width="393" height="739"/>
+                                <rect key="frame" x="0.0" y="138" width="393" height="646"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Dates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5n6-C9-1VN">
                                         <rect key="frame" x="20" y="20" width="353" height="24"/>
@@ -2346,10 +2346,10 @@ I understand that any ID information provided will only be used for booking trav
                                         </constraints>
                                     </view>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azn-5R-tvo">
-                                        <rect key="frame" x="0.0" y="110.99999999999997" width="393" height="477.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="110.99999999999997" width="393" height="384.33333333333326"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c60-tb-6Vt">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="477.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="384.33333333333331"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                         </subviews>
@@ -2365,7 +2365,7 @@ I understand that any ID information provided will only be used for booking trav
                                         <viewLayoutGuide key="frameLayoutGuide" id="n9J-dq-KkY"/>
                                     </scrollView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQW-Ww-SPG">
-                                        <rect key="frame" x="0.0" y="588.33333333333337" width="393" height="150.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="495.33333333333343" width="393" height="150.66666666666669"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vff-e1-ytg">
                                                 <rect key="frame" x="20" y="5" width="373" height="50"/>
@@ -2491,7 +2491,7 @@ I understand that any ID information provided will only be used for booking trav
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMd-Df-SUv">
-                                <rect key="frame" x="10" y="69" width="25" height="25"/>
+                                <rect key="frame" x="10" y="128" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QMd-Df-SUv" secondAttribute="height" id="Urd-cN-obw"/>
                                     <constraint firstAttribute="height" constant="25" id="jgy-XI-jDv"/>
@@ -2506,7 +2506,7 @@ I understand that any ID information provided will only be used for booking trav
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80x-3P-ZeY">
-                                <rect key="frame" x="0.0" y="104" width="393" height="714"/>
+                                <rect key="frame" x="0.0" y="163" width="393" height="621"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select rooms &amp; guests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdM-bl-ntk">
                                         <rect key="frame" x="20" y="20" width="353" height="24"/>
@@ -2592,7 +2592,7 @@ I understand that any ID information provided will only be used for booking trav
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVm-bk-Osu">
-                                                <rect key="frame" x="0.0" y="56.666666666666657" width="353" height="46.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="56.666666666666686" width="353" height="46.666666666666657"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="aKv-Qf-ow6">
                                                         <rect key="frame" x="0.0" y="0.0" width="353" height="46.666666666666664"/>
@@ -2822,7 +2822,7 @@ I understand that any ID information provided will only be used for booking trav
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child ages will be used to find you the best macth in beds, room size and special prices." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dD0-0i-6bB">
-                                        <rect key="frame" x="20" y="387.33333333333331" width="353" height="36"/>
+                                        <rect key="frame" x="20" y="387.33333333333337" width="353" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -2831,7 +2831,7 @@ I understand that any ID information provided will only be used for booking trav
                                         </variation>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TOs-FB-Hxr">
-                                        <rect key="frame" x="20" y="433.33333333333343" width="353" height="200.66666666666669"/>
+                                        <rect key="frame" x="20" y="433.33333333333337" width="353" height="107.66666666666663"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <connections>
                                             <outlet property="dataSource" destination="NJr-Ob-aGP" id="PvX-Zx-0ja"/>
@@ -2839,7 +2839,7 @@ I understand that any ID information provided will only be used for booking trav
                                         </connections>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ue-Ty-rep">
-                                        <rect key="frame" x="0.0" y="634" width="393" height="80"/>
+                                        <rect key="frame" x="0.0" y="541" width="393" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zR-Bx-1zF">
                                                 <rect key="frame" x="20" y="20" width="353" height="50"/>
@@ -2952,7 +2952,7 @@ I understand that any ID information provided will only be used for booking trav
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_assistancePet" translatesAutoresizingMaskIntoConstraints="NO" id="mZY-0h-d3c">
-                                <rect key="frame" x="121.66666666666669" y="89" width="150" height="150"/>
+                                <rect key="frame" x="121.66666666666669" y="148" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="nCA-lW-Sq5">
                                         <variation key="heightClass=regular-widthClass=regular" constant="200"/>
@@ -2961,7 +2961,7 @@ I understand that any ID information provided will only be used for booking trav
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travelling with assistance animals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XlH-k4-A1k">
-                                <rect key="frame" x="20" y="249" width="353" height="24"/>
+                                <rect key="frame" x="20" y="308" width="353" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2970,7 +2970,7 @@ I understand that any ID information provided will only be used for booking trav
                                 </variation>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="KRy-L6-BMH">
-                                <rect key="frame" x="20" y="283" width="353" height="250"/>
+                                <rect key="frame" x="20" y="342" width="353" height="250"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="VEP-MW-sps"/>
@@ -3015,7 +3015,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhr-9O-IG4">
-                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <rect key="frame" x="0.0" y="162" width="393" height="690"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEB-Vp-6w2">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="2380"/>
@@ -3710,7 +3710,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Enter destination" translatesAutoresizingMaskIntoConstraints="NO" id="dIU-Pe-7L9">
-                                <rect key="frame" x="20" y="79" width="353" height="56"/>
+                                <rect key="frame" x="20" y="138" width="353" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -3721,7 +3721,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                 </connections>
                             </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRg-yi-474">
-                                <rect key="frame" x="20" y="145" width="353" height="50"/>
+                                <rect key="frame" x="20" y="204" width="353" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locate-fixed" translatesAutoresizingMaskIntoConstraints="NO" id="v6T-kp-ABg">
                                         <rect key="frame" x="10" y="10" width="30" height="30"/>
@@ -3766,13 +3766,13 @@ In many countries, travellers with an assistance animal are entitled to book any
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue your search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFD-XU-5nY">
-                                <rect key="frame" x="20" y="215" width="353" height="21"/>
+                                <rect key="frame" x="20" y="274" width="353" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gyj-5o-Klb">
-                                <rect key="frame" x="0.0" y="246" width="393" height="572"/>
+                                <rect key="frame" x="0.0" y="305" width="393" height="479"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Dss-Me-x54" id="rCh-GP-xP2"/>
@@ -3780,7 +3780,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                 </connections>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4lU-ve-NTj">
-                                <rect key="frame" x="0.0" y="135" width="393" height="683"/>
+                                <rect key="frame" x="0.0" y="194" width="393" height="590"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Dss-Me-x54" id="LAA-wG-hKK"/>
@@ -3831,7 +3831,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vn3-7m-Wid">
-                                <rect key="frame" x="0.0" y="69" width="393" height="749"/>
+                                <rect key="frame" x="0.0" y="128" width="393" height="656"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2SD-0O-AVU">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1792.6666666666667"/>
@@ -3893,18 +3893,18 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ij7-LL-3vE">
-                                                        <rect key="frame" x="10" y="148.33333333333334" width="75.666666666666671" height="18"/>
+                                                        <rect key="frame" x="10" y="148.33333333333331" width="75.666666666666671" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="k8c-N1-9iY">
-                                                        <rect key="frame" x="95.666666666666671" y="149.66666666666669" width="15.666666666666671" height="15.666666666666657"/>
+                                                        <rect key="frame" x="95.666666666666671" y="149.66666666666666" width="15.666666666666671" height="15.666666666666657"/>
                                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="medium"/>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pZo-kP-0fL">
-                                                        <rect key="frame" x="10" y="177.66666666666666" width="373" height="50"/>
+                                                        <rect key="frame" x="10" y="177.66666666666669" width="373" height="50"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtN-Dj-raR" userLabel="2">
                                                                 <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="50"/>
@@ -4321,7 +4321,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iqh-Ks-hHa">
-                                                                <rect key="frame" x="0.0" y="61.333333333333258" width="373" height="53.666666666666657"/>
+                                                                <rect key="frame" x="0.0" y="61.333333333333371" width="373" height="53.666666666666657"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byC-cb-bTM">
                                                                         <rect key="frame" x="0.0" y="1" width="121" height="51.333333333333336"/>
@@ -4806,7 +4806,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                 <viewLayoutGuide key="frameLayoutGuide" id="y70-4n-u0m"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPJ-6Y-toK">
-                                <rect key="frame" x="0.0" y="758" width="393" height="60"/>
+                                <rect key="frame" x="0.0" y="724" width="393" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLe-bW-QOf">
                                         <rect key="frame" x="20" y="12.666666666666629" width="34" height="35"/>
@@ -4867,7 +4867,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qq2-Pu-U8r">
-                                <rect key="frame" x="20" y="796.66666666666663" width="34" height="1"/>
+                                <rect key="frame" x="20" y="762.66666666666663" width="34" height="1"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="hJ6-zj-IbM"/>
@@ -4948,7 +4948,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSP-7b-YBf">
-                                <rect key="frame" x="20" y="79" width="25" height="25"/>
+                                <rect key="frame" x="20" y="138" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="hZG-CH-mWR"/>
                                     <constraint firstAttribute="width" secondItem="xSP-7b-YBf" secondAttribute="height" id="qJl-OO-icB"/>
@@ -4968,33 +4968,33 @@ In many countries, travellers with an assistance animal are entitled to book any
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 3 of 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1e1-hL-H8b">
-                                <rect key="frame" x="65" y="82" width="278" height="19.333333333333329"/>
+                                <rect key="frame" x="65" y="141" width="278" height="19.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request cots and extra beds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJr-9M-QP3">
-                                <rect key="frame" x="20" y="134" width="353" height="20.333333333333343"/>
+                                <rect key="frame" x="20" y="193" width="353" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qz-Fd-QOW">
-                                <rect key="frame" x="20" y="164.33333333333334" width="353" height="50.333333333333343"/>
+                                <rect key="frame" x="20" y="223.33333333333334" width="353" height="50.333333333333343"/>
                                 <string key="text">The property will do its best to meet your needs. Cots and extra beds not labelled 'Free' may inclued extra charges that need to be paid during your stay.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igv-sW-Yte">
-                                <rect key="frame" x="20" y="224.66666666666666" width="353" height="32.999999999999972"/>
+                                <rect key="frame" x="20" y="283.66666666666669" width="353" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="tintColor" name="defaultColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="See full policies"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="9xv-Wj-l8i">
-                                <rect key="frame" x="20" y="277.66666666666669" width="353" height="60"/>
+                                <rect key="frame" x="20" y="336.66666666666669" width="353" height="60"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncN-Wm-EZ3">
                                         <rect key="frame" x="0.0" y="0.0" width="203" height="60"/>
@@ -5089,26 +5089,26 @@ In many countries, travellers with an assistance animal are entitled to book any
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9l-Rx-P5t">
-                                <rect key="frame" x="20" y="347.66666666666669" width="353" height="1"/>
+                                <rect key="frame" x="20" y="406.66666666666669" width="353" height="1"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="VnL-H6-lvL"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 100.00 • 2 rooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3n-we-5t0">
-                                <rect key="frame" x="20" y="368.66666666666669" width="353" height="21.666666666666686"/>
+                                <rect key="frame" x="20" y="427.66666666666669" width="353" height="21.666666666666686"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 10 taxes &amp; fees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9G-mp-Nr9">
-                                <rect key="frame" x="20" y="395.33333333333331" width="353" height="19.333333333333314"/>
+                                <rect key="frame" x="20" y="454.33333333333331" width="353" height="19.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ocy-EP-8ZL">
-                                <rect key="frame" x="20" y="444.66666666666669" width="353" height="50"/>
+                                <rect key="frame" x="20" y="503.66666666666674" width="353" height="50"/>
                                 <color key="backgroundColor" name="defaultColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="nq3-yM-0Vc"/>
@@ -5182,7 +5182,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKx-at-BRS">
-                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <rect key="frame" x="0.0" y="162" width="393" height="690"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKh-kc-8cb">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1670"/>
@@ -5236,10 +5236,10 @@ In many countries, travellers with an assistance animal are entitled to book any
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7p6-fu-0Pa">
-                                                                <rect key="frame" x="0.0" y="60.666666666666657" width="363" height="58.666666666666657"/>
+                                                                <rect key="frame" x="0.0" y="60.666666666666686" width="363" height="58.666666666666657"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="80w-67-Kh4">
-                                                                        <rect key="frame" x="20" y="17.333333333333343" width="30" height="24"/>
+                                                                        <rect key="frame" x="20" y="17.333333333333314" width="30" height="24"/>
                                                                         <color key="tintColor" systemColor="labelColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="30" id="PHv-se-KmZ"/>
@@ -5648,7 +5648,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xtj-cL-rIQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="w3X-xn-w34">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="defaultColor"/>
                         <textAttributes key="titleTextAttributes">
@@ -5670,7 +5670,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zhe-Kr-tO8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qu1-sK-nfd">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="defaultColor"/>
                         <color key="barTintColor" name="defaultColor"/>

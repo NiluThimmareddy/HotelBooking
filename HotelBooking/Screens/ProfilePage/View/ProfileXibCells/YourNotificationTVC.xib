@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="YourNotificationTVC" rowHeight="108" id="KGk-i7-Jjw" customClass="YourNotificationTVC" customModule="HotelBooking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="432" height="108"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="432" height="108"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V41-Ei-VOT">
+                        <rect key="frame" x="10" y="5" width="412" height="98"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZFz-wY-PTe">
+                                <rect key="frame" x="10" y="9" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="4rj-yS-eSq"/>
+                                    <constraint firstAttribute="width" constant="80" id="Id4-j1-Dsf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booking Confirmed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwa-cn-dBB">
+                                <rect key="frame" x="100" y="9" width="302" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View your booking confirmation for TreeHouse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93D-pw-VXN">
+                                <rect key="frame" x="100" y="40" width="302" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 june 2025" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7c-db-Tiw">
+                                <rect key="frame" x="100" y="71" width="302" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="93D-pw-VXN" firstAttribute="leading" secondItem="ZFz-wY-PTe" secondAttribute="trailing" constant="10" id="7bB-Vm-gcZ"/>
+                            <constraint firstItem="93D-pw-VXN" firstAttribute="top" secondItem="Bwa-cn-dBB" secondAttribute="bottom" constant="10" id="8Al-YT-kUP"/>
+                            <constraint firstItem="Bwa-cn-dBB" firstAttribute="top" secondItem="ZFz-wY-PTe" secondAttribute="top" id="8vu-ZU-jw2"/>
+                            <constraint firstAttribute="trailing" secondItem="93D-pw-VXN" secondAttribute="trailing" constant="10" id="9jQ-LF-h8V"/>
+                            <constraint firstAttribute="trailing" secondItem="Bwa-cn-dBB" secondAttribute="trailing" constant="10" id="F1R-Mm-2ge"/>
+                            <constraint firstItem="l7c-db-Tiw" firstAttribute="top" secondItem="93D-pw-VXN" secondAttribute="bottom" constant="10" id="H4C-gr-TrG"/>
+                            <constraint firstItem="Bwa-cn-dBB" firstAttribute="leading" secondItem="ZFz-wY-PTe" secondAttribute="trailing" constant="10" id="Qvr-TI-GMx"/>
+                            <constraint firstItem="ZFz-wY-PTe" firstAttribute="centerY" secondItem="V41-Ei-VOT" secondAttribute="centerY" id="jwV-gy-YLj"/>
+                            <constraint firstAttribute="trailing" secondItem="l7c-db-Tiw" secondAttribute="trailing" constant="10" id="vGE-0w-jwE"/>
+                            <constraint firstItem="l7c-db-Tiw" firstAttribute="leading" secondItem="ZFz-wY-PTe" secondAttribute="trailing" constant="10" id="xtv-9T-ITp"/>
+                            <constraint firstItem="ZFz-wY-PTe" firstAttribute="leading" secondItem="V41-Ei-VOT" secondAttribute="leading" constant="10" id="yTd-V2-IKx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="V41-Ei-VOT" secondAttribute="bottom" constant="5" id="64Z-rE-HX7"/>
+                    <constraint firstItem="V41-Ei-VOT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="S0n-QL-LUJ"/>
+                    <constraint firstItem="V41-Ei-VOT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Ube-R8-rA3"/>
+                    <constraint firstAttribute="trailing" secondItem="V41-Ei-VOT" secondAttribute="trailing" constant="10" id="pEn-dT-Kw9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="backView" destination="V41-Ei-VOT" id="a3h-O4-eqp"/>
+                <outlet property="bookingConfirmationLbl" destination="Bwa-cn-dBB" id="25S-Bf-Ik0"/>
+                <outlet property="dateLbl" destination="l7c-db-Tiw" id="c8r-zi-r6H"/>
+                <outlet property="hotelImage" destination="ZFz-wY-PTe" id="ish-6B-2jV"/>
+                <outlet property="viewYourBookingLbl" destination="93D-pw-VXN" id="ik4-1g-XBm"/>
+            </connections>
+            <point key="canvasLocation" x="215.26717557251908" y="11.267605633802818"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

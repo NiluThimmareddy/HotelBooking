@@ -108,6 +108,30 @@ class UserFeedBackStepTwoVC: UIViewController {
     @objc func dismissKeyboard() {
          view.endEditing(true)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupDefaultNavigationBarAppearance()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        setupDefaultNavigationBarDisAppearance()
+    }
+    func setupDefaultNavigationBarAppearance() {
+        if let color = UIColor(named: "defaultColor") {
+            navigationController?.navigationBar.barTintColor = color
+            navigationController?.navigationBar.backgroundColor = color
+            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.tintColor = .white
+        }
+    }
+    func setupDefaultNavigationBarDisAppearance() {
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.backgroundColor = .white
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        navigationController?.navigationBar.tintColor = .black
+    }
+    
     func navigationProcess(){
         let titleLabel = UILabel()
         titleLabel.text = "Step 2 of 2 (Optional)"
@@ -127,14 +151,17 @@ class UserFeedBackStepTwoVC: UIViewController {
     }
 
     @IBAction func finisgButton(_ sender: Any) {
+        
     }
     
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true)
     }
+    
 }
 
 extension UserFeedBackStepTwoVC: UITableViewDelegate, UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return expectationData.count
     }
@@ -147,15 +174,16 @@ extension UserFeedBackStepTwoVC: UITableViewDelegate, UITableViewDataSource{
         cell.titleLbl.text = expectationData[indexPath.row]
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedExpectationIndex = indexPath.row
         meetYourExpectationTV.reloadData()
     }
 
-    
 }
 
 extension UserFeedBackStepTwoVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == bonusQuestionCV{
             let width = ( bonusQuestionCV.frame.size.width - 10)
@@ -167,6 +195,7 @@ extension UserFeedBackStepTwoVC: UICollectionViewDelegate, UICollectionViewDataS
             return CGSize(width: width, height: height)
         }
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == bonusQuestionCV{
             return bonusQuestion.count
@@ -211,8 +240,11 @@ extension UserFeedBackStepTwoVC: UICollectionViewDelegate, UICollectionViewDataS
         picker.delegate = self
         present(picker, animated: true, completion: nil)
     }
+    
 }
+
 extension UserFeedBackStepTwoVC: PHPickerViewControllerDelegate {
+    
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         picker.dismiss(animated: true)
 

@@ -10,6 +10,16 @@ import UIKit
 class UserFeedBackListVC: UIViewController {
 
     @IBOutlet weak var feedBackListTV: UITableView!
+    
+    let topNameLbl: UILabel = {
+       let label = UILabel()
+       label.textColor = .white
+       label.text = "Your Reviews"
+       label.font = UIFont.poppinsBold(16)
+       label.textAlignment = .center
+       return label
+   }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let appearance = UIBarButtonItem.appearance()
@@ -17,9 +27,32 @@ class UserFeedBackListVC: UIViewController {
         feedBackListTV.register(UINib(nibName: "UserFeedBackListTVC", bundle: nil), forCellReuseIdentifier: "UserFeedBackListTVC")
         feedBackListTV.showsVerticalScrollIndicator = false
         feedBackListTV.showsHorizontalScrollIndicator = false
+        navigationItem.titleView = topNameLbl
     }
     
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupDefaultNavigationBarAppearance()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        setupDefaultNavigationBarDisAppearance()
+    }
+    func setupDefaultNavigationBarAppearance() {
+        if let color = UIColor(named: "defaultColor") {
+            navigationController?.navigationBar.barTintColor = color
+            navigationController?.navigationBar.backgroundColor = color
+            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.tintColor = .white
+        }
+    }
+    func setupDefaultNavigationBarDisAppearance() {
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.backgroundColor = .white
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        navigationController?.navigationBar.tintColor = .black
+    }
     
 }
 
