@@ -150,7 +150,18 @@ extension UIView {
         self.layer.shadowRadius = 4
         self.layer.masksToBounds = false
     }
-    
+    func backViewBlackShadow(backgroundColor: UIColor = .white,
+                             shadowColor: UIColor = .black,
+                             shadowOpacity: Float = 0.5,
+                             shadowOffset: CGSize = CGSize(width: 0, height: 1),
+                             shadowRadius: CGFloat = 3) {
+            self.backgroundColor = backgroundColor
+            self.layer.masksToBounds = false
+            self.layer.shadowColor = shadowColor.cgColor
+            self.layer.shadowOpacity = shadowOpacity
+            self.layer.shadowOffset = shadowOffset
+            self.layer.shadowRadius = shadowRadius
+        }
     func addTopShadow() {
         self.layer.masksToBounds = false
         self.layer.shadowColor = UIColor.black.cgColor

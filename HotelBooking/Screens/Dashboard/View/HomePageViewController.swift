@@ -349,8 +349,29 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
         super.viewWillDisappear(animated)
         offerScrollTimer?.invalidate()
         offerScrollTimer = nil
+        setupDefaultNavigationBarDisAppearance()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupDefaultNavigationBarAppearance()
+    }
+   
+    func setupDefaultNavigationBarAppearance() {
+        if let color = UIColor(named: "defaultColor") {
+            navigationController?.navigationBar.barTintColor = color
+            navigationController?.navigationBar.backgroundColor = color
+            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navigationController?.navigationBar.tintColor = .white
+        }
+    }
+    func setupDefaultNavigationBarDisAppearance() {
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.backgroundColor = .white
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        navigationController?.navigationBar.tintColor = .black
+    }
+
     @IBAction func searchNameButtonAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchBarViewController") as! SearchBarViewController
         storyboard.delegate = self

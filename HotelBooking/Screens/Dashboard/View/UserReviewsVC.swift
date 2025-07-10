@@ -52,7 +52,7 @@ class UserReviewsVC: UIViewController {
        let label = UILabel()
        label.textColor = .white
        label.text = "Review"
-       label.font = UIFont.boldSystemFont(ofSize: 18)
+       label.font = UIFont.poppinsBold(16)
        label.textAlignment = .center
        return label
    }()

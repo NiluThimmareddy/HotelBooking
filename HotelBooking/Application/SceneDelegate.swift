@@ -6,12 +6,53 @@
 //
 
 import UIKit
+import UserNotifications
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    func sceneDidBecomeActive(_ scene: UIScene) {
+            print("🚀 sceneDidBecomeActive called")
 
+            // For testing: reset flag to show again
+            // UserDefaults.standard.set(false, forKey: "hasViewedNotifications")
+
+            let hasViewed = UserDefaults.standard.bool(forKey: "hasViewedNotifications")
+            if !hasViewed {
+                scheduleNotificationIfNeeded()
+            }
+        }
+
+        func scheduleNotificationIfNeeded() {
+            print("🛎️ Scheduling notification...")
+
+            let content = UNMutableNotificationContent()
+            content.title = "You have new booking updates"
+            content.body = "Tap to view your confirmations and cancellations."
+            content.sound = .default
+            content.badge = 1
+            content.categoryIdentifier = "openNotifications"
+
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+
+            let request = UNNotificationRequest(identifier: "booking_updates", content: content, trigger: trigger)
+
+            UNUserNotificationCenter.current().add(request) { error in
+                if let error = error {
+                    print("❌ Notification Error: \(error.localizedDescription)")
+                } else {
+                    print("✅ Notification scheduled.")
+                }
+            }
+
+            // Optional: print pending for debug
+            UNUserNotificationCenter.current().getPendingNotificationRequests { requests in
+                print("🔍 Pending Notifications: \(requests.count)")
+            }
+        }
+
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -26,10 +67,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
     }
 
-    func sceneDidBecomeActive(_ scene: UIScene) {
-        // Called when the scene has moved from an inactive state to an active state.
-        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
-    }
 
     func sceneWillResignActive(_ scene: UIScene) {
         // Called when the scene will move from an active state to an inactive state.
