@@ -10,7 +10,7 @@ import MapKit
 import CoreLocation
 
 protocol SearchBarViewControllerDelegate: AnyObject {
-    func didSelectSearchResult(_ result: String)
+    func didSelectSearchResult(_ result: String, withDateRange: String)
 }
 
 class SearchBarViewController: UIViewController {
@@ -31,6 +31,7 @@ class SearchBarViewController: UIViewController {
     
     var searchHistory: [SearchHistoryItem] = [] {
         didSet {
+            searchHistory = Array(searchHistory.prefix(5))
             saveSearchHistory()
             continueSearchTableview.reloadData()
         }
@@ -53,7 +54,7 @@ class SearchBarViewController: UIViewController {
                 }
             }
             
-            delegate?.didSelectSearchResult(name)
+            delegate?.didSelectSearchResult(name, withDateRange: selectedDateRange ?? "No Dates Selected")
             navigationController?.popViewController(animated: true)
         } else {
             print("Current location not available yet.")
@@ -92,24 +93,27 @@ extension SearchBarViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == listTableView {
             let selectedSuggestion = suggestions[indexPath.row]
             let selectedText = "\(selectedSuggestion.title), \(selectedSuggestion.subtitle)"
             searchBar.text = selectedSuggestion.title
             currentLocationLabel.text = selectedText
-            
-            let newItem = SearchHistoryItem(destination: selectedText, dateRange: selectedDateRange ?? "No Dates Selected")
-            
-            if !searchHistory.contains(where: { $0.destination == selectedText }) {
-                searchHistory.insert(newItem, at: 0)
-                if searchHistory.count > 10 {
-                    searchHistory.removeLast()
-                }
+
+            let selectedDate = selectedDateRange ?? "No Dates Selected"
+            print("🔍 Saving search for \(selectedText) with date: \(selectedDate)")
+
+            let newItem = SearchHistoryItem(destination: selectedText, dateRange: selectedDate)
+
+            if let index = searchHistory.firstIndex(where: { $0.destination == selectedText }) {
+                searchHistory.remove(at: index)
             }
-            
-            delegate?.didSelectSearchResult(selectedText)
+
+            searchHistory.insert(newItem, at: 0)
+            searchHistory = Array(searchHistory.prefix(5))
+
+            delegate?.didSelectSearchResult(selectedText, withDateRange: selectedDate)
             suggestions.removeAll()
             listTableView.reloadData()
             listTableView.isHidden = true
@@ -117,11 +121,11 @@ extension SearchBarViewController: UITableViewDelegate, UITableViewDataSource {
             navigationController?.popViewController(animated: true)
         } else {
             let selectedItem = searchHistory[indexPath.row]
-            delegate?.didSelectSearchResult(selectedItem.destination)
+            delegate?.didSelectSearchResult(selectedItem.destination, withDateRange: selectedItem.dateRange)
             navigationController?.popViewController(animated: true)
         }
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
@@ -147,10 +151,7 @@ extension SearchBarViewController: MKLocalSearchCompleterDelegate {
         listTableView.reloadData()
         listTableView.isHidden = suggestions.isEmpty
     }
-    
-//    func completer(_ completer: MKLocalSearchCompleter, didFailWithError error: Error) {
-//        print("Search completer error: \(error.localizedDescription)")
-//    }
+
 }
 
 extension SearchBarViewController: CLLocationManagerDelegate {
@@ -186,7 +187,6 @@ extension SearchBarViewController {
         
         loadSearchHistory()
     }
-    
     
     func saveSearchHistory() {
         if let encoded = try? JSONEncoder().encode(searchHistory) {

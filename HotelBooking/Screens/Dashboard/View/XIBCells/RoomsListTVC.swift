@@ -8,8 +8,13 @@
 import UIKit
 import SkeletonView
 
-class RoomsListTVC : UITableViewCell {
+protocol RoomsListTVCDelegate: AnyObject {
+    func didTapSelectImagesButton(in cell: RoomsListTVC)
+    func didTapSelectRoom(in cell: RoomsListTVC, room: HotelRoom)
+}
 
+class RoomsListTVC : UITableViewCell {
+    
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var roomTypeLabel: UILabel!
     @IBOutlet weak var topStackView: UIStackView!
@@ -23,10 +28,15 @@ class RoomsListTVC : UITableViewCell {
     @IBOutlet weak var discountView: UIView!
     @IBOutlet weak var offerLabel: UILabel!
     @IBOutlet weak var taxesLabel: UILabel!
-    @IBOutlet weak var cancellationView: UILabel!
+    @IBOutlet weak var cancellationLabel: UILabel!
     @IBOutlet weak var selectButton: UIButton!
     @IBOutlet weak var selectImagesButton: UIButton!
+    @IBOutlet weak var bedsCountLabel: UILabel!
+    @IBOutlet weak var roomSizeLabel: UILabel!
+    @IBOutlet weak var adultsCountLabel: UILabel!
     
+    weak var delegate: RoomsListTVCDelegate?
+    var currentRoom: HotelRoom?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,11 +49,15 @@ class RoomsListTVC : UITableViewCell {
         
         backView.applyCardStyle()
     }
-
+    
     @IBAction func selectRoomButtonAction(_ sender: Any) {
+        if let room = currentRoom {
+            delegate?.didTapSelectRoom(in: self, room: room)
+        }
     }
     
     @IBAction func selectImagesButtonAction(_ sender: Any) {
+        delegate?.didTapSelectImagesButton(in: self)
     }
     
     func makeAllSubviewsSkeletonable(in view: UIView) {
@@ -51,6 +65,16 @@ class RoomsListTVC : UITableViewCell {
             $0.isSkeletonable = true
             makeAllSubviewsSkeletonable(in: $0)
         }
+    }
+    
+    func configure(with room : HotelRoom) {
+        self.currentRoom = room
+        roomTypeLabel.text = room.roomName
+        bedsCountLabel.text = "\(room.bedType)"
+        roomSizeLabel.text = room.roomSize
+        adultsCountLabel.text = "\(room.maxAdults) adults, \(room.maxChildren) children"
+        priceLabel.text = "$ \(room.basePrice)"
+        cancellationLabel.text = room.refundPolicy
     }
     
 }

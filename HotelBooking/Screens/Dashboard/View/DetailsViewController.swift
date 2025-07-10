@@ -622,8 +622,9 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
     @IBAction func selectRoomButtonAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "RoomsListPageVC")as! RoomsListPageVC
-        vc.navigationItem.title = "Rooms List"
-        navigationItem.backButtonTitle = ""
+        let titleValue = hotelDetailsData
+        vc.hotelIdPass = titleValue
+        vc.hotelDetailsData = hotelDetailsData
         navigationController?.pushViewController(vc, animated: true)
     }
     

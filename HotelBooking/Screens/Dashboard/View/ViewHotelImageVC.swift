@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewHotelImageVC: UIViewController {
+class ViewHotelImageVC : UIViewController {
     
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var photosCountLbl: UILabel!

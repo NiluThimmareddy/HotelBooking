@@ -60,35 +60,34 @@ class HotelImageOverViewVC: UIViewController {
         threeSixtyDegreeTV.showsVerticalScrollIndicator = false
         threeSixtyDegreeTV.showsHorizontalScrollIndicator = false
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setupDefaultNavigationBarAppearance()
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        setupDefaultNavigationBarDisAppearance()
-    }
-    func setupDefaultNavigationBarAppearance() {
-        if let color = UIColor(named: "defaultColor") {
-            navigationController?.navigationBar.barTintColor = color
-            navigationController?.navigationBar.backgroundColor = color
-            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-            navigationController?.navigationBar.tintColor = .white
-        }
-    }
-    func setupDefaultNavigationBarDisAppearance() {
-        navigationController?.navigationBar.barTintColor = .white
-        navigationController?.navigationBar.backgroundColor = .white
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
-        navigationController?.navigationBar.tintColor = .black
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        setupDefaultNavigationBarAppearance()
+//    }
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        setupDefaultNavigationBarDisAppearance()
+//    }
+//    func setupDefaultNavigationBarAppearance() {
+//        if let color = UIColor(named: "defaultColor") {
+//            navigationController?.navigationBar.barTintColor = color
+//            navigationController?.navigationBar.backgroundColor = color
+//            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+//            navigationController?.navigationBar.tintColor = .white
+//        }
+//    }
+//    func setupDefaultNavigationBarDisAppearance() {
+//        navigationController?.navigationBar.barTintColor = .white
+//        navigationController?.navigationBar.backgroundColor = .white
+//        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+//        navigationController?.navigationBar.tintColor = .black
+//    }
     func callThreeSixtyImagesData(){
         viewModel.switchDisplayMode(to: .hotelThreeSixtyImages)
 
         viewModel.fetchHotels {
             DispatchQueue.main.async {
                 let filtered = self.filteredHotelThreeSixtyImages
-                print("Filter Three Sixty Images-----> \(filtered.first?.imageUrl ?? "")")
                 self.threeSixtyDegreeTV.reloadData()
                 
             }
@@ -100,7 +99,6 @@ class HotelImageOverViewVC: UIViewController {
         viewModel.fetchHotels {
             DispatchQueue.main.async {
                 let filtered = self.filteredHotelImages
-                print("Filter Images-----> \(filtered)")
                 self.roomsTypeImagesCollectionView.reloadData()
                 self.roomTypeCollectionView.reloadData()
             }
@@ -112,9 +110,7 @@ class HotelImageOverViewVC: UIViewController {
         viewModel.fetchHotels {
             DispatchQueue.main.async {
                 let filter = self.viewModel.allRooms.filter({$0.hotelId == self.hotelIdPass?.HotelId ?? "" })
-                print("✅ Matched Rooms for Hotel ID\(filter)")
                 let filtered = self.filteredRooms
-                print("✅ Filtered Rooms for Hotel ID \(self.hotelIdPass?.HotelId ?? ""): \(filtered.count)")
                 self.allRooms = self.viewModel.allRooms.filter { $0.hotelId == self.hotelIdPass?.HotelId }
                 self.filteredRoomType = self.allRooms
                 self.roomsTypeImagesCollectionView.reloadData()

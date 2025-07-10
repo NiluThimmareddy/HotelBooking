@@ -12,20 +12,45 @@ protocol ThirdStepVCDelegate: AnyObject {
     func navigateToBookingOverview()
 }
 
-class RoomsListPageVC: UIViewController, ThirdStepVCDelegate {
+class RoomsListPageVC: UIViewController, ThirdStepVCDelegate, RoomsListTVCDelegate {
 
-    @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var roomsListTableView: UITableView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var filterCollectionView: UICollectionView!
+    @IBOutlet weak var bottomViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var selectedRoomPriceLabel: UILabel!
+    @IBOutlet weak var totalRoomsCountLabel: UILabel!
+    @IBOutlet weak var downTriangleImgView: UIImageView!
     
-    var filterOptions = ["Hotel offers","Breakfast included","Free cancellation"]
+    var filterOptions = ["🎁 Hotel offers","Breakfast included","Free cancellation"]
+    var hotelDetailsData: Hotel?
+    var hotelIdPass: Hotel?
+    
+    let viewModel = HotelJsonViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUpUI()
+        
+        let titleLabel = UILabel()
+        titleLabel.numberOfLines = 2
+        titleLabel.textAlignment = .left
+         
+        let titleText = NSMutableAttributedString(string: "Select room\n", attributes: [
+            .font: UIFont.boldSystemFont(ofSize: 16),
+            .foregroundColor: UIColor.white
+        ])
+        titleText.append(NSAttributedString(string: "03-July to 05-July ", attributes: [
+            .font: UIFont.systemFont(ofSize: 14),
+            .foregroundColor: UIColor.white
+        ]))
+         
+        titleLabel.attributedText = titleText
+        titleLabel.sizeToFit()
+         
+        self.navigationItem.titleView = titleLabel
     }
 
     func navigateToBookingOverview() {
@@ -38,7 +63,30 @@ class RoomsListPageVC: UIViewController, ThirdStepVCDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction func selectButtonAction(_ sender: UIBarButtonItem) {}
+    func didTapSelectImagesButton(in cell: RoomsListTVC) {
+        let controller = UIStoryboard(name: "HomePage", bundle: nil).instantiateViewController(withIdentifier: "HotelImageOverViewVC") as! HotelImageOverViewVC
+        let titleValue = hotelDetailsData
+        controller.hotelIdPass = titleValue
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        self.navigationItem.backBarButtonItem = backItem
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func didTapSelectRoom(in cell: RoomsListTVC, room: HotelRoom) {
+        bottomView.isHidden = false
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            bottomViewHeightConstraint.constant = 100
+        } else {
+            bottomViewHeightConstraint.constant = 80
+        }
+
+        selectedRoomPriceLabel.text = "$ \(room.basePrice)"
+
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+    }
 
     @IBAction func continueButtonAction(_ sender: Any) {
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "FirstStepVC") as? FirstStepVC else { return }
@@ -80,11 +128,9 @@ extension RoomsListPageVC : UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return -5
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
+
 }
 extension RoomsListPageVC: SkeletonTableViewDataSource, UITableViewDelegate {
 
@@ -97,16 +143,19 @@ extension RoomsListPageVC: SkeletonTableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return min(5, viewModel.allRooms.count)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RoomsListTVC") as! RoomsListTVC
+        cell.delegate = self
+        let rooms = viewModel.allRooms[indexPath.row]
+        cell.configure(with: rooms)
         return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       return 350
+        return UIDevice.current.userInterfaceIdiom == .pad ? 400 : 366
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -120,21 +169,31 @@ extension RoomsListPageVC: SkeletonTableViewDataSource, UITableViewDelegate {
     }
 }
 
-
-
 extension RoomsListPageVC {
     func setUpUI() {
         bottomView.addTopShadow()
+        bottomView.isHidden = true
+        bottomViewHeightConstraint.constant = 0
 
         filterCollectionView.register(UINib(nibName: "FilterRoomsCVC", bundle: nil), forCellWithReuseIdentifier: "FilterRoomsCVC")
         roomsListTableView.register(UINib(nibName: "RoomsListTVC", bundle: nil), forCellReuseIdentifier: "RoomsListTVC")
        
-        roomsListTableView.isSkeletonable = true
-        roomsListTableView.showAnimatedGradientSkeleton()
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            self.roomsListTableView.stopSkeletonAnimation()
-            self.roomsListTableView.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.25))
+        [roomsListTableView,totalRoomsCountLabel,downTriangleImgView].forEach { skeltonView in
+            skeltonView.isSkeletonable = true
+            skeltonView.showAnimatedGradientSkeleton()
         }
+
+        viewModel.fetchHotels {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                [self.roomsListTableView, self.totalRoomsCountLabel, self.downTriangleImgView].forEach { skeletonView in
+                    skeletonView?.stopSkeletonAnimation()
+                    skeletonView?.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.25))
+                }
+
+                let visibleRoomCount = min(5, self.viewModel.allRooms.count)
+                self.totalRoomsCountLabel.text = "\(visibleRoomCount) room type\(visibleRoomCount == 1 ? "" : "s")"
+            }
+        }
+        
     }
 }

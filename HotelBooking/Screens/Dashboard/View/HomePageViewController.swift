@@ -319,6 +319,7 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
     @IBOutlet weak var stackView: UIStackView!
     
     var selectedDateRange: String?
+    var selectedDestination: String?
     
     let viewModel = HotelJsonViewModel()
     var offerScrollTimer: Timer?
@@ -353,7 +354,6 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
     @IBAction func searchNameButtonAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchBarViewController") as! SearchBarViewController
         storyboard.delegate = self
-        storyboard.selectedDateRange = selectedDateRange
         let backItem = UIBarButtonItem()
         backItem.title = ""
         self.navigationItem.backBarButtonItem = backItem
@@ -430,9 +430,32 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
 
         present(controller, animated: true)
     }
-
-
+    
     @IBAction func searchButtonAction(_ sender: Any) {
+        guard let destination = selectedDestination,
+              let dateRange = selectedDateRange else {
+            print("Destination or Date range missing")
+            return
+        }
+
+        var history: [SearchHistoryItem] = []
+        if let data = UserDefaults.standard.data(forKey: "SearchHistory"),
+           let decoded = try? JSONDecoder().decode([SearchHistoryItem].self, from: data) {
+            history = decoded
+        }
+
+        if let index = history.firstIndex(where: { $0.destination == destination }) {
+            history.remove(at: index)
+        }
+
+        let newItem = SearchHistoryItem(destination: destination, dateRange: dateRange)
+        history.insert(newItem, at: 0)
+        history = Array(history.prefix(5))
+
+        if let encoded = try? JSONEncoder().encode(history) {
+            UserDefaults.standard.set(encoded, forKey: "SearchHistory")
+        }
+
         let controller = storyboard?.instantiateViewController(withIdentifier: "HotelListPageVC") as! HotelListPageVC
         let backItem = UIBarButtonItem()
         backItem.title = ""
@@ -440,6 +463,7 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
         self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.pushViewController(controller, animated: true)
     }
+
     
     @IBAction func seeDealsButtonAction(_ sender: Any) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "HotelListPageVC") as! HotelListPageVC
@@ -594,8 +618,10 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
 
 extension HomePageViewController : SearchBarViewControllerDelegate {
     
-    func didSelectSearchResult(_ result: String) {
+    func didSelectSearchResult(_ result: String, withDateRange dateRange: String) {
         searchNameButton.setTitle(result, for: .normal)
+        selectedDestination = result
+        selectedDateRange = dateRange
     }
     
     func setUpUI() {
