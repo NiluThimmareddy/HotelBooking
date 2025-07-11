@@ -326,6 +326,10 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
     var currentOfferIndex = 0
     var selectedSegmentIndex: Int = 0
     
+    var selectedRooms: Int = 1
+    var selectedAdults: Int = 2
+    var selectedChildren: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
@@ -349,27 +353,7 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
         super.viewWillDisappear(animated)
         offerScrollTimer?.invalidate()
         offerScrollTimer = nil
-        setupDefaultNavigationBarDisAppearance()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setupDefaultNavigationBarAppearance()
-    }
-   
-    func setupDefaultNavigationBarAppearance() {
-        if let color = UIColor(named: "defaultColor") {
-            navigationController?.navigationBar.barTintColor = color
-            navigationController?.navigationBar.backgroundColor = color
-            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-            navigationController?.navigationBar.tintColor = .white
-        }
-    }
-    func setupDefaultNavigationBarDisAppearance() {
-        navigationController?.navigationBar.barTintColor = .white
-        navigationController?.navigationBar.backgroundColor = .white
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
-        navigationController?.navigationBar.tintColor = .black
+        
     }
 
     @IBAction func searchNameButtonAction(_ sender: Any) {
@@ -390,6 +374,10 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
     @IBAction func selectdateButtonAction(_ sender: Any) {
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "CalenderVC") as? CalenderVC else { return }
         controller.delegate = self
+        
+        controller.selectedRooms = selectedRooms
+        controller.selectedAdults = selectedAdults
+        controller.selectedChildren = selectedChildren
         
         if let sheet = controller.sheetPresentationController {
             sheet.detents = [
@@ -447,15 +435,28 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
         controller.onApply = { [weak self] rooms, adults, children in
             let title = "\(rooms) Room\(rooms > 1 ? "s" : "") , \(adults) Adult\(adults > 1 ? "s" : "")" + (children > 0 ? " , \(children) Child\(children > 1 ? "ren" : "")" : "")
             self?.roomAndAdultsButton.setTitle(title, for: .normal)
+            self?.selectedRooms = rooms
+            self?.selectedAdults = adults
+            self?.selectedChildren = children
         }
 
         present(controller, animated: true)
     }
-    
+
     @IBAction func searchButtonAction(_ sender: Any) {
-        guard let destination = selectedDestination,
-              let dateRange = selectedDateRange else {
-            print("Destination or Date range missing")
+        guard let destination = selectedDestination, !destination.isEmpty else {
+            showAlert(message: "Please select a destination.")
+            return
+        }
+
+        if selectedDateRange == nil || selectedDateRange?.isEmpty == true {
+            let defaultDateRange = Date.todayAndTomorrowFormattedRange()
+            selectedDateRange = defaultDateRange
+            selectdateButton.setTitle(defaultDateRange, for: .normal)
+        }
+
+        guard let dateRange = selectedDateRange else {
+            showAlert(message: "Please select a date range.") 
             return
         }
 
@@ -691,6 +692,10 @@ extension HomePageViewController : SearchBarViewControllerDelegate {
         stackView.clipsToBounds = true
         stackView.layer.cornerRadius = 20
         stackView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
+        let defaultRange = Date.todayAndTomorrowFormattedRange()
+        selectdateButton.setTitle(defaultRange, for: .normal)
+        selectedDateRange = defaultRange
         
         //        configureTransparentNavBar()
     }

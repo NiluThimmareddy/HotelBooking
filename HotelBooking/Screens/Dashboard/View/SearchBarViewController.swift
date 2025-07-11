@@ -27,7 +27,7 @@ class SearchBarViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     var currentPlacemark: CLPlacemark?
-    var selectedDateRange: String?
+    var selectedDateRange: String? = Date.todayAndTomorrowFormattedRange()
     
     var searchHistory: [SearchHistoryItem] = [] {
         didSet {
@@ -45,7 +45,7 @@ class SearchBarViewController: UIViewController {
     @IBAction func arroundCurrentLoactionButtonAction(_ sender: Any) {
         if let placemark = currentPlacemark {
             let name = placemark.locality ?? placemark.administrativeArea ?? "Unknown"
-            let newItem = SearchHistoryItem(destination: name, dateRange: selectedDateRange ?? "No Dates Selected")
+            let newItem = SearchHistoryItem(destination: name, dateRange: selectedDateRange ?? Date.todayAndTomorrowFormattedRange())
             
             if !searchHistory.contains(where: { $0.destination == name }) {
                 searchHistory.insert(newItem, at: 0)
@@ -54,7 +54,7 @@ class SearchBarViewController: UIViewController {
                 }
             }
             
-            delegate?.didSelectSearchResult(name, withDateRange: selectedDateRange ?? "No Dates Selected")
+            delegate?.didSelectSearchResult(name, withDateRange: selectedDateRange ?? Date.todayAndTomorrowFormattedRange())
             navigationController?.popViewController(animated: true)
         } else {
             print("Current location not available yet.")

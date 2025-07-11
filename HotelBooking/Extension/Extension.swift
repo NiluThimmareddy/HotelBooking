@@ -375,3 +375,25 @@ extension UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 }
+
+extension UIViewController {
+    func showAlert(title: String = "Error", message: String, buttonTitle: String = "OK") {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: buttonTitle, style: .default))
+        self.present(alert, animated: true)
+    }
+}
+extension Date {
+    static func todayAndTomorrowFormattedRange() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "E dd MMM" 
+
+        let today = Date()
+        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today)!
+
+        let todayString = dateFormatter.string(from: today)
+        let tomorrowString = dateFormatter.string(from: tomorrow)
+
+        return "\(todayString) - \(tomorrowString)"
+    }
+}
