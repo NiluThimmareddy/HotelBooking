@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import ObjectiveC
 
 extension UIViewController{
     enum AlertType{
@@ -188,9 +189,20 @@ extension UIView {
         gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.0)
         gradientLayer.endPoint = CGPoint(x: 0.5, y: 1.0)
         gradientLayer.frame = self.bounds
-        
         self.layer.sublayers?.removeAll(where: { $0 is CAGradientLayer })
-        
+        self.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    func applyGradient() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [
+            UIColor(red: 48.0/255, green: 105.0/255, blue: 178.0/255, alpha: 1.0).cgColor,
+            UIColor(red: 0.0/255, green: 59.0/255, blue: 149.0/255, alpha: 1.0).cgColor
+        ]
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        gradientLayer.frame = self.bounds
+        self.layer.sublayers?.removeAll(where: { $0 is CAGradientLayer })
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
     
@@ -274,22 +286,20 @@ extension UIFont {
 
 extension UIColor {
     convenience init(hex: String) {
-        var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-        
-        if hexSanitized.hasPrefix("#") {
-            hexSanitized.remove(at: hexSanitized.startIndex)
-        }
+        var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+        hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
         
         var rgb: UInt64 = 0
         Scanner(string: hexSanitized).scanHexInt64(&rgb)
         
-        let red = CGFloat((rgb & 0xFF0000) >> 16) / 255.0
-        let green = CGFloat((rgb & 0x00FF00) >> 8) / 255.0
-        let blue = CGFloat(rgb & 0x0000FF) / 255.0
+        let hasAlpha = hexSanitized.count == 8
+        let r = CGFloat((rgb & 0xFF0000) >> 16) / 255
+        let g = CGFloat((rgb & 0x00FF00) >> 8) / 255
+        let b = CGFloat(rgb & 0x0000FF) / 255
+        let a = hasAlpha ? CGFloat((rgb & 0xFF000000) >> 24) / 255 : 1
         
-        self.init(red: red, green: green, blue: blue, alpha: 1.0)
+        self.init(red: r, green: g, blue: b, alpha: a)
     }
-
 }
 
 extension UIImageView {
@@ -395,5 +405,68 @@ extension Date {
         let tomorrowString = dateFormatter.string(from: tomorrow)
 
         return "\(todayString) - \(tomorrowString)"
+    }
+}
+private var placeholderLabelKey: UInt8 = 0
+
+extension UITextView {
+ 
+    var placeholder: String? {
+        get {
+            return placeholderLabel?.text
+        }
+        set {
+            if let label = placeholderLabel {
+                label.text = newValue
+            } else {
+                let label = UILabel()
+                label.text = newValue
+                label.font = self.font
+                label.textColor = .lightGray
+                label.numberOfLines = 0
+                label.translatesAutoresizingMaskIntoConstraints = false
+                label.isUserInteractionEnabled = false
+                addSubview(label)
+                sendSubviewToBack(label)
+ 
+                NSLayoutConstraint.activate([
+                    label.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
+                    label.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
+                    label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5)
+                ])
+ 
+                placeholderLabel = label
+ 
+                NotificationCenter.default.addObserver(self, selector: #selector(textDidChangeInTextView), name: UITextView.textDidChangeNotification, object: self)
+            }
+ 
+            placeholderLabel?.isHidden = !(self.text?.isEmpty ?? true)
+        }
+    }
+ 
+    private var placeholderLabel: UILabel? {
+        get {
+            return objc_getAssociatedObject(self, &placeholderLabelKey) as? UILabel
+        }
+        set {
+            objc_setAssociatedObject(self, &placeholderLabelKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+ 
+    @objc private func textDidChangeInTextView() {
+        placeholderLabel?.isHidden = !(self.text?.isEmpty ?? true)
+    }
+}
+ 
+ 
+extension UIView {
+    func pinToEdges(of superview: UIView) {
+        translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: superview.topAnchor),
+            leadingAnchor.constraint(equalTo: superview.leadingAnchor),
+            trailingAnchor.constraint(equalTo: superview.trailingAnchor),
+            bottomAnchor.constraint(equalTo: superview.bottomAnchor)
+        ])
     }
 }

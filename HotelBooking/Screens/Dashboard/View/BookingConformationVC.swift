@@ -94,7 +94,11 @@ class BookingConformationVC: UIViewController {
     private func animateTransitionImageView() {
         self.view.layoutIfNeeded()
         
-        self.transitionImageViewCenterYConstraint.constant = -162
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            self.transitionImageViewCenterYConstraint.constant = -130
+        } else {
+            self.transitionImageViewCenterYConstraint.constant = -162
+        }
         UIView.animate(withDuration: 1.5,
                        delay: 0.1,
                        usingSpringWithDamping: 0.7,
