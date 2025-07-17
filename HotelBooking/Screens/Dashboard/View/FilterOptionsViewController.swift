@@ -83,25 +83,17 @@ class FilterOptionsViewController: UIViewController {
         sender.isSelected.toggle()
  
         let imageName = sender.isSelected ? "checkmark.square.fill" : "square"
-        sender.setImage(UIImage(systemName: imageName)?.withRenderingMode(.alwaysOriginal).withTintColor(UIColor(named: "defaultColor") ?? .blue), for: .normal)
+        let symbolConfig = UIImage.SymbolConfiguration(scale: .medium)
+        let image = UIImage(systemName: imageName, withConfiguration: symbolConfig)?
+            .withRenderingMode(.alwaysOriginal)
+            .withTintColor(UIColor(named: "defaultColor") ?? .blue)
         
+        sender.setImage(image, for: .normal)
         sender.setTitleColor(.black, for: .normal)
-        
-        if let imageView = sender.imageView {
-            imageView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-            imageView.tintColor = .systemGreen
-            UIView.animate(
-                withDuration: 0.3,
-                delay: 0,
-                usingSpringWithDamping: 0.4,
-                initialSpringVelocity: 0.6,
-                options: .curveEaseOut,
-                animations: {
-                    imageView.transform = CGAffineTransform.identity
-                },
-                completion: nil
-            )
-        }
+ 
+        UIView.transition(with: sender, duration: 0.2, options: .transitionCrossDissolve, animations: {
+            sender.setImage(image, for: .normal)
+        }, completion: nil)
  
         if let title = sender.titleLabel?.text {
             if sender.isSelected {

@@ -132,6 +132,7 @@ extension UIView {
         self.layer.masksToBounds = false
         self.layer.shadowPath = nil
     }
+    
     func BackViewShadowAppyManually(cornerRadius: CGFloat) {
         self.layer.cornerRadius = cornerRadius
         self.layer.shadowColor = UIColor.darkGray.cgColor
@@ -140,6 +141,7 @@ extension UIView {
         self.layer.shadowRadius = 4
         self.layer.masksToBounds = false
     }
+    
     func BackViewShadow(){
         self.layer.shadowOpacity = 0.0
         self.layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -151,18 +153,20 @@ extension UIView {
         self.layer.shadowRadius = 4
         self.layer.masksToBounds = false
     }
+    
     func backViewBlackShadow(backgroundColor: UIColor = .white,
                              shadowColor: UIColor = .black,
                              shadowOpacity: Float = 0.5,
                              shadowOffset: CGSize = CGSize(width: 0, height: 1),
                              shadowRadius: CGFloat = 3) {
-            self.backgroundColor = backgroundColor
-            self.layer.masksToBounds = false
-            self.layer.shadowColor = shadowColor.cgColor
-            self.layer.shadowOpacity = shadowOpacity
-            self.layer.shadowOffset = shadowOffset
-            self.layer.shadowRadius = shadowRadius
-        }
+        self.backgroundColor = backgroundColor
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = shadowColor.cgColor
+        self.layer.shadowOpacity = shadowOpacity
+        self.layer.shadowOffset = shadowOffset
+        self.layer.shadowRadius = shadowRadius
+    }
+    
     func addTopShadow() {
         self.layer.masksToBounds = false
         self.layer.shadowColor = UIColor.black.cgColor
@@ -193,6 +197,20 @@ extension UIView {
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
     
+    func applyVerticalGradient() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [
+            UIColor(red: 48.0/255, green: 105.0/255, blue: 178.0/255, alpha: 1.0).cgColor,
+            UIColor(red: 0.0/255, green: 59.0/255, blue: 149.0/255, alpha: 1.0).cgColor
+        ]
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.0)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.0)
+        gradientLayer.frame = self.bounds
+
+        self.layer.sublayers?.removeAll(where: { $0 is CAGradientLayer })
+        self.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
     func applyGradient() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [
@@ -206,14 +224,71 @@ extension UIView {
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
     
-    func setHighlightedText(for label: UILabel, fullText: String, highlightText: String, normalFont: UIFont = .systemFont(ofSize: 14), highlightFont: UIFont = .boldSystemFont(ofSize: 18), normalColor: UIColor = .darkGray, highlightColor: UIColor = .black) {
-        let attributedString = NSMutableAttributedString(string: fullText)
+    func allSubviewsRecursive() -> [UIView] {
+        return subviews + subviews.flatMap { $0.allSubviewsRecursive() }
+    }
+    
+    func startPulseShimmerr() {
+        let pulse = CABasicAnimation(keyPath: "opacity")
+        pulse.duration = 0.8
+        pulse.fromValue = 0.5
+        pulse.toValue = 1
+        pulse.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        pulse.autoreverses = true
+        pulse.repeatCount = .infinity
+        self.layer.add(pulse, forKey: "pulseShimmer")
+    }
+    
+    func stopPulseShimmer() {
+        self.layer.removeAnimation(forKey: "pulseShimmer")
+    }
+    
+    func startPulseShimmer() {
+        stopShimmering()
         
+        let lightGray = UIColor.systemGray4.cgColor
+        let white = UIColor.white.withAlphaComponent(0.6).cgColor
+        
+        let gradient = CAGradientLayer()
+        gradient.colors = [lightGray, white, lightGray]
+        gradient.locations = [0, 0.5, 1]
+        gradient.startPoint = CGPoint(x: 0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1, y: 0.5)
+        gradient.frame = self.bounds
+        gradient.name = "pulseShimmerLayer"
+        
+        let animation = CABasicAnimation(keyPath: "locations")
+        animation.fromValue = [-1, -0.2, 0.2]
+        animation.toValue = [0.8, 1.2, 2]
+        animation.duration = 0.8 // faster pulse
+        animation.repeatCount = .infinity
+        
+        gradient.add(animation, forKey: "pulseShimmer")
+        self.layer.mask = gradient
+    }
+    
+    func stopShimmering() {
+        self.layer.mask = nil
+        self.layer.sublayers?.removeAll { $0.name == "pulseShimmerLayer" }
+    }
+}
+
+extension UILabel {
+    func setHighlightedText(
+        fullText: String,
+        highlightText: String,
+        normalFont: UIFont = .systemFont(ofSize: 14),
+        highlightFont: UIFont = .boldSystemFont(ofSize: 18),
+        normalColor: UIColor = .darkGray,
+        highlightColor: UIColor = .black
+    ) {
+        let attributedString = NSMutableAttributedString(string: fullText)
+
         attributedString.addAttributes([
             .font: normalFont,
             .foregroundColor: normalColor
         ], range: NSRange(location: 0, length: attributedString.length))
-        
+
         if let range = fullText.range(of: highlightText) {
             let nsRange = NSRange(range, in: fullText)
             attributedString.addAttributes([
@@ -221,64 +296,16 @@ extension UIView {
                 .foregroundColor: highlightColor
             ], range: nsRange)
         }
-        
-        label.attributedText = attributedString
+
+        self.attributedText = attributedString
     }
-    func allSubviewsRecursive() -> [UIView] {
-            return subviews + subviews.flatMap { $0.allSubviewsRecursive() }
-        }
-
- 
-        func startPulseShimmerr() {
-            let pulse = CABasicAnimation(keyPath: "opacity")
-            pulse.duration = 0.8
-            pulse.fromValue = 0.5
-            pulse.toValue = 1
-            pulse.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-            pulse.autoreverses = true
-            pulse.repeatCount = .infinity
-            self.layer.add(pulse, forKey: "pulseShimmer")
-        }
-
-        func stopPulseShimmer() {
-            self.layer.removeAnimation(forKey: "pulseShimmer")
-        }
-    
-    func startPulseShimmer() {
-           stopShimmering()
-
-           let lightGray = UIColor.systemGray4.cgColor
-           let white = UIColor.white.withAlphaComponent(0.6).cgColor
-
-           let gradient = CAGradientLayer()
-           gradient.colors = [lightGray, white, lightGray]
-           gradient.locations = [0, 0.5, 1]
-           gradient.startPoint = CGPoint(x: 0, y: 0.5)
-           gradient.endPoint = CGPoint(x: 1, y: 0.5)
-           gradient.frame = self.bounds
-           gradient.name = "pulseShimmerLayer"
-
-           let animation = CABasicAnimation(keyPath: "locations")
-           animation.fromValue = [-1, -0.2, 0.2]
-           animation.toValue = [0.8, 1.2, 2]
-           animation.duration = 0.8 // faster pulse
-           animation.repeatCount = .infinity
-
-           gradient.add(animation, forKey: "pulseShimmer")
-           self.layer.mask = gradient
-       }
-       
-       func stopShimmering() {
-           self.layer.mask = nil
-           self.layer.sublayers?.removeAll { $0.name == "pulseShimmerLayer" }
-       }
 }
 
 extension UIFont {
     static func poppinsMedium(_ size: CGFloat) -> UIFont {
         UIFont(name: "Poppins-Medium", size: size) ?? UIFont.systemFont(ofSize: size)
     }
-
+    
     static func poppinsBold(_ size: CGFloat) -> UIFont {
         UIFont(name: "Poppins-Bold", size: size) ?? UIFont.boldSystemFont(ofSize: size)
     }
@@ -316,7 +343,7 @@ extension UIImageView {
         gradient.frame = self.bounds
         gradient.cornerRadius = self.layer.cornerRadius
         gradient.name = "blackOverlay"
-
+        
         self.layer.sublayers?.removeAll(where: { $0.name == "blackOverlay" })
         self.layer.addSublayer(gradient)
     }
@@ -393,24 +420,26 @@ extension UIViewController {
         self.present(alert, animated: true)
     }
 }
+
 extension Date {
     static func todayAndTomorrowFormattedRange() -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "E dd MMM" 
-
+        dateFormatter.dateFormat = "E dd MMM"
+        
         let today = Date()
         let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today)!
-
+        
         let todayString = dateFormatter.string(from: today)
         let tomorrowString = dateFormatter.string(from: tomorrow)
-
+        
         return "\(todayString) - \(tomorrowString)"
     }
 }
+
 private var placeholderLabelKey: UInt8 = 0
 
 extension UITextView {
- 
+    
     var placeholder: String? {
         get {
             return placeholderLabel?.text
@@ -428,22 +457,22 @@ extension UITextView {
                 label.isUserInteractionEnabled = false
                 addSubview(label)
                 sendSubviewToBack(label)
- 
+                
                 NSLayoutConstraint.activate([
                     label.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
                     label.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
                     label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5)
                 ])
- 
+                
                 placeholderLabel = label
- 
+                
                 NotificationCenter.default.addObserver(self, selector: #selector(textDidChangeInTextView), name: UITextView.textDidChangeNotification, object: self)
             }
- 
+            
             placeholderLabel?.isHidden = !(self.text?.isEmpty ?? true)
         }
     }
- 
+    
     private var placeholderLabel: UILabel? {
         get {
             return objc_getAssociatedObject(self, &placeholderLabelKey) as? UILabel
@@ -452,13 +481,13 @@ extension UITextView {
             objc_setAssociatedObject(self, &placeholderLabelKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
- 
+    
     @objc private func textDidChangeInTextView() {
         placeholderLabel?.isHidden = !(self.text?.isEmpty ?? true)
     }
 }
- 
- 
+
+
 extension UIView {
     func pinToEdges(of superview: UIView) {
         translatesAutoresizingMaskIntoConstraints = false

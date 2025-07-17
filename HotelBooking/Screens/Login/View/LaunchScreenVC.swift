@@ -28,7 +28,8 @@ class LaunchScreenVC: UIViewController {
     }
     
     func movetoLoginScreen(){
-        let controller = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        let storyboard = UIStoryboard(name: "SplashScreen", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "SplashScreensVC") as! SplashScreensVC
         controller.modalPresentationStyle = .fullScreen
         self.present(controller, animated: true)
     }

@@ -49,6 +49,9 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotPassword(_ sender: Any) {
+        let storyboard = storyboard?.instantiateViewController(withIdentifier: "ForgotPasswordVC") as! ForgotPasswordVC
+        storyboard.modalPresentationStyle = .fullScreen
+        present(storyboard, animated: true)
     }
     
     @IBAction func signInButtonAction(_ sender: Any) {
