@@ -374,7 +374,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="phf-VD-qkf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2472.5190839694656" y="-332.3943661971831"/>
+            <point key="canvasLocation" x="3399.2366412213737" y="-332.3943661971831"/>
         </scene>
         <!--Rooms List PageVC-->
         <scene sceneID="Mlt-O1-a8W">
@@ -2514,7 +2514,7 @@ I understand that any ID information provided will only be used for booking trav
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XvE-tm-9ur" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3376" y="-332"/>
+            <point key="canvasLocation" x="4301.5267175572517" y="-332.3943661971831"/>
         </scene>
         <!--Select Rooms And GuestsVC-->
         <scene sceneID="h58-eC-lvv">
@@ -2975,7 +2975,7 @@ I understand that any ID information provided will only be used for booking trav
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C98-f0-fb2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4115.2671755725187" y="-332.3943661971831"/>
+            <point key="canvasLocation" x="5041.9847328244268" y="-332.3943661971831"/>
         </scene>
         <!--Assistance Animal PolicyVC-->
         <scene sceneID="QAZ-y9-DOW">
@@ -3038,7 +3038,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uce-fj-EHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4823.6641221374048" y="-332.3943661971831"/>
+            <point key="canvasLocation" x="5750.3816793893129" y="-332.3943661971831"/>
         </scene>
         <!--Hotel Booking-->
         <scene sceneID="fLU-rw-CWe">
@@ -3710,6 +3710,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                             <constraint firstItem="fhr-9O-IG4" firstAttribute="leading" secondItem="6nE-j2-4I9" secondAttribute="leading" id="fmZ-34-gFB"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="b3z-lL-1lF"/>
                     <navigationItem key="navigationItem" title="Hotel Booking" id="Dph-JD-Of6"/>
                     <connections>
                         <outlet property="bestPlaceImgView" destination="Dcx-aX-dK7" id="WeI-aP-T7l"/>
@@ -3733,7 +3734,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3a-Zx-wsx" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721" y="-332"/>
+            <point key="canvasLocation" x="2646.5648854961833" y="-332.3943661971831"/>
         </scene>
         <!--Search Bar View Controller-->
         <scene sceneID="xNY-jp-H2q">
@@ -4971,7 +4972,7 @@ In many countries, travellers with an assistance animal are entitled to book any
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZN-90-ELH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5611.4503816793895" y="-331.69014084507046"/>
+            <point key="canvasLocation" x="6538.1679389312976" y="-331.69014084507046"/>
         </scene>
         <!--Third StepVC-->
         <scene sceneID="m5D-bK-iwH">
@@ -5714,12 +5715,12 @@ In many countries, travellers with an assistance animal are entitled to book any
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="xFL-L9-mqO" kind="relationship" relationship="rootViewController" id="KQV-hj-PP1"/>
+                        <segue destination="xFL-L9-mqO" kind="relationship" relationship="rootViewController" id="z7K-WS-ghV"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HbR-Qk-wpQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="981" y="-332"/>
+            <point key="canvasLocation" x="1869" y="-332"/>
         </scene>
         <!--Booking ConformationVC-->
         <scene sceneID="3KU-0m-Xpc">
@@ -6119,31 +6120,31 @@ In many countries, travellers with an assistance animal are entitled to book any
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

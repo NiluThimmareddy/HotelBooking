@@ -21,6 +21,7 @@ class VerificationCodeVC: UIViewController {
     
     var countdownTimer: Timer?
     var totalTime = 60
+    var email: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,10 +109,11 @@ extension VerificationCodeVC : UITextFieldDelegate {
 
 extension VerificationCodeVC {
     func setUpUI() {
+        let displayEmail = email ?? "your email"
         
         verificationEmailLabel.setHighlightedText(
-            fullText: "Verification code sent to mahesh123@gmail.com",
-            highlightText: "mahesh123@gmail.com",
+            fullText: "Verification code sent to \(displayEmail)",
+            highlightText: displayEmail,
             normalFont: .systemFont(ofSize: 14),
             highlightFont: .boldSystemFont(ofSize: 18),
             normalColor: .darkGray,

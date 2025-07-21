@@ -18,9 +18,9 @@ class SplashScreensVC: UIViewController {
     @IBOutlet weak var nextPageButton: UIButton!
     
     var splashData: [SplashData] = [
-        SplashData(imageName: "1.5.5", title: "Away from Home, Yet Feels Like Home", description: "Enjoy the warmth, comfort, and care of home wherever you go"),
-        SplashData(imageName: "1.1.1", title: "Seamless Booking, Exceptional Services", description: "Book your stay, explore amenities, and enjoy exclusive deals—all in one place"),
-        SplashData(imageName: "1.1.3", title: "Customized Especially for You", description: "Get personalized recommendations and offers to make your stay unforgettable.")
+        SplashData(imageName: "ic_splashscreen1", title: "Away from Home, Yet Feels Like Home", description: "Enjoy the warmth, comfort, and care of home wherever you go"),
+        SplashData(imageName: "ic_splashscreen2", title: "Seamless Booking, Exceptional Services", description: "Book your stay, explore amenities, and enjoy exclusive deals—all in one place"),
+        SplashData(imageName: "ic_splashscreen3", title: "Customized Especially for You", description: "Get personalized recommendations and offers to make your stay unforgettable.")
     ]
     
     var currentPage = 0

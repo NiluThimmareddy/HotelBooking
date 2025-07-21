@@ -8,7 +8,7 @@
 import UIKit
 
 class SignupViewController : UIViewController {
-
+    
     let viewmodel = SignupViewModel()
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var backView: UIView!
@@ -20,11 +20,11 @@ class SignupViewController : UIViewController {
     @IBOutlet weak var conformPasswordTF: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signUpButtonAction: UIButton!
+    @IBOutlet weak var eyeButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     override func viewDidLayoutSubviews() {
@@ -36,7 +36,7 @@ class SignupViewController : UIViewController {
             topCorner.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         }
     }
-
+    
     func bindViewModel(){
         viewmodel.isLoading = { [weak self] isLoading in
             if isLoading {
@@ -44,12 +44,19 @@ class SignupViewController : UIViewController {
             }else{
                 self?.hideActivityIndicator()
             }
-            
         }
     }
     
     @IBAction func signInButtonAction(_ sender: Any) {
         self.dismiss(animated: true)
+    }
+    
+    @IBAction func eyeButtonAction(_ sender: Any) {
+        conformPasswordTF.isSecureTextEntry.toggle()
+        let eyeImageName = conformPasswordTF.isSecureTextEntry ? "eye.slash.fill" : "eye"
+        let config = UIImage.SymbolConfiguration(pointSize: 14, weight: .regular)
+        let image = UIImage(systemName: eyeImageName, withConfiguration: config)
+        eyeButton.setImage(image, for: .normal)
     }
     
     @IBAction func signUpButtonAction(_ sender: Any) {

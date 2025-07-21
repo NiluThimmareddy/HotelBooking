@@ -14,7 +14,6 @@ class ForgotPasswordVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     @IBAction func backButtonAction(_ sender: Any) {
@@ -23,6 +22,7 @@ class ForgotPasswordVC: UIViewController {
     
     @IBAction func confirmMailButtonAction(_ sender: Any) {
         let storyboard = storyboard?.instantiateViewController(withIdentifier: "VerificationCodeVC") as! VerificationCodeVC
+        storyboard.email = emailIdTF.text
         storyboard.modalPresentationStyle = .fullScreen
         present(storyboard, animated: true)
     }

@@ -56,9 +56,12 @@ class LoginViewController: UIViewController {
     
     @IBAction func signInButtonAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "NavigationViewController")
-        controller.modalPresentationStyle = .fullScreen
-        self.present(controller, animated: true)
+        let navController = storyboard.instantiateViewController(withIdentifier: "NavigationViewController")
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let sceneDelegate = windowScene.delegate as? SceneDelegate {
+            sceneDelegate.window?.rootViewController = navController
+            sceneDelegate.window?.makeKeyAndVisible()
+        }
     }
     
     @IBAction func googleButtonAction(_ sender: Any) {
