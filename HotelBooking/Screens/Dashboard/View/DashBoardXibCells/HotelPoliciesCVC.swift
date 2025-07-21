@@ -9,6 +9,7 @@ import UIKit
 
 class HotelPoliciesCVC: UICollectionViewCell {
 
+    @IBOutlet weak var titleImage: UIImageView!
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var titleLbl: UILabel!
     override func awakeFromNib() {

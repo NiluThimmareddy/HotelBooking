@@ -18,7 +18,7 @@ class CountryListViewModel {
         guard let url = URL(string: "https://flagcdn.com/en/codes.json") else {
             return
         }
-
+       
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
                 DispatchQueue.main.async {

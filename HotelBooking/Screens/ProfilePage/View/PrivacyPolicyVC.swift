@@ -8,11 +8,7 @@
 import UIKit
 import WebKit
 
-enum StaticContentType {
-    case privacy
-    case terms
-    case about
-}
+
 
 class PrivacyPolicyVC: UIViewController {
     
@@ -23,34 +19,10 @@ class PrivacyPolicyVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
-        
         loadSelectedHTML()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setupDefaultNavigationBarAppearance()
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        setupDefaultNavigationBarDisAppearance()
-    }
-    func setupDefaultNavigationBarAppearance() {
-        if let color = UIColor(named: "defaultColor") {
-            navigationController?.navigationBar.barTintColor = color
-            navigationController?.navigationBar.backgroundColor = color
-            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-            navigationController?.navigationBar.tintColor = .white
-        }
-    }
-    func setupDefaultNavigationBarDisAppearance() {
-        navigationController?.navigationBar.barTintColor = .white
-        navigationController?.navigationBar.backgroundColor = .white
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
-        navigationController?.navigationBar.tintColor = .black
-    }
+    
+    
     private func loadSelectedHTML() {
         switch contentType {
         case .privacy:

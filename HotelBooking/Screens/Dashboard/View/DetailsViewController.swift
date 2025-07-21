@@ -10,6 +10,8 @@ import MapKit
 
 
 class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDelegate {
+    @IBOutlet weak var hotelImagesCollectionViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var seeAllPoliciesButton: UIButton!
     @IBOutlet weak var hotelAddressDataLbl: UILabel!
     @IBOutlet weak var hotelMailIdDataLbl: UILabel!
     @IBOutlet weak var hotelPhoneNumberDataLbl: UILabel!
@@ -350,6 +352,12 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         )
         selectRoomButton.setAttributedTitle(selectRoom, for: .normal)
         
+        let seeAllPolicies = NSAttributedString(
+            string: "See all policies",
+            attributes: [.font: UIFont.poppinsBold(12), .foregroundColor: color ?? UIColor.blue]
+        )
+        seeAllPoliciesButton.setAttributedTitle(seeAllPolicies, for: .normal)
+        
         let readMoreInfo = NSAttributedString(
             string: "Read More",
             attributes: [.font: UIFont.poppinsBold(12), .foregroundColor: color ?? UIColor.blue]
@@ -425,36 +433,15 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         for (index, imageView) in starImageViews.enumerated() {
             if index < rating {
                 imageView?.isHidden = false
-                imageView?.image = UIImage(named: "star")
+                imageView?.image = UIImage(systemName:  "star.fill")
             } else {
                 imageView?.isHidden = true
             }
         }
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setupDefaultNavigationBarAppearance()
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        setupDefaultNavigationBarDisAppearance()
-    }
-    func setupDefaultNavigationBarAppearance() {
-        if let color = UIColor(named: "defaultColor") {
-            navigationController?.navigationBar.barTintColor = color
-            navigationController?.navigationBar.backgroundColor = color
-            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-            navigationController?.navigationBar.tintColor = .white
-        }
-    }
     
-    func setupDefaultNavigationBarDisAppearance() {
-        navigationController?.navigationBar.barTintColor = .white
-        navigationController?.navigationBar.backgroundColor = .white
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
-        navigationController?.navigationBar.tintColor = .black
-    }
+   
     func hideViewAllButton(){
         let maxUserReviewCount = callUserReview.count
         if maxUserReviewCount > 5{
@@ -492,14 +479,14 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
     }
     func navigationProcess() {
         heartBarButton = UIBarButtonItem(
-            image: UIImage(named: "heart"),
+            image: UIImage(systemName:  "heart"),
             style: .plain,
             target: self,
             action: #selector(heartButtonTapped)
         )
 
         shareBarButton = UIBarButtonItem(
-            image: UIImage(named: "share"),
+            image: UIImage(systemName: "square.and.arrow.up"),
             style: .plain,
             target: self,
             action: #selector(shareButtonTapped)
@@ -516,8 +503,8 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
     @objc func heartButtonTapped() {
         isHeartSelected.toggle() // Toggle the state
         
-        let imageName = isHeartSelected ? "heartFill" : "heart"
-        heartBarButton?.image = UIImage(named: imageName)
+        let imageName = isHeartSelected ? "heart.fill" : "heart"
+        heartBarButton?.image = UIImage(systemName:  imageName)
     }
     
     @objc func shareButtonTapped() {
@@ -553,45 +540,54 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         roundCornersOfGuestReviewRatingLabelContainer()
     }
     func updateDynamicHeights() {
-        let guestReviewCount = isGuestReviewExpanded ? callGuestReview.count : min(callGuestReview.count, 3)
-        let guestReviewHeight = CGFloat(guestReviewCount) * 50
-
-        let maxUserReviewCount = min(callUserReview.count, 5)
-        let guestWhoStayedHeight = CGFloat(maxUserReviewCount) * 100
-
-        guestReviewTVHightCons.constant = guestReviewHeight
-        GuestWhoStayedHereTVHeightCons.constant = guestWhoStayedHeight
-
-        // Policies collection view height calculation
-        let policyCount = self.viewModel.allPolicies.filter { $0.HotelId == self.hotelDetailsData?.HotelId }
-        let itemsPerRow: CGFloat = 2
-        let rowHeight: CGFloat = 35
-        let numberOfRows = ceil(CGFloat(policyCount.count) / itemsPerRow)
-        let policiesHeight = numberOfRows * rowHeight
-
-        policiesCollectionViewHeightCons.constant = policiesHeight
-
-        let baseContentHeight: CGFloat = 2194 - 35 - 100
-        scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight + policiesHeight
-
-        view.layoutIfNeeded()
+        if UIDevice.current.userInterfaceIdiom == .pad{
+            let guestReviewCount = isGuestReviewExpanded ? callGuestReview.count : min(callGuestReview.count, 3)
+            let guestReviewHeight = CGFloat(guestReviewCount) * 50
+            
+            let maxUserReviewCount = min(callUserReview.count, 5)
+            let guestWhoStayedHeight = CGFloat(maxUserReviewCount) * 100
+            
+            guestReviewTVHightCons.constant = guestReviewHeight
+            GuestWhoStayedHereTVHeightCons.constant = guestWhoStayedHeight
+            
+            // Policies collection view height calculation
+            let policyCount = self.viewModel.allPolicies.filter { $0.HotelId == self.hotelDetailsData?.HotelId }
+            let itemsPerRow: CGFloat = 2
+            let rowHeight: CGFloat = 40
+            let numberOfRows = ceil(CGFloat(policyCount.count) / itemsPerRow)
+            let policiesHeight = numberOfRows * rowHeight
+            
+            policiesCollectionViewHeightCons.constant = policiesHeight
+            
+            let baseContentHeight: CGFloat = 2344 - 35 - 100
+            scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight + policiesHeight
+            
+            view.layoutIfNeeded()
+        }else{
+            let guestReviewCount = isGuestReviewExpanded ? callGuestReview.count : min(callGuestReview.count, 3)
+            let guestReviewHeight = CGFloat(guestReviewCount) * 50
+            
+            let maxUserReviewCount = min(callUserReview.count, 5)
+            let guestWhoStayedHeight = CGFloat(maxUserReviewCount) * 100
+            
+            guestReviewTVHightCons.constant = guestReviewHeight
+            GuestWhoStayedHereTVHeightCons.constant = guestWhoStayedHeight
+            
+            // Policies collection view height calculation
+            let policyCount = self.viewModel.allPolicies.filter { $0.HotelId == self.hotelDetailsData?.HotelId }
+            let itemsPerRow: CGFloat = 2
+            let rowHeight: CGFloat = 40
+            let numberOfRows = ceil(CGFloat(policyCount.count) / itemsPerRow)
+            let policiesHeight = numberOfRows * rowHeight
+            
+            policiesCollectionViewHeightCons.constant = policiesHeight
+            
+            let baseContentHeight: CGFloat = 2194 - 35 - 100
+            scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight + policiesHeight
+            
+            view.layoutIfNeeded()
+        }
     }
-
-//    func updateDynamicHeights() {
-//        let guestReviewCount = isGuestReviewExpanded ? callGuestReview.count : min(callGuestReview.count, 3)
-//        let guestReviewHeight = CGFloat(guestReviewCount) * 50
-//
-//        let maxUserReviewCount = min(callUserReview.count, 5)
-//        let guestWhoStayedHeight = CGFloat(maxUserReviewCount) * 100
-//
-//        guestReviewTVHightCons.constant = guestReviewHeight
-//        GuestWhoStayedHereTVHeightCons.constant = guestWhoStayedHeight
-//
-//        let baseContentHeight: CGFloat = 2204 - 50 - 100 
-//        scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight
-//
-//        view.layoutIfNeeded()
-//    }
 
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -619,9 +615,8 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
     @IBAction func selectRoomButtonAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "RoomsListPageVC")as! RoomsListPageVC
-        let titleValue = hotelDetailsData
-        vc.hotelIdPass = titleValue
-        vc.hotelDetailsData = hotelDetailsData
+        vc.navigationItem.title = "Rooms List"
+        navigationItem.backButtonTitle = ""
         navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func guestWhoStayedHereLovedViewAllButton(_ sender: Any) {
@@ -632,6 +627,13 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func seeAllPoliciesButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "ViewAllFacilitiesVC")as! ViewAllFacilitiesVC
+        vc.selectedState = .policies
+        navigationItem.backButtonTitle = ""
+        navigationController?.pushViewController(vc, animated: true)
+    }
     @IBAction func importantInformationReadMoreButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Profile", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ProfilePageVC")as! ProfilePageVC
@@ -760,7 +762,7 @@ extension DetailsViewController: UICollectionViewDelegate,UICollectionViewDataSo
         if collectionView == hotelImagesCollectionView{
             return 1
         }else if collectionView == availabilitiesCollectionView{
-            return callAvailabilities.count
+            return callAvailabilities.count + 1
         }else{
             let filter = self.viewModel.allPolicies.filter { $0.HotelId == self.hotelDetailsData?.HotelId }
             return filter.count
@@ -772,18 +774,23 @@ extension DetailsViewController: UICollectionViewDelegate,UICollectionViewDataSo
             let widthCons = (hotelImagesCollectionView.frame.size.width - 10 )
             return CGSize(width: widthCons, height: heightCons)
         }else if collectionView == availabilitiesCollectionView{
-            let labelText = callAvailabilities[indexPath.row].name
             let font = UIFont.poppinsBold(12)
             let padding: CGFloat = 8
-            
-            let textWidth = (labelText as NSString).size(withAttributes: [.font: font]).width + padding * 2
-            
             let availableWidth = collectionView.frame.width
             let interItemSpacing: CGFloat = 10
+            let cellHeight = availabilitiesCollectionView.frame.size.height - 20
+            
+            var labelText = ""
+            
+            if indexPath.row < callAvailabilities.count {
+                labelText = callAvailabilities[indexPath.row].name
+            } else {
+                labelText = "More"
+            }
+            
+            let textWidth = (labelText as NSString).size(withAttributes: [.font: font]).width + padding * 2
             let maxCellsPerRow: CGFloat = floor((availableWidth + interItemSpacing) / (textWidth + interItemSpacing))
             let finalCellWidth = (availableWidth - (maxCellsPerRow - 1) * interItemSpacing) / maxCellsPerRow
-            
-            let cellHeight = availabilitiesCollectionView.frame.size.height
             
             return CGSize(width: finalCellWidth, height: cellHeight)
         }else{
@@ -852,15 +859,35 @@ extension DetailsViewController: UICollectionViewDelegate,UICollectionViewDataSo
             return cell
         }else if collectionView == availabilitiesCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AvailabilitiesCVC", for: indexPath)as! AvailabilitiesCVC
-            let data = callAvailabilities[indexPath.row]
-            cell.dataImage.image = UIImage(named: data.image)
-            cell.titleLbl.text = data.name
+            if indexPath.row == callAvailabilities.count {
+                cell.dataImage.image = UIImage(systemName:  "ellipsis")
+                cell.titleLbl.text = "More"
+            } else {
+                let data = callAvailabilities[indexPath.row]
+                cell.dataImage.image = UIImage(named: data.image)
+                cell.titleLbl.text = data.name
+            }
             return cell
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HotelPoliciesCVC", for: indexPath)as! HotelPoliciesCVC
             let filter = self.viewModel.allPolicies.filter { $0.HotelId == self.hotelDetailsData?.HotelId }
             let finalFilteredData = filter[indexPath.row]
             cell.titleLbl.text = finalFilteredData.PolicyType
+            
+            switch finalFilteredData.PolicyType.lowercased() {
+            case let type where type.contains("child"):
+                cell.titleImage.image = UIImage(systemName: "person.2.fill")
+            case let type where type.contains("cancel"):
+                cell.titleImage.image = UIImage(systemName: "xmark.circle.fill")
+            case let type where type.contains("pet"):
+                cell.titleImage.image = UIImage(systemName: "pawprint.fill")
+            case let type where type.contains("payment"):
+                cell.titleImage.image = UIImage(systemName: "creditcard.fill")
+            case let type where type.contains("smoking"):
+                cell.titleImage.image = UIImage(systemName: "nosign")
+            default:
+                cell.titleImage.image = UIImage(systemName: "doc.plaintext") 
+            }
             return cell
         }
     }
@@ -873,6 +900,14 @@ extension DetailsViewController: UICollectionViewDelegate,UICollectionViewDataSo
             vc.hotelIdPass = titleValue
             navigationItem.backButtonTitle = ""
             navigationController?.pushViewController(vc, animated: true)
+        }else if collectionView == availabilitiesCollectionView {
+            if indexPath.row == callAvailabilities.count{
+                let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
+                let vc = storyboard.instantiateViewController(identifier: "ViewAllFacilitiesVC")as! ViewAllFacilitiesVC
+                vc.selectedState = .facilites
+                navigationItem.backButtonTitle = ""
+                navigationController?.pushViewController(vc, animated: true)
+            }
         }
     }
 }
@@ -904,6 +939,16 @@ extension DetailsViewController: UITableViewDelegate,UITableViewDataSource{
             let data = callGuestReview[indexPath.row]
             cell.titleLbl.text = data.name
             cell.countLbl.text = data.rating
+            let ratingValue = CGFloat((data.rating.replacingOccurrences(of: "%", with: "") as NSString).floatValue)
+
+            DispatchQueue.main.async {
+                let totalWidth = cell.progressViewBackView.frame.width
+                let calculatedWidth = (ratingValue / 10.0) * totalWidth
+                cell.progressViewWidthCons.constant = calculatedWidth
+                
+                
+                cell.layoutIfNeeded()
+            }
             return cell
         }else if tableView == topAttractionsTV{
             let cell = tableView.dequeueReusableCell(withIdentifier: "TopAttractionTVC")as! TopAttractionTVC

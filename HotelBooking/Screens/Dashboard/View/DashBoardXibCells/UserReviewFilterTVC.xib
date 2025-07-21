@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -42,11 +41,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="UuP-OW-cBX">
-                                        <rect key="frame" x="298" y="12.666666666666664" width="25" height="25"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UuP-OW-cBX">
+                                        <rect key="frame" x="303" y="20.333333333333332" width="20" height="9.9999999999999964"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="IMh-4a-dIB"/>
-                                            <constraint firstAttribute="width" constant="25" id="QnN-aV-zKN"/>
+                                            <constraint firstAttribute="height" constant="20" id="IMh-4a-dIB"/>
+                                            <constraint firstAttribute="width" constant="20" id="QnN-aV-zKN"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See all 5 reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ses-8u-vXD">
@@ -56,7 +56,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="backgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Ses-8u-vXD" firstAttribute="leading" secondItem="dsG-JN-qqw" secondAttribute="trailing" constant="10" id="5IF-Bk-d66"/>
                                     <constraint firstAttribute="height" constant="50" id="Mto-qH-5DE"/>
@@ -87,15 +87,16 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="6WD-Bl-ptB">
-                                        <rect key="frame" x="298" y="12.666666666666664" width="25" height="25"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6WD-Bl-ptB">
+                                        <rect key="frame" x="303" y="20.333333333333332" width="20" height="9.9999999999999964"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="6zk-Jq-kdP"/>
-                                            <constraint firstAttribute="width" constant="25" id="aFN-GU-Rur"/>
+                                            <constraint firstAttribute="height" constant="20" id="6zk-Jq-kdP"/>
+                                            <constraint firstAttribute="width" constant="20" id="aFN-GU-Rur"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="backgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="bYq-fv-ZC1" firstAttribute="leading" secondItem="uCn-Wa-Pq7" secondAttribute="trailing" id="0AN-8v-9Yu"/>
                                     <constraint firstItem="uCn-Wa-Pq7" firstAttribute="centerY" secondItem="wL4-p3-Nir" secondAttribute="centerY" id="5sE-ym-R8x"/>
@@ -108,10 +109,10 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KVt-QZ-4Js">
                                 <rect key="frame" x="0.0" y="50" width="333" height="139"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="backgroundColor"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
                             <constraint firstItem="wL4-p3-Nir" firstAttribute="top" secondItem="fdM-IE-dY3" secondAttribute="top" id="GHo-I3-B0J"/>
                             <constraint firstAttribute="bottom" secondItem="KVt-QZ-4Js" secondAttribute="bottom" id="Mdf-5d-q47"/>
@@ -150,12 +151,12 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="down-arrow" width="512" height="512"/>
+        <image name="chevron.down" catalog="system" width="128" height="70"/>
+        <namedColor name="backgroundColor">
+            <color red="0.93300002813339233" green="0.93300002813339233" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="defaultColor">
             <color red="0.0" green="0.23100000619888306" blue="0.58399999141693115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

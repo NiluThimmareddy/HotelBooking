@@ -22,10 +22,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="228" height="102"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="izY-ah-0kd">
-                                <rect key="frame" x="10" y="21" width="208" height="60"/>
+                                <rect key="frame" x="10" y="26" width="208" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j43-Mr-ZyY">
-                                        <rect key="frame" x="70" y="23" width="31" height="14.333333333333336"/>
+                                        <rect key="frame" x="60" y="18" width="31" height="14.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -34,34 +34,34 @@
                                 <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="j43-Mr-ZyY" firstAttribute="centerY" secondItem="izY-ah-0kd" secondAttribute="centerY" id="3el-gb-NFp"/>
-                                    <constraint firstAttribute="height" constant="60" id="Z3X-OQ-AAp"/>
+                                    <constraint firstAttribute="height" constant="50" id="Z3X-OQ-AAp"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="j43-Mr-ZyY" secondAttribute="trailing" constant="10" id="eqC-Uk-V4U"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9HB-W2-Seg">
-                                <rect key="frame" x="10" y="21" width="60" height="60"/>
+                                <rect key="frame" x="10" y="26" width="50" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gvg-mB-iLt">
-                                        <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                        <rect key="frame" x="7.6666666666666679" y="7.6666666666666643" width="35" height="35"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="2mE-zO-mWP"/>
-                                            <constraint firstAttribute="width" constant="40" id="sVJ-5j-jFQ"/>
+                                            <constraint firstAttribute="height" constant="35" id="2mE-zO-mWP"/>
+                                            <constraint firstAttribute="width" constant="35" id="sVJ-5j-jFQ"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" name="defaultColor"/>
                                 <constraints>
                                     <constraint firstItem="Gvg-mB-iLt" firstAttribute="centerY" secondItem="9HB-W2-Seg" secondAttribute="centerY" id="4f5-d6-NQh"/>
-                                    <constraint firstAttribute="width" constant="60" id="4vw-09-a9D"/>
+                                    <constraint firstAttribute="width" constant="50" id="4vw-09-a9D"/>
                                     <constraint firstItem="Gvg-mB-iLt" firstAttribute="centerX" secondItem="9HB-W2-Seg" secondAttribute="centerX" id="G3c-ta-0Cy"/>
-                                    <constraint firstAttribute="height" constant="60" id="J9f-f6-QLj"/>
+                                    <constraint firstAttribute="height" constant="50" id="J9f-f6-QLj"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="izY-ah-0kd" firstAttribute="leading" secondItem="9HB-W2-Seg" secondAttribute="trailing" constant="-60" id="CRo-Hk-z9H"/>
+                            <constraint firstItem="izY-ah-0kd" firstAttribute="leading" secondItem="9HB-W2-Seg" secondAttribute="trailing" constant="-50" id="CRo-Hk-z9H"/>
                             <constraint firstItem="9HB-W2-Seg" firstAttribute="leading" secondItem="PRO-9b-fCu" secondAttribute="leading" constant="10" id="TRG-b2-eJh"/>
                             <constraint firstItem="j43-Mr-ZyY" firstAttribute="leading" secondItem="9HB-W2-Seg" secondAttribute="trailing" constant="10" id="WbI-UA-ZKl"/>
                             <constraint firstAttribute="trailing" secondItem="izY-ah-0kd" secondAttribute="trailing" constant="10" id="YLP-hk-eDT"/>

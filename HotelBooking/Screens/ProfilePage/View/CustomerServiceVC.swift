@@ -86,15 +86,7 @@ class CustomerServiceVC: UIViewController, UIImagePickerControllerDelegate, UINa
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setupDefaultNavigationBarAppearance()
-    }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        setupDefaultNavigationBarDisAppearance()
-    }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -166,21 +158,7 @@ class CustomerServiceVC: UIViewController, UIImagePickerControllerDelegate, UINa
         scrollViewScroll.scrollIndicatorInsets = .zero
     }
     
-    func setupDefaultNavigationBarAppearance() {
-        if let color = UIColor(named: "defaultColor") {
-            navigationController?.navigationBar.barTintColor = color
-            navigationController?.navigationBar.backgroundColor = color
-            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-            navigationController?.navigationBar.tintColor = .white
-        }
-    }
     
-    func setupDefaultNavigationBarDisAppearance() {
-        navigationController?.navigationBar.barTintColor = .white
-        navigationController?.navigationBar.backgroundColor = .white
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
-        navigationController?.navigationBar.tintColor = .black
-    }
     func boldPhoneNumberText(fullText: String, boldPart: String) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: fullText)
 

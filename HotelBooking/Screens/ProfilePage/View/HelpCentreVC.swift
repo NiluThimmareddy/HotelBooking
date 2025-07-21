@@ -55,11 +55,14 @@ class HelpCentreVC: UIViewController {
         )
     ]
 
-    let categoryData = [ProfileOption(listData: "Bookings", imageName: "cashback"),
-        ProfileOption(listData: "Refunds and Charges", imageName: "hotel (1)"),
-        ProfileOption(listData: "Accounts", imageName: "user-management"),
-        ProfileOption(listData: "Privacy", imageName: "insurance"),
-        ProfileOption(listData: "Security", imageName: "padlock")]
+    let categoryData = [
+        ProfileOption(listData: "Bookings", imageName: "calendar.badge.checkmark"),
+        ProfileOption(listData: "Refunds and Charges", imageName: "creditcard"),
+        ProfileOption(listData: "Accounts", imageName: "person.crop.circle"),
+        ProfileOption(listData: "Privacy", imageName: "lock.shield"),
+        ProfileOption(listData: "Security", imageName: "lock")
+    ]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,28 +86,8 @@ class HelpCentreVC: UIViewController {
         print("curveView.bounds = \(curveView.bounds)")
         updateDynamicHeights()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setupDefaultNavigationBarAppearance()
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        setupDefaultNavigationBarDisAppearance()
-    }
-    func setupDefaultNavigationBarAppearance() {
-        if let color = UIColor(named: "defaultColor") {
-            navigationController?.navigationBar.barTintColor = color
-            navigationController?.navigationBar.backgroundColor = color
-            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-            navigationController?.navigationBar.tintColor = .white
-        }
-    }
-    func setupDefaultNavigationBarDisAppearance() {
-        navigationController?.navigationBar.barTintColor = .white
-        navigationController?.navigationBar.backgroundColor = .white
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
-        navigationController?.navigationBar.tintColor = .black
-    }
+    
+   
     private func roundTopLeftCornerOnly() {
         curveView.layer.cornerRadius = 40
         curveView.layer.maskedCorners = [.layerMinXMinYCorner]
@@ -181,7 +164,7 @@ extension HelpCentreVC: UITableViewDelegate, UITableViewDataSource{
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
             let data = categoryData[indexPath.row]
             cell.profileListLbl.text = data.listData
-            cell.profileListImages.image = UIImage(named: data.imageName)
+            cell.profileListImages.image = UIImage(systemName:  data.imageName)
             cell.profileListImages.tintColor = .darkGray
             cell.viewLeading.constant = 10
             cell.viewTrailing.constant = 10
