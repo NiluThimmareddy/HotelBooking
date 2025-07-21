@@ -11,6 +11,7 @@ class UserFeedBackListVC: UIViewController {
 
     @IBOutlet weak var feedBackListTV: UITableView!
     
+    let color = UIColor(named: "defaultColor")
     var callHotelFeedBack = [
         HotelFeedBackInfo(hotelImage: "1", hotelName: "Taj", bookedDate: "15 - 16 May 2025", hotelLocation: "Chennai", status: "Completed", process: "Done"),
         HotelFeedBackInfo(hotelImage: "2",hotelName: "Chola", bookedDate: "15 - 16 June 2025",hotelLocation: "Chennai",status: "Pending",process: "Draft")
@@ -62,9 +63,11 @@ extension UserFeedBackListVC: UITableViewDelegate, UITableViewDataSource{
             cell.draftLbl.layer.borderColor = UIColor.systemGreen.cgColor
         }
         if data.status == "Pending"{
+            cell.completeReviewLbl.textColor = .systemRed
             cell.completeReviewLbl.text = "Complete your draft review"
             cell.howManyDaysLeftToGiveReview.text = data.daysRemaining
         }else{
+            cell.completeReviewLbl.textColor = color
             cell.completeReviewLbl.text = "Review Completed"
             cell.howManyDaysLeftToGiveReview.text = "Thanks for your useful Feedback"
         }
