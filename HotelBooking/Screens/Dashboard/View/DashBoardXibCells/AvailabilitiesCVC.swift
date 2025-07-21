@@ -16,8 +16,8 @@ class AvailabilitiesCVC: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         titleLbl.font = UIFont(name: "Poppins-Bold", size: 12)
-        imageBackView.layer.cornerRadius = imageBackView.frame.size.width / 2
-        labelBackView.layer.cornerRadius = 30
+        imageBackView.layer.cornerRadius = imageBackView.frame.size.height / 2
+        labelBackView.layer.cornerRadius = labelBackView.frame.size.height / 2
     }
 
 }

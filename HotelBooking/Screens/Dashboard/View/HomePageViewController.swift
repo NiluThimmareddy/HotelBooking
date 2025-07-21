@@ -501,12 +501,7 @@ class HomePageViewController: UIViewController, CalenderVCDelegate {
     }
     
     @IBAction func popularSeemoreButtonAction(_ sender: Any) {
-        let controller = UIStoryboard(name: "Review", bundle: nil).instantiateViewController(withIdentifier: "PostReviewViewController") as! PostReviewViewController
-        let backItem = UIBarButtonItem()
-        backItem.title = ""
-        self.navigationItem.backBarButtonItem = backItem
-        self.navigationController?.navigationBar.tintColor = .white
-        self.navigationController?.pushViewController(controller, animated: true)
+        
     }
     
 }
