@@ -22,21 +22,29 @@
                         <rect key="frame" x="10" y="10" width="225" height="66"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdY-yC-LfY">
-                                <rect key="frame" x="0.0" y="0.0" width="225" height="66"/>
+                                <rect key="frame" x="35" y="0.0" width="190" height="66"/>
                                 <color key="backgroundColor" name="backgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.badge.key" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="497-7h-ToE">
+                                <rect key="frame" x="5.0000000000000018" y="22.000000000000004" width="26.666666666666671" height="25.333333333333339"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="EaW-27-Nhw"/>
+                                    <constraint firstAttribute="height" constant="25" id="Wn7-GT-Tei"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
-                            <constraint firstItem="sdY-yC-LfY" firstAttribute="leading" secondItem="Pds-02-QXs" secondAttribute="leading" id="1Lj-04-LRI"/>
-                            <constraint firstItem="sdY-yC-LfY" firstAttribute="top" secondItem="Pds-02-QXs" secondAttribute="top" id="D61-J0-FPK"/>
-                            <constraint firstAttribute="bottom" secondItem="sdY-yC-LfY" secondAttribute="bottom" id="GC7-Yv-Cxu"/>
-                            <constraint firstItem="sdY-yC-LfY" firstAttribute="centerX" secondItem="Pds-02-QXs" secondAttribute="centerX" id="M36-OF-9qT"/>
-                            <constraint firstItem="sdY-yC-LfY" firstAttribute="centerY" secondItem="Pds-02-QXs" secondAttribute="centerY" id="TMH-SU-88K"/>
-                            <constraint firstAttribute="trailing" secondItem="sdY-yC-LfY" secondAttribute="trailing" id="vIZ-5T-2kP"/>
+                            <constraint firstAttribute="bottom" secondItem="sdY-yC-LfY" secondAttribute="bottom" id="1Ps-mY-9No"/>
+                            <constraint firstAttribute="trailing" secondItem="sdY-yC-LfY" secondAttribute="trailing" id="2oN-v4-lMR"/>
+                            <constraint firstItem="sdY-yC-LfY" firstAttribute="top" secondItem="Pds-02-QXs" secondAttribute="top" id="5yV-bG-1IV"/>
+                            <constraint firstItem="sdY-yC-LfY" firstAttribute="leading" secondItem="497-7h-ToE" secondAttribute="trailing" constant="5" id="BXN-6q-UVK"/>
+                            <constraint firstItem="497-7h-ToE" firstAttribute="leading" secondItem="Pds-02-QXs" secondAttribute="leading" constant="5" id="PdR-XZ-qUb"/>
+                            <constraint firstItem="497-7h-ToE" firstAttribute="centerY" secondItem="Pds-02-QXs" secondAttribute="centerY" id="hDE-AK-T8z"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -51,14 +59,16 @@
             <size key="customSize" width="245" height="86"/>
             <connections>
                 <outlet property="backView" destination="Pds-02-QXs" id="Rnk-Re-0rp"/>
+                <outlet property="titleImage" destination="497-7h-ToE" id="gpW-jH-46c"/>
                 <outlet property="titleLbl" destination="sdY-yC-LfY" id="YWw-xP-kOl"/>
             </connections>
             <point key="canvasLocation" x="278.62595419847327" y="1.4084507042253522"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="person.badge.key" catalog="system" width="128" height="128"/>
         <namedColor name="backgroundColor">
-            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.93300002813339233" green="0.93300002813339233" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -23,20 +23,20 @@ class CustomerServiceChatTVC: UITableViewCell {
         messageLabel.textAlignment = .left
         
         if message.isFromAgent {
-            // Align to left
+           
             bubbleLeadingConstraint.constant = 10
-            bubbleTrailingConstraint.constant = 100 // or greater value
+            bubbleTrailingConstraint.constant = 100
             bubbleView.backgroundColor = UIColor.systemGray5
             messageLabel.textColor = .black
         } else {
-            // Align to right
+            
             bubbleLeadingConstraint.constant = 100
             bubbleTrailingConstraint.constant = 10
             bubbleView.backgroundColor = UIColor.systemBlue
             messageLabel.textColor = .white
         }
         
-        layoutIfNeeded() // Refresh constraints
+        layoutIfNeeded()
     }
 
     }

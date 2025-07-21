@@ -8,6 +8,8 @@
 import UIKit
 
 class UserFeedBackAfterCheckOutTVC: UITableViewCell {
+    
+    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var titleData: UILabel!
     
     override func awakeFromNib() {

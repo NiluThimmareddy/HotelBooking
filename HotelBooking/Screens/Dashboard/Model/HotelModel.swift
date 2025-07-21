@@ -318,3 +318,28 @@ struct SearchHistoryItem: Codable {
     let dateRange: String
 }
 
+struct HotelAllFacility {
+    let title: String
+    var items: [String]
+}
+
+struct HotelPolicy {
+    let title: String
+    let details: [String]
+    let systemImageName: String
+}
+
+struct ChildPolicy {
+    let title: String
+    let details: [String]
+    let priceContent: String
+    let amountForAge: String
+    let totalAmount: String
+    let calculationContent: String
+    let systemImageName: String
+}
+
+enum PolicyType {
+    case general(HotelPolicy)
+    case children(ChildPolicy)
+}

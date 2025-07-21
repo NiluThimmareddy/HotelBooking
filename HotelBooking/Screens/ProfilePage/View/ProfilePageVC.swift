@@ -9,6 +9,7 @@ import UIKit
 
 class ProfilePageVC: UIViewController {
     
+    @IBOutlet weak var manageAccountsCVHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var userEmail: UILabel!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
@@ -43,32 +44,34 @@ class ProfilePageVC: UIViewController {
         ProfileSection(
             sectionTitle: "Preferences",
             options: [
-                ProfileOption(listData: "Email Preferences", imageName: "email")
+                ProfileOption(listData: "Email Preferences", imageName: "envelope.fill")
             ]
         ),
         ProfileSection(
             sectionTitle: "Help and Privacy",
             options: [
-                ProfileOption(listData: "FAQ", imageName: "faq512px"),
-                ProfileOption(listData: "Abous Us", imageName: "info"),
-                ProfileOption(listData: "Terms of Use", imageName: "file"),
-                ProfileOption(listData: "Privacy and data management", imageName: "insurance"),
-                ProfileOption(listData: "Customer Service", imageName: "question"),
+                ProfileOption(listData: "FAQ", imageName: "questionmark.circle"),
+                ProfileOption(listData: "About Us", imageName: "info.circle"),
+                ProfileOption(listData: "Terms of Use", imageName: "doc.text"),
+                ProfileOption(listData: "Privacy and Data Management", imageName: "lock.shield"),
+                ProfileOption(listData: "Customer Service", imageName: "person.crop.circle.badge.questionmark")
             ]
         )
     ]
 
-    let manageAccountsData = [ProfileOption(listData: "Personal details", imageName: "user"),
-        ProfileOption(listData: "Security Settings", imageName: "padlock"),
-        ProfileOption(listData: "Other travellers", imageName: "users512px"),
-        ProfileOption(listData: "My reviews", imageName: "message512px")]
+    let manageAccountsData = [
+        ProfileOption(listData: "Personal details", imageName: "person"),
+        ProfileOption(listData: "Security Settings", imageName: "lock"),
+        ProfileOption(listData: "Other travellers", imageName: "person.2"),
+        ProfileOption(listData: "My reviews", imageName: "bubble.left.and.bubble.right")
+    ]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         profileTV.register(UINib(nibName: "ProfileTVC", bundle: nil), forCellReuseIdentifier: "ProfileTVC")
         profileTV.showsVerticalScrollIndicator = false
         profileTV.showsHorizontalScrollIndicator = false
-        setupDefaultNavigationBarDisAppearance()
         manageAccountsCV.register(UINib(nibName: "ManageAccountsCVC", bundle: nil), forCellWithReuseIdentifier: "ManageAccountsCVC")
         completeProfileImageBackView.layer.cornerRadius = completeProfileImageBackView.frame.size.height / 2
         profileImage.layer.cornerRadius = profileImage.frame.size.height / 2
@@ -118,49 +121,47 @@ class ProfilePageVC: UIViewController {
         signOutButton.setAttributedTitle(signOut, for: .normal)
     }
     func updateProfileTableViewHeight() {
-        var totalTableHeight: CGFloat = 0
-
-        for section in profileSections {
-            totalTableHeight += 70
-            totalTableHeight += CGFloat(section.options.count) * 50
+        if UIDevice.current.userInterfaceIdiom == .pad{
+            var totalTableHeight: CGFloat = 0
+            
+            for section in profileSections {
+                totalTableHeight += 70
+                totalTableHeight += CGFloat(section.options.count) * 50
+            }
+            
+            profileTVHeightCons.constant = totalTableHeight
+            
+            if totalTableHeight > 90 {
+                let extraHeight = totalTableHeight - 90
+                scrollViewContentViewHeightCons.constant = 721 + extraHeight
+            } else {
+                scrollViewContentViewHeightCons.constant = 721
+            }
+            
+            self.view.layoutIfNeeded()
+        }else{
+            var totalTableHeight: CGFloat = 0
+            
+            for section in profileSections {
+                totalTableHeight += 70
+                totalTableHeight += CGFloat(section.options.count) * 50
+            }
+            
+            profileTVHeightCons.constant = totalTableHeight
+            
+            if totalTableHeight > 90 {
+                let extraHeight = totalTableHeight - 90
+                scrollViewContentViewHeightCons.constant = 571 + extraHeight
+            } else {
+                scrollViewContentViewHeightCons.constant = 571
+            }
+            
+            self.view.layoutIfNeeded()
         }
-
-        profileTVHeightCons.constant = totalTableHeight
-
-        if totalTableHeight > 90 {
-            let extraHeight = totalTableHeight - 90
-            scrollViewContentViewHeightCons.constant = 571 + extraHeight
-        } else {
-            scrollViewContentViewHeightCons.constant = 571
-        }
-
-        self.view.layoutIfNeeded()
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        setupDefaultNavigationBarDisAppearance()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setupDefaultNavigationBarAppearance()
     }
    
-    func setupDefaultNavigationBarAppearance() {
-        if let color = UIColor(named: "defaultColor") {
-            navigationController?.navigationBar.barTintColor = color
-            navigationController?.navigationBar.backgroundColor = color
-            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-            navigationController?.navigationBar.tintColor = .white
-        }
-    }
-    func setupDefaultNavigationBarDisAppearance() {
-        navigationController?.navigationBar.barTintColor = .white
-        navigationController?.navigationBar.backgroundColor = .white
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
-        navigationController?.navigationBar.tintColor = .black
-    }
-
+   
+  
     private func roundCornersOfTopProfileView() {
         let width = topProfileView.bounds.width
         let height = topProfileView.bounds.height
@@ -182,14 +183,14 @@ class ProfilePageVC: UIViewController {
 
     func navigationProcess() {
         messageButton = UIBarButtonItem(
-            image: UIImage(named: "message-circle"),
+            image: UIImage(systemName: "message"),
             style: .plain,
             target: self,
             action: #selector(messageButtonTapped)
         )
 
         bellButton = UIBarButtonItem(
-            image: UIImage(named: "bell"),
+            image: UIImage(systemName:  "bell"),
             style: .plain,
             target: self,
             action: #selector(bellButtonTapped)
@@ -205,6 +206,14 @@ class ProfilePageVC: UIViewController {
 
     @objc func messageButtonTapped() {
         print("message tapped")
+        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+        let controller = storyboard.instantiateViewController(identifier: "CustomerServiceChatVC")as! CustomerServiceChatVC
+        navigationItem.backButtonTitle = ""
+        navigationController?.pushViewController(controller, animated: true)
+//        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+//        let controller = storyboard.instantiateViewController(identifier: "MessagesVC")as! MessagesVC
+//        navigationItem.backButtonTitle = ""
+//        navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc func bellButtonTapped() {
@@ -250,7 +259,7 @@ extension ProfilePageVC: UITableViewDelegate, UITableViewDataSource{
         let option = profileSections[section].options[row]
         
         cell.profileListLbl.text = option.listData
-        cell.profileListImages.image = UIImage(named: option.imageName)
+        cell.profileListImages.image = UIImage(systemName:  option.imageName)
         
         cell.profileListLbl.textColor = .darkGray
         cell.profileListLbl.textAlignment = .left
@@ -374,7 +383,7 @@ extension ProfilePageVC: UICollectionViewDelegate, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ManageAccountsCVC", for: indexPath)as! ManageAccountsCVC
         let data = manageAccountsData[indexPath.row]
-        cell.titleImage.image = UIImage(named: data.imageName)
+        cell.titleImage.image = UIImage(systemName:  data.imageName)
         cell.titleLbl.text = data.listData
         return cell
     }
@@ -386,7 +395,7 @@ extension ProfilePageVC: UICollectionViewDelegate, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0{
             let storyboard = UIStoryboard(name: "Profile", bundle: nil)
-            let controller = storyboard.instantiateViewController(identifier: "DetailsBookingsViewController")as! DetailsBookingsViewController
+            let controller = storyboard.instantiateViewController(identifier: "PersonalDetailsViewController")as! PersonalDetailsViewController
             navigationItem.backButtonTitle = ""
             navigationController?.pushViewController(controller, animated: true)
         }else if indexPath.row == 1{
@@ -407,4 +416,5 @@ extension ProfilePageVC: UICollectionViewDelegate, UICollectionViewDataSource, U
         }
     }
 }
+
 

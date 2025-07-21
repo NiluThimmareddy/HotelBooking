@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChildDataPoliciesTVC" rowHeight="340" id="KGk-i7-Jjw" customClass="ChildDataPoliciesTVC" customModule="HotelBooking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="569" height="340"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="569" height="340"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZQ-8r-Ggp">
+                        <rect key="frame" x="0.0" y="0.0" width="569" height="340"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XJR-Mn-aYe">
+                                <rect key="frame" x="10" y="10" width="25" height="25"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="86f-ti-hte"/>
+                                    <constraint firstAttribute="width" constant="25" id="us3-s6-o9c"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child Policies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="231-IK-l9z">
+                                <rect key="frame" x="45" y="12" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children of any age are welcome. Children 18 years and above will be charged as adults at this property." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGu-02-QrV">
+                                <rect key="frame" x="45" y="43" width="514" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cot and extra bed policies" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb0-ba-isn">
+                                <rect key="frame" x="45" y="130.33333333333334" width="514" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hKT-5d-Ar6">
+                                <rect key="frame" x="45" y="160.66666666666666" width="514" height="99.999999999999972"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ipB-cH-07G"/>
+                                </constraints>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTi-pv-xzY">
+                                <rect key="frame" x="45" y="270.66666666666669" width="514" height="50.333333333333314"/>
+                                <string key="text">Supplements are not calculated automatically in the total costs and will have to be paid for separately during your stay. All cots and extra bed are subject to availability. There is no capacity for cots.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To see correct prices and occupancy information, please add the number of children in your group and their ages to the search." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNp-7B-J3d">
+                                <rect key="frame" x="45" y="86.666666666666671" width="514" height="33.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XJR-Mn-aYe" firstAttribute="top" secondItem="BZQ-8r-Ggp" secondAttribute="top" constant="10" id="0q5-rW-bhK"/>
+                            <constraint firstAttribute="trailing" secondItem="hKT-5d-Ar6" secondAttribute="trailing" constant="10" id="2Zz-qR-nqh"/>
+                            <constraint firstItem="hKT-5d-Ar6" firstAttribute="leading" secondItem="231-IK-l9z" secondAttribute="leading" id="2eo-ln-iov"/>
+                            <constraint firstItem="uTi-pv-xzY" firstAttribute="top" secondItem="hKT-5d-Ar6" secondAttribute="bottom" constant="10" id="6qw-Za-qMp"/>
+                            <constraint firstAttribute="trailing" secondItem="uTi-pv-xzY" secondAttribute="trailing" constant="10" id="D14-HK-8vU"/>
+                            <constraint firstItem="hKT-5d-Ar6" firstAttribute="top" secondItem="Xb0-ba-isn" secondAttribute="bottom" constant="10" id="FzW-el-cHX"/>
+                            <constraint firstItem="NGu-02-QrV" firstAttribute="top" secondItem="231-IK-l9z" secondAttribute="bottom" constant="10" id="MJn-ba-rcY"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uTi-pv-xzY" secondAttribute="bottom" constant="10" id="Vlz-UT-0c7"/>
+                            <constraint firstItem="uTi-pv-xzY" firstAttribute="leading" secondItem="231-IK-l9z" secondAttribute="leading" id="X8M-NJ-Izq"/>
+                            <constraint firstItem="UNp-7B-J3d" firstAttribute="leading" secondItem="231-IK-l9z" secondAttribute="leading" id="btb-Rn-5Yy"/>
+                            <constraint firstItem="Xb0-ba-isn" firstAttribute="top" secondItem="UNp-7B-J3d" secondAttribute="bottom" constant="10" id="efU-J1-OOi"/>
+                            <constraint firstItem="XJR-Mn-aYe" firstAttribute="leading" secondItem="BZQ-8r-Ggp" secondAttribute="leading" constant="10" id="fay-9R-iWT"/>
+                            <constraint firstAttribute="trailing" secondItem="NGu-02-QrV" secondAttribute="trailing" constant="10" id="ft8-wh-Hgq"/>
+                            <constraint firstItem="231-IK-l9z" firstAttribute="centerY" secondItem="XJR-Mn-aYe" secondAttribute="centerY" id="hi7-c0-vXk"/>
+                            <constraint firstAttribute="trailing" secondItem="UNp-7B-J3d" secondAttribute="trailing" constant="10" id="rrU-A6-TUA"/>
+                            <constraint firstItem="NGu-02-QrV" firstAttribute="leading" secondItem="231-IK-l9z" secondAttribute="leading" id="t53-fP-9uV"/>
+                            <constraint firstItem="UNp-7B-J3d" firstAttribute="top" secondItem="NGu-02-QrV" secondAttribute="bottom" constant="10" id="wbw-eR-MWo"/>
+                            <constraint firstItem="Xb0-ba-isn" firstAttribute="leading" secondItem="UNp-7B-J3d" secondAttribute="leading" id="y2S-32-3UO"/>
+                            <constraint firstItem="231-IK-l9z" firstAttribute="leading" secondItem="XJR-Mn-aYe" secondAttribute="trailing" constant="10" id="y74-RA-BgP"/>
+                            <constraint firstAttribute="trailing" secondItem="Xb0-ba-isn" secondAttribute="trailing" constant="10" id="zLo-ES-LNB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="BZQ-8r-Ggp" secondAttribute="trailing" id="GcQ-2G-ry5"/>
+                    <constraint firstItem="BZQ-8r-Ggp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="XBZ-Bb-gec"/>
+                    <constraint firstAttribute="bottom" secondItem="BZQ-8r-Ggp" secondAttribute="bottom" id="bCp-nM-ioq"/>
+                    <constraint firstItem="BZQ-8r-Ggp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="chC-Hk-2wF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="childFinalContentLbl" destination="uTi-pv-xzY" id="SDN-F1-Vx4"/>
+                <outlet property="childPoliciesContent" destination="NGu-02-QrV" id="MK9-9g-7y0"/>
+                <outlet property="childPoliciesImage" destination="XJR-Mn-aYe" id="s29-SP-Yco"/>
+                <outlet property="childPoliciesTV" destination="hKT-5d-Ar6" id="TOB-Ds-zyU"/>
+                <outlet property="childPoliciesTitle" destination="231-IK-l9z" id="dcA-g4-Aro"/>
+                <outlet property="childPoliciesView" destination="BZQ-8r-Ggp" id="543-Yh-MQp"/>
+                <outlet property="cotAndExtraBed" destination="Xb0-ba-isn" id="fi8-1F-Tux"/>
+                <outlet property="toSeeCorrectPrice" destination="UNp-7B-J3d" id="GFe-wg-O7H"/>
+            </connections>
+            <point key="canvasLocation" x="49.618320610687022" y="25.35211267605634"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="backgroundColor">
+            <color red="0.93300002813339233" green="0.93300002813339233" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -434,7 +434,6 @@ class DetailsBookingsViewController: UIViewController, UIScrollViewDelegate {
         super.viewWillDisappear(animated)
         statusBarBackgroundView.removeFromSuperview()
         
-        setupDefaultNavigationBarDisAppearance()
     }
     
     override func viewDidLayoutSubviews() {
@@ -487,18 +486,11 @@ class DetailsBookingsViewController: UIViewController, UIScrollViewDelegate {
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.backgroundColor = .clear
         navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         statusBarBackgroundView.backgroundColor = .clear
     }
     
-    func setupDefaultNavigationBarDisAppearance() {
-        let color = UIColor(named: "defaultColor")
-        navigationController?.navigationBar.barTintColor = .white
-        navigationController?.navigationBar.backgroundColor = .white
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
-        navigationController?.navigationBar.tintColor = .black
-        statusBarBackgroundView.backgroundColor = color
-    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -569,9 +561,9 @@ class DetailsBookingsViewController: UIViewController, UIScrollViewDelegate {
 
     func updateNextButtonImage() {
         if isGoingForward {
-            nextButton.setImage(UIImage(named: "chevron-right"), for: .normal)
+            nextButton.setImage(UIImage(named: "chevron.right"), for: .normal)
         } else {
-            nextButton.setImage(UIImage(named: "chevron-left"), for: .normal)
+            nextButton.setImage(UIImage(named: "chevron.left"), for: .normal)
         }
     }
     
