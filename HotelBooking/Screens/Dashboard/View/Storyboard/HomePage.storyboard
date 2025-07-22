@@ -711,7 +711,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="J3Q-bd-qFb"/>
                                                         </constraints>
-                                                        <string key="text">For security purposes, all Indian guests are required to present a valid government-issued photo identification at the time of check-in. Accepted ID proofs include Aadhaar card, passport, voter ID, or driving license. Please note that PAN card is not considered a valid form of identification for this purpose. We kindly request your cooperation in complying with this requirement to help ensure the safety and security of all our guests.</string>
+                                                        <mutableString key="text">Please note that for security purpose all Indian guests are required to present a valid photo ID proof (Voter's ID, Driving Licence, Aadhar Card, any other ID with address approved by the Government of India. A Pan Card is not acceptable). All international guests are required to present a valid passport and visa. For Indian guests, cash settlements of INR 25000 and above will require a pan card copy during check out.Please note that to check the validity of the credit card and guarantee the booking, the property reserves the right to temporarily hold an amount prior to arrival. Also the property reserve the right to charge the Credit Card provided in case of a No Show or late cancellation.Please advise the hotel if billing is settled by different credit card. Hotel will be taking a pre-authorization on shared credit card during the time of confirmation. Traveler is requested to inform hotel front desk at the time of check in if there is change in credit card details.As per government guidelines only fully vaccinated individuals are permitted into hotel premises, guests have to present the certificate at check-in.Guests are required to show a photo identification and credit card upon check-in. Please note that all Special Requests are subject to availability and additional charges may apply.Please inform Taj MG Road Bengaluru in advance of your expected arrival time. You can use the Special Requests box when booking, or contact the property directly with the contact details provided in your confirmation.Guests under the age of 18 can only check in with a parent or official guardian.</mutableString>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1846,7 +1846,7 @@
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="chevron-left"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system"/>
                                         <connections>
                                             <action selector="backButton:" destination="9e0-79-axG" eventType="touchUpInside" id="bca-zM-jy5"/>
                                         </connections>
@@ -1864,7 +1864,7 @@
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="ellipsis-vertical"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ellipsis" catalog="system"/>
                                         <connections>
                                             <action selector="menuButton:" destination="9e0-79-axG" eventType="touchUpInside" id="rvy-j2-XYa"/>
                                         </connections>
@@ -2034,6 +2034,18 @@
                                     <constraint firstItem="rxA-0N-sTb" firstAttribute="leading" secondItem="Z5h-WS-wFc" secondAttribute="leading" constant="10" id="ysO-67-Mc3"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0Ey-3i-UuO">
+                                <rect key="frame" x="123" y="178" width="250" height="120"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="NIY-gm-Chb"/>
+                                    <constraint firstAttribute="height" constant="120" id="uIr-ZD-ZIh"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="9e0-79-axG" id="hRe-xG-ABp"/>
+                                    <outlet property="delegate" destination="9e0-79-axG" id="et9-xS-SBn"/>
+                                </connections>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkx-Sb-aJw">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="644"/>
                                 <subviews>
@@ -2073,12 +2085,14 @@
                             <constraint firstItem="kkx-Sb-aJw" firstAttribute="trailing" secondItem="sVZ-RY-pvF" secondAttribute="trailing" id="YWF-13-JGz"/>
                             <constraint firstItem="Ul3-tM-0ox" firstAttribute="top" secondItem="Yqb-Kz-CUR" secondAttribute="bottom" id="bBL-1O-PGS"/>
                             <constraint firstItem="Ul3-tM-0ox" firstAttribute="top" secondItem="Ixx-VN-6Rp" secondAttribute="bottom" constant="10" id="bLW-uC-31q"/>
+                            <constraint firstItem="0Ey-3i-UuO" firstAttribute="trailing" secondItem="UFN-9M-Srn" secondAttribute="trailing" id="cFT-wi-C6F"/>
                             <constraint firstItem="Z5h-WS-wFc" firstAttribute="top" secondItem="kkx-Sb-aJw" secondAttribute="bottom" constant="8" symbolic="YES" id="ffU-RD-gd5"/>
                             <constraint firstItem="Z5h-OI-iVs" firstAttribute="centerX" secondItem="sVZ-RY-pvF" secondAttribute="centerX" id="h2H-e6-blU"/>
                             <constraint firstItem="kkx-Sb-aJw" firstAttribute="top" secondItem="T8J-dY-v8e" secondAttribute="top" id="hhc-sL-Edl"/>
                             <constraint firstItem="Yqb-Kz-CUR" firstAttribute="top" secondItem="T8J-dY-v8e" secondAttribute="top" id="iP2-VU-c8a"/>
                             <constraint firstItem="tgP-ay-RJP" firstAttribute="top" secondItem="sVZ-RY-pvF" secondAttribute="top" constant="10" id="nE7-5r-aEf"/>
                             <constraint firstItem="sVZ-RY-pvF" firstAttribute="trailing" secondItem="Yqb-Kz-CUR" secondAttribute="trailing" id="rr9-ae-5uC"/>
+                            <constraint firstItem="0Ey-3i-UuO" firstAttribute="top" secondItem="tgP-ay-RJP" secondAttribute="bottom" id="trT-nI-0uN"/>
                             <constraint firstItem="sVZ-RY-pvF" firstAttribute="trailing" secondItem="Ixx-VN-6Rp" secondAttribute="trailing" constant="10" id="up8-X3-TXI"/>
                             <constraint firstItem="Ul3-tM-0ox" firstAttribute="leading" secondItem="sVZ-RY-pvF" secondAttribute="leading" id="v39-vF-C0w"/>
                             <constraint firstItem="sVZ-RY-pvF" firstAttribute="trailing" secondItem="Z5h-WS-wFc" secondAttribute="trailing" id="vds-kM-3fm"/>
@@ -2103,6 +2117,8 @@
                         <outlet property="mapTypeButton" destination="v8V-u0-i6O" id="WRp-Iu-k5p"/>
                         <outlet property="mapTypeCloseButton" destination="DKg-oY-Tq1" id="gGc-T4-gIL"/>
                         <outlet property="mapTypeCloseButtonView" destination="kkx-Sb-aJw" id="klE-aM-j5p"/>
+                        <outlet property="moreMenuButton" destination="2UA-md-Ygs" id="UyL-fN-NTn"/>
+                        <outlet property="moreMenuButtonTV" destination="0Ey-3i-UuO" id="xpu-NR-KxJ"/>
                         <outlet property="newPrice" destination="Zvg-hQ-Cct" id="o4C-xN-fgw"/>
                         <outlet property="oldPrice" destination="0Nl-HB-f2e" id="CBh-Cu-EMW"/>
                         <outlet property="priceForTwoNights" destination="Hwo-ya-9iz" id="5Rr-3R-TZk"/>
@@ -4287,11 +4303,12 @@
         <image name="bathtub" catalog="system" width="128" height="75"/>
         <image name="bed.double.fill" catalog="system" width="128" height="82"/>
         <image name="chevron-left" width="24" height="24"/>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="chevron.up.chevron.down" catalog="system" width="109" height="128"/>
         <image name="cleaning" width="512" height="512"/>
         <image name="comfort" width="256" height="256"/>
         <image name="content" width="512" height="512"/>
-        <image name="ellipsis-vertical" width="24" height="24"/>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="food" width="512" height="512"/>
         <image name="heart" width="24" height="24"/>
         <image name="kitchen-table" width="512" height="512"/>

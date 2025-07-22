@@ -15,6 +15,8 @@ class HotelAnnotation: MKPointAnnotation {
 
 class ViewHotelMapLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDelegate, CLLocationManagerDelegate {
     
+    @IBOutlet weak var moreMenuButtonTV: UITableView!
+    @IBOutlet weak var moreMenuButton: UIButton!
     @IBOutlet weak var shimmerEffectView: UIView!
     @IBOutlet weak var hotelDetailsUpdatedPopUpLbl: UILabel!
     @IBOutlet weak var hotelDetailsUpdatedPopUpView: UIView!
@@ -49,10 +51,18 @@ class ViewHotelMapLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDe
     var hotelDataPass: Hotel?
     let color = UIColor(named: "defaultColor")
     var selectedName: String?
+    var moreButtonTvData = ["Copy Address","Copy GPS Co-ordinates","Open in Google Maps"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         callHotelData()
+        moreMenuButtonTV.isHidden = true
+        moreMenuButtonTV.register(UINib(nibName: "UserFeedBackAfterCheckOutTVC", bundle: nil), forCellReuseIdentifier: "UserFeedBackAfterCheckOutTVC")
+        let image = UIImage(systemName: "ellipsis")?.withRenderingMode(.alwaysTemplate)
+        moreMenuButton.setImage(image, for: .normal)
+        moreMenuButton.tintColor = .black
+        moreMenuButton.transform = CGAffineTransform(rotationAngle: .pi / 2)
         mapDataView.delegate = self
         searchLocationTextField.delegate = self
         mapTypeButton.layer.cornerRadius = mapTypeButton.frame.height / 2
@@ -85,22 +95,19 @@ class ViewHotelMapLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDe
         shimmerEffectView.isHidden = true
         shimmerEffectView.alpha = 0.6
 
-
     }
+    
     func showHotelUpdatedPopup(with name: String) {
         hotelDetailsUpdatedPopUpLbl.text = "\(name) Details Updated"
         
-        // Start from just off the left side of the screen
         let screenWidth = UIScreen.main.bounds.width
         hotelDetailsUpdatedPopUpView.transform = CGAffineTransform(translationX: -screenWidth, y: 0)
         hotelDetailsUpdatedPopUpView.alpha = 1
         hotelDetailsUpdatedPopUpView.isHidden = false
 
-        // Slide into center
         UIView.animate(withDuration: 0.5, animations: {
             self.hotelDetailsUpdatedPopUpView.transform = .identity
         }) { _ in
-            // After 2 seconds, slide out to the right
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 UIView.animate(withDuration: 0.5, animations: {
                     self.hotelDetailsUpdatedPopUpView.transform = CGAffineTransform(translationX: screenWidth, y: 0)
@@ -170,7 +177,6 @@ class ViewHotelMapLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDe
                             self.mapDataView.addAnnotation(annotation)
                         }
 
-                        // Zoom to selected hotel
                         let selectedCoordinate = CLLocationCoordinate2D(latitude: selectedHotel.Latitude, longitude: selectedHotel.Longitude)
                         let region = MKCoordinateRegion(center: selectedCoordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
                         self.mapDataView.setRegion(region, animated: true)
@@ -179,12 +185,6 @@ class ViewHotelMapLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDe
             }
         }
 
-
-
-
-
-
-     
     // MARK: - MKMapViewDelegate
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation {
@@ -195,7 +195,6 @@ class ViewHotelMapLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDe
            annotation.coordinate.latitude == selectedHotel.Latitude,
            annotation.coordinate.longitude == selectedHotel.Longitude {
 
-            // Selected hotel: show custom pin
             let identifier = "SelectedHotel"
             var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
 
@@ -211,7 +210,6 @@ class ViewHotelMapLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDe
             return annotationView
 
         } else {
-            // Other hotels: show chat bubble
             let identifier = "ChatBubbleAnnotation"
             var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
 
@@ -227,18 +225,15 @@ class ViewHotelMapLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDe
                 bubbleView.tag = 3001
                 bubbleView.backgroundColor = .clear
 
-                // Bubble shape
                 let shapeLayer = CAShapeLayer()
                 let path = UIBezierPath()
 
-                // Rounded rect
                 path.move(to: CGPoint(x: 10, y: 0))
                 path.addLine(to: CGPoint(x: bubbleWidth - 10, y: 0))
                 path.addQuadCurve(to: CGPoint(x: bubbleWidth, y: 10), controlPoint: CGPoint(x: bubbleWidth, y: 0))
                 path.addLine(to: CGPoint(x: bubbleWidth, y: bubbleHeight - 10))
                 path.addQuadCurve(to: CGPoint(x: bubbleWidth - 10, y: bubbleHeight), controlPoint: CGPoint(x: bubbleWidth, y: bubbleHeight))
                 
-                // Tail
                 path.addLine(to: CGPoint(x: bubbleWidth / 2 + 5, y: bubbleHeight))
                 path.addLine(to: CGPoint(x: bubbleWidth / 2, y: bubbleHeight + tailHeight))
                 path.addLine(to: CGPoint(x: bubbleWidth / 2 - 5, y: bubbleHeight))
@@ -253,7 +248,6 @@ class ViewHotelMapLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDe
                 shapeLayer.fillColor = UIColor(red: 0/255, green: 59/255, blue: 149/255, alpha: 1).cgColor
                 bubbleView.layer.insertSublayer(shapeLayer, at: 0)
 
-                // Hotel name label
                 let label = UILabel(frame: CGRect(x: 8, y: 5, width: bubbleWidth - 16, height: bubbleHeight - 10))
                 label.tag = 1001
                 label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
@@ -286,22 +280,17 @@ class ViewHotelMapLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDe
         guard let annotation = view.annotation as? HotelAnnotation else { return }
         
 
-        // Step 1: Start shimmer
         shimmerEffectView.isHidden = false
         shimmerEffectView.startPulseShimmerr()
        
-        // Step 2: Delay the update by 1 second (until shimmer is complete)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            // Stop shimmer
             self.shimmerEffectView.stopShimmering()
             self.shimmerEffectView.isHidden = true
             
-            // Step 3: Update hotel name and show popup
             let hotelNameText = annotation.hotelName ?? "Unknown Hotel"
             self.hotelName.text = hotelNameText
             self.showHotelUpdatedPopup(with: hotelNameText)
             
-            // Step 4: Load hotel image
             let fil = self.viewModel.allHotels.filter { $0.HotelName == hotelNameText }
             let hotelId = self.viewModel.allhotelImages.filter { $0.hotelId == fil.first?.HotelId }
             let hotelUrl = hotelId.first?.imageUrl
@@ -414,10 +403,88 @@ class ViewHotelMapLocationVC: UIViewController, MKMapViewDelegate, UITextFieldDe
         dismiss(animated: true)
     }
     @IBAction func menuButton(_ sender: Any) {
+        moreMenuButtonTV.isHidden = !moreMenuButtonTV.isHidden
     }
     
 }
 
 
+extension ViewHotelMapLocationVC: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return moreButtonTvData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UserFeedBackAfterCheckOutTVC")as! UserFeedBackAfterCheckOutTVC
+        cell.titleData.text = moreButtonTvData[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let hotel = hotelDataPass else { return }
 
+            switch indexPath.row {
+            case 0:
+                // Copy Address
+                UIPasteboard.general.string = hotel.AddressLine1
+                showToast(message: "Address copied!")
 
+            case 1:
+                // Copy GPS Coordinates
+                let coordinates = "\(hotel.Latitude), \(hotel.Longitude)"
+                UIPasteboard.general.string = coordinates
+                showToast(message: "Coordinates copied!")
+
+            case 2:
+                // Open in Google Maps
+                let urlString = "comgooglemaps://?q=\(hotel.Latitude),\(hotel.Longitude)"
+                if let url = URL(string: urlString), UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url)
+                } else {
+                    // Fallback to browser
+                    let webUrl = "https://maps.google.com/?q=\(hotel.Latitude),\(hotel.Longitude)"
+                    if let url = URL(string: webUrl) {
+                        UIApplication.shared.open(url)
+                    }
+                }
+
+            default:
+                break
+            }
+
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    
+    func showToast(message: String, duration: TimeInterval = 2.0) {
+        let toastLabel = UILabel()
+        toastLabel.text = message
+        toastLabel.textAlignment = .center
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+        toastLabel.textColor = .white
+        toastLabel.font = UIFont.systemFont(ofSize: 14)
+        toastLabel.alpha = 0.0
+        toastLabel.layer.cornerRadius = 10
+        toastLabel.clipsToBounds = true
+
+        if let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) {
+            let labelWidth = window.frame.width - 40
+            toastLabel.frame = CGRect(x: 20, y: window.frame.height - 120, width: labelWidth, height: 40)
+            window.addSubview(toastLabel)
+
+            UIView.animate(withDuration: 0.5, animations: {
+                toastLabel.alpha = 1.0
+            }) { _ in
+                UIView.animate(withDuration: 0.5, delay: duration, options: .curveEaseOut, animations: {
+                    toastLabel.alpha = 0.0
+                }) { _ in
+                    toastLabel.removeFromSuperview()
+                }
+            }
+        }
+    }
+
+}

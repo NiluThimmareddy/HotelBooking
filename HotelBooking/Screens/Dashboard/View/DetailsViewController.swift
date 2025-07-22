@@ -119,7 +119,8 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         GuestReviewModel(name: "Value for Money", rating: "8.2"),
         GuestReviewModel(name: "Location", rating: "9.3")
     ]
-    
+    var isImportantInformationExpanded = false
+    var importantReadMoreHeight: Int = 0
     var hotelImages = ["1","2","3","4","5","6","7","8","9","10","11"]
     var policies = ["Cancellation","Child","Comfort","Pet"]
     var isHeartSelected = false
@@ -560,7 +561,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
             policiesCollectionViewHeightCons.constant = policiesHeight
             
             let baseContentHeight: CGFloat = 2344 - 35 - 100
-            scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight + policiesHeight
+            scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight + policiesHeight + CGFloat(importantReadMoreHeight)
             
             view.layoutIfNeeded()
         }else{
@@ -583,7 +584,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
             policiesCollectionViewHeightCons.constant = policiesHeight
             
             let baseContentHeight: CGFloat = 2194 - 35 - 100
-            scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight + policiesHeight
+            scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight + policiesHeight + CGFloat(importantReadMoreHeight)
             
             view.layoutIfNeeded()
         }
@@ -604,8 +605,6 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         
     }
     
-    
-
 
     func callData(){
         hotelNameLBL.text = hotelDetailsData?.HotelName
@@ -634,12 +633,39 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         navigationItem.backButtonTitle = ""
         navigationController?.pushViewController(vc, animated: true)
     }
+    
     @IBAction func importantInformationReadMoreButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ProfilePageVC")as! ProfilePageVC
-        navigationItem.backButtonTitle = ""
-        navigationController?.pushViewController(vc, animated: true)
+        isImportantInformationExpanded.toggle()
+        
+        importantInformationLbl.numberOfLines = isImportantInformationExpanded ? 0 : 3
+        
+        let buttonTitle = isImportantInformationExpanded ? "Read Less" : "Read More"
+        let color = UIColor(named: "defaultColor") ?? UIColor.blue
+        
+        let attributedTitle = NSAttributedString(
+            string: buttonTitle,
+            attributes: [
+                .font: UIFont.poppinsBold(12),
+                .foregroundColor: color
+            ]
+        )
+        importantInformationReadMoreButton.setAttributedTitle(attributedTitle, for: .normal)
+        
+        let newHeight = calculateLabelHeight()
+        importantReadMoreHeight = Int(newHeight - 60)
+        
+        UIView.animate(withDuration: 0.3) {
+            self.importantInformationLblHeightCons.constant = newHeight
+            self.view.layoutIfNeeded()
+        }
     }
+    
+    func calculateLabelHeight() -> CGFloat {
+        let maxSize = CGSize(width: importantInformationLbl.frame.width, height: CGFloat.greatestFiniteMagnitude)
+        let expectedSize = importantInformationLbl.sizeThatFits(maxSize)
+        return expectedSize.height
+    }
+
     func changeTextColorWhileSwipe(){
         if currentIndex == 0{
             attractionButton.tintColor = color
