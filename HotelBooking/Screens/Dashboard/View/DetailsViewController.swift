@@ -635,30 +635,39 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
     }
     
     @IBAction func importantInformationReadMoreButton(_ sender: Any) {
-        isImportantInformationExpanded.toggle()
-        
-        importantInformationLbl.numberOfLines = isImportantInformationExpanded ? 0 : 3
-        
-        let buttonTitle = isImportantInformationExpanded ? "Read Less" : "Read More"
-        let color = UIColor(named: "defaultColor") ?? UIColor.blue
-        
-        let attributedTitle = NSAttributedString(
-            string: buttonTitle,
-            attributes: [
-                .font: UIFont.poppinsBold(12),
-                .foregroundColor: color
-            ]
-        )
-        importantInformationReadMoreButton.setAttributedTitle(attributedTitle, for: .normal)
-        
-        let newHeight = calculateLabelHeight()
-        importantReadMoreHeight = Int(newHeight - 60)
-        
-        UIView.animate(withDuration: 0.3) {
-            self.importantInformationLblHeightCons.constant = newHeight
-            self.view.layoutIfNeeded()
-        }
+//        isImportantInformationExpanded.toggle()
+//        
+//        importantInformationLbl.numberOfLines = isImportantInformationExpanded ? 0 : 3
+//        
+//        let buttonTitle = isImportantInformationExpanded ? "Read Less" : "Read More"
+//        let color = UIColor(named: "defaultColor") ?? UIColor.blue
+//        
+//        let attributedTitle = NSAttributedString(
+//            string: buttonTitle,
+//            attributes: [
+//                .font: UIFont.poppinsBold(12),
+//                .foregroundColor: color
+//            ]
+//        )
+//        importantInformationReadMoreButton.setAttributedTitle(attributedTitle, for: .normal)
+//        
+//        let newHeight = calculateLabelHeight()
+//        importantReadMoreHeight = Int(newHeight - 60)
+//        
+//        UIView.animate(withDuration: 0.3) {
+//            self.importantInformationLblHeightCons.constant = newHeight
+//            self.view.layoutIfNeeded()
+//        }
+            let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+            let vc = storyboard.instantiateViewController(identifier: "ProfilePageVC")as! ProfilePageVC
+            navigationItem.backButtonTitle = ""
+            navigationController?.pushViewController(vc, animated: true)
     }
+    
+//    let storyboard = UIStoryboard(name: "", bundle: nil)
+//    let vc = storyboard.instantiateViewController(identifier: "ProfilePageVC")as! ProfilePageVC
+//    navigationItem.backButtonTitle = ""
+//    navigationController?.pushViewController(vc, animated: true)
     
     func calculateLabelHeight() -> CGFloat {
         let maxSize = CGSize(width: importantInformationLbl.frame.width, height: CGFloat.greatestFiniteMagnitude)
@@ -690,21 +699,25 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
             transportButton.setTitleColor(color, for: .normal)
         }
     }
+    
     @IBAction func attractionButton(_ sender: Any) {
         currentIndex = 0
         switchToCategory(index: currentIndex)
         changeTextColorWhileSwipe()
     }
+    
     @IBAction func eatAndDrinkButton(_ sender: Any) {
         currentIndex = 1
         switchToCategory(index: currentIndex)
         changeTextColorWhileSwipe()
     }
+    
     @IBAction func transportButton(_ sender: Any) {
         currentIndex = 2
         switchToCategory(index: currentIndex)
         changeTextColorWhileSwipe()
     }
+    
     @IBAction func showMoreButton(_ sender: UIButton) {
         isGuestReviewExpanded.toggle()
         
@@ -718,6 +731,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         guestReviewTV.reloadData()
         updateDynamicHeights()
     }
+    
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true)
     }
@@ -728,6 +742,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         vc.hotelDataPass = hotelDetailsData
         present(vc, animated: true)
     }
+    
     @IBAction func heartButton(_ sender: Any) {
     }
     

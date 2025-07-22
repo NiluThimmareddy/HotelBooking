@@ -24,7 +24,6 @@ class UserFeedBackListTVC: UITableViewCell {
     @IBOutlet weak var bookedDate: UILabel!
     @IBOutlet weak var hotelLocation: UILabel!
     @IBOutlet weak var hotelName: UILabel!
-    @IBOutlet weak var draftLbl: UILabel!
     @IBOutlet weak var hotelImage: UIImageView!
     
     weak var delegate: UserFeedBackListTVCDelegate?
@@ -33,13 +32,9 @@ class UserFeedBackListTVC: UITableViewCell {
         super.awakeFromNib()
         backView.BackViewShadow()
         hotelImage.layer.cornerRadius = 10
-        draftLbl.layer.cornerRadius = 5
-        draftLbl.layer.borderWidth = 2
-        draftLbl.layer.borderColor = UIColor.lightGray.cgColor
         fontStyle()
     }
     func fontStyle(){
-        draftLbl.font = .poppinsMedium(10)
         hotelName.font = .poppinsBold(14)
         hotelLocation.font = .poppinsMedium(12)
         bookedDate.font = .poppinsMedium(12)
@@ -56,10 +51,10 @@ class UserFeedBackListTVC: UITableViewCell {
         
         for (index, star) in starImages.enumerated() {
             if index < rating {
-                star?.isHidden = false
+                
                 star?.image = UIImage(systemName: "star.fill") 
             } else {
-                star?.isHidden = true
+                star?.image = UIImage(systemName: "star")
             }
         }
     }

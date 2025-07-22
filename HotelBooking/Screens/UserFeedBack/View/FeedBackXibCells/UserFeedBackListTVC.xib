@@ -29,42 +29,32 @@
                                     <constraint firstAttribute="width" constant="100" id="DhE-CP-6Kl"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Draft" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSJ-rU-47E">
-                                <rect key="frame" x="150" y="20" width="50" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="Tjp-ip-ebo"/>
-                                    <constraint firstAttribute="width" constant="50" id="doA-eO-wmB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treebo Emirates Suites Indiranagar" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPu-ES-Q6O">
-                                <rect key="frame" x="150" y="45" width="242.33333333333337" height="17"/>
+                                <rect key="frame" x="150" y="20" width="242.33333333333337" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bengaluru, India" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPo-pn-MHR">
-                                <rect key="frame" x="150" y="67" width="91.666666666666686" height="14.333333333333329"/>
+                                <rect key="frame" x="150" y="42" width="91.666666666666686" height="14.333333333333336"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 - 16 May 2025" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTe-5a-EBO">
-                                <rect key="frame" x="150" y="86.333333333333329" width="98.333333333333314" height="14.333333333333329"/>
+                                <rect key="frame" x="150" y="61.333333333333336" width="98.333333333333314" height="14.333333333333336"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="61 days left to write your review" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pq-wF-GTb">
-                                <rect key="frame" x="150" y="105.66666666666667" width="179.66666666666663" height="14.333333333333329"/>
+                                <rect key="frame" x="150" y="80.666666666666671" width="179.66666666666663" height="14.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTx-de-N7p">
-                                <rect key="frame" x="138" y="124.99999999999999" width="188.33333333333337" height="28.333333333333329"/>
+                                <rect key="frame" x="138" y="100" width="188.33333333333337" height="28.333333333333343"/>
                                 <color key="tintColor" name="defaultColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Complete your draft review">
@@ -75,7 +65,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uyV-OV-M5u">
-                                <rect key="frame" x="150" y="125" width="80" height="20"/>
+                                <rect key="frame" x="150" y="100" width="80" height="20"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="V8X-Hf-buI">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="20"/>
@@ -117,23 +107,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YPu-ES-Q6O" secondAttribute="trailing" constant="10" id="2t7-Eu-YL5"/>
-                            <constraint firstItem="5Pq-wF-GTb" firstAttribute="leading" secondItem="QSJ-rU-47E" secondAttribute="leading" id="9ZM-iP-sCL"/>
                             <constraint firstItem="IPo-pn-MHR" firstAttribute="top" secondItem="YPu-ES-Q6O" secondAttribute="bottom" constant="5" id="C5q-Z5-mKX"/>
+                            <constraint firstItem="YPu-ES-Q6O" firstAttribute="top" secondItem="Bgq-W9-MsN" secondAttribute="top" id="DPl-Ow-78b"/>
+                            <constraint firstItem="uyV-OV-M5u" firstAttribute="leading" secondItem="YPu-ES-Q6O" secondAttribute="leading" id="Dac-w2-axu"/>
+                            <constraint firstItem="FTe-5a-EBO" firstAttribute="leading" secondItem="YPu-ES-Q6O" secondAttribute="leading" id="ETs-Dz-wnx"/>
+                            <constraint firstItem="XTx-de-N7p" firstAttribute="leading" secondItem="YPu-ES-Q6O" secondAttribute="leading" constant="-12" id="Ifs-u8-YsJ"/>
                             <constraint firstItem="5Pq-wF-GTb" firstAttribute="top" secondItem="FTe-5a-EBO" secondAttribute="bottom" constant="5" id="J67-us-cWD"/>
-                            <constraint firstItem="XTx-de-N7p" firstAttribute="leading" secondItem="QSJ-rU-47E" secondAttribute="leading" constant="-12" id="MXt-0e-ShB"/>
+                            <constraint firstItem="YPu-ES-Q6O" firstAttribute="leading" secondItem="Bgq-W9-MsN" secondAttribute="trailing" constant="30" id="LqF-Py-y6T"/>
+                            <constraint firstItem="IPo-pn-MHR" firstAttribute="leading" secondItem="YPu-ES-Q6O" secondAttribute="leading" id="MYK-9Y-i9w"/>
                             <constraint firstItem="uyV-OV-M5u" firstAttribute="top" secondItem="5Pq-wF-GTb" secondAttribute="bottom" constant="5" id="PR8-iM-QNP"/>
-                            <constraint firstItem="FTe-5a-EBO" firstAttribute="leading" secondItem="QSJ-rU-47E" secondAttribute="leading" id="Q84-pc-44I"/>
-                            <constraint firstItem="QSJ-rU-47E" firstAttribute="top" secondItem="Bgq-W9-MsN" secondAttribute="top" id="SvL-cw-jRx"/>
-                            <constraint firstItem="uyV-OV-M5u" firstAttribute="leading" secondItem="QSJ-rU-47E" secondAttribute="leading" id="TCO-Ee-oJv"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IPo-pn-MHR" secondAttribute="trailing" constant="10" id="Uaz-99-1zH"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FTe-5a-EBO" secondAttribute="trailing" constant="10" id="Vnp-zI-9Os"/>
                             <constraint firstItem="XTx-de-N7p" firstAttribute="top" secondItem="5Pq-wF-GTb" secondAttribute="bottom" constant="5" id="Vz0-Do-RML"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5Pq-wF-GTb" secondAttribute="trailing" constant="10" id="Z2F-pK-gSy"/>
-                            <constraint firstItem="QSJ-rU-47E" firstAttribute="leading" secondItem="Bgq-W9-MsN" secondAttribute="trailing" constant="30" id="ZyR-Pc-gdX"/>
-                            <constraint firstItem="YPu-ES-Q6O" firstAttribute="leading" secondItem="QSJ-rU-47E" secondAttribute="leading" id="pKs-mL-mra"/>
+                            <constraint firstItem="5Pq-wF-GTb" firstAttribute="leading" secondItem="YPu-ES-Q6O" secondAttribute="leading" id="pB0-sQ-5kY"/>
                             <constraint firstItem="Bgq-W9-MsN" firstAttribute="leading" secondItem="YDo-M3-XvP" secondAttribute="leading" constant="20" id="q0C-Lf-xtU"/>
-                            <constraint firstItem="IPo-pn-MHR" firstAttribute="leading" secondItem="QSJ-rU-47E" secondAttribute="leading" id="ruc-Ih-9aW"/>
-                            <constraint firstItem="YPu-ES-Q6O" firstAttribute="top" secondItem="QSJ-rU-47E" secondAttribute="bottom" constant="5" id="uLR-Ww-5Mk"/>
                             <constraint firstItem="Bgq-W9-MsN" firstAttribute="top" secondItem="YDo-M3-XvP" secondAttribute="top" constant="20" id="w9E-MI-LiA"/>
                             <constraint firstItem="FTe-5a-EBO" firstAttribute="top" secondItem="IPo-pn-MHR" secondAttribute="bottom" constant="5" id="zTw-fL-ckh"/>
                         </constraints>
@@ -152,7 +140,6 @@
                 <outlet property="backView" destination="YDo-M3-XvP" id="wEW-m9-6n5"/>
                 <outlet property="bookedDate" destination="FTe-5a-EBO" id="SGJ-jP-BKp"/>
                 <outlet property="completeButton" destination="XTx-de-N7p" id="hpe-nA-XZs"/>
-                <outlet property="draftLbl" destination="QSJ-rU-47E" id="z2s-s6-GYP"/>
                 <outlet property="hotelImage" destination="Bgq-W9-MsN" id="OKB-Z7-2ZH"/>
                 <outlet property="hotelLocation" destination="IPo-pn-MHR" id="rsW-n7-aET"/>
                 <outlet property="hotelName" destination="YPu-ES-Q6O" id="oC8-bo-39a"/>
