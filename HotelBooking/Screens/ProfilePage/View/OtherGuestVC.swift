@@ -41,6 +41,7 @@ class OtherGuestVC: UIViewController {
     }
     
     
+    
 
 }
 
@@ -76,28 +77,27 @@ extension OtherGuestVC: UITableViewDelegate, UITableViewDataSource, OtherGuestLi
 
     }
 
-    
-    func didTapDeleteButton(in cell: OtherGuestListTVC) {
-        guard let indexPath = otherGuestListTV.indexPath(for: cell) else { return }
-        
-        let guest = otherGuests[indexPath.row]
-        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "AddNewTravellerVC") as! AddNewTravellerVC
-        vc.selectedOption = .delete
-        vc.otherGuestsDelete = guest
-        vc.guestIndex = indexPath.row
-        vc.delegate = self
-        present(vc, animated: true)
-    }
 }
 
 
 extension OtherGuestVC: AddNewTravellerDelegate {
-    func didDeleteGuest(_ guest: Guest) {
-        if let index = otherGuests.firstIndex(where: { $0.firstName == guest.firstName && $0.lastName == guest.lastName && $0.dob == guest.dob }) {
-            otherGuests.remove(at: index)
-            otherGuestListTV.reloadData()
-        }
+    func didTapDeleteButton(in cell: OtherGuestListTVC) {
+        guard let indexPath = otherGuestListTV.indexPath(for: cell) else { return }
+
+        let guest = otherGuests[indexPath.row]
+        
+       
+        let alert = UIAlertController(title: "Delete Guest", message: "Are you sure you want to delete \(guest.firstName) \(guest.lastName)?", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
+        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
+           
+            self.otherGuests.remove(at: indexPath.row)
+            self.otherGuestListTV.deleteRows(at: [indexPath], with: .fade)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
 
     func didEditGuest(_ guest: Guest, at index: Int) {

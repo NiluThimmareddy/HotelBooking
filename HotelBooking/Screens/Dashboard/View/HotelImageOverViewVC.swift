@@ -124,13 +124,25 @@ class HotelImageOverViewVC: UIViewController {
 extension HotelImageOverViewVC: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == roomTypeCollectionView{
-            let width = roomTypeCollectionView.frame.size.width / 3
-            let height = roomTypeCollectionView.frame.size.height
-            return CGSize(width: width, height: height)
+            if UIDevice.current.userInterfaceIdiom == .pad{
+                let width = roomTypeCollectionView.frame.size.width / 3
+                let height = roomTypeCollectionView.frame.size.height
+                return CGSize(width: width, height: height)
+            }else{
+                let width = roomTypeCollectionView.frame.size.width / 3
+                let height = roomTypeCollectionView.frame.size.height
+                return CGSize(width: width, height: height)
+            }
         }else{
-            let width = roomsTypeImagesCollectionView.frame.size.width - 10
-            let height: CGFloat = 350
-            return CGSize(width: width, height: height)
+            if UIDevice.current.userInterfaceIdiom == .pad{
+                let width = roomsTypeImagesCollectionView.frame.size.width - 10
+                let height: CGFloat = 650
+                return CGSize(width: width, height: height)
+            }else{
+                let width = roomsTypeImagesCollectionView.frame.size.width - 10
+                let height: CGFloat = 350
+                return CGSize(width: width, height: height)
+            }
         }
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -298,7 +310,11 @@ extension HotelImageOverViewVC: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        if UIDevice.current.userInterfaceIdiom == .pad{
+            return 400
+        }else{
+            return 200
+        }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "HomePage", bundle: nil)

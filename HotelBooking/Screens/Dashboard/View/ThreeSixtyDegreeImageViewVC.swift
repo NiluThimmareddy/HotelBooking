@@ -24,7 +24,11 @@ class ThreeSixtyDegreeImageViewVC: UIViewController {
         
         let cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
+        cameraNode.position = SCNVector3(x: 0, y: 0, z: 12)
+        cameraNode.camera?.fieldOfView = 120
         scene.rootNode.addChildNode(cameraNode)
+
+
         
         if let imageUrl = image, let url = URL(string: imageUrl) {
                 URLSession.shared.dataTask(with: url) { data, _, _ in

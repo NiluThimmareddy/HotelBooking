@@ -107,7 +107,7 @@
                                     <constraint firstItem="6WD-Bl-ptB" firstAttribute="centerY" secondItem="wL4-p3-Nir" secondAttribute="centerY" id="tZy-wP-3ON"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KVt-QZ-4Js">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KVt-QZ-4Js">
                                 <rect key="frame" x="0.0" y="50" width="333" height="139"/>
                                 <color key="backgroundColor" name="backgroundColor"/>
                             </tableView>
@@ -138,6 +138,8 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="backView" destination="fdM-IE-dY3" id="6Cb-1O-aKd"/>
+                <outlet property="downArrowImage" destination="6WD-Bl-ptB" id="2hA-Gf-Y3I"/>
+                <outlet property="downArrowOneImage" destination="UuP-OW-cBX" id="wiJ-OL-rkC"/>
                 <outlet property="filterByLbl" destination="uCn-Wa-Pq7" id="4JW-as-Vja"/>
                 <outlet property="filterView" destination="wL4-p3-Nir" id="b0e-Dj-7kN"/>
                 <outlet property="ratingContentLbl" destination="jIi-lh-8dH" id="1pC-tY-7Nv"/>

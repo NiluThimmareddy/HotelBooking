@@ -35,7 +35,9 @@
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="tsK-ML-DOh"/>
+                                    <constraint firstAttribute="height" constant="130" id="tsK-ML-DOh">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="250"/>
+                                    </constraint>
                                 </constraints>
                             </stackView>
                         </subviews>

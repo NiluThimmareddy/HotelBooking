@@ -19,9 +19,10 @@ class FilterByDateTVC: UITableViewCell {
         setCheckboxState()
         titleLbl.font = .poppinsMedium(12)
     }
+    
     private func setCheckboxState() {
-        let imageName = isChecked ? "square-check" : "square"
-        checkBoxButton.setImage(UIImage(named: imageName), for: .normal)
+        let imageName = isChecked ? "checkmark.square" : "square"
+        checkBoxButton.setImage(UIImage(systemName: imageName), for: .normal)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -49,6 +49,9 @@ class YourNotificationVC: UIViewController {
         let backItem = UIBarButtonItem()
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
+        yourNotificationTV.rowHeight = UITableView.automaticDimension
+        yourNotificationTV.estimatedRowHeight = 120
+
     }
    
     
@@ -72,6 +75,6 @@ extension YourNotificationVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return UITableView.automaticDimension
     }
 }

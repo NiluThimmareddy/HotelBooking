@@ -20,6 +20,7 @@ class YourNotificationTVC: UITableViewCell {
         dateLbl.font = UIFont.poppinsMedium(14)
         viewYourBookingLbl.font = UIFont.poppinsMedium(14)
         bookingConfirmationLbl.font = UIFont.poppinsMedium(16)
+        backView.BackViewShadow()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

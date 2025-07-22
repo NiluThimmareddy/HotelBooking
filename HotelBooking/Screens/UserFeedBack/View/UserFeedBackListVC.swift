@@ -13,8 +13,8 @@ class UserFeedBackListVC: UIViewController {
     
     let color = UIColor(named: "defaultColor")
     var callHotelFeedBack = [
-        HotelFeedBackInfo(hotelImage: "1", hotelName: "Taj", bookedDate: "15 - 16 May 2025", hotelLocation: "Chennai", status: "Completed", process: "Done"),
-        HotelFeedBackInfo(hotelImage: "2",hotelName: "Chola", bookedDate: "15 - 16 June 2025",hotelLocation: "Chennai",status: "Pending",process: "Draft")
+        HotelFeedBackInfo(hotelImage: "1", hotelName: "Taj", bookedDate: "15 - 16 May 2025", hotelLocation: "Chennai", status: "Completed", process: "Done",rating: "3"),
+        HotelFeedBackInfo(hotelImage: "2",hotelName: "Chola", bookedDate: "15 - 16 June 2025",hotelLocation: "Chennai",status: "Pending",process: "Draft",rating: "")
     ]
     
     let topNameLbl: UILabel = {
@@ -41,7 +41,7 @@ class UserFeedBackListVC: UIViewController {
     
 }
 
-extension UserFeedBackListVC: UITableViewDelegate, UITableViewDataSource{
+extension UserFeedBackListVC: UITableViewDelegate, UITableViewDataSource, UserFeedBackListTVCDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return callHotelFeedBack.count
     }
@@ -53,6 +53,7 @@ extension UserFeedBackListVC: UITableViewDelegate, UITableViewDataSource{
         cell.hotelName.text = data.hotelName
         cell.hotelImage.image = UIImage(named: data.hotelImage)
         cell.hotelLocation.text = data.hotelLocation
+        cell.delegate =  self
         if data.process == "Draft"{
             cell.draftLbl.text = data.process
             cell.draftLbl.textColor = .darkGray
@@ -63,13 +64,20 @@ extension UserFeedBackListVC: UITableViewDelegate, UITableViewDataSource{
             cell.draftLbl.layer.borderColor = UIColor.systemGreen.cgColor
         }
         if data.status == "Pending"{
-            cell.completeReviewLbl.textColor = .systemRed
-            cell.completeReviewLbl.text = "Complete your draft review"
+            cell.starBackView.isHidden = true
             cell.howManyDaysLeftToGiveReview.text = data.daysRemaining
+            cell.completeButton.isHidden = false
+            let selectRoom = NSAttributedString(
+                string: "Complete your draft review",
+                attributes: [.font: UIFont.poppinsBold(12), .foregroundColor: color ?? UIColor.white ]
+            )
+            cell.completeButton.setAttributedTitle(selectRoom, for: .normal)
+            
         }else{
-            cell.completeReviewLbl.textColor = color
-            cell.completeReviewLbl.text = "Review Completed"
+            cell.starBackView.isHidden = false
+            cell.completeButton.isHidden = true
             cell.howManyDaysLeftToGiveReview.text = "Thanks for your useful Feedback"
+            cell.setRatingStars(from: data.rating)
         }
         return cell
     }
@@ -78,20 +86,25 @@ extension UserFeedBackListVC: UITableViewDelegate, UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let data = callHotelFeedBack[indexPath.row]
-        if data.status == "Pending"{
-            let controller = UIStoryboard(name: "Review", bundle: nil).instantiateViewController(withIdentifier: "PostReviewViewController") as! PostReviewViewController
-            let backItem = UIBarButtonItem()
-            backItem.title = ""
-            self.navigationItem.backBarButtonItem = backItem
-            self.navigationController?.navigationBar.tintColor = .white
-            self.navigationController?.pushViewController(controller, animated: true)
-        }else{
+        if data.status == "Completed"{
+    
             self.showAlert(
-                        title: "Feedback Completed",
-                        message: "You have already submitted feedback for this booking.",
-                        type: .info
-                    )
+                title: "Feedback Completed",
+                message: "You have already submitted feedback for this booking.",
+                type: .info
+            )
         }
         
     }
+    func didCompleteFeedback() {
+        let controller = UIStoryboard(name: "Review", bundle: nil).instantiateViewController(withIdentifier: "PostReviewViewController") as! PostReviewViewController
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        self.navigationItem.backBarButtonItem = backItem
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    
+    
 }

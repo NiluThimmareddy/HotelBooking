@@ -9,6 +9,8 @@ import UIKit
 
 class UserReviewFilterTVC: UITableViewCell {
 
+    @IBOutlet weak var downArrowOneImage: UIImageView!
+    @IBOutlet weak var downArrowImage: UIImageView!
     @IBOutlet weak var filterView: UIView!
     @IBOutlet weak var timeOfYearLbl: UILabel!
     @IBOutlet weak var filterByLbl: UILabel!
@@ -57,12 +59,22 @@ extension UserReviewFilterTVC: UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     
-            let cell = tableView.dequeueReusableCell(withIdentifier: "GuestReviewTVC")as! GuestReviewTVC
-            let data = callGuestReview[indexPath.row]
-            cell.titleLbl.text = data.name
-            cell.countLbl.text = data.rating
-            return cell
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GuestReviewTVC")as! GuestReviewTVC
+        let data = callGuestReview[indexPath.row]
+        cell.titleLbl.text = data.name
+        cell.countLbl.text = data.rating
+        let ratingValue = CGFloat((data.rating.replacingOccurrences(of: "%", with: "") as NSString).floatValue)
+        
+        DispatchQueue.main.async {
+            let totalWidth = cell.progressViewBackView.frame.width
+            let calculatedWidth = (ratingValue / 10.0) * totalWidth
+            cell.progressViewWidthCons.constant = calculatedWidth
+            
+            
+            cell.layoutIfNeeded()
+        }
+        return cell
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

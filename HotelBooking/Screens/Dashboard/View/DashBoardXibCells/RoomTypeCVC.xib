@@ -24,7 +24,9 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VU9-EY-TPV">
                                 <rect key="frame" x="10" y="10" width="95" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="nTx-Zc-yzS"/>
+                                    <constraint firstAttribute="height" constant="70" id="nTx-Zc-yzS">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                                    </constraint>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXd-wQ-5JX">

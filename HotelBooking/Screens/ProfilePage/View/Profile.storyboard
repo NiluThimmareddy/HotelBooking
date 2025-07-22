@@ -1699,8 +1699,8 @@
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name(s)*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TU8-lL-I5k">
-                                                        <rect key="frame" x="10" y="86.666666666666686" width="108" height="20.333333333333329"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TU8-lL-I5k">
+                                                        <rect key="frame" x="10" y="86.666666666666686" width="87.333333333333329" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1713,8 +1713,8 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last name(s)*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqA-3i-nUt">
-                                                        <rect key="frame" x="10" y="172" width="107" height="20.333333333333343"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last name*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqA-3i-nUt">
+                                                        <rect key="frame" x="10" y="172" width="86.333333333333329" height="20.333333333333343"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1791,8 +1791,9 @@
                                                             <constraint firstAttribute="width" constant="25" id="aCZ-GN-WrA"/>
                                                             <constraint firstAttribute="height" constant="25" id="e6b-Qj-b2y"/>
                                                         </constraints>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="square-check" title=""/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system" title=""/>
                                                         <connections>
                                                             <action selector="ckeckBoxButton:" destination="o3n-6r-kAx" eventType="touchUpInside" id="n9N-1L-YMK"/>
                                                         </connections>
@@ -2013,6 +2014,7 @@
                         <outlet property="lastNameTF" destination="ODV-7k-C4b" id="0JD-3r-k4U"/>
                         <outlet property="okButton" destination="QFG-Qg-Mtz" id="vmv-zQ-1SF"/>
                         <outlet property="pleaseEnterLbl" destination="MWg-kf-hxn" id="t7v-yG-vjV"/>
+                        <outlet property="scrollViewScroll" destination="tCl-dz-NWP" id="h6C-NQ-1l9"/>
                         <outlet property="selectDateLbl" destination="Ctg-RQ-SSo" id="HzH-lk-ZM7"/>
                         <outlet property="selectDatePicker" destination="3J8-Hv-RaS" id="w0p-hQ-r0y"/>
                         <outlet property="selectGenderTV" destination="noM-DQ-A0j" id="39P-dg-mxe"/>
@@ -3521,6 +3523,7 @@
         <image name="bell" catalog="system" width="125" height="128"/>
         <image name="bot-message-square" width="24" height="24"/>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
+        <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="envelope.circle" catalog="system" width="128" height="123"/>
@@ -3537,7 +3540,6 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="profile" width="512" height="512"/>
         <image name="square" catalog="system" width="128" height="114"/>
-        <image name="square-check" width="24" height="24"/>
         <image name="x" width="24" height="24"/>
         <namedColor name="backgroundColor">
             <color red="0.93300002813339233" green="0.93300002813339233" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

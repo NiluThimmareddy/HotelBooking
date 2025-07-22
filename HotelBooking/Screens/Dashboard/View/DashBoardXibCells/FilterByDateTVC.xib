@@ -29,8 +29,9 @@
                             <constraint firstAttribute="width" constant="25" id="Oiq-Zq-LpE"/>
                             <constraint firstAttribute="height" constant="25" id="x3H-Jd-htn"/>
                         </constraints>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="square"/>
+                        <buttonConfiguration key="configuration" style="plain" image="square" catalog="system"/>
                         <connections>
                             <action selector="checkBoxButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="R0L-al-N0N"/>
                         </connections>
@@ -52,6 +53,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="square" width="24" height="24"/>
+        <image name="square" catalog="system" width="128" height="114"/>
     </resources>
 </document>

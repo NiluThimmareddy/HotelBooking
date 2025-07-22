@@ -65,7 +65,6 @@ struct NotificationData{
 enum chooseOptions{
     case add
     case edit
-    case delete
 }
 
 

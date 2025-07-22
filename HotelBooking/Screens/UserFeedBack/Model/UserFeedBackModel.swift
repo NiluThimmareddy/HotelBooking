@@ -14,6 +14,7 @@ struct HotelFeedBackInfo {
     var hotelLocation: String
     var status: String
     var process: String
+    var rating: String
     var daysRemaining: String {
             if status == "Completed" {
                 return "0"

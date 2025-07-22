@@ -89,7 +89,7 @@ class UserReviewsVC: UIViewController {
         let maxUserReviewCount = callUserReview.count
         let guestWhoStayedHeight = CGFloat(maxUserReviewCount) * 100
         GuestWhoStayedHereTVHeightCons.constant = guestWhoStayedHeight
-        let baseContentHeight: CGFloat = 260 - 100
+        let baseContentHeight: CGFloat = 440
         scrollViewContentViewHightCons.constant = baseContentHeight +  guestWhoStayedHeight
         view.layoutIfNeeded()
     }
@@ -153,6 +153,7 @@ extension UserReviewsVC: UITableViewDelegate,UITableViewDataSource{
                 cell.seeAllCountReviews.text = "See All 3 Reviews"
                 cell.filterView.isHidden = true
                 cell.ratingView.isHidden = false
+                cell.downArrowOneImage.isHidden =  true
             case 1:
                 cell.filterByLbl.text = "Filter by : "
                 cell.timeOfYearLbl.text = "Time of Year"
@@ -215,7 +216,7 @@ extension UserReviewsVC: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if tableView == reviewFilterTableView {
             if indexPath.row == 0 {
-                return isFirstFilterCellExpanded ? 300 : 50
+                return  300
             }
             return 50
         } else if tableView == userReviewTableView{
@@ -228,15 +229,7 @@ extension UserReviewsVC: UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == reviewFilterTableView {
-            if indexPath.row == 0 {
-                isFirstFilterCellExpanded.toggle()
-                reviewFilterTableViewHeightCons.constant = isFirstFilterCellExpanded ? 400 : 150
-                UIView.animate(withDuration: 0.3) {
-                    self.view.layoutIfNeeded()
-                }
-                reviewFilterTableView.beginUpdates()
-                reviewFilterTableView.endUpdates()
-            }else if indexPath.row == 1{
+             if indexPath.row == 1{
                 filterByCloseView.isHidden = false
                 sortByCloseView.isHidden = true
             }else if indexPath.row == 2{

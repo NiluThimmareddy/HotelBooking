@@ -945,8 +945,6 @@ extension DetailsViewController: UITableViewDelegate,UITableViewDataSource{
                 let totalWidth = cell.progressViewBackView.frame.width
                 let calculatedWidth = (ratingValue / 10.0) * totalWidth
                 cell.progressViewWidthCons.constant = calculatedWidth
-                
-                
                 cell.layoutIfNeeded()
             }
             return cell
