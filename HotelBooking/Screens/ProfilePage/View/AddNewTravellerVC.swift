@@ -66,6 +66,7 @@ class AddNewTravellerVC: UIViewController, UITextFieldDelegate {
         applyBorder()
         setCheckboxState()
         updateAddTravellerButtonColor()
+        selectGenderTV.separatorStyle = .none
         firstNameTF.delegate = self
         lastNameTF.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -111,6 +112,7 @@ class AddNewTravellerVC: UIViewController, UITextFieldDelegate {
         genderButton.layer.cornerRadius = 5
         genderButton.layer.borderWidth = 1
         genderButton.layer.borderColor = UIColor.lightGray.cgColor
+        
     }
     func passedEditData() {
         if let dataGet = otherGuestsEdit{
@@ -344,12 +346,17 @@ extension AddNewTravellerVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserFeedBackAfterCheckOutTVC")as! UserFeedBackAfterCheckOutTVC
         let data = genderData[indexPath.row]
+        cell.backView.BackViewShadow()
+        cell.backViewTopCons.constant = 10
+        cell.backViewBottomCons.constant = 10
+        cell.backViewLeadingCons.constant = 10
+        cell.backViewTrailingCons.constant = 10
         cell.titleData.text = data
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40
+        return 60
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

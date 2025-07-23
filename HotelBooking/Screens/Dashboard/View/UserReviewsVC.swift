@@ -87,7 +87,7 @@ class UserReviewsVC: UIViewController {
     }
     func updateDynamicHeights() {
         let maxUserReviewCount = callUserReview.count
-        let guestWhoStayedHeight = CGFloat(maxUserReviewCount) * 100
+        let guestWhoStayedHeight = CGFloat(maxUserReviewCount) * 120
         GuestWhoStayedHereTVHeightCons.constant = guestWhoStayedHeight
         let baseContentHeight: CGFloat = 440
         scrollViewContentViewHightCons.constant = baseContentHeight +  guestWhoStayedHeight
@@ -220,7 +220,7 @@ extension UserReviewsVC: UITableViewDelegate,UITableViewDataSource{
             }
             return 50
         } else if tableView == userReviewTableView{
-            return 100
+            return 120
         }else if tableView == filterByTableView{
             return 50
         }else{

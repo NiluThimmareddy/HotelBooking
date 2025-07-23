@@ -9,6 +9,7 @@ import UIKit
 
 class GuestWhoStayedHereTVC: UITableViewCell {
 
+    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var countryImage: UIImageView!
     @IBOutlet weak var userCountry: UILabel!
     @IBOutlet weak var userReview: UILabel!
@@ -20,12 +21,13 @@ class GuestWhoStayedHereTVC: UITableViewCell {
         userName.font = UIFont(name: "Poppins-Medium", size: 12)
         userReview.font = UIFont(name: "Poppins-Medium", size: 12)
         userCountry.font = UIFont(name: "Poppins-Medium", size: 10)
+        backView.BackViewShadow()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        
     }
     
 }

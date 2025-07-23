@@ -546,7 +546,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
             let guestReviewHeight = CGFloat(guestReviewCount) * 50
             
             let maxUserReviewCount = min(callUserReview.count, 5)
-            let guestWhoStayedHeight = CGFloat(maxUserReviewCount) * 100
+            let guestWhoStayedHeight = CGFloat(maxUserReviewCount) * 120
             
             guestReviewTVHightCons.constant = guestReviewHeight
             GuestWhoStayedHereTVHeightCons.constant = guestWhoStayedHeight
@@ -560,7 +560,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
             
             policiesCollectionViewHeightCons.constant = policiesHeight
             
-            let baseContentHeight: CGFloat = 2344 - 35 - 100
+            let baseContentHeight: CGFloat = 2209
             scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight + policiesHeight + CGFloat(importantReadMoreHeight)
             
             view.layoutIfNeeded()
@@ -569,7 +569,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
             let guestReviewHeight = CGFloat(guestReviewCount) * 50
             
             let maxUserReviewCount = min(callUserReview.count, 5)
-            let guestWhoStayedHeight = CGFloat(maxUserReviewCount) * 100
+            let guestWhoStayedHeight = CGFloat(maxUserReviewCount) * 120
             
             guestReviewTVHightCons.constant = guestReviewHeight
             GuestWhoStayedHereTVHeightCons.constant = guestWhoStayedHeight
@@ -583,7 +583,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
             
             policiesCollectionViewHeightCons.constant = policiesHeight
             
-            let baseContentHeight: CGFloat = 2194 - 35 - 100
+            let baseContentHeight: CGFloat = 2059
             scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight + policiesHeight + CGFloat(importantReadMoreHeight)
             
             view.layoutIfNeeded()
@@ -1057,6 +1057,8 @@ extension DetailsViewController: UITableViewDelegate,UITableViewDataSource{
             return 30
         }else if tableView == publicTransportTV{
             return 30
+        }else if tableView == GuestWhoStayedHereTV{
+            return 120
         }else{
             return 100
         }

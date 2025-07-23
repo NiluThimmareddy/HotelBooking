@@ -46,6 +46,10 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="backView" destination="fjV-1F-PIQ" id="v4k-wh-4TZ"/>
+                <outlet property="backViewBottomCons" destination="RXy-ps-2D8" id="VES-MF-YIm"/>
+                <outlet property="backViewLeadingCons" destination="U2c-Vs-RWl" id="Y5n-ar-94A"/>
+                <outlet property="backViewTopCons" destination="ZG3-Cg-56N" id="hXj-ZC-YwE"/>
+                <outlet property="backViewTrailingCons" destination="Sir-Em-ezz" id="kVM-9C-shI"/>
                 <outlet property="titleData" destination="B5b-yB-pQu" id="QHf-nX-v5h"/>
             </connections>
             <point key="canvasLocation" x="-32.061068702290072" y="-11.267605633802818"/>
