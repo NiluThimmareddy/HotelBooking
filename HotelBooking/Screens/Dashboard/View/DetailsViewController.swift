@@ -10,6 +10,10 @@ import MapKit
 
 
 class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDelegate {
+    @IBOutlet weak var popularSurroundingStackView: UIStackView!
+    @IBOutlet weak var importantInfoLineViewTopCons: NSLayoutConstraint!
+    @IBOutlet weak var popularSurroundingBackViewHeightCons: NSLayoutConstraint!
+    @IBOutlet weak var popularSurroundingBackViewTopCons: NSLayoutConstraint!
     @IBOutlet weak var hotelImagesCollectionViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var seeAllPoliciesButton: UIButton!
     @IBOutlet weak var hotelAddressDataLbl: UILabel!
@@ -221,6 +225,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         callAllHotelsRoomData()
         callImagesData()
         labelActionGeture()
+        popularSurroundingHideData()
         
     }
     func labelActionGeture(){
@@ -284,6 +289,7 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
         hotelPhoneNumberDataLbl.font = .poppinsMedium(12)
         hotelWebSiteDataLbl.font = .poppinsMedium(12)
         selectRoomButton.BackViewShadow()
+        
     }
     
     @objc func mailLabelTapped() {
@@ -413,6 +419,8 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
                 self.topAttractionsTV.reloadData()
                 self.eatAndDrinkTV.reloadData()
                 self.publicTransportTV.reloadData()
+                self.popularSurroundingHideData()
+
             }
         }
     }
@@ -563,7 +571,26 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
             let baseContentHeight: CGFloat = 2209
             scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight + policiesHeight + CGFloat(importantReadMoreHeight)
             
+            
+            let attractionsFilter = viewModel.allHotelNearbyLandmarks.filter {
+                $0.hotelId == hotelDetailsData?.HotelId
+            }
+
+            let filterOne = attractionsFilter.filter { $0.landmarkType == "Attractions" }
+            let filterTwo = attractionsFilter.filter { $0.landmarkType == "Eat and Drink" }
+            let filterThree = attractionsFilter.filter { $0.landmarkType == "Transport" }
+
+            let allAreEmpty = filterOne.isEmpty && filterTwo.isEmpty && filterThree.isEmpty
+            if allAreEmpty == true{
+                let baseContentHeight: CGFloat = 2059
+                scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight + policiesHeight + CGFloat(importantReadMoreHeight) - 370
+            }else{
+                let baseContentHeight: CGFloat = 2059
+                scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight + policiesHeight + CGFloat(importantReadMoreHeight)
+            }
+            
             view.layoutIfNeeded()
+            
         }else{
             let guestReviewCount = isGuestReviewExpanded ? callGuestReview.count : min(callGuestReview.count, 3)
             let guestReviewHeight = CGFloat(guestReviewCount) * 50
@@ -586,9 +613,55 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
             let baseContentHeight: CGFloat = 2059
             scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight + policiesHeight + CGFloat(importantReadMoreHeight)
             
+            
+            
+            let attractionsFilter = viewModel.allHotelNearbyLandmarks.filter {
+                $0.hotelId == hotelDetailsData?.HotelId
+            }
+
+            let filterOne = attractionsFilter.filter { $0.landmarkType == "Attractions" }
+            let filterTwo = attractionsFilter.filter { $0.landmarkType == "Eat and Drink" }
+            let filterThree = attractionsFilter.filter { $0.landmarkType == "Transport" }
+
+            let allAreEmpty = filterOne.isEmpty && filterTwo.isEmpty && filterThree.isEmpty
+            if allAreEmpty == true{
+                let baseContentHeight: CGFloat = 2059
+                scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight + policiesHeight + CGFloat(importantReadMoreHeight) - 355
+            }else{
+                let baseContentHeight: CGFloat = 2059
+                scrollViewContentViewHightCons.constant = baseContentHeight + guestReviewHeight + guestWhoStayedHeight + policiesHeight + CGFloat(importantReadMoreHeight)
+            }
+            
             view.layoutIfNeeded()
         }
     }
+    
+    func popularSurroundingHideData() {
+        let attractionsFilter = viewModel.allHotelNearbyLandmarks.filter {
+            $0.hotelId == hotelDetailsData?.HotelId
+        }
+
+        let filterOne = attractionsFilter.filter { $0.landmarkType == "Attractions" }
+        let filterTwo = attractionsFilter.filter { $0.landmarkType == "Eat and Drink" }
+        let filterThree = attractionsFilter.filter { $0.landmarkType == "Transport" }
+
+        // Show or hide each section based on its filtered content
+        topAttrocitiesBackView.isHidden = filterOne.isEmpty
+        eatAndDrinkBackView.isHidden = filterTwo.isEmpty
+        transportBackView.isHidden = filterThree.isEmpty
+
+        // Determine if all are empty
+        let allAreEmpty = filterOne.isEmpty && filterTwo.isEmpty && filterThree.isEmpty
+
+        popularSurroundingBackView.isHidden = allAreEmpty
+        popularSurroundingStackView.isHidden = allAreEmpty
+        popularSurroundingBackViewHeightCons.constant = allAreEmpty ? 0 : 330
+        importantInfoLineViewTopCons.constant =   allAreEmpty ? -1 : 355
+
+       
+            self.view.layoutIfNeeded()
+    }
+
 
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -658,16 +731,14 @@ class DetailsViewController: UIViewController,UIScrollViewDelegate, MKMapViewDel
 //            self.importantInformationLblHeightCons.constant = newHeight
 //            self.view.layoutIfNeeded()
 //        }
+        
             let storyboard = UIStoryboard(name: "Profile", bundle: nil)
             let vc = storyboard.instantiateViewController(identifier: "ProfilePageVC")as! ProfilePageVC
             navigationItem.backButtonTitle = ""
             navigationController?.pushViewController(vc, animated: true)
     }
     
-//    let storyboard = UIStoryboard(name: "", bundle: nil)
-//    let vc = storyboard.instantiateViewController(identifier: "ProfilePageVC")as! ProfilePageVC
-//    navigationItem.backButtonTitle = ""
-//    navigationController?.pushViewController(vc, animated: true)
+
     
     func calculateLabelHeight() -> CGFloat {
         let maxSize = CGSize(width: importantInformationLbl.frame.width, height: CGFloat.greatestFiniteMagnitude)

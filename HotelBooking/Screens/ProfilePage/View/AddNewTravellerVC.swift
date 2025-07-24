@@ -65,6 +65,7 @@ class AddNewTravellerVC: UIViewController, UITextFieldDelegate {
         passedDeleteData()
         applyBorder()
         setCheckboxState()
+        selectGenderTV.BackViewShadow()
         updateAddTravellerButtonColor()
         selectGenderTV.separatorStyle = .none
         firstNameTF.delegate = self
@@ -346,17 +347,13 @@ extension AddNewTravellerVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserFeedBackAfterCheckOutTVC")as! UserFeedBackAfterCheckOutTVC
         let data = genderData[indexPath.row]
-        cell.backView.BackViewShadow()
-        cell.backViewTopCons.constant = 10
-        cell.backViewBottomCons.constant = 10
-        cell.backViewLeadingCons.constant = 10
-        cell.backViewTrailingCons.constant = 10
+        cell.backView.backgroundColor = .clear
         cell.titleData.text = data
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 40
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

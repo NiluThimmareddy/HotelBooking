@@ -8,7 +8,7 @@
 import UIKit
 
 class HelpCentreVC: UIViewController {
-    
+
     @IBOutlet weak var scrollViewScroll: UIScrollView!
     @IBOutlet weak var scrollViewContentView: UIView!
     @IBOutlet weak var popularFaqTVHeightCons: NSLayoutConstraint!
@@ -22,16 +22,18 @@ class HelpCentreVC: UIViewController {
     @IBOutlet weak var searchTF: UITextField!
     @IBOutlet weak var searchBackView: UIView!
     @IBOutlet weak var howCanWeHelpYopuLbl: UILabel!
-    
+
     var selectedFAQIndex: IndexPath?
+    
     let topNameLbl: UILabel = {
-       let label = UILabel()
-       label.textColor = .white
-       label.text = "FAQ's"
-       label.font = UIFont.poppinsBold(16)
-       label.textAlignment = .center
-       return label
-   }()
+        let label = UILabel()
+        label.textColor = .white
+        label.text = "FAQ's"
+        label.font = UIFont.poppinsBold(16)
+        label.textAlignment = .center
+        return label
+    }()
+
     let faqCall = [
         SecurityData(
             securityTitle: "When will I receive my booking confirmation?",
@@ -63,7 +65,6 @@ class HelpCentreVC: UIViewController {
         ProfileOption(listData: "Security", imageName: "lock")
     ]
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         popularFaqTitle.font = .poppinsBold(16)
@@ -73,98 +74,72 @@ class HelpCentreVC: UIViewController {
         browseByCategoryTV.register(UINib(nibName: "ProfileTVC", bundle: nil), forCellReuseIdentifier: "ProfileTVC")
         navigationItem.titleView = topNameLbl
         popularFaqTV.showsVerticalScrollIndicator = false
-        popularFaqTV.showsHorizontalScrollIndicator = false
         browseByCategoryTV.showsVerticalScrollIndicator = false
-        browseByCategoryTV.showsHorizontalScrollIndicator = false
         searchBackView.BackViewShadow()
         popularFaqTV.BackViewShadow()
         browseByCategoryTV.BackViewShadow()
     }
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         roundTopLeftCornerOnly()
-        print("curveView.bounds = \(curveView.bounds)")
         updateDynamicHeights()
     }
-    
-   
+
     private func roundTopLeftCornerOnly() {
         curveView.layer.cornerRadius = 40
         curveView.layer.maskedCorners = [.layerMinXMinYCorner]
         curveView.clipsToBounds = true
     }
 
-
-    
     func updateDynamicHeights() {
         let defaultScrollHeight: CGFloat = 255
         let popularFAQDefaultRowHeight: CGFloat = 50
-        let expandedFAQRowHeight: CGFloat = 186
+        let expandedFAQRowHeight: CGFloat = 236
         let browseCategoryDefaultRowHeight: CGFloat = 50
 
-        let popularFAQCount = popularFaqTV.numberOfRows(inSection: 0)
-        let browseCategoryCount = browseByCategoryTV.numberOfRows(inSection: 0)
+        let faqCount = popularFaqTV.numberOfRows(inSection: 0)
+        let categoryCount = browseByCategoryTV.numberOfRows(inSection: 0)
 
-        // --- Calculate FAQ section total height ---
         var faqTotalHeight: CGFloat = 0
-        for row in 0..<popularFAQCount {
+        for row in 0..<faqCount {
             let indexPath = IndexPath(row: row, section: 0)
             faqTotalHeight += (selectedFAQIndex == indexPath) ? expandedFAQRowHeight : popularFAQDefaultRowHeight
         }
         popularFaqTVHeightCons.constant = faqTotalHeight
-
-        // --- BrowseByCategory height ---
-        let categoryTableHeight = CGFloat(browseCategoryCount) * browseCategoryDefaultRowHeight
-        browseByCategoryTVHeightCons.constant = categoryTableHeight
-
-        // --- ScrollView Height ---
-        scrollViewHeightCons.constant = defaultScrollHeight + faqTotalHeight + categoryTableHeight
+        browseByCategoryTVHeightCons.constant = CGFloat(categoryCount) * browseCategoryDefaultRowHeight
+        scrollViewHeightCons.constant = defaultScrollHeight + faqTotalHeight + browseByCategoryTVHeightCons.constant
 
         view.layoutIfNeeded()
     }
-
-
-
-   
-
 }
 
+extension HelpCentreVC: UITableViewDelegate, UITableViewDataSource {
 
-extension HelpCentreVC: UITableViewDelegate, UITableViewDataSource{
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView == popularFaqTV{
-            return faqCall.count
-        }else{
-            return categoryData.count
-        }
+        return tableView == popularFaqTV ? faqCall.count : categoryData.count
     }
-    
-    
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if tableView == popularFaqTV{
+        if tableView == popularFaqTV {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PopularFAQTVC", for: indexPath) as! PopularFAQTVC
             let data = faqCall[indexPath.row]
+            let isExpanded = selectedFAQIndex == indexPath
             cell.questionLbl.text = data.securityTitle
             cell.answerLbl.text = data.securityContent
-            cell.bottomView.isHidden = true
-            if selectedFAQIndex == indexPath {
-                cell.bottomView.isHidden = false
-            }else{
-                cell.bottomView.isHidden = true
-            }
-            let isExpanded = selectedFAQIndex == indexPath
-            
             cell.bottomView.isHidden = !isExpanded
             cell.bottomViewHeightCons.constant = isExpanded ? 186 : 0
+
+            UIView.animate(withDuration: 0.3) {
+                cell.bottomView.alpha = isExpanded ? 1 : 0
+            }
+
             return cell
-        }else{
+        } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTVC", for: indexPath) as! ProfileTVC
             let data = categoryData[indexPath.row]
             cell.profileListLbl.text = data.listData
-            cell.profileListImages.image = UIImage(systemName:  data.imageName)
+            cell.profileListImages.image = UIImage(systemName: data.imageName)
             cell.profileListImages.tintColor = .darkGray
             cell.viewLeading.constant = 10
             cell.viewTrailing.constant = 10
@@ -173,7 +148,7 @@ extension HelpCentreVC: UITableViewDelegate, UITableViewDataSource{
             return cell
         }
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if tableView == popularFaqTV {
             return selectedFAQIndex == indexPath ? 236 : 50
@@ -183,18 +158,26 @@ extension HelpCentreVC: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if tableView == popularFaqTV {
-            if selectedFAQIndex == indexPath {
-                selectedFAQIndex = nil
-            } else {
-                selectedFAQIndex = indexPath
-            }
-            popularFaqTV.reloadData()
-            tableView.beginUpdates()
-            tableView.endUpdates()
-            updateDynamicHeights()
+        guard tableView == popularFaqTV else { return }
+
+        let previousSelectedIndex = selectedFAQIndex
+        if selectedFAQIndex == indexPath {
+            selectedFAQIndex = nil
+        } else {
+            selectedFAQIndex = indexPath
+        }
+
+        tableView.beginUpdates()
+        if let previous = previousSelectedIndex {
+            tableView.reloadRows(at: [previous], with: .automatic)
+        }
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+        tableView.endUpdates()
+
+        updateDynamicHeights()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            tableView.scrollToRow(at: indexPath, at: .none, animated: true)
         }
     }
-
-
 }
